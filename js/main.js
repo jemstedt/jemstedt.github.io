@@ -1,12 +1,14 @@
+function expFunc(){
+	$('.first-meny').hide();
+	$('.exp.window').show();
+}
+
+
 function main(){
-  $('.skillset').hide();
-  $('.skillset').fadeIn(1000);
+  $('.exp-window').hide();
   $('.projects').hide();
-  $('.projects-button').on('click', function(){
-    //$(this).next().toggle();
-    $(this).next().slideToggle(400);
-    $(this).toggleClass('active');
-    $(this).text('Projects Viewed');
+  $('.#exp1-button').on('click', function(){
+  	expFunc();
   });
 }
 $(document).ready(main);
