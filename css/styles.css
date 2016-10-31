@@ -22,9 +22,8 @@ h1 {
 .exp2-select {
   background-color: #0C73B8;
 }
-
-.exp1-select,
-.exp2-select {
+.exp-info,
+.exp-select{
   width: 100%;
   padding: 1em 3em 2em 2em;
   margin: 0.5em;
