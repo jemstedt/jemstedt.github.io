@@ -1,12 +1,25 @@
 function expFunc(){
-	$('#first-meny').hide();
-	$('#exp.window').show();
+	$('#expSelectBox').hide();
+	$('#expInfoBox').show();
 }
 
+function studyFunc(){
+	$('#studyBox').show();
+	var stim = "Detta är en string";
+	$('.stim').text(stim);
+}
 
 function main(){
-  $('#exp-window').hide();
-  $('.projects').hide();
-  $('#exp1-button').on('click', expFunc(){});
+  $('#expInfoBox').hide();
+  $('#studyBox').hide();
+
+  $('#exp1-button').on('click', function(){
+  	expFunc();
+  });
+
+  $('#next-button').on('click', function(){
+  	$('#expInfoBox').hide();
+  	studyFunc();
+  });
 }
 $(document).ready(main);

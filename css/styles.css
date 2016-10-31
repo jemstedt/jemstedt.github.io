@@ -2,32 +2,47 @@ body {
   font-family: Helvetica;
   padding: 2em;
   background-color: whitesmoke;
+  border: 3px solid red;
 }
 
 h1 {
   font-size: 2.5em;
 }
 
-#first-meny {
+
+.container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.exp1-select {
-  background-color: #E55126;
+#studyBox {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+
+    height: 400px;
+    margin-top: -200px;
+
+    width: 600px;
+    margin-left: -300px;
 }
 
-
-.exp2-select {
-  background-color: #0C73B8;
+.stim {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  text-align: center;
 }
+
 .exp-info,
-.exp-select{
+.exp-select {
   width: 100%;
   padding: 1em 3em 2em 2em;
   margin: 0.5em;
   color: whitesmoke;
+  background-color: #E55126;
 }
 
 .button {
