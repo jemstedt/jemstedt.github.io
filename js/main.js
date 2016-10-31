@@ -1,13 +1,13 @@
 function expFunc(){
-	$('.first-meny').hide();
-	$('.exp.window').show();
+	$('#first-meny').hide();
+	$('#exp.window').show();
 }
 
 
 function main(){
-  $('.exp-window').hide();
+  $('#exp-window').hide();
   $('.projects').hide();
-  $('.#exp1-button').on('click', function(){
+  $('#exp1-button').on('click', function(){
   	expFunc();
   });
 }
