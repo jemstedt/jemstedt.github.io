@@ -10,10 +10,16 @@ body {
     justify-content: center;
 }
 
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 nav {
     position: fixed;
     top: 0;
-    right: 0;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -22,7 +28,7 @@ nav ul {
     margin: 0;
     padding: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 nav ul li {
@@ -36,7 +42,6 @@ nav ul li a {
 
 .container {
     text-align: center;
-    max-width: 800px;
     padding: 20px;
 }
 
