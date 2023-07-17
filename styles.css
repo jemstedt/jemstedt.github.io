@@ -44,6 +44,22 @@ nav ul li a {
     padding: 20px;
 }
 
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-text {
+    margin-right: 20px;
+}
+
+.landing-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
 h1 {
     font-size: 2.5em;
 }
@@ -77,5 +93,19 @@ p {
 
     p {
         font-size: 1.4em;
+    }
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
     }
 }
