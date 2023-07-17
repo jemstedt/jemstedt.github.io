@@ -47,3 +47,27 @@ h1 {
 p {
     font-size: 1.2em;
 }
+
+/* Styles for screens with a max width of 600px (like smartphones) */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
