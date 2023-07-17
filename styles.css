@@ -12,7 +12,7 @@ body {
 
 .page-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
     width: 100%;
 }
 
@@ -21,6 +21,7 @@ nav {
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
 nav ul {
@@ -58,6 +59,7 @@ nav ul li a {
     width: 200px;
     height: 200px;
     object-fit: cover;
+    margin-right: 20px;
 }
 
 h1 {
@@ -66,6 +68,10 @@ h1 {
 
 p {
     font-size: 1.2em;
+}
+
+.additional-content {
+    margin-top: 40px;
 }
 
 /* Styles for screens with a max width of 600px (like smartphones) */
@@ -104,8 +110,10 @@ p {
         margin-bottom: 20px;
     }
 
-    .profile-pic {
+    .landing-image {
         width: 150px;
         height: 150px;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
