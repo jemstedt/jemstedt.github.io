@@ -37,8 +37,7 @@ nav {
     font-size: 1.5em;
     margin-left: 20px;
     transition: color 0.3s ease;
-    padding: 10px 0; /* Add more padding here */
-    line-height: 1.5; /* Adjust line height here */
+    line-height: 1.5;
 }
 
 .name:hover, .name a:hover {
@@ -54,7 +53,6 @@ nav {
 }
 
 .links ul li {
-    padding: 10px 20px; /* Increase padding here */
     transition: color 0.3s ease;
 }
 
@@ -63,9 +61,11 @@ nav {
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s ease;
+    padding: 10px 20px; 
+    display: block;
 }
 
-.links ul li:hover, .links ul li a:hover {
+.links ul li a:hover {
     color: #FFD700;
 }
 
@@ -116,12 +116,9 @@ nav {
         padding: 10px 0;
     }
 
-    .links ul li {
-        margin-bottom: 10px;
-    }
-
     .links ul li a {
         font-size: 1em;
+        padding: 10px;
     }
 
     .container {
