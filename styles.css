@@ -33,7 +33,20 @@ nav {
     box-sizing: border-box;
 }
 
-nav div a, nav ul li a {
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
@@ -42,18 +55,7 @@ nav div a, nav ul li a {
     line-height: 30px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a:hover, nav div a:hover, nav ul li a.active {
+nav ul li a:hover, nav ul li a.active {
     background-color: #555;
 }
 
@@ -67,4 +69,8 @@ h1 {
 
 p {
     font-size: 1.2em;
+}
+
+.hidden {
+    display: none;
 }
