@@ -3,6 +3,7 @@
 <head>
     <title>Andreas Jemstedt, PhD</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="page-container">
@@ -10,7 +11,7 @@
             <div class="nav-container">
                 <div class="nav-left">
                     <ul>
-                        <li><a href="#" onclick="show('home')">Andreas Jemstedt, PhD</a></li>
+                        <li><a href="#" class="active" onclick="show('home')">Andreas Jemstedt, PhD</a></li>
                     </ul>
                 </div>
                 <div class="nav-right">
@@ -22,7 +23,22 @@
                 </div>
             </div>
         </nav>
-        <!-- Rest of your HTML -->
+        <div id="home" class="container">
+            <h1>Welcome to my homepage</h1>
+            <p>I am Andreas Jemstedt, a PhD with a passion for ... </p>
+        </div>
+        <div id="portfolio" class="container hidden">
+            <h1>Portfolio</h1>
+            <p>Here is some of my work ...</p>
+        </div>
+        <div id="contact" class="container hidden">
+            <h1>Contact</h1>
+            <p>You can reach me at jemstedt@su.se ...</p>
+        </div>
+        <div id="hireme" class="container hidden">
+            <h1>Hire Me!</h1>
+            <p>If you're interested in hiring me, please contact me at jemstedt@su.se ...</p>
+        </div>
     </div>
 </body>
 </html>
