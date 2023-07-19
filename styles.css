@@ -37,6 +37,8 @@ nav {
     font-size: 1.5em;
     margin-left: 20px;
     transition: color 0.3s ease;
+    padding: 10px 0; /* Add more padding here */
+    line-height: 1.5; /* Adjust line height here */
 }
 
 .name:hover, .name a:hover {
@@ -52,7 +54,7 @@ nav {
 }
 
 .links ul li {
-    padding: 10px;
+    padding: 10px 20px; /* Increase padding here */
     transition: color 0.3s ease;
 }
 
