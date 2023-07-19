@@ -31,11 +31,16 @@ nav {
     align-items: center;
 }
 
-.name a {
+.name, .name a {
     color: white;
     text-decoration: none;
     font-size: 1.5em;
     margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.name:hover, .name a:hover {
+    color: #FFD700;
 }
 
 .links ul {
@@ -49,16 +54,16 @@ nav {
 .links ul li {
     margin-left: 20px;
     padding: 0 10px;
+    transition: color 0.3s ease;
 }
 
 .links ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-    transition: color 0.3s ease;
 }
 
-.links ul li a:hover {
+.links ul li:hover, .links ul li a:hover {
     color: #FFD700;
 }
 
@@ -98,7 +103,7 @@ nav {
         padding: 20px 0;
     }
 
-    .name a {
+    .name, .name a {
         margin-bottom: 10px;
         font-size: 1.3em;
     }
