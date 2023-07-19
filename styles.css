@@ -16,6 +16,12 @@ body {
     width: 100%;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav {
     position: sticky;
     top: 0;
@@ -23,9 +29,6 @@ nav {
     background-color: #333;
     z-index: 1;
     height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 0 20px;
     box-sizing: border-box;
 }
@@ -69,32 +72,4 @@ h1 {
 
 p {
     font-size: 1.2em;
-}
-
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        height: auto;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 1em;
-    }
 }
