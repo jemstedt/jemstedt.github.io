@@ -22,6 +22,7 @@ nav {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
+    padding: 10px 0;
 }
 
 .nav-container {
@@ -40,18 +41,25 @@ nav {
 .links ul {
     list-style-type: none;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     display: flex;
     justify-content: space-around;
 }
 
 .links ul li {
     margin-left: 20px;
+    padding: 0 10px;
 }
 
 .links ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.links ul li a:hover {
+    color: #FFD700;  /* you can change this to any color you like */
 }
 
 .container {
@@ -95,15 +103,19 @@ p {
 
     .nav-container {
         flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
     }
 
     .name a {
         margin-bottom: 10px;
+        font-size: 1.3em;
     }
 
     .links ul {
         flex-direction: column;
         align-items: center;
+        padding: 10px 0;
     }
 
     .links ul li {
@@ -111,7 +123,7 @@ p {
     }
 
     .links ul li a {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     h1 {
