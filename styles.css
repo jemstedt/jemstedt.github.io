@@ -32,13 +32,11 @@ nav {
     height: 100%;
 }
 
-.nav-left ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.nav-left {
+    padding: 0 20px;
+    color: white;
     display: flex;
     align-items: center;
-    height: 100%;
 }
 
 nav ul li {
