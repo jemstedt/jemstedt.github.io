@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const navLinks = document.querySelectorAll('nav ul li a');
     const containers = document.querySelectorAll('.container');
-    const heroButtons = document.querySelectorAll('.hero-buttons button');
+    const homeButtons = document.querySelectorAll('.home-buttons button');
 
     // Function to hide all sections
     function hideAll() {
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
-    // Add click listeners to nav links and hero buttons
+    // Add click listeners to nav links and home buttons
     addClickListenerToButtons(navLinks);
-    addClickListenerToButtons(heroButtons);
+    addClickListenerToButtons(homeButtons);
 
     // Display home section by default on page load
     hideAll();

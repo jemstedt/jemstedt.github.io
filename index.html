@@ -11,11 +11,7 @@
             <div class="nav-container">
                 <div class="nav-left">
                     <ul>
-                        <li><a href="#" class="active" onclick="show('home')">Andreas Jemstedt, PhD</a></li>
-                    </ul>
-                </div>
-                <div class="nav-right">
-                    <ul>
+                        <li><a href="#" class="active" onclick="show('home')">Home</a></li>
                         <li><a href="#" onclick="show('portfolio')">Portfolio</a></li>
                         <li><a href="#" onclick="show('services')">Services</a></li>
                         <li><a href="#" onclick="show('contact')">Contact</a></li>
@@ -24,19 +20,19 @@
             </div>
         </nav>
         <div id="home" class="container">
-            <div class="hero-section">
-                <div class="hero-text">
+            <div class="home-section">
+                <div class="home-text">
                     <h1>Welcome to my homepage</h1>
                     <p>I am Andreas Jemstedt, a PhD with a passion for ... </p>
-                    <div class="hero-buttons">
-                        <button onclick="show('portfolio')">Portfolio</button>
-                        <button onclick="show('services')">Services</button>
-                        <button onclick="show('contact')">Contact</button>
-                    </div>
                 </div>
-                <div class="hero-image">
-                    <img src="andreas.png" alt="Andreas Jemstedt">
+                <div class="home-image">
+                    <img src="landing.png" alt="Andreas Jemstedt">
                 </div>
+            </div>
+            <div class="home-buttons">
+                <button onclick="show('portfolio')">Portfolio</button>
+                <button onclick="show('services')">Services</button>
+                <button onclick="show('contact')">Contact</button>
             </div>
         </div>
         <div id="portfolio" class="container hidden">
