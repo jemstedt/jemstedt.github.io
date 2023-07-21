@@ -39,18 +39,27 @@ nav {
     align-items: center;
 }
 
-nav ul li {
+.nav-right ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right ul li {
     margin: 0 10px;
 }
 
-nav ul li a {
+.nav-right ul li a {
     color: white;
     text-decoration: none;
     padding: 20px;
     display: block;
 }
 
-nav ul li a:hover, nav ul li a.active {
+.nav-right ul li a:hover, nav ul li a.active {
     background-color: #555;
 }
 
@@ -64,10 +73,6 @@ h1 {
 
 p {
     font-size: 1.2em;
-}
-
-.hidden {
-    display: none;
 }
 
 .home-section {
