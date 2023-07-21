@@ -11,33 +11,45 @@
             <div class="nav-container">
                 <div class="nav-left">
                     <ul>
-                        <li><a href="#home" class="active" onclick="show('home'); event.preventDefault();">Andreas Jemstedt, PhD</a></li>
+                        <li><a href="#" class="active" onclick="show('home')">Andreas Jemstedt, PhD</a></li>
                     </ul>
                 </div>
                 <div class="nav-right">
                     <ul>
-                        <li><a href="#portfolio" onclick="show('portfolio'); event.preventDefault();">Portfolio</a></li>
-                        <li><a href="#contact" onclick="show('contact'); event.preventDefault();">Contact</a></li>
-                        <li><a href="#hireme" onclick="show('hireme'); event.preventDefault();">Hire Me!</a></li>
+                        <li><a href="#" onclick="show('portfolio')">Portfolio</a></li>
+                        <li><a href="#" onclick="show('services')">Services</a></li>
+                        <li><a href="#" onclick="show('contact')">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div id="home" class="container">
-            <h1>Welcome to my homepage</h1>
-            <p>I am Andreas Jemstedt, a PhD with a passion for ... </p>
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h1>Welcome to my homepage</h1>
+                    <p>I am Andreas Jemstedt, a PhD with a passion for ... </p>
+                    <div class="hero-buttons">
+                        <button onclick="show('portfolio')">Portfolio</button>
+                        <button onclick="show('services')">Services</button>
+                        <button onclick="show('contact')">Contact</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="andreas.jpg" alt="Andreas Jemstedt">
+                </div>
+            </div>
         </div>
         <div id="portfolio" class="container hidden">
             <h1>Portfolio</h1>
             <p>Here is some of my work ...</p>
         </div>
+        <div id="services" class="container hidden">
+            <h1>Services</h1>
+            <p>These are the services I offer ...</p>
+        </div>
         <div id="contact" class="container hidden">
             <h1>Contact</h1>
             <p>You can reach me at jemstedt@su.se ...</p>
-        </div>
-        <div id="hireme" class="container hidden">
-            <h1>Hire Me!</h1>
-            <p>If you're interested in hiring me, please contact me at jemstedt@su.se ...</p>
         </div>
     </div>
 </body>
