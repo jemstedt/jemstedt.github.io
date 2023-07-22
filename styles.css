@@ -95,20 +95,118 @@ p {
 
 .home-buttons {
     display: flex;
-    gap: 20px;
     justify-content: center;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 20px; 
 }
 
-.home-buttons button {
-    border: 2px solid #000;
-    background: #fff;
-    padding: 10px;
-    font-size: 1em;
+.home-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd;
+    color: #333;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.home-buttons button:hover {
-    background: #ddd;
+.home-buttons a:hover {
+    background-color: #bbb;
+}
+
+.tag-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tag-button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+}
+
+.tag-button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.tag-buttons button:hover {
+    background-color: #bbb;
+}
+
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  height: 400px; /* Set a fixed height for the container */
+}
+
+.image-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop the images to fit the container */
+}
+
+@media (min-width: 600px) { /* 3 columns on screens wider than 600px */
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 900px) { /* 4 columns on screens wider than 900px */
+    .image-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1200px) { /* 5 columns on screens wider than 1200px */
+    .image-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+.project.hide {
+    display: none;
+}
+
+.project-content {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+.project-content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    color: white;
+    padding: 5px;
+    text-align: center;
 }
