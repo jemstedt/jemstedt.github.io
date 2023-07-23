@@ -246,7 +246,7 @@ p {
     }
   
     .home-section {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
   
     .home-text, .home-image {
