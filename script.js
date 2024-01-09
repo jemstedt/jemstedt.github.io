@@ -1,11 +1,11 @@
 $(function() {
   // default page to load
-  $('#content').load('home.html', setupHomeButtons);
+  $('#content').load('home.html');
 
   $('nav a').click(function(e) {
       e.preventDefault();
       let page = $(this).attr('href');
-      $('#content').load(page, page === 'portfolio.html' ? setupPortfolioPage : setupHomeButtons);
+      $('#content').load(page, page === 'portfolio.html' ? setupPortfolioPage : null);
       $('nav a').removeClass('active');
       $(this).addClass('active');
   });
