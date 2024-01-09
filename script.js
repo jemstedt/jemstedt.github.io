@@ -11,26 +11,6 @@ $(function() {
   });
 });
 
-function setupHomeButtons() {
-  $('#portfolio-button').off().click(function(e) {
-      e.preventDefault();
-      $('#content').load('portfolio.html', setupPortfolioPage);
-      updateActiveNavbarButton('portfolio.html');
-  });
-
-  $('#services-button').off().click(function(e) {
-      e.preventDefault();
-      $('#content').load('services.html');
-      updateActiveNavbarButton('services.html');
-  });
-
-  $('#contact-button').off().click(function(e) {
-      e.preventDefault();
-      $('#content').load('contact.html');
-      updateActiveNavbarButton('contact.html');
-  });
-}
-
 function updateActiveNavbarButton(page) {
   $('nav a').removeClass('active');
   $('nav a[href="' + page + '"]').addClass('active');

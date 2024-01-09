@@ -96,31 +96,6 @@ p {
     max-height: 75%;
 }
 
-.home-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px; 
-}
-
-.home-buttons a {
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    margin: 0 10px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ddd;
-    color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.home-buttons a:hover {
-    background-color: #bbb;
-}
-
 .tag-buttons {
     display: flex;
     justify-content: center;
@@ -229,6 +204,51 @@ p {
     margin-right: auto;
 }
 
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .question-text {
+    font-weight: bold;
+  }
+  
+  .answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .answer {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .feedback {
+    margin-top: 10px;
+    display: none;
+    font-weight: bold;
+  }
+  
+  .answer.correct {
+    background-color: #a8e6cf; /* Green */
+  }
+  
+  .answer.incorrect {
+    background-color: #f6b6b6; /* Red */
+  }
+  
+
 
 @media screen and (max-width: 600px) {
     .page-container {
@@ -251,14 +271,6 @@ p {
   
     .home-text, .home-image {
         flex-basis: 100%;
-    }
-  
-    .home-buttons {
-        flex-direction: column;
-    }
-  
-    .home-buttons a {
-        margin-bottom: 10px;
     }
   
     .tag-buttons {
