@@ -4,7 +4,7 @@ format: html
 page-layout: full
 ---
 
-If you'd like to get in touch, feel free to reach out by email. You can also find me on LinkedIn.
+If you'd like to get in touch, feel free to reach out by email or on LinkedIn.
 
 -   **Email**: [jemstedt\@su.se](mailto:jemstedt@su.se)
 -   **LinkedIn**: [linkedin.com/in/andreas-jemstedt](https://www.linkedin.com/in/andreas-jemstedt)

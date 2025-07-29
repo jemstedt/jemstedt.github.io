@@ -14,7 +14,7 @@ This page collects a few selected projects I’ve worked on, professional and ot
 
 ### [Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’](projects/expert_to_inquiry.qmd)
 
-I contributed an expert text to the preparatory work for the Swedish Ministry of Education's inquiry "Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81." The inquiry examined how incorporating insights from cognitive science and the science of learning could strengthen the education of Swedish teachers.
+I contributed as an expert to the preparatory work for the Swedish Ministry of Education's inquiry "Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81." The inquiry examined how incorporating insights from cognitive science and the science of learning could strengthen the education of Swedish teachers.
 
 ### [A two-page study manual to improve self-regulated learning](projects/study_manual.qmd)
 

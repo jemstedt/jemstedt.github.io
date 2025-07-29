@@ -46,7 +46,7 @@
     "href": "projects.html#selected-professional-projects",
     "title": "Projects & Other Work",
     "section": "Selected Professional Projects",
-    "text": "Selected Professional Projects\n\n\nExpert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’\nI contributed an expert text to the preparatory work for the Swedish Ministry of Education’s inquiry “Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81.” The inquiry examined how incorporating insights from cognitive science and the science of learning could strengthen the education of Swedish teachers.\n\n\nA two-page study manual to improve self-regulated learning\nA study manual created for one of my research projects. The manual teaches evidence-based study techniques.\n\n\n[Free online course about evidence-based study techniques]\nAs a postdoc at KTH Royal Institute of Technology, I developed a free online course that teaches evidence-based study techniques using question-based learning (learn by answer questions and receive feedback). The course is freely available on one of their learning platforms.\n\n\n[Free ChatGPT agent that generates high-quality multiple choice questions with feedback]\nAs part of a project at Stockholm university, I developed a ChatGPT agent that helps teachers generate large amounts of multiple-choice questions with feedback for each response alternative. The aim of the project is to develop tools to make it easier for teachers aid their students self-regulated learning by providing them with high-quality study materials before and after their lectures, seminars and workshops.\n\n\n[One-page courses teachning topics the science of learning]"
+    "text": "Selected Professional Projects\n\n\nExpert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’\nI contributed as an expert to the preparatory work for the Swedish Ministry of Education’s inquiry “Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81.” The inquiry examined how incorporating insights from cognitive science and the science of learning could strengthen the education of Swedish teachers.\n\n\nA two-page study manual to improve self-regulated learning\nA study manual created for one of my research projects. The manual teaches evidence-based study techniques.\n\n\n[Free online course about evidence-based study techniques]\nAs a postdoc at KTH Royal Institute of Technology, I developed a free online course that teaches evidence-based study techniques using question-based learning (learn by answer questions and receive feedback). The course is freely available on one of their learning platforms.\n\n\n[Free ChatGPT agent that generates high-quality multiple choice questions with feedback]\nAs part of a project at Stockholm university, I developed a ChatGPT agent that helps teachers generate large amounts of multiple-choice questions with feedback for each response alternative. The aim of the project is to develop tools to make it easier for teachers aid their students self-regulated learning by providing them with high-quality study materials before and after their lectures, seminars and workshops.\n\n\n[One-page courses teachning topics the science of learning]"
   },
   {
     "objectID": "projects.html#other",
@@ -102,7 +102,7 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "My work spans topics in cognitive psychology, memory, learning, and decision-making. I am especially interested in how people monitor their own understanding, how they regulate their learning over time, and how we can model these processes using quantitative methods.\nThe list below includes journal articles, book chapters, and selected conference presentations."
+    "text": "My work spans topics in cognitive psychology, memory, learning, and decision-making. I am especially interested in how people monitor their own understanding, how they regulate their learning over time, and how we can model these processes.\nThe list below includes journal articles, book chapters, and selected conference presentations."
   },
   {
     "objectID": "research.html#journal-articles",
@@ -130,7 +130,7 @@
     "href": "contact.html",
     "title": "Contact & Links",
     "section": "",
-    "text": "If you’d like to get in touch, feel free to reach out by email. You can also find me on LinkedIn.\n\nEmail: jemstedt@su.se\nLinkedIn: linkedin.com/in/andreas-jemstedt\nORCID: https://orcid.org/0000-0003-3845-5468\nStockholm University Webpage: https://www.su.se/english/profiles/anje6261-1.191060"
+    "text": "If you’d like to get in touch, feel free to reach out by email or on LinkedIn.\n\nEmail: jemstedt@su.se\nLinkedIn: linkedin.com/in/andreas-jemstedt\nORCID: https://orcid.org/0000-0003-3845-5468\nStockholm University Webpage: https://www.su.se/english/profiles/anje6261-1.191060"
   },
   {
     "objectID": "projects/study_manual.html",
@@ -179,20 +179,20 @@
     "href": "index.html",
     "title": "Andreas Jemstedt",
     "section": "",
-    "text": "I’m a cognitive psychologist by training and currently work as an Associate Professor (Docent) at the Department of Education at Stockholm University. My research explores how people learn and retain information, how they make judgments under uncertainty, and how those judgments influence their behaviors."
+    "text": "I’m a cognitive psychologist and currently work as an Associate Professor (Docent) in the Department of Education at Stockholm University. My research focuses on how people learn and remember information, how they make decisions under uncertainty, and how these judgments shape their behavior. I have a strong interest in quantitative methods, particularly Bayesian modeling, as tools for understanding these cognitive processes."
   },
   {
     "objectID": "index.html#what-i-work-on",
     "href": "index.html#what-i-work-on",
     "title": "Andreas Jemstedt",
     "section": "What I work on",
-    "text": "What I work on\nMy research focuses on:\n\nHow we learn and forget over time\n\nHow learners monitor and direct their own learning\n\nHow we make decisions in situations of uncertainty\n\nThe use of quantitative methods, especially Bayesian modeling, to understand learning and behavior\n\nAlongside research, I teach courses on how insights from cognitive science and the science of learning can be applied in educational settings. This includes classroom practice, curriculum development, and the design of digital learning tools.\nI also work with data, both from my own research and in collaboration with others. I have occasionally worked with teams outside my main area on experimental design, statistical analysis, or modeling, particularly in projects involving behavioral or cognitive data."
+    "text": "What I work on\nMy research focuses on:\n\nHow we learn and forget over time\n\nHow learners monitor and direct their own learning\n\nHow we make decisions in situations of uncertainty\n\nThe use of quantitative methods, especially Bayesian modeling, to understand learning and behavior\n\nAlongside research, I teach courses on how insights from cognitive science and the science of learning can be applied in educational settings. For example, how it can be used to improve classroom practice, curriculum development, and the design of digital learning aids.\nI also work with data, both from my own research and in collaboration with others. I have occasionally worked with teams outside my main area on experimental design, statistical analysis, or modeling, particularly in projects involving behavioral or cognitive data."
   },
   {
     "objectID": "index.html#work-beyond-my-research-and-teaching",
     "href": "index.html#work-beyond-my-research-and-teaching",
     "title": "Andreas Jemstedt",
     "section": "Work Beyond My Research and Teaching",
-    "text": "Work Beyond My Research and Teaching\nMost of my work is academic, but I also contribute to projects beyond my own research and teaching. This usually include presentations and workshops, course design, report writing, and data analysis using statistical methods. I’m open to collaborations of various kinds, both within and outside the academic setting.\nIf you’re working on something related, or have data you’d like to explore, feel free to get in touch.\n📩 jemstedt@su.se"
+    "text": "Work Beyond My Research and Teaching\nMost of my work is academic, but I also contribute to projects beyond my own research and teaching. This usually include presentations and workshops, course design, report writing, and data analysis. I’m open to collaborations of various kinds, both within and outside the academic setting.\nIf you’re working on something related, or have data you’d like to explore, feel free to get in touch.\n📩 jemstedt@su.se"
   }
 ]
