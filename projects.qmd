@@ -1,5 +1,5 @@
 ---
-title: "Projects & Other Work"
+title: "A Selection of Projects"
 format: html
 page-layout: full
 ---
@@ -8,7 +8,7 @@ This page collects a few selected projects I’ve worked on, professional and ot
 
 ------------------------------------------------------------------------
 
-## Selected Professional Projects
+## A Selection of Professional Projects
 
 ------------------------------------------------------------------------
 
