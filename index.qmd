@@ -1,5 +1,5 @@
 ---
-title: "Andreas Jemstedt"
+title: ""
 format: html
 page-layout: full
 ---
