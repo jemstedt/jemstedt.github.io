@@ -1,0 +1,28 @@
+---
+title: "Project Alpha"
+format: html
+---
+
+[← Back to Projects](../projects.qmd){.button}
+
+# 🚀 Project Alpha
+
+This project simulates rocket trajectories under various environmental conditions. It's built with Python, uses NumPy for math, and Matplotlib for visualization.
+
+## Features
+
+-   Real-time simulation
+-   Adjustable parameters
+-   Exportable trajectory plots
+
+## Screenshots
+
+![Rocket simulation](images/rocket-sim-example.png)
+
+## Learn More
+
+You can find the source code on [GitHub](https://github.com/yourusername/project-alpha).
+
+------------------------------------------------------------------------
+
+[← Back to Projects](../projects.qmd){.button}

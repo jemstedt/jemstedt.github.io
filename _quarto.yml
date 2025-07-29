@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: .
+
+website:
+  title: "Andreas Jemstedt"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About        
+      - href: research.qmd
+        text: Research
+      - href: projects.qmd
+        text: Projects        
+      - href: contact.qmd
+        text: Contact
+
+format:
+  html:
+    theme: Flatly #Also try: Flatley
+    toc: true
+
+editor: visual
+execute:
+  engine: knitr

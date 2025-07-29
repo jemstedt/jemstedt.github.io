@@ -1,0 +1,97 @@
+---
+title: "Study Manual"
+format: html
+---
+
+[← Back to Projects](../projects.qmd){.button}
+
+I create a two-page study manual for one of my research projects. The manual teaches students to use evidence-based study techniques in two pages with bullet points. The purpose of the study was to test a cost-effective method of improving students self-regulated learning.
+
+The study: Jemstedt, A. (2024). Enhancing learning with a two-page study manual. *Learning and Instruction, 90*, 101852. <https://doi.org/10.1016/j.learninstruc.2023.101852>
+
+## 📄 Download the Manual as PDF
+
+-   [Download: English version](../pdfs/Study_manual_English.pdf)
+-   [Download: Swedish version](../pdfs/Study_manual_Swedish.pdf)
+
+------------------------------------------------------------------------
+
+## 📘 Study Manual
+
+Below you will find descriptions of three methods that can aid your learning. Besides this, the manual also makes suggestions on how you can plan your study time to use these methods in your studies.
+
+### Three methods that research has shown will aid your learning
+
+------------------------------------------------------------------------
+
+### 1. Deep processing of what you learn
+
+You will remember information better if you elaborate on it and make it meaningful, rather than simply reading the words.
+
+-   Create questions for yourself while you read which you can use to test yourself later. Use, for example, headings and concepts as a basis for your questions.
+
+    -   When possible, write your questions in the form of “why” questions. For example: *Why are polar bears white?*
+
+-   Write answers to your questions. If possible, do the following in your answers:
+
+    -   Write as if you were explaining to a person who has not learned what you have learned.\
+    -   Use concrete examples to clarify.\
+    -   Connect what you write to yourself or your personal experiences.\
+    -   Connect the information with things you have previously learned.
+
+-   In the same way, create questions and answers for new information you learn during teacher-led learning.
+
+-   Continuously update your questions and answers as you learn more throughout the course.
+
+------------------------------------------------------------------------
+
+### 2. Retrieval practice
+
+You will remember more of the course material if you test yourself on it instead of simply reading it again. However, it is important that you check that what you remember is correct.
+
+-   Test yourself on:
+
+    -   The questions you create while reading the course literature.\
+    -   Questions in your course book:
+        -   Check if your course book has questions at the end of each chapter.\
+        -   Check if your course book has a homepage with practice tests.\
+    -   Old exams and practice tests:
+        -   When you know the answer to a question, write it down and use it when you test yourself later.
+
+-   When you test yourself, first try to remember the answer before you read the answer. Read the answer to check that what you remember is correct.
+
+-   Test yourself on other questions before you test yourself on the same question again.
+
+------------------------------------------------------------------------
+
+### 3. Distributed practice
+
+When you study, you have limited time to study different parts of the course material. You will remember each part better if you spread out your study time over shorter sessions instead of studying everything in one long session. Avoid studying the same information repeatedly in a single session. Instead, space it out.
+
+-   The time between the sessions can be hours or days. The main thing is that you spread out your time.
+
+-   This also applies to self-testing. Read or test yourself on other material before testing yourself on the same questions again.
+
+------------------------------------------------------------------------
+
+## Plan your study time
+
+None of the methods above will improve your learning if you do not use them. To make use of the methods, plan your time so that you have time to apply them — and to revisit the same material multiple times.
+
+When planning, make sure to allocate time for:
+
+-   Reading the course literature according to your course’s schedule. While reading, follow the instructions under *Deep processing of what you learn*. Allow enough time to create good questions and answers.
+
+-   Testing yourself on material you learned earlier in the course. For example, test yourself on content from lectures 1 and 2 after attending lecture 3. Follow the instructions under *Retrieval practice*.
+
+-   Testing yourself on the same material at different points during the course. Follow the *Distributed practice* advice.
+
+Also consider the following tips:
+
+-   Use a calendar to plan your study time.\
+-   Include time for group assignments.\
+-   Full-time study equals about 40 hours per week — approximately 8 hours per weekday. This includes both independent and teacher-led learning.
+
+------------------------------------------------------------------------
+
+## [← Back to Projects](../projects.qmd){.button}

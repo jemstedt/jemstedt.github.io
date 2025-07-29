@@ -1,0 +1,34 @@
+---
+title: "About"
+format: html
+page-layout: full
+---
+
+## Education
+
+-   Ph.D. in Psychology, Stockholm University, 2018
+-   M.Sc. in Psychology, Stockholm University, 2013
+-   B.Sc. in Psychology, Stockholm University, 2011
+
+## Positions
+
+-   Associate Professor (Docent), Stockholm University, 2023–present
+-   Researcher and ICT pedagogue, Stockholm University, Jan–Nov 2023
+-   Owner and freelance educational advisor and data analyst, Rowboater AB, Nov 2022–present
+-   Postdoctoral Researcher, KTH Royal Institute of Technology, 2022–2023
+-   Associate Professor (temporary), Stockholm University, 2019–2021
+-   Ph.D. Student, Stockholm University, 2014–2018
+
+## Other Experience
+
+-   Research consultant, Stockholm University, 2019
+-   Research consultant, The Living History Forum, 2018
+-   Research assistant, The Royal Swedish Academy of Sciences, 2011–2014
+-   Research assistant, Stockholm University, 2012–2013
+-   Organizer, Nordic Learning Analytics Summer Institute (LASI Nordic), 2022
+
+## Grants
+
+-   *Rektors medel för kvalitetsutveckling av utbildning*, Stockholm University, 2024
+-   Riksbankens Jubileumsfond (P22–0573), 2023–2025
+-   Stiftelsen Lars Hiertas Minne, 2014

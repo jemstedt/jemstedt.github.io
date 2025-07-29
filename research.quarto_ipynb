@@ -1,0 +1,50 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Research\"\n",
+        "format: html\n",
+        "csl: apa.csl\n",
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "# Research\n",
+        "\n",
+        "Welcome to my research page. Below you'll find my academic publications, grouped by type.\n",
+        "\n",
+        "\n",
+        "::: {#refs}\n",
+        "\n",
+        "\n",
+        "\n",
+        "````{=markdown}\n",
+        "```{bibliography}\n",
+        "articles.bib\n",
+        "nocite: |\n",
+        "  @*\n",
+        "```\n",
+        "````\n",
+        "\n",
+        "\n",
+        "\n",
+        ":::\n"
+      ],
+      "id": "3fd4d688"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

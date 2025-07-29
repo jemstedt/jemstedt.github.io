@@ -1,0 +1,36 @@
+---
+title: "Andreas Jemstedt"
+format: html
+page-layout: full
+---
+
+::: {=html}
+<div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
+  <img src="images/profil.jpg" alt="Photo of Andreas Jemstedt" style="width: 160px; border-radius: 50%; border: 1px solid #ccc;">
+  <div><strong style="font-size: 1.5rem;">Andreas Jemstedt</strong><br>
+  Cognitive psychologist and Associate Professor (Docent)<br></div>
+</div>
+:::
+
+I’m a cognitive psychologis by training and currently work as an Associate Professor (Docent) at the Department of Education Stockholm University. My research explores how people learn and retain information, how they make judgments under uncertainty, and how those judgments influence their behaviours.
+
+## What I work on
+
+My research focuses on:
+
+-   How we learn and forget over time\
+-   How learners monitor and direct their own learning\
+-   How we make decisions in situations of uncertainty\
+-   The use of quantitative methods, especially Bayesian modeling, to understand learning and behavior
+
+Alongside research, I teach courses on how insights from cognitive science and the science of learning can be applied in educational settings. This includes classroom practice, curriculum development, and the design of digital learning tools.
+
+I also work with data, both from my own research and in collaboration with others. I have occasionally worked with teams outside my main area on experimental design, statistical analysis, or modeling, particularly in projects involving behavioral or cognitive data.
+
+## Work Beyond My Research and Teaching
+
+Most of my work is academic, but I also contribute to projects beyond my own research and teaching. This has included presentations and workshops, course design, report writing, and data analysis using statistical methods. I'm open to collaborations of various kinds, both within and outside the academic setting.
+
+If you're working on something related, or have data you'd like to explore, feel free to get in touch.
+
+📩 jemstedt\@su.se

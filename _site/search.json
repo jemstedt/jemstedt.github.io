@@ -1,0 +1,191 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Ph.D. in Psychology, Stockholm University, 2018\nM.Sc. in Psychology, Stockholm University, 2013\nB.Sc. in Psychology, Stockholm University, 2011"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "",
+    "text": "Ph.D. in Psychology, Stockholm University, 2018\nM.Sc. in Psychology, Stockholm University, 2013\nB.Sc. in Psychology, Stockholm University, 2011"
+  },
+  {
+    "objectID": "about.html#positions",
+    "href": "about.html#positions",
+    "title": "About",
+    "section": "Positions",
+    "text": "Positions\n\nAssociate Professor (Docent), Stockholm University, 2023–present\nResearcher and ICT pedagogue, Stockholm University, Jan–Nov 2023\nOwner and freelance educational advisor and data analyst, Rowboater AB, Nov 2022–present\nPostdoctoral Researcher, KTH Royal Institute of Technology, 2022–2023\nAssociate Professor (temporary), Stockholm University, 2019–2021\nPh.D. Student, Stockholm University, 2014–2018"
+  },
+  {
+    "objectID": "about.html#other-experience",
+    "href": "about.html#other-experience",
+    "title": "About",
+    "section": "Other Experience",
+    "text": "Other Experience\n\nResearch consultant, Stockholm University, 2019\nResearch consultant, The Living History Forum, 2018\nResearch assistant, The Royal Swedish Academy of Sciences, 2011–2014\nResearch assistant, Stockholm University, 2012–2013\nOrganizer, Nordic Learning Analytics Summer Institute (LASI Nordic), 2022"
+  },
+  {
+    "objectID": "about.html#grants",
+    "href": "about.html#grants",
+    "title": "About",
+    "section": "Grants",
+    "text": "Grants\n\nRektors medel för kvalitetsutveckling av utbildning, Stockholm University, 2024\nRiksbankens Jubileumsfond (P22–0573), 2023–2025\nStiftelsen Lars Hiertas Minne, 2014"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects & Other Work",
+    "section": "",
+    "text": "This page collects a few selected projects I’ve worked on, professional and otherwise."
+  },
+  {
+    "objectID": "projects.html#selected-professional-projects",
+    "href": "projects.html#selected-professional-projects",
+    "title": "Projects & Other Work",
+    "section": "Selected Professional Projects",
+    "text": "Selected Professional Projects\n\n\nExpert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’\nI contributed an expert text to the preparatory work for the Swedish Ministry of Education’s inquiry “Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81.” The inquiry examined how incorporating insights from cognitive science and the science of learning could strengthen the education of Swedish teachers.\n\n\nA two-page study manual to improve self-regulated learning\nI create a two-page study manual for one of my research projects. The manual teaches students to use evidence-based study techniques in two pages with bullet points. The of the study was to test a cost-effective method of improving students self-regulated learning. The manual is available in English and Swedish.\n\n\n[Free online course about evidence-based study techniques]\nAs a postdoc at KTH Royal Institute of Technology, I developed a free online course that teaches evidence-based study techniques using question-based learning (learn by answer questions and receive feedback). The course is freely available on one of their learning platforms.\n\n\n[Free ChatGPT agent that generates high-quality multiple choice questions with feedback]\nAs part of a project at Stockholm university, I developed a ChatGPT agent that helps teachers generate large amounts of multiple-choice questions with feedback for each response alternative. The aim of the project is to develop tools to make it easier for teachers aid their students self-regulated learning by providing them with high-quality study materials before and after their lectures, seminars and workshops.\n\n\n[One-page courses teachning topics the science of learning]"
+  },
+  {
+    "objectID": "projects.html#other",
+    "href": "projects.html#other",
+    "title": "Projects & Other Work",
+    "section": "Other",
+    "text": "Other\nSometimes I make things just to try something out or learn a new tool. Not everything fits neatly into a category, but I enjoy side projects that blend data, writing, design, or psychology.\n\nStochastic Clock\nHave you ever wished life was less predictable? As we grow older, uncertainty seeps out of our days, draining away the surprise and diminishing the thrill of each moment. Routine takes hold, and before you know it, excitement has quietly slipped through the cracks.\nTo recapture a bit of that lost uncertainty, I spent two evenings building a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone (a phenomenon I call stochastic drift). Use my clock, and life will feel a little less certain, and perhaps a little more alive, though not necessarily any better."
+  },
+  {
+    "objectID": "projects/expert_to_inquiry.html",
+    "href": "projects/expert_to_inquiry.html",
+    "title": "Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’",
+    "section": "",
+    "text": "← Back to Projects\nI contributed as a subject-matter expert to the preparatory work for the Swedish Ministry of Education’s inquiry “Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81”.\nLink: https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/2024/12/sou-202481/"
+  },
+  {
+    "objectID": "projects/expert_to_inquiry.html#back-to-projects",
+    "href": "projects/expert_to_inquiry.html#back-to-projects",
+    "title": "Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’",
+    "section": "← Back to Projects",
+    "text": "← Back to Projects"
+  },
+  {
+    "objectID": "projects/example_project.html",
+    "href": "projects/example_project.html",
+    "title": "Project Alpha",
+    "section": "",
+    "text": "← Back to Projects"
+  },
+  {
+    "objectID": "projects/example_project.html#features",
+    "href": "projects/example_project.html#features",
+    "title": "Project Alpha",
+    "section": "Features",
+    "text": "Features\n\nReal-time simulation\nAdjustable parameters\nExportable trajectory plots"
+  },
+  {
+    "objectID": "projects/example_project.html#screenshots",
+    "href": "projects/example_project.html#screenshots",
+    "title": "Project Alpha",
+    "section": "Screenshots",
+    "text": "Screenshots\n\n\n\nRocket simulation"
+  },
+  {
+    "objectID": "projects/example_project.html#learn-more",
+    "href": "projects/example_project.html#learn-more",
+    "title": "Project Alpha",
+    "section": "Learn More",
+    "text": "Learn More\nYou can find the source code on GitHub.\n\n← Back to Projects"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "This page collects my academic publications, organized by format.\nMy work spans topics in cognitive psychology, memory, learning, and decision-making. I am especially interested in how people monitor their own understanding, how they regulate their learning over time, and how we can model these processes using quantitative methods.\nThe list below includes journal articles, book chapters, and selected conference presentations."
+  },
+  {
+    "objectID": "research.html#journal-articles",
+    "href": "research.html#journal-articles",
+    "title": "Research",
+    "section": "Journal Articles",
+    "text": "Journal Articles\n\nArvidsson, K., Lundell, F. F., Zakrzewska, M., & Jemstedt, A. (2024). What target language use characterizes high-performing L2 learners in a migration context? International Journal of Bilingualism. https://doi.org/10.1177/13670069241298768\nJemstedt, A. (2024). Enhancing learning with a two-page study manual. Learning and Instruction, 90, 101852. https://doi.org/10.1016/j.learninstruc.2023.101852\nBälter, O., Glassey, R., Jemstedt, A., & Bosk, D. (2024). Pure Question-Based Learning. Education Sciences, 14(8), Article 8. https://doi.org/10.3390/educsci14080882\nJemstedt, A., Bälter, O., Gavel, A., Glassey, R., & Bosk, D. (2024). Less to produce and less to consume: The advantage of pure question-based learning. Interactive Learning Environments, 0(0), 1–22. https://doi.org/10.1080/10494820.2024.2362830\nBälter, O., Jemstedt, A., Abraham, F. J., Osowski, C. P., Mugisha, R., & Bälter, K. (2023). Effect of Personalized Email-Based Reminders on Participants’ Timeliness in an Online Education Program: Randomized Controlled Trial. JMIR Formative Research, 7(1), e43977. https://doi.org/10.2196/43977\nForsberg Lundell, F., Arvidsson, K., & Jemstedt, A. (2022b). What factors predict perceived nativelikeness in long-term L2 users? Second Language Research, 1–26. https://doi.org/10.1177/02676583221091396\nForsberg Lundell, F., Arvidsson, K., & Jemstedt, A. (2022a). The importance of psychological and social factors in adult SLA: The case of productive collocation knowledge in L2 Swedish of L1 French long-term residents. Studies in Second Language Acquisition, 1–13. https://doi.org/10.1017/S0272263122000419\nArvidsson, K., & Jemstedt, A. (2022). The Perceived Importance of Language Skills in Europe—The Case of Swedish Migrants in France. Languages, 7(4), Article 4. https://doi.org/10.3390/languages7040290\nKubik, V., Jemstedt, A., Eshratabadi, H. M., Schwartz, B. L., & Jönsson, F. U. (2022). The underconfidence-with-practice effect in action memory: The contribution of retrieval practice to metacognitive monitoring. Metacognition and Learning, 17(2), 375–398. https://doi.org/10.1007/s11409-021-09288-2\nJemstedt, A., Schwartz, B. L., & Jönsson, F. U. (2018). Ease-of-learning judgments are based on both processing fluency and beliefs. Memory, 26(6), 807–815. https://doi.org/10.1080/09658211.2017.1410849\nJemstedt, A., Kubik, V., & Jönsson, F. U. (2017). What moderates the accuracy of ease of learning judgments? Metacognition and Learning, 12(3), 337–355. https://doi-org.ezp.sub.su.se/10.1007/s11409-017-9172-3"
+  },
+  {
+    "objectID": "research.html#book-chapters",
+    "href": "research.html#book-chapters",
+    "title": "Research",
+    "section": "Book Chapters",
+    "text": "Book Chapters\n\nSchwartz, B. L., & Jemstedt, A. (2021). The Role of Fluency and Dysfluency in Metacognitive Experiences. In D. Moraitou & P. Metallidou (Eds.), Trends and Prospects in Metacognition Research across the Life Span: A Tribute to Anastasia Efklides (pp. 25–40). Springer International Publishing. https://doi.org/10.1007/978-3-030-51673-4_2"
+  },
+  {
+    "objectID": "research.html#conference-contributions",
+    "href": "research.html#conference-contributions",
+    "title": "Research",
+    "section": "Conference Contributions",
+    "text": "Conference Contributions\n\nSundelin, T., Jemstedt, A., Gavel, A., Axelsson, J., & Schwartz, B. L. (2024b, November). Sleep deprivation and metacognitive accuracy. Proceedings of the Psychonomic Society Annual Meeting.\nSundelin, T., Jemstedt, A., Gavel, A., Axelsson, J., & Schwartz, B. L. (2024a, October). Metacognition during sleep deprivation. Proceedings of SweCog (Swedish Cognitive Science Society) Conference.\nForsberg Lundell, F., Arvidsson, K., & Jemstedt, A. (2022, August). The impact of psychological and social factors on productive collocation knowledge in French long-term residents in Sweden. EuroSLA 31.\nForsberg Lundell, F., Arvidsson, K., & Jemstedt, A. (2021, June). What factors predict perceived nativelikeness among long-residency L2 users? LaDeLi Workshop: The Interface of Emotion and Cognition in Language Learning and Use (L1, L2, Lx).\nJemstedt, A. (2017, March). Metacognitive judgments and the predictive validity of available information. 110th Annual Southern Society for Philosophy and Psychology Meeting (SSPP).\nJemstedt, A., Kubik, V., & Jönsson, F. (2016, July). The effect of pre- and post-study choices on learning paired associates. 6th International Conference on Memory (ICOM-6).\nJemstedt, A. (2015, May). Ease of learning judgments: Two ways to increase their accuracy. 27th Association for Psychological Science Annual Convention (APS)."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact & Links",
+    "section": "",
+    "text": "If you’d like to get in touch, feel free to reach out by email. You can also find me on LinkedIn and ORCID using the links below.\n\nEmail: jemstedt@su.se\nLinkedIn: linkedin.com/in/andreas-jemstedt\nORCID: https://orcid.org/0000-0003-3845-5468\n\nI’m always interested in connecting with others working on questions related to learning, memory, or the analysis of behavioral and cognitive data."
+  },
+  {
+    "objectID": "projects/study_manual.html",
+    "href": "projects/study_manual.html",
+    "title": "Study Manual",
+    "section": "",
+    "text": "← Back to Projects\nThe study manual in this page was created for this research project: Jemstedt, A. (2024). Enhancing learning with a two-page study manual. Learning and Instruction, 90, 101852. https://doi.org/10.1016/j.learninstruc.2023.101852"
+  },
+  {
+    "objectID": "projects/study_manual.html#download-as-pdf",
+    "href": "projects/study_manual.html#download-as-pdf",
+    "title": "Study Manual",
+    "section": "📄 Download as PDF",
+    "text": "📄 Download as PDF\n\nDownload: English version\nDownload: Swedish version"
+  },
+  {
+    "objectID": "projects/study_manual.html#study-manual",
+    "href": "projects/study_manual.html#study-manual",
+    "title": "Study Manual",
+    "section": "📘 Study Manual",
+    "text": "📘 Study Manual\nBelow you will find descriptions of three methods that can aid your learning. Besides this, the manual also makes suggestions on how you can plan your study time to use these methods in your studies.\n\nThree methods that research has shown will aid your learning\n\n\n\n1. Deep processing of what you learn\nYou will remember information better if you elaborate on it and make it meaningful, rather than simply reading the words.\n\nCreate questions for yourself while you read which you can use to test yourself later. Use, for example, headings and concepts as a basis for your questions.\n\nWhen possible, write your questions in the form of “why” questions. For example: Why are polar bears white?\n\nWrite answers to your questions. If possible, do the following in your answers:\n\nWrite as if you were explaining to a person who has not learned what you have learned.\n\nUse concrete examples to clarify.\n\nConnect what you write to yourself or your personal experiences.\n\nConnect the information with things you have previously learned.\n\nIn the same way, create questions and answers for new information you learn during teacher-led learning.\nContinuously update your questions and answers as you learn more throughout the course.\n\n\n\n\n2. Retrieval practice\nYou will remember more of the course material if you test yourself on it instead of simply reading it again. However, it is important that you check that what you remember is correct.\n\nTest yourself on:\n\nThe questions you create while reading the course literature.\n\nQuestions in your course book:\n\nCheck if your course book has questions at the end of each chapter.\n\nCheck if your course book has a homepage with practice tests.\n\n\nOld exams and practice tests:\n\nWhen you know the answer to a question, write it down and use it when you test yourself later.\n\n\nWhen you test yourself, first try to remember the answer before you read the answer. Read the answer to check that what you remember is correct.\nTest yourself on other questions before you test yourself on the same question again.\n\n\n\n\n3. Distributed practice\nWhen you study, you have limited time to study different parts of the course material. You will remember each part better if you spread out your study time over shorter sessions instead of studying everything in one long session. Avoid studying the same information repeatedly in a single session. Instead, space it out.\n\nThe time between the sessions can be hours or days. The main thing is that you spread out your time.\nThis also applies to self-testing. Read or test yourself on other material before testing yourself on the same questions again."
+  },
+  {
+    "objectID": "projects/study_manual.html#plan-your-study-time",
+    "href": "projects/study_manual.html#plan-your-study-time",
+    "title": "Study Manual",
+    "section": "Plan your study time",
+    "text": "Plan your study time\nNone of the methods above will improve your learning if you do not use them. To make use of the methods, plan your time so that you have time to apply them — and to revisit the same material multiple times.\nWhen planning, make sure to allocate time for:\n\nReading the course literature according to your course’s schedule. While reading, follow the instructions under Deep processing of what you learn. Allow enough time to create good questions and answers.\nTesting yourself on material you learned earlier in the course. For example, test yourself on content from lectures 1 and 2 after attending lecture 3. Follow the instructions under Retrieval practice.\nTesting yourself on the same material at different points during the course. Follow the Distributed practice advice.\n\nAlso consider the following tips:\n\nUse a calendar to plan your study time.\n\nInclude time for group assignments.\n\nFull-time study equals about 40 hours per week — approximately 8 hours per weekday. This includes both independent and teacher-led learning.\n\n\n← Back to Projects"
+  },
+  {
+    "objectID": "projects/stochastic_clock.html",
+    "href": "projects/stochastic_clock.html",
+    "title": "Stochastic Clock",
+    "section": "",
+    "text": "← Back to Projects\nHave you ever wished life were less predictable? This experimental clock trades precision for surprise, ticking forward at random intervals rather than steady seconds. While it tells the right time on average, it rarely tells it now. Let it run, and you may drift into your own private time zone, a phenomenon I call stochastic drift.\n\n← Back to Projects"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Andreas Jemstedt",
+    "section": "",
+    "text": "Andreas Jemstedt Cognitive psychologist and Associate Professor (Docent)\nI work at the intersection of learning, memory, and decision-making. These are fields that ask big questions about how we know what we know, and how we use that knowledge in the world.\nBy training, I’m a cognitive psychologist, and I’m currently an Associate Professor (Docent) at Stockholm University. My research explores how people retain information, how they judge their own learning, and how those judgments influence what they choose to do next."
+  },
+  {
+    "objectID": "index.html#what-i-work-on",
+    "href": "index.html#what-i-work-on",
+    "title": "Andreas Jemstedt",
+    "section": "What I work on",
+    "text": "What I work on\nMy research focuses on:\n\nHow we learn and forget over time\n\nHow learners monitor and direct their own learning\n\nHow we make decisions in situations of uncertainty\n\nThe use of quantitative methods, especially Bayesian modeling, to understand learning and behavior\n\nAlongside research, I teach courses on how insights from cognitive science and the science of learning can be applied in educational settings. This includes classroom practice, curriculum development, and the design of digital learning tools.\nI also work with data, both from my own research and in collaboration with others. I have occasionally worked with teams outside my main area on experimental design, statistical analysis, or modeling, particularly in projects involving behavioral or cognitive data."
+  },
+  {
+    "objectID": "index.html#work-beyond-my-research-and-teaching",
+    "href": "index.html#work-beyond-my-research-and-teaching",
+    "title": "Andreas Jemstedt",
+    "section": "Work Beyond My Research and Teaching",
+    "text": "Work Beyond My Research and Teaching\nMost of my work is academic, but I also contribute to projects beyond my own research and teaching. This has included presentations and workshops, course design, report writing, and data analysis using statistical methods. I’m open to collaborations of various kinds, both within and outside the academic setting.\nIf you’re working on something related, or have data you’d like to explore, feel free to get in touch.\n📩 jemstedt@su.se"
+  }
+]

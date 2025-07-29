@@ -1,0 +1,45 @@
+---
+title: "Projects & Other Work"
+format: html
+page-layout: full
+---
+
+This page collects a few selected projects I’ve worked on, professional and otherwise.
+
+------------------------------------------------------------------------
+
+## Selected Professional Projects
+
+------------------------------------------------------------------------
+
+### [Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’](projects/expert_to_inquiry.qmd)
+
+I contributed an expert text to the preparatory work for the Swedish Ministry of Education's inquiry "Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81." The inquiry examined how incorporating insights from cognitive science and the science of learning could strengthen the education of Swedish teachers.
+
+### [A two-page study manual to improve self-regulated learning](projects/study_manual.qmd)
+
+A study manual created for one of my research projects. The manual teaches evidence-based study techniques.
+
+### \[Free online course about evidence-based study techniques\]
+
+As a postdoc at KTH Royal Institute of Technology, I developed a free online course that teaches evidence-based study techniques using question-based learning (learn by answer questions and receive feedback). The course is freely available on one of their learning platforms.
+
+### \[Free ChatGPT agent that generates high-quality multiple choice questions with feedback\]
+
+As part of a project at Stockholm university, I developed a ChatGPT agent that helps teachers generate large amounts of multiple-choice questions with feedback for each response alternative. The aim of the project is to develop tools to make it easier for teachers aid their students self-regulated learning by providing them with high-quality study materials before and after their lectures, seminars and workshops.
+
+### \[One-page courses teachning topics the science of learning\]
+
+------------------------------------------------------------------------
+
+## Other
+
+Sometimes I make things just to try something out or learn a new tool. Not everything fits neatly into a category, but I enjoy side projects that blend data, writing, design, or psychology.
+
+### [Stochastic Clock](projects/stochastic_clock.qmd)
+
+Have you ever wished life was less predictable? As we grow older, uncertainty seeps out of our days, draining away the surprise and diminishing the thrill of each moment. Routine takes hold, and before you know it, excitement has quietly slipped through the cracks.
+
+To recapture a bit of that lost uncertainty, I spent two evenings building a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone (a phenomenon I call stochastic drift). Use my clock, and life will feel a little less certain, and perhaps a little more alive, though not necessarily any better.
+
+------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+---
+title: "Stochastic Clock"
+format:
+  html:
+    sanitize: false
+resources:
+  - "*.html"
+---
+
+[← Back to Projects](../projects.qmd){.button}
+
+Have you ever wished life were less predictable? This experimental clock trades precision for surprise, ticking forward at random intervals rather than steady seconds. While it tells the right time on average, it rarely tells it now. Let it run, and you may drift into your own private time zone, a phenomenon I call stochastic drift. 
+
+```{=html}
+<iframe
+  src="stochastic_clock_original.html"
+  width="100%"
+  height="1200"
+  frameborder="0"
+  style="border:1px solid #ddd; border-radius:4px;"
+  loading="lazy"
+></iframe>
+```
+
+[← Back to Projects](../projects.qmd){.button}
