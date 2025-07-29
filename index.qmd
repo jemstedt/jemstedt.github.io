@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Andreas Jemstedt"
 format: html
 page-layout: full
 ---
@@ -7,11 +7,8 @@ page-layout: full
 ::: {=html}
 <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
   <img src="images/profil.jpg" alt="Photo of Andreas Jemstedt" style="width: 160px; border-radius: 50%; border: 1px solid #ccc;">
-  <div><strong style="font-size: 1.5rem;">Andreas Jemstedt</strong><br>
-  Cognitive psychologist and Associate Professor (Docent)<br></div>
 </div>
 :::
-
 I’m a cognitive psychologist by training and currently work as an Associate Professor (Docent) at the Department of Education at Stockholm University. My research explores how people learn and retain information, how they make judgments under uncertainty, and how those judgments influence their behaviors.
 
 ## What I work on
