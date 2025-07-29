@@ -8,7 +8,7 @@ This page collects a few selected projects I’ve worked on, professional and ot
 
 ------------------------------------------------------------------------
 
-## A Selection of Professional Projects
+## Professional Projects
 
 ------------------------------------------------------------------------
 
@@ -32,7 +32,7 @@ As part of a project at Stockholm university, I developed a ChatGPT agent that h
 
 ------------------------------------------------------------------------
 
-## Other
+## Other Projects
 
 Sometimes I make things just to try something out or learn a new tool. Not everything fits neatly into a category, but I enjoy side projects that blend data, writing, design, or psychology.
 
