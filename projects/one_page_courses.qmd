@@ -1,0 +1,9 @@
+---
+title: "One-page courses"
+---
+
+As a summer project, I wrote a couple of articles on Substack about topics related to cognitive science and learning. The articles cover, for example, the basics of retrieval practice and spaced practice.
+
+<https://onepagecourses.substack.com/>
+
+![](images/one-page courses.png)

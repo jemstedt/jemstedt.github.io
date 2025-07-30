@@ -1,0 +1,11 @@
+---
+title: "Course about evidence-based study techniques"
+---
+
+As a postdoc at KTH Royal Institute of Technology, I developed a free 30-minute online course that teaches evidence-based study techniques using question-based learning (learn by answer questions and receive feedback).
+
+You can access the course for free here. Just sign in as a guest.
+
+<https://qbl.sys.kth.se/sections/evidensbaserade_studietekniker_063l3>
+
+![](images/KTH_course.png)

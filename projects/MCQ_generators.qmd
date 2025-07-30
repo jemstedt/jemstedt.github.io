@@ -1,0 +1,13 @@
+---
+title: "MCQ Generators"
+---
+
+As part of a project at Stockholm university, I developed a ChatGPT GPTs that helps teachers generate large amounts of multiple-choice questions with feedback for each response alternative. The aim of the project is to develop tools to make it easier for teachers aid their students self-regulated learning by providing them with high-quality study materials before and after their lectures, seminars and workshops.
+
+The GPTs have slightly different flavor and flexibility (how much it asks you to provide info about your topic). I am still working on ways of making the GPTs create harder and more high-quality questions.
+
+### You can access the GPTs through these links:
+
+**MCQ creation assistant**: <https://chatgpt.com/g/g-uW7KC4U7M-mcq-creation-assistant>
+
+**Eric's and Andreas' MCQ bot**: <https://chatgpt.com/g/g-67516b00597881919a6960fc5ae0983d-eric-s-and-andreas-mcq-bot>\

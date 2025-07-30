@@ -5,7 +5,7 @@ format: html
 
 [← Back to Projects](../projects.qmd){.button}
 
-I contributed as a subject-matter expert to the preparatory work for the Swedish Ministry of Education’s inquiry **"Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81"**.
+I contributed as an expert to the preparatory work for the Swedish Ministry of Education's inquiry **"Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81".** The inquiry examined how incorporating insights from cognitive science and the science of learning could strengthen the education of Swedish teachers.
 
 Link: <https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/2024/12/sou-202481/>
 
