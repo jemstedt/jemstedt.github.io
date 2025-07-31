@@ -11,7 +11,7 @@ I’m a cognitive psychologist and currently work as an Associate Professor (Doc
 </div>
 :::
 
-## What I work on
+## Research and Teaching
 
 My research focuses on:
 
@@ -24,7 +24,7 @@ Alongside research, I teach courses on how insights from cognitive science and t
 
 I also work with data, both from my own research and in collaboration with others. I have occasionally worked with teams outside my main area on experimental design, statistical analysis, or modeling, particularly in projects involving behavioral or cognitive data.
 
-## Work Beyond My Research and Teaching
+## Other Work
 
 Most of my work is academic, but I also contribute to projects beyond my own research and teaching. This usually include presentations and workshops, course design, report writing, and data analysis. I'm open to collaborations of various kinds, both within and outside the academic setting.
 
