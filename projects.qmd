@@ -4,7 +4,7 @@ format: html
 page-layout: full
 ---
 
-This page collects a few selected projects I’ve worked on, professional and otherwise.
+This is a collection of a selection of projects I’ve worked on, professional and otherwise.
 
 ------------------------------------------------------------------------
 

@@ -3,13 +3,13 @@ title: "Andreas Jemstedt"
 format: html
 page-layout: full
 ---
+::: {.container style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 2em;"}
+<img src="images/profil.jpg" alt="Photo of Andreas Jemstedt" style="max-width: 150px; height: auto; border-radius: 50%; border: 1px solid #ccc;" />
 
-::: {=html}
-<div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap;">
-  <img src="images/profil.jpg" alt="Photo of Andreas Jemstedt" style="width: 160px; border-radius: 50%; border: 1px solid #ccc;">
+<div>
+I’m a cognitive psychologist and currently work as an Associate Professor (Docent) in the Department of Education at Stockholm University. My research focuses on how people learn and remember information, how they make decisions under uncertainty, and how these judgments shape their behavior. I have a strong interest in quantitative methods, particularly Bayesian modeling, as tools for understanding these cognitive processes.
 </div>
 :::
-I’m a cognitive psychologist and currently work as an Associate Professor (Docent) in the Department of Education at Stockholm University. My research focuses on how people learn and remember information, how they make decisions under uncertainty, and how these judgments shape their behavior. I have a strong interest in quantitative methods, particularly Bayesian modeling, as tools for understanding these cognitive processes.
 
 ## What I work on
 
