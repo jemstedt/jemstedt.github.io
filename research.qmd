@@ -12,17 +12,18 @@ The list below includes journal articles, book chapters, and selected conference
 
 ## Journal Articles
 
-1.  Arvidsson, K., Lundell, F. F., Zakrzewska, M., & **Jemstedt, A.** (2024). What target language use characterizes high-performing L2 learners in a migration context? *International Journal of Bilingualism*. <https://doi.org/10.1177/13670069241298768>
-2.  **Jemstedt, A.** (2024). Enhancing learning with a two-page study manual. *Learning and Instruction, 90*, 101852. <https://doi.org/10.1016/j.learninstruc.2023.101852>
-3.  Bälter, O., Glassey, R., **Jemstedt, A.**, & Bosk, D. (2024). Pure Question-Based Learning. *Education Sciences, 14*(8), Article 8. <https://doi.org/10.3390/educsci14080882>
-4.  **Jemstedt, A.**, Bälter, O., Gavel, A., Glassey, R., & Bosk, D. (2024). Less to produce and less to consume: The advantage of pure question-based learning. *Interactive Learning Environments, 0*(0), 1–22. <https://doi.org/10.1080/10494820.2024.2362830>
-5.  Bälter, O., **Jemstedt, A.**, Abraham, F. J., Osowski, C. P., Mugisha, R., & Bälter, K. (2023). Effect of Personalized Email-Based Reminders on Participants’ Timeliness in an Online Education Program: Randomized Controlled Trial. *JMIR Formative Research, 7*(1), e43977. <https://doi.org/10.2196/43977>
-6.  Forsberg Lundell, F., Arvidsson, K., & **Jemstedt, A.** (2022b). What factors predict perceived nativelikeness in long-term L2 users? *Second Language Research, 1–26*. <https://doi.org/10.1177/02676583221091396>
-7.  Forsberg Lundell, F., Arvidsson, K., & **Jemstedt, A.** (2022a). The importance of psychological and social factors in adult SLA: The case of productive collocation knowledge in L2 Swedish of L1 French long-term residents. *Studies in Second Language Acquisition, 1–13*. <https://doi.org/10.1017/S0272263122000419>
-8.  Arvidsson, K., & **Jemstedt, A.** (2022). The Perceived Importance of Language Skills in Europe—The Case of Swedish Migrants in France. *Languages, 7*(4), Article 4. <https://doi.org/10.3390/languages7040290>
-9.  Kubik, V., **Jemstedt, A.**, Eshratabadi, H. M., Schwartz, B. L., & Jönsson, F. U. (2022). The underconfidence-with-practice effect in action memory: The contribution of retrieval practice to metacognitive monitoring. *Metacognition and Learning, 17*(2), 375–398. <https://doi.org/10.1007/s11409-021-09288-2>
-10. **Jemstedt, A.**, Schwartz, B. L., & Jönsson, F. U. (2018). Ease-of-learning judgments are based on both processing fluency and beliefs. *Memory, 26*(6), 807–815. <https://doi.org/10.1080/09658211.2017.1410849>
-11. **Jemstedt, A.**, Kubik, V., & Jönsson, F. U. (2017). What moderates the accuracy of ease of learning judgments? *Metacognition and Learning, 12*(3), 337–355. <https://doi-org.ezp.sub.su.se/10.1007/s11409-017-9172-3>
+1.  Sundelin, T., **Jemstedt, A**., Gavel, A., Schwartz, B. L., & Axelsson, J. (n.d.). The Effect of Sleep Loss on Retrospective Metacognitive Judgements Across Five Cognitive Tests. *Journal of Sleep Research*, e70141. <https://doi.org/10.1111/jsr.70141>
+2.  Arvidsson, K., Lundell, F. F., Zakrzewska, M., & **Jemstedt, A.** (2024). What target language use characterizes high-performing L2 learners in a migration context? *International Journal of Bilingualism*. <https://doi.org/10.1177/13670069241298768>
+3.  **Jemstedt, A.** (2024). Enhancing learning with a two-page study manual. *Learning and Instruction, 90*, 101852. <https://doi.org/10.1016/j.learninstruc.2023.101852>
+4.  Bälter, O., Glassey, R., **Jemstedt, A.**, & Bosk, D. (2024). Pure Question-Based Learning. *Education Sciences, 14*(8), Article 8. <https://doi.org/10.3390/educsci14080882>
+5.  **Jemstedt, A.**, Bälter, O., Gavel, A., Glassey, R., & Bosk, D. (2024). Less to produce and less to consume: The advantage of pure question-based learning. *Interactive Learning Environments, 0*(0), 1–22. <https://doi.org/10.1080/10494820.2024.2362830>
+6.  Bälter, O., **Jemstedt, A.**, Abraham, F. J., Osowski, C. P., Mugisha, R., & Bälter, K. (2023). Effect of Personalized Email-Based Reminders on Participants’ Timeliness in an Online Education Program: Randomized Controlled Trial. *JMIR Formative Research, 7*(1), e43977. <https://doi.org/10.2196/43977>
+7.  Forsberg Lundell, F., Arvidsson, K., & **Jemstedt, A.** (2022b). What factors predict perceived nativelikeness in long-term L2 users? *Second Language Research, 1–26*. <https://doi.org/10.1177/02676583221091396>
+8.  Forsberg Lundell, F., Arvidsson, K., & **Jemstedt, A.** (2022a). The importance of psychological and social factors in adult SLA: The case of productive collocation knowledge in L2 Swedish of L1 French long-term residents. *Studies in Second Language Acquisition, 1–13*. <https://doi.org/10.1017/S0272263122000419>
+9.  Arvidsson, K., & **Jemstedt, A.** (2022). The Perceived Importance of Language Skills in Europe—The Case of Swedish Migrants in France. *Languages, 7*(4), Article 4. <https://doi.org/10.3390/languages7040290>
+10. Kubik, V., **Jemstedt, A.**, Eshratabadi, H. M., Schwartz, B. L., & Jönsson, F. U. (2022). The underconfidence-with-practice effect in action memory: The contribution of retrieval practice to metacognitive monitoring. *Metacognition and Learning, 17*(2), 375–398. <https://doi.org/10.1007/s11409-021-09288-2>
+11. **Jemstedt, A.**, Schwartz, B. L., & Jönsson, F. U. (2018). Ease-of-learning judgments are based on both processing fluency and beliefs. *Memory, 26*(6), 807–815. <https://doi.org/10.1080/09658211.2017.1410849>
+12. **Jemstedt, A.**, Kubik, V., & Jönsson, F. U. (2017). What moderates the accuracy of ease of learning judgments? *Metacognition and Learning, 12*(3), 337–355. <https://doi-org.ezp.sub.su.se/10.1007/s11409-017-9172-3>
 
 ## Book Chapters
 
