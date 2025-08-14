@@ -24,7 +24,7 @@ A study manual created for one of my research projects. The manual teaches evide
 
 As a postdoc at KTH, I created a free 30-minute online course on evidence-based study techniques using question-based learning.
 
-### [ChatGPT GPTs that generate multiple-choice questions with feedback](projects/MCQ_generators.qmd)
+### [AI tools that generate multiple-choice questions with feedback](projects/MCQ_generators.qmd)
 
 I created ChatGPT tools at Stockholm University to help teachers generate feedback-rich quizzes that support student self-regulated learning.
 
