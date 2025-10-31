@@ -9,7 +9,7 @@ resources:
 
 [← Back to Projects](../projects.qmd){.button}
 
-Have you ever wished life were less predictable? This experimental clock trades precision for surprise, ticking forward at random intervals rather than steady seconds. While it tells the right time on average, it rarely tells it now. Let it run, and you may drift into your own private time zone, a phenomenon I call stochastic drift.
+Have you ever wished life were less predictable? This experimental clock trades precision for surprise, ticking forward at random intervals rather than steady seconds. While it tells the right time on average, it rarely tells it now. Let it run, and you may drift into your own private time zone, a phenomenon called stochastic drift.
 
 ```{=html}
 <iframe
