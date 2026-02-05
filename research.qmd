@@ -6,7 +6,7 @@ execute:
   echo: false
 ---
 
-My work spans topics in cognitive psychology, memory, learning, and decision-making. I am especially interested in how people monitor their own understanding, how they regulate their learning over time, and how we can model these processes.
+My work spans topics in cognitive psychology, memory, learning, metacognition, and decisions under uncertainty. I am especially interested in how people monitor their own understanding, how they regulate their learning over time, and how we can model these processes.
 
 The list below includes journal articles, book chapters, and selected conference presentations.
 
