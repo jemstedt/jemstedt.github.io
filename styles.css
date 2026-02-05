@@ -1,1 +1,7 @@
 /* css styles */
+/* Wrap *all* code blocks */
+pre, pre code, div.sourceCode pre {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-x: visible !important;
+}
