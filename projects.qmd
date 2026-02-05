@@ -46,6 +46,6 @@ Sometimes I make things just to try something out or learn a new tool. Not every
 
 Have you ever wished life was less predictable? As we grow older, uncertainty seeps out of our days, draining away the surprise and diminishing the thrill of each moment. Routine takes hold, and before you know it, excitement has quietly slipped through the cracks.
 
-To recapture a bit of that lost uncertainty, I spent two evenings building a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone (a phenomenon I call stochastic drift). Use my clock, and life will feel a little less certain, and perhaps a little more alive, though not necessarily any better.
+To recapture a bit of that lost uncertainty, I spent two evenings building a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone. Use my clock, and life will feel a little less certain, and perhaps a little more alive, though not necessarily any better.
 
 ------------------------------------------------------------------------
