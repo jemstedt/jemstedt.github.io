@@ -19,7 +19,7 @@ website:
 
 format:
   html:
-    theme: Flatly #Also try: Flatley
+    theme: Journal
     toc: true
 
 editor: visual
