@@ -22,6 +22,8 @@ Mental production rate is influenced by task difficulty and the current mental e
 
 For example, in Jemstedt et al (2018) participants were shown words either written in all upper-case letters (e.g., EFFORT), or with every other letter being lower-case (eFfOrT) and asked to learn them for a later test. Over the two types of items, participants likely had a similar expected mental production rate based on their general experience of reading words, as they had no prior experience with a task like this. As such, when they read eFfOrT, the rate by which the word came to mind was lower than expected. That is, it took longer for them to read it than common words would usually take. This led their mental effort to increase to compensate. See Figure 1 below for a visualization of how mental effort and mental production rate change over an imagined task where a couple of words are processed in an experiment like this.
 
+A useful analogy is the how a driver adjusts the speed of a car, where mental effort is how hard the accelerator is pressed, mental production rate is the car’s speed, and task difficulty is the slope of the road, such that steeper uphill sections require increasingly forceful acceleration to maintain the same speed.
+
 **Figure 1.**. Figure illustrates an imagined experiment where a participant is trying to study six words (upper x-axis) for 5 seconds each (lower x-axis). How the word is shown (all upper-case letters a mix of upper- and lower-case letters) affects task difficulty, which impacts mental production rate, which in turn affects mental effort. The grey horizontal field shows the accepted/expected production rate for the task, which the model aims for the production rate to be within. The y-axis shows the level of production rate (blue line) and level of mental effort (orange line).
 
 ```{r}
@@ -171,3 +173,4 @@ print(p)
 
 
 ```
+
