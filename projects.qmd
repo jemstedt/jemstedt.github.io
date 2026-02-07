@@ -42,6 +42,9 @@ I created an AI assistant that helps teachers create multiple-choice questions w
 
 Sometimes I make things just to try something out or learn a new tool. Not everything fits neatly into a category, but I enjoy side projects that blend data, writing, design, or psychology.
 
+### [A Proto Theory About Mental Effort and Mental Production Rate](projects/mental_effort.qmd)
+Here I sketch out a proto-theory born from a concussion, proposing that processing fluency is best understood as an interaction between mental effort and mental production rate.
+
 ### [Stochastic Clock](projects/stochastic_clock.qmd)
 
 Have you ever wished life was less predictable? As we grow older, uncertainty seeps out of our days, draining away the surprise and diminishing the thrill of each moment. Routine takes hold, and before you know it, excitement has quietly slipped through the cracks.
