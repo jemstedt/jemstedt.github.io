@@ -12,7 +12,8 @@ page-layout: full
 
 ## Positions
 
--   Associate Professor (Docent), Stockholm University, 2023–present
+-   Associate Professor (Docent), Stockholm University, 2025–present
+-   Senior Lecturer, Stockholm University, 2023-2025
 -   Researcher and ICT pedagogue, Stockholm University, 2023
 -   Owner and freelance expert in cognitive science and data analysis, Rowboater AB, 2022–present
 -   Postdoctoral Researcher, KTH Royal Institute of Technology, 2022–2023
