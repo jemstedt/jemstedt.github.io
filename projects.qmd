@@ -20,10 +20,6 @@ Contributed as an expert to the Swedish Ministry of Education's inquiry on impro
 
 A study manual created for one of my research projects. The manual teaches evidence-based study techniques.
 
-### [Free online course about evidence-based study techniques](projects/study_techniques_KTH.qmd)
-
-As a postdoc at KTH, I created a free 30-minute online course on evidence-based study techniques using question-based learning.
-
 ### [AI tools that generate multiple-choice questions with feedback](projects/MCQ_generators.qmd)
 
 I created ChatGPT tools at Stockholm University to help teachers generate feedback-rich quizzes that support student self-regulated learning.
@@ -35,6 +31,19 @@ I've written a couple of Substack articles covering topics related to cognitive 
 ### [AI tool for Danderyds gymnasium](projects/MCQ_generator danderyd.qmd)
 
 I created an AI assistant that helps teachers create multiple-choice questions with feedback.
+
+------------------------------------------------------------------------
+
+## Teaching Projects
+
+### [Free online course about evidence-based study techniques](projects/study_techniques_KTH.qmd)
+
+As a postdoc at KTH, I created a free 30-minute online course on evidence-based study techniques using question-based learning.
+
+### [Resources for workshop on AI supported course development for Stockholm University's "Lärarkonferens2026": ](projects/2026_teaching_conference.qmd)
+
+As a postdoc at KTH, I created a free 30-minute online course on evidence-based study techniques using question-based learning.
+
 
 ------------------------------------------------------------------------
 
