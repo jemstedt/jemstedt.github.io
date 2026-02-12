@@ -28,7 +28,7 @@ As a postdoc at KTH, I created a free 30-minute online course on evidence-based 
 
 I created ChatGPT tools at Stockholm University to help teachers generate feedback-rich quizzes that support student self-regulated learning.
 
-### [One-page courses teachning topics the science of learning](projects/MCQ_generator danderyd.qmd)
+### [One-page courses teachning topics from the science of learning](projects/one_page_courses.qmd)
 
 I've written a couple of Substack articles covering topics related to cognitive science and learning.
 
