@@ -4,6 +4,8 @@ format: html
 editor: visual
 ---
 
+[← Back to Projects](../projects.qmd){.button}
+
 Not too long ago, I suffered a concussion. The following weeks and months were stressful and sometimes scary, but also interesting for someone interested in the mind. I have previously published work on how metacognitive monitoring is influenced by the ease or difficulty of information processing, a construct called processing fluency. Because of this work, I not only experienced changes in processing fluency during this time, but also observed and thought about them a lot. These observations resulted in an idea.
 
 The idea came mainly from a series of experiences that can be summarised as follows. When engaging with a thought and seeing where it would take me, the thoughts wouldn't come as they normally would, but I could stick with them. When I did, the thoughts would come, but more slowly, and I could feel a pressure or load building in my mind. Sometimes this would reach a level where it caused me nausea. This only happened when I continued to engage with thoughts, even though I could feel the mental effort or nausea building.
@@ -174,3 +176,4 @@ print(p)
 
 ```
 
+[← Back to Projects](../projects.qmd){.button}
