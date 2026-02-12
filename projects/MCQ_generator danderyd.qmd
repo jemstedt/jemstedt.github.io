@@ -19,7 +19,7 @@ Notera att när du anger ett område kommer AI:n att skapa fyra olika frågor so
 
 ## Frågekonstruktörens prompt
 
-För den som är nyfiken eller har idéer för hur konstruktören kan förbättras följer här den prompt som styr AI:ns beteende. Den är baserad på en engelsk assistent jag byggt tidigare, vilket är varför prompten består av både svenska och engelska.
+För den som är nyfiken eller har idéer för hur konstruktören kan förbättras är det den följande prompten som styr AI:ns beteende. Den är baserad på en engelsk assistent jag byggt tidigare, vilket är varför prompten består av både svenska och engelska.
 
 ### Prompt
 
