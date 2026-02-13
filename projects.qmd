@@ -10,8 +10,6 @@ This is a collection of a selection of projects I’ve worked on, professional a
 
 ## Professional Projects
 
-------------------------------------------------------------------------
-
 ### [Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’](projects/expert_to_inquiry.qmd)
 
 Contributed as an expert to the Swedish Ministry of Education's inquiry on improving teacher education using insights from cognitive science (SOU 2024:81).
@@ -32,8 +30,6 @@ I've written a couple of Substack articles covering topics related to cognitive 
 
 I created an AI assistant that helps teachers create multiple-choice questions with feedback.
 
-------------------------------------------------------------------------
-
 ## Teaching Projects
 
 ### [Free online course about evidence-based study techniques](projects/study_techniques_KTH.qmd)
@@ -43,9 +39,6 @@ As a postdoc at KTH, I created a free 30-minute online course on evidence-based 
 ### [Resources for workshop on AI supported course development for Stockholm University's "Lärarkonferens2026": ](projects/2026_teaching_conference.qmd)
 
 As a postdoc at KTH, I created a free 30-minute online course on evidence-based study techniques using question-based learning.
-
-
-------------------------------------------------------------------------
 
 ## Other Projects
 
