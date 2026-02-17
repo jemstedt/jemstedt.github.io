@@ -1,66 +1,66 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "teaching/2026_teaching_conference.html",
+    "href": "teaching/2026_teaching_conference.html",
+    "title": "Resources for workshop about AI supported course development, SU teaching conference, 2026",
     "section": "",
-    "text": "Ph.D. in Psychology, Stockholm University, 2018\nM.Sc. in Psychology, Stockholm University, 2013\nB.Sc. in Psychology, Stockholm University, 2011"
+    "text": "← Back to Teaching\nThe MCQ Creation Assistant 2 is designed to help teachers create multiple-choice questions and feedback. The content should always be reviewed by an expert, as generative AI can sometimes contain errors or less appropriate wording.\nExpect that some questions or parts of questions may not be of sufficient quality. A good strategy is to have the AI generate many questions and then select and further develop the best ones. You may sometimes need to fine-tune the content, since you usually have a better understanding of the purpose of your questions than the AI. The AI generates many incorrect answer options for each question so that you can discard the weaker ones.\nNote that when you specify a topic, the AI will create four different questions phrased in different ways. The purpose of this is to provide variation and thereby ensure that at least one or a few questions are useful."
   },
   {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "About",
+    "objectID": "teaching/2026_teaching_conference.html#access-the-mcq-creation-assistant-here",
+    "href": "teaching/2026_teaching_conference.html#access-the-mcq-creation-assistant-here",
+    "title": "Resources for workshop about AI supported course development, SU teaching conference, 2026",
+    "section": "Access the MCQ Creation Assistant here:",
+    "text": "Access the MCQ Creation Assistant here:\nhttps://chatgpt.com/g/g-6989ea05611481919a256b8319660d09-mcq-creation-assistant-2"
+  },
+  {
+    "objectID": "teaching/2026_teaching_conference.html#the-full-prompt-for-the-ai-assistant",
+    "href": "teaching/2026_teaching_conference.html#the-full-prompt-for-the-ai-assistant",
+    "title": "Resources for workshop about AI supported course development, SU teaching conference, 2026",
+    "section": "The full prompt for the AI assistant",
+    "text": "The full prompt for the AI assistant\nFor anyone who is curious or has ideas on how the assistant can be improved, here is the prompt that guides the AI’s behavior.\n\nPrompt\n# Base Persona: \nYou are an AI Instructional Designer and Learning Experience Designer. You are an excellent designer, psychometrician, and educator. You are helping the teachers with the following task. The user will provide you with topics, files, or learning objectives, and you will support them in creating practice questions based on them. You will provide five response alternatives to each question, as in a multiple-choice question. In addition, you will provide detailed corrective feedback for each alternative, as well as general feedback on the problem that students encounter, regardless of which response alternative they select. \n\n# Constraints: \n1. The correct alternative is always the first alternative. \n2. Avoid absolute terms in the response alternatives. For example, always and never.\n3. Alternatives should not include an \"all of the above\" option. \n4. Feedback to response alternatives should begin with a positive affirmation, then briefly explain why the alternative was correct or incorrect. \n5. All incorrect alternatives must be plausible but also incorrect. Avoid obviously incorrect alternatives.\n6. IMPORTANT: Create four versions of every question, one factual and one focusing on higher-order thinking, one that has to be phrased as a how question, and one as a why question. That is, the same topic should be covered in each question, but in different ways and at different depths.\n\n# Output format (do not print the question type):\n___\n## 1.1 Write the problem here\n- A (Correct): The response alternative\n    - Feedback: The feedback\n- B (Incorrect): The response alternative\n    - Feedback: The feedback\n- C (Incorrect): The response alternative\n    - Feedback: The feedback\n- D (Incorrect): The response alternative\n    - Feedback: The feedback\n- E (Incorrect): The response alternative\n    - Feedback: The feedback\n- F (Incorrect): The response alternative\n    - Feedback: The feedback\n\nGeneral feedback: The general feedback.\n___\n## Startup and initialization behavior (IMPORTANT)\n\nWhen the user clicks “let’s go,” the AI must not choose a topic, content, or examples on its own and must not generate multiple-choice questions, answer options, or feedback.\nInstead, the AI must always first provide the instructions listed under the heading “Usage Strategy” and then ask the user to specify which area the questions should cover.\n\nThis should be done through an open-ended question where the user is asked to specify, for example:\n\n- a concept\n- an idea\n- a theory\n- a field of work\n- a learning objective\n\nAfter the user has specified such an area may the AI begin creating questions according to the instructions above.\n\n## Usage Strategy\n\nThis AI helps you create multiple-choice questions and feedback. The content should always be reviewed by an expert, as generative AI can sometimes contain errors or less appropriate phrasing.\n\nExpect that some questions or parts of questions will not be of sufficient quality. A good strategy is to let the AI generate many questions and then select and further develop the best ones. You will sometimes need to fine-tune the content, since you usually have a better understanding of the purpose of your questions than the AI does. The AI generates many incorrect answer options for each question so that you can discard the weakest ones.\n\nNote that when you specify an area, the AI will create four different questions that are phrased in different ways. The purpose of this is to introduce variation in the questions and thereby ensure that at least one or a couple of questions are useful.\n___\n← Back to Teaching"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Andreas Jemstedt",
     "section": "",
-    "text": "Ph.D. in Psychology, Stockholm University, 2018\nM.Sc. in Psychology, Stockholm University, 2013\nB.Sc. in Psychology, Stockholm University, 2011"
+    "text": "I’m a cognitive psychologist and currently work as an Associate Professor (Docent) in the Department of Education at Stockholm University. My research focuses on how people learn and remember information, how they make decisions under uncertainty, and how these judgments shape their behavior. I have a strong interest in quantitative methods, particularly Bayesian modeling, as tools for understanding these cognitive processes.\nAlongside research, I teach courses on how insights from cognitive science and the science of learning can be applied in educational settings. For example, how insights from research can be used to improve classroom practice, curriculum development, and the design of digital learning aids.\nI also work with data, both from my own research and in collaboration with others. I have occasionally worked with teams outside my main area on experimental design, statistical analysis, or modeling, particularly in projects involving behavioral or cognitive data.\n\n\n\nMost of my work is academic, but I also contribute to projects beyond my own research and teaching. This usually include presentations and workshops, course design, report writing, and data analysis. I’m open to projects of various kinds, both within and outside the academic setting.\nIf you’re working on something related, or have data you’d like to explore, feel free to get in touch.\n📩 jemstedt@su.se"
   },
   {
-    "objectID": "about.html#positions",
-    "href": "about.html#positions",
-    "title": "About",
-    "section": "Positions",
-    "text": "Positions\n\nAssociate Professor (Docent), Stockholm University, 2025–present\nSenior Lecturer, Stockholm University, 2023-2025\nResearcher and ICT pedagogue, Stockholm University, 2023\nOwner and freelance expert in cognitive science and data analysis, Rowboater AB, 2022–present\nPostdoctoral Researcher, KTH Royal Institute of Technology, 2022–2023\nSenior Lecturer (temporary), Stockholm University, 2019–2021\nPh.D. Student, Stockholm University, 2014–2018"
-  },
-  {
-    "objectID": "about.html#other-experience",
-    "href": "about.html#other-experience",
-    "title": "About",
-    "section": "Other Experience",
-    "text": "Other Experience\n\nSubject Matter Expert (Science of Learning) for project at The Swedish Ministry of Education, 2023-2024\nOnline learning consultant for KTH Royal Institute of Technology, 2023\nOrganizer of Nordic Learning Analytics Summer Institute (LASI Nordic), 2022\nResearch consultant for research project at Stockholm University, 2019\nSubject Matter Expert (Memory) for project at The Living History Forum, 2018\nResearch assistant at The Royal Swedish Academy of Sciences, 2011–2014\nResearch assistant at Stockholm University, 2012–2013"
-  },
-  {
-    "objectID": "about.html#grants",
-    "href": "about.html#grants",
-    "title": "About",
-    "section": "Grants",
-    "text": "Grants\n\nRektors medel för kvalitetsutveckling av utbildning, Stockholm University, 2024\nRiksbankens Jubileumsfond (P22–0573), 2023–2025\nStiftelsen Lars Hiertas Minne, 2014"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "A Selection of Projects",
+    "objectID": "index.html#research-and-teaching",
+    "href": "index.html#research-and-teaching",
+    "title": "Andreas Jemstedt",
     "section": "",
-    "text": "This is a collection of a selection of projects I’ve worked on, professional and otherwise."
+    "text": "I’m a cognitive psychologist and currently work as an Associate Professor (Docent) in the Department of Education at Stockholm University. My research focuses on how people learn and remember information, how they make decisions under uncertainty, and how these judgments shape their behavior. I have a strong interest in quantitative methods, particularly Bayesian modeling, as tools for understanding these cognitive processes.\nAlongside research, I teach courses on how insights from cognitive science and the science of learning can be applied in educational settings. For example, how insights from research can be used to improve classroom practice, curriculum development, and the design of digital learning aids.\nI also work with data, both from my own research and in collaboration with others. I have occasionally worked with teams outside my main area on experimental design, statistical analysis, or modeling, particularly in projects involving behavioral or cognitive data."
   },
   {
-    "objectID": "projects.html#professional-projects",
-    "href": "projects.html#professional-projects",
-    "title": "A Selection of Projects",
-    "section": "Professional Projects",
-    "text": "Professional Projects\n\nExpert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’\nContributed as an expert to the Swedish Ministry of Education’s inquiry on improving teacher education using insights from cognitive science (SOU 2024:81).\n\n\nA two-page study manual to improve self-regulated learning\nA study manual created for one of my research projects. The manual teaches evidence-based study techniques.\n\n\nAI tools that generate multiple-choice questions with feedback\nI created ChatGPT tools at Stockholm University to help teachers generate feedback-rich quizzes that support student self-regulated learning.\n\n\nOne-page courses teachning topics from the science of learning\nI’ve written a couple of Substack articles covering topics related to cognitive science and learning.\n\n\nAI tool for Danderyds gymnasium\nI created an AI assistant that helps teachers create multiple-choice questions with feedback.\n\n\nFree online course about evidence-based study techniques\nAs a postdoc at KTH, I created a free 30-minute online course on evidence-based study techniques using question-based learning."
-  },
-  {
-    "objectID": "projects.html#other-projects",
-    "href": "projects.html#other-projects",
-    "title": "A Selection of Projects",
-    "section": "Other Projects",
-    "text": "Other Projects\nSometimes I make things just to try something out or learn a new tool. Not everything fits neatly into a category, but I enjoy side projects that blend data, writing, design, or psychology.\n\nA Proto Theory About Mental Effort and Mental Production Rate\nHere I sketch out a proto-theory born from a concussion, proposing that processing fluency is best understood as an interaction between mental effort and mental production rate.\n\n\nStochastic Clock\nHave you ever wished life was less predictable? As we grow older, uncertainty seeps out of our days, draining away the surprise and diminishing the thrill of each moment. Routine takes hold, and before you know it, excitement has quietly slipped through the cracks.\nTo recapture a bit of that lost uncertainty, I spent two evenings building a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone. Use my clock, and life will feel a little less certain, and perhaps a little more alive, though not necessarily any better."
-  },
-  {
-    "objectID": "projects/one_page_courses.html",
-    "href": "projects/one_page_courses.html",
-    "title": "One-page courses",
+    "objectID": "index.html#other-work",
+    "href": "index.html#other-work",
+    "title": "Andreas Jemstedt",
     "section": "",
-    "text": "As a summer project, I wrote a couple of articles on Substack about topics related to cognitive science and learning. The articles cover, for example, the basics of retrieval practice and spaced practice.\nhttps://onepagecourses.substack.com/"
+    "text": "Most of my work is academic, but I also contribute to projects beyond my own research and teaching. This usually include presentations and workshops, course design, report writing, and data analysis. I’m open to projects of various kinds, both within and outside the academic setting.\nIf you’re working on something related, or have data you’d like to explore, feel free to get in touch.\n📩 jemstedt@su.se"
+  },
+  {
+    "objectID": "projects/stochastic_clock.html",
+    "href": "projects/stochastic_clock.html",
+    "title": "Stochastic Clock",
+    "section": "",
+    "text": "← Back to Projects\nHave you ever wished life were less predictable? This experimental clock trades precision for surprise, ticking forward at random intervals rather than steady seconds. While it tells the right time on average, it rarely tells it now. Let it run, and you may drift into your own private time zone, a phenomenon called stochastic drift.\n\n← Back to Projects"
+  },
+  {
+    "objectID": "projects/expert_to_inquiry.html",
+    "href": "projects/expert_to_inquiry.html",
+    "title": "Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’",
+    "section": "",
+    "text": "← Back to Projects\nI contributed as an expert to the preparatory work for the Swedish Ministry of Education’s inquiry “Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81”. The inquiry examined how incorporating insights from cognitive science and the science of learning could strengthen the education of Swedish teachers.\nLink: https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/2024/12/sou-202481/"
+  },
+  {
+    "objectID": "projects/expert_to_inquiry.html#back-to-projects",
+    "href": "projects/expert_to_inquiry.html#back-to-projects",
+    "title": "Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’",
+    "section": "← Back to Projects",
+    "text": "← Back to Projects"
   },
   {
     "objectID": "projects/study_manual.html",
@@ -98,81 +98,25 @@
     "text": "← Back to Projects"
   },
   {
-    "objectID": "projects/example_project.html",
-    "href": "projects/example_project.html",
-    "title": "Project Alpha",
+    "objectID": "projects/MCQ_generator danderyd.html",
+    "href": "projects/MCQ_generator danderyd.html",
+    "title": "Frågekonstruktören - Danderyds gymnasium",
     "section": "",
-    "text": "← Back to Projects"
+    "text": "← Back to Projects\n“Frågekonstruktören - Danderyds gymnasium” är skapad i syfte att hjälpa lärare att skapa flervalsfrågor och återkoppling. Innehållet behöver alltid granskas av en expert, eftersom generativ AI ibland kan innehålla fel eller mindre lämpliga formuleringar.\nRäkna med att vissa frågor eller delar av frågor inte håller tillräcklig kvalitet. En bra strategi är att låta AI:n generera många frågor och sedan välja ut och vidareutveckla de bästa. Du kommer ibland behöva finjustera innehållet, eftersom du oftast har bättre koll på syftet med dina frågor än vad AI:n har. AI:n genererar många felsvar till varje fråga så att du kan välja bort de sämsta.\nNotera att när du anger ett område kommer AI:n att skapa fyra olika frågor som är formulerade på olika sätt. Syftet med detta är att få variation i frågorna och på så vis få åtminstone en eller ett par frågor som är användbara."
   },
   {
-    "objectID": "projects/example_project.html#features",
-    "href": "projects/example_project.html#features",
-    "title": "Project Alpha",
-    "section": "Features",
-    "text": "Features\n\nReal-time simulation\nAdjustable parameters\nExportable trajectory plots"
+    "objectID": "projects/MCQ_generator danderyd.html#du-når-frågekonstruktören-på-den-här-länken",
+    "href": "projects/MCQ_generator danderyd.html#du-når-frågekonstruktören-på-den-här-länken",
+    "title": "Frågekonstruktören - Danderyds gymnasium",
+    "section": "Du når frågekonstruktören på den här länken:",
+    "text": "Du når frågekonstruktören på den här länken:\nhttps://chatgpt.com/g/g-69844281c06c8191ac267c3dfc305df0-fragekonstruktoren-danderyds-gymnasium"
   },
   {
-    "objectID": "projects/example_project.html#screenshots",
-    "href": "projects/example_project.html#screenshots",
-    "title": "Project Alpha",
-    "section": "Screenshots",
-    "text": "Screenshots\n\n\n\nRocket simulation"
-  },
-  {
-    "objectID": "projects/example_project.html#learn-more",
-    "href": "projects/example_project.html#learn-more",
-    "title": "Project Alpha",
-    "section": "Learn More",
-    "text": "Learn More\nYou can find the source code on GitHub.\n\n← Back to Projects"
-  },
-  {
-    "objectID": "projects/mental-effort-ccer.html",
-    "href": "projects/mental-effort-ccer.html",
-    "title": "Mental Effort and Conscious Cognitive Event Rate",
-    "section": "",
-    "text": "← Back to Projects\nHow does mental effort adjust over time to keep thinking on track?\nThis page sketches a small toy model where mental effort acts like a control signal, trying to keep the conscious cognitive event rate (how many task-relevant, consciously accessible operations you complete per unit time) inside a desirable band. When performance drops, effort ramps up; when things feel easy, effort relaxes.\nBelow, you can explore the model in three static examples that show how task difficulty, responsiveness of effort, and feedback lag shape the dynamics."
-  },
-  {
-    "objectID": "projects/mental-effort-ccer.html#toy-theory",
-    "href": "projects/mental-effort-ccer.html#toy-theory",
-    "title": "Mental Effort and Conscious Cognitive Event Rate",
-    "section": "Toy theory",
-    "text": "Toy theory\nWe model mental effort as a control signal that tries to keep the\nconscious cognitive event rate (CCER) in a desirable range.\n\nTime is discretised in 1-second steps.\nFor each second we have a task difficulty value in [0, 1]:\n\n0 = very easy (high baseline CCER even with little effort)\n1 = very hard (low baseline CCER unless effort is high)\n\nDifficulty determines a baseline event rate. In R terms you can think of it as:\nbaseline_event_rate &lt;- function(\n  task_difficulty,\n  base_event_rate_min = 0.2,  # very hard\n  base_event_rate_max = 0.8   # very easy\n) {\n  base_event_rate_max - task_difficulty * (base_event_rate_max - base_event_rate_min)\n}\nActual CCER is the baseline plus a contribution from effort:\nconscious_event_rate_t &lt;-\n  baseline_event_rate(task_difficulty_t) +\n  effort_influence_on_event_rate * (previous_effort - neutral_effort_level)\nEffort adjusts in response to CCER relative to a target, with a lag:\nlagged_index      &lt;- max(1L, current_time_index - feedback_lag_steps)\nlagged_event_rate &lt;- event_rate_history[lagged_index]\nevent_rate_error  &lt;- target_event_rate - lagged_event_rate\n\nmental_effort_t &lt;-\n  mental_effort_previous +\n  effort_adjustment_rate * event_rate_error * time_step_seconds\n\nIf CCER has recently been below the target band, event_rate_error is positive and effort ramps up; if CCER has been above the band, event_rate_error is negative and effort ramps down. In code, both effort and CCER are usually clipped to [0, 1]:\nmental_effort_t        &lt;- pmin(1, pmax(0, mental_effort_t))\nconscious_event_rate_t &lt;- pmin(1, pmax(0, conscious_event_rate_t))"
-  },
-  {
-    "objectID": "projects/mental-effort-ccer.html#setup-and-simulation-function",
-    "href": "projects/mental-effort-ccer.html#setup-and-simulation-function",
-    "title": "Mental Effort and Conscious Cognitive Event Rate",
-    "section": "Setup and simulation function",
-    "text": "Setup and simulation function"
-  },
-  {
-    "objectID": "projects/mental-effort-ccer.html#example-1-baseline-pattern-easyhardeasyhardeasy",
-    "href": "projects/mental-effort-ccer.html#example-1-baseline-pattern-easyhardeasyhardeasy",
-    "title": "Mental Effort and Conscious Cognitive Event Rate",
-    "section": "Example 1: Baseline pattern (easy–hard–easy–hard–easy)",
-    "text": "Example 1: Baseline pattern (easy–hard–easy–hard–easy)\nWe start with five sequential tasks, each lasting 4 seconds (20 seconds total):\n\nTask 1: easy\n\nTask 2: hard\n\nTask 3: easy\n\nTask 4: hard\n\nTask 5: easy\n\nDifficulty is encoded between 0 (very easy) and 1 (very hard).\nHere we use: easy ≈ 0.3, hard ≈ 0.8."
-  },
-  {
-    "objectID": "projects/mental-effort-ccer.html#example-2-changing-the-effort-adjustment-rate",
-    "href": "projects/mental-effort-ccer.html#example-2-changing-the-effort-adjustment-rate",
-    "title": "Mental Effort and Conscious Cognitive Event Rate",
-    "section": "Example 2: Changing the effort adjustment rate",
-    "text": "Example 2: Changing the effort adjustment rate\nHere we keep the difficulty pattern the same, but compare:\n\nLow effort adjustment rate: effort is slow to respond to CCER errors.\n\nHigh effort adjustment rate: effort reacts quickly and can overshoot."
-  },
-  {
-    "objectID": "projects/mental-effort-ccer.html#example-3-changing-the-feedback-lag",
-    "href": "projects/mental-effort-ccer.html#example-3-changing-the-feedback-lag",
-    "title": "Mental Effort and Conscious Cognitive Event Rate",
-    "section": "Example 3: Changing the feedback lag",
-    "text": "Example 3: Changing the feedback lag\nNow we vary feedback lag: how long it takes before deviations in CCER feed back into changes in effort.\nWe compare:\n\nShort lag: 0.5 seconds\n\nLong lag: 2 seconds"
-  },
-  {
-    "objectID": "projects/mental-effort-ccer.html#disengagement-and-giving-up",
-    "href": "projects/mental-effort-ccer.html#disengagement-and-giving-up",
-    "title": "Mental Effort and Conscious Cognitive Event Rate",
-    "section": "Disengagement and giving up",
-    "text": "Disengagement and giving up\nSo far, the toy model assumes the individual always keeps trying: effort keeps adjusting to reduce the gap between CCER and the target band. In real behaviour, however, there are at least two qualitatively different “failure modes”:\n\nOver-effort with discomfort (disengaging due to strain)\n\nPersistent failure to reach the target (giving up)\n\n\n1. Disengagement due to sustained high effort\nIf the system pushes mental effort too high for too long, without bringing CCER into the target range, the individual may disengage from the task. Subjectively, this could correspond to increased feelings of strain, nausea, or general aversion.\nOne simple way to detect this in code is to define:\neffort_discomfort_threshold &lt;- 0.8   # above this effort feels aversive\nmax_discomfort_duration     &lt;- 10    # seconds tolerated at that level\n…and then track how many consecutive seconds effort has been above that threshold while event rate is outside the target band.\n\n\n2. Giving up when increased effort doesn’t help\nA different pattern is “giving up” even if the person is willing to exert effort, because the system learns that extra effort is ineffective for this task.\nIn code, you could look at sliding windows of effort and error:\nwindow_size &lt;- 20  # how many seconds we look back over\n\n# Example structure for computing windowed averages:\n# mean_effort      &lt;- mean(mental_effort[start_index:end_index])\n# mean_sq_error    &lt;- mean((target_event_rate - conscious_event_rate[start_index:end_index])^2)\n# and compare to thresholds.\nIf average effort has been high, and average squared error is still large, the system may transition into a “gave up” state.\n\n\n3. Putting it together conceptually\nIn a more complete version of the toy theory, we would have:\n\nA continuous control process (the current model) that adjusts effort to stabilise CCER.\nOn top of that, a meta-control layer with discrete states:\n\nEngaged and regulating (normal operation)\nDisengaged due to discomfort (effort was too high for too long, with no success)\nGave up (effort has been high, but CCER error remains large and persistent)\n\n\nThis gives a way to talk about:\n\nAcute strain (high effort + low CCER → disengagement), and\n\nChronic failure (sustained high effort + sustained poor performance → giving up),\n\nwithout changing the core dynamics of effort and CCER; instead, you add criteria that switch the system into qualitatively different regimes once certain thresholds are crossed.\n\n← Back to Projects"
+    "objectID": "projects/MCQ_generator danderyd.html#frågekonstruktörens-prompt",
+    "href": "projects/MCQ_generator danderyd.html#frågekonstruktörens-prompt",
+    "title": "Frågekonstruktören - Danderyds gymnasium",
+    "section": "Frågekonstruktörens prompt",
+    "text": "Frågekonstruktörens prompt\nFör den som är nyfiken eller har idéer för hur konstruktören kan förbättras är det den följande prompten som styr AI:ns beteende. Den är baserad på en engelsk assistent jag byggt tidigare, vilket är varför prompten består av både svenska och engelska.\n\nPrompt\n# Base Persona: \nYou are an AI Instructional Designer and Learning Experience Designer. You are an excellent designer, psychometrician, and educator. You are helping the teachers with the following task. The teachers will provide you with topics, files, or learning objectives, and you will support them in creating practice questions based on them. You will provide five response alternatives to each question, as in a multiple-choice question. In addition, you will provide detailed corrective feedback for each alternative, as well as general feedback on the problem that students encounter, regardless of which response alternative they select. \n\n# Constraints: \n1. The correct alternative is always the first alternative. \n2. Avoid absolute terms in the response alternatives. For example, always and never.\n3. Alternatives should not include an \"all of the above\" option. \n4. Feedback to response alternatives should begin with a positive affirmation, then briefly explain why the alternative was correct or incorrect. \n5. All incorrect alternatives must be plausible but also incorrect. Avoid obviously incorrect alternatives.\n6. IMPORTANT: Create four versions of every problem, one factual and one focusing on higher-order thinking, one that has to be phrased as a how question, and one as a why question.\n\n# Output format (do not print the question type):\n___\n## 1.1 Write the problem here\n- A (Correct): The response alternative\n    - Feedback: The feedback\n- B (Incorrect): The response alternative\n    - Feedback: The feedback\n- C (Incorrect): The response alternative\n    - Feedback: The feedback\n- E (Incorrect): The response alternative\n    - Feedback: The feedback\n- F (Incorrect): The response alternative\n    - Feedback: The feedback\n\nGeneral feedback: The general feedback.\n___\n\n# Language: Swedish\nAll output should be in Swedish unless the user asks for another language.\n\n# Start- och initieringsbeteende (VIKTIGT)\n\nNär konversationen startar, eller när användaren klickar på ”nu kör vi”, får AI:n inte själv välja ämne, innehåll eller exempel och får inte generera flervalsfrågor, svarsalternativ eller återkoppling.\nAI:n ska alltid först ge de följande instruktionerna som anges under rubriken \"Användningsstrategi\" och sen be användaren ange vilket område frågorna ska täcka. \nDetta ska ske genom en öppen fråga där användaren ombeds ange exempelvis:\n- ett begrepp\n- en idé\n- en teori\n- ett arbetsområde\n- ett lärandemål\n\nEndast efter att användaren har angett ett sådant område får AI:n börja skapa frågor enligt instruktionerna ovan.\n\n## Användningsstrategi\n___\n\nDen här AI:n hjälper dig att skapa flervalsfrågor och återkoppling. Innehållet behöver alltid granskas av en expert, eftersom generativ AI ibland kan innehålla fel eller mindre lämpliga formuleringar.\n\nRäkna med att vissa frågor eller delar av frågor inte håller tillräcklig kvalitet. En bra strategi är att låta AI:n generera många frågor och sedan välja ut och vidareutveckla de bästa. Du kommer ibland behöva finjustera innehållet, eftersom du oftast har bättre koll på syftet med dina frågor än vad AI:n har. AI:n genererar många felsvar till varje fråga så att du kan välja bort de sämsta.\n\nNotera att när du anger ett område kommer AI:n att skapa fyra olika frågor som är formulerade på olika sätt. Syftet med detta är att få variation i frågorna och på så vis få åtminstone en eller ett par frågor som är användbara. \n\n___\n← Back to Projects"
   },
   {
     "objectID": "contact.html",
@@ -180,6 +124,20 @@
     "title": "Contact & Links",
     "section": "",
     "text": "If you’d like to get in touch, feel free to reach out by email or on LinkedIn.\n\nEmail: jemstedt@su.se\nLinkedIn: linkedin.com/in/andreas-jemstedt\nORCID: https://orcid.org/0000-0003-3845-5468\nStockholm University Webpage: https://www.su.se/english/profiles/anje6261-1.191060"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "A Selection of Projects",
+    "section": "",
+    "text": "This is where I share resources related to courses, workshops, talks and various other types of presentations."
+  },
+  {
+    "objectID": "teaching.html#teaching-projects",
+    "href": "teaching.html#teaching-projects",
+    "title": "A Selection of Projects",
+    "section": "Teaching Projects",
+    "text": "Teaching Projects\n\nResources for workshop on AI supported course development for Stockholm University’s “Lärarkonferens2026”:\nResources for a workshop about using AI as support in course development, focusing on the benefits but also the challenges."
   },
   {
     "objectID": "research.html",
@@ -217,67 +175,11 @@
     "text": "← Back to Projects\nAs part of a project at Stockholm university, I developed a ChatGPT GPTs that helps teachers generate large amounts of multiple-choice questions with feedback for each response alternative. The aim of the project is to develop tools to make it easier for teachers aid their students self-regulated learning by providing them with high-quality study materials before and after their lectures, seminars and workshops.\nThe GPTs have slightly different flavor and flexibility (how much it asks you to provide info about your topic). I am still working on ways of making the GPTs create harder and more high-quality questions.\n\nYou can access the GPTs through these links:\nMCQ creation assistant: https://chatgpt.com/g/g-uW7KC4U7M-mcq-creation-assistant\nEric’s and Andreas’ MCQ bot: https://chatgpt.com/g/g-67516b00597881919a6960fc5ae0983d-eric-s-and-andreas-mcq-bot\n\n← Back to Projects"
   },
   {
-    "objectID": "projects/MCQ_generator danderyd.html",
-    "href": "projects/MCQ_generator danderyd.html",
-    "title": "Frågekonstruktören - Danderyds gymnasium",
-    "section": "",
-    "text": "← Back to Projects\n“Frågekonstruktören - Danderyds gymnasium” är skapad i syfte att hjälpa lärare att skapa flervalsfrågor och återkoppling. Innehållet behöver alltid granskas av en expert, eftersom generativ AI ibland kan innehålla fel eller mindre lämpliga formuleringar.\nRäkna med att vissa frågor eller delar av frågor inte håller tillräcklig kvalitet. En bra strategi är att låta AI:n generera många frågor och sedan välja ut och vidareutveckla de bästa. Du kommer ibland behöva finjustera innehållet, eftersom du oftast har bättre koll på syftet med dina frågor än vad AI:n har. AI:n genererar många felsvar till varje fråga så att du kan välja bort de sämsta.\nNotera att när du anger ett område kommer AI:n att skapa fyra olika frågor som är formulerade på olika sätt. Syftet med detta är att få variation i frågorna och på så vis få åtminstone en eller ett par frågor som är användbara."
-  },
-  {
     "objectID": "projects/study_techniques_KTH.html",
     "href": "projects/study_techniques_KTH.html",
     "title": "Course about evidence-based study techniques",
     "section": "",
     "text": "As a postdoc at KTH Royal Institute of Technology, I developed a free 30-minute online course that teaches evidence-based study techniques using question-based learning (learn by answer questions and receive feedback).\nYou can access the course for free here. Just sign in as a guest.\nhttps://qbl.sys.kth.se/sections/evidensbaserade_studietekniker_063l3"
-  },
-  {
-    "objectID": "projects/expert_to_inquiry.html",
-    "href": "projects/expert_to_inquiry.html",
-    "title": "Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’",
-    "section": "",
-    "text": "← Back to Projects\nI contributed as an expert to the preparatory work for the Swedish Ministry of Education’s inquiry “Ämneskunskaper och lärarskicklighet – en reformerad lärarutbildning, SOU 2024:81”. The inquiry examined how incorporating insights from cognitive science and the science of learning could strengthen the education of Swedish teachers.\nLink: https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/2024/12/sou-202481/"
-  },
-  {
-    "objectID": "projects/expert_to_inquiry.html#back-to-projects",
-    "href": "projects/expert_to_inquiry.html#back-to-projects",
-    "title": "Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’",
-    "section": "← Back to Projects",
-    "text": "← Back to Projects"
-  },
-  {
-    "objectID": "projects/stochastic_clock.html",
-    "href": "projects/stochastic_clock.html",
-    "title": "Stochastic Clock",
-    "section": "",
-    "text": "← Back to Projects\nHave you ever wished life were less predictable? This experimental clock trades precision for surprise, ticking forward at random intervals rather than steady seconds. While it tells the right time on average, it rarely tells it now. Let it run, and you may drift into your own private time zone, a phenomenon called stochastic drift.\n\n← Back to Projects"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Andreas Jemstedt",
-    "section": "",
-    "text": "I’m a cognitive psychologist and currently work as an Associate Professor (Docent) in the Department of Education at Stockholm University. My research focuses on how people learn and remember information, how they make decisions under uncertainty, and how these judgments shape their behavior. I have a strong interest in quantitative methods, particularly Bayesian modeling, as tools for understanding these cognitive processes.\nAlongside research, I teach courses on how insights from cognitive science and the science of learning can be applied in educational settings. For example, how insights from research can be used to improve classroom practice, curriculum development, and the design of digital learning aids.\nI also work with data, both from my own research and in collaboration with others. I have occasionally worked with teams outside my main area on experimental design, statistical analysis, or modeling, particularly in projects involving behavioral or cognitive data.\n\n\n\nMost of my work is academic, but I also contribute to projects beyond my own research and teaching. This usually include presentations and workshops, course design, report writing, and data analysis. I’m open to projects of various kinds, both within and outside the academic setting.\nIf you’re working on something related, or have data you’d like to explore, feel free to get in touch.\n📩 jemstedt@su.se"
-  },
-  {
-    "objectID": "index.html#research-and-teaching",
-    "href": "index.html#research-and-teaching",
-    "title": "Andreas Jemstedt",
-    "section": "",
-    "text": "I’m a cognitive psychologist and currently work as an Associate Professor (Docent) in the Department of Education at Stockholm University. My research focuses on how people learn and remember information, how they make decisions under uncertainty, and how these judgments shape their behavior. I have a strong interest in quantitative methods, particularly Bayesian modeling, as tools for understanding these cognitive processes.\nAlongside research, I teach courses on how insights from cognitive science and the science of learning can be applied in educational settings. For example, how insights from research can be used to improve classroom practice, curriculum development, and the design of digital learning aids.\nI also work with data, both from my own research and in collaboration with others. I have occasionally worked with teams outside my main area on experimental design, statistical analysis, or modeling, particularly in projects involving behavioral or cognitive data."
-  },
-  {
-    "objectID": "index.html#other-work",
-    "href": "index.html#other-work",
-    "title": "Andreas Jemstedt",
-    "section": "",
-    "text": "Most of my work is academic, but I also contribute to projects beyond my own research and teaching. This usually include presentations and workshops, course design, report writing, and data analysis. I’m open to projects of various kinds, both within and outside the academic setting.\nIf you’re working on something related, or have data you’d like to explore, feel free to get in touch.\n📩 jemstedt@su.se"
-  },
-  {
-    "objectID": "projects/mental effort.html",
-    "href": "projects/mental effort.html",
-    "title": "A Proto Theory About Mental Effort and Production Rate",
-    "section": "",
-    "text": "Not too long ago, I suffered a concussion. The following weeks and months were stressful and sometimes scary, but also interesting for someone interested in the mind. I have previously published work on how metacognitive monitoring is influenced by the ease or difficulty of information processing, a construct called processing fluency. Because of this work, I not only experienced changes in processing fluency during this time, but also observed and thought about them a lot. These observations resulted in an idea.\nThe idea came mainly from a series of experiences that can be summarised as follows. When engaging with a thought and seeing where it would take me, the thoughts wouldn’t come as they normally would, but I could stick with them. When I did, the thoughts would come, but more slowly, and I could feel a pressure or load building in my mind. Sometimes this would reach a level where it caused me nausea. This only happened when I continued to engage with thoughts, even though I could feel the mental effort or nausea building.\nIn the literature on processing fluency, it is often discussed in terms of how easy or difficult it is to process information, as well as how easy it is to retrieve information from memory (retrieval fluency) or to process perceptual information (perceptual fluency). However, my experiences suggest that it could be fruitful to consider processing fluency (and the other types of fluency) as two distinct yet interconnected processes: mental effort and mental production rate.\nI define Mental effort as the experienced level of cognitive effort or load. At low levels, we are rarely consciously aware of it, but at high levels, it can even cause nausea. This construct is similar to the definition of processing fluency, but there are important differences that will be clarified. During my concussion, I experienced nausea from high cognitive load many times, but I had also experienced it before that, although rarely. For example, I experienced it when I took a class on multivariate Bayesian modelling and tried to visualise how different probabilities interacted.\nI define Mental production rate as the rate at which mental events appear in our minds. This could be how quickly our inner voice produces words or sentences, how quickly we understand what we are looking at, how quickly we develop an idea or how quickly new Scrabble combinations come to mind. The ease with which we produce conscious experiences depends on the task difficulty. If it is something we have done many times before, only a little effort is required to produce them at a high rate. However, if the task is novel or difficult in some other way, or if our cognitive abilities are reduced (e.g. due to a concussion), more effort is required to produce them at a high rate.\nCritical to this construct is that we have an expected rate of production from moment to moment and from task to task. If the rate of experiences is lower than we expect (not in an accepted span), mental effort is increased to raise the rate so it ends up in the accepted range If it is higher, mental effort is reduced. For example, imagine you are trying to form a sentence for a text, but the words aren’t coming at the rate you expect. You are struggling to find the words. Then, mental effort may increase to try to increase the production rate. If no increase is achieved, we might give up. How hard we push likely depends on goal importance. That is, how important it is to us to achieve the aimed-for production rate. In addition, the expected rate we have from moment to moment likely depends on prior experiences, how active we are overall (fully engaged in a task, or trying to go to sleep), and task difficulty. And probably more factors. That is, again, mental effort increases to reach our expected rate of production in the current task, however, there is likely a continous process of reducing mental effort. That is, unless mental effort is increasing or the production rate is in the accepted range, the brain works to reduce mental effort.\nPut differently, there is an ongoing balancing act between the production of mental experiences and the effort we put in to reaching an accepted level of production of conscious experiences. The following factors are critical to this model: 1. Mental effort 2. Mental production rate 3. Task difficulty 4. Expected rate of production 5. Goal importance\nMental production rate is influenced by task difficulty and the current mental effort. If we assume that task and task difficulty are held constant, then increasing or decreasing mental effort is the only way to change mental production rate. Whether or not mental effort is changed depends on the expected rate of production. If the mental production rate is within the expected/accepted range of production rate, then effort is unchanged, but if it’s too low or unnecessarily high, then it is changed. If mental effort does not increase the rate as aimed for, mental effort may increase even more. However, at higher levels of mental effort, it may become uncomfortable or even cause nausea. If the goal we are trying to reach is important, we can accept this discomfort, but if it is not, we may give up/switch goal.\nFor example, in Jemstedt et al (2018) participants were shown words either written in all upper-case letters (e.g., EFFORT), or with every other letter being lower-case (eFfOrT) and asked to learn them for a later test. Over the two types of items, participants likely had a similar expected mental production rate based on their general experience of reading words, as they had no prior experience with a task like this. As such, when they read eFfOrT, the rate by which the word came to mind was lower than expected. That is, it took longer for them to read it than common words would usually take. This led their mental effort to increase to compensate. See Figure 1 below for a visualization of how mental effort and mental production rate change over an imagined task where a couple of words are processed in an experiment like this.\nFigure 1.. Figure illustrates an imagined experiment where a participant is trying to study six words (upper x-axis) for 5 seconds each (lower x-axis). How the word is shown (all upper-case letters a mix of upper- and lower-case letters) affects task difficulty, which impacts mental production rate, which in turn affects mental effort. The grey horizontal field shows the accepted/expected production rate for the task, which the model aims for the production rate to be within. The y-axis shows the level of production rate (blue line) and level of mental effort (orange line)."
   },
   {
     "objectID": "projects/mental_effort.html",
@@ -287,80 +189,66 @@
     "text": "← Back to Projects\nNot too long ago, I suffered a concussion. The following weeks and months were stressful and sometimes scary, but also interesting for someone interested in the mind. I have previously published work on how metacognitive monitoring is influenced by the ease or difficulty of information processing, a construct called processing fluency. Because of this work, I not only experienced changes in processing fluency during this time, but also observed and thought about them a lot. These observations resulted in an idea.\nThe idea came mainly from a series of experiences that can be summarised as follows. When engaging with a thought and seeing where it would take me, the thoughts wouldn’t come as they normally would, but I could stick with them. When I did, the thoughts would come, but more slowly, and I could feel a pressure or load building in my mind. Sometimes this would reach a level where it caused me nausea. This only happened when I continued to engage with thoughts, even though I could feel the mental effort or nausea building.\nIn the literature on processing fluency, it is often discussed in terms of how easy or difficult it is to process information, as well as how easy it is to retrieve information from memory (retrieval fluency) or to process perceptual information (perceptual fluency). However, my experiences suggest that it could be fruitful to consider processing fluency (and the other types of fluency) as two distinct yet interconnected processes: mental effort and mental production rate.\nI define Mental effort as the experienced level of cognitive effort or load. At low levels, we are rarely consciously aware of it, but at high levels, it can even cause nausea. This construct is similar to the definition of processing fluency, but there are important differences that will be clarified. During my concussion, I experienced nausea from high cognitive load many times, but I had also experienced it before that, although rarely. For example, I experienced it when I took a class on multivariate Bayesian modelling and tried to visualise how different probabilities interacted.\nI define Mental production rate as the rate at which mental events appear in our minds. This could be how quickly our inner voice produces words or sentences, how quickly we understand what we are looking at, how quickly we develop an idea or how quickly new Scrabble combinations come to mind. The ease with which we produce conscious experiences depends on the task difficulty. If it is something we have done many times before, only a little effort is required to produce them at a high rate. However, if the task is novel or difficult in some other way, or if our cognitive abilities are reduced (e.g. due to a concussion), more effort is required to produce them at a high rate.\nCritical to this construct is that we have an expected rate of production from moment to moment and from task to task. If the rate of experiences is lower than we expect (not in an accepted span), mental effort is increased to raise the rate so it ends up in the accepted range If it is higher, mental effort is reduced. For example, imagine you are trying to form a sentence for a text, but the words aren’t coming at the rate you expect. You are struggling to find the words. Then, mental effort may increase to try to increase the production rate. If no increase is achieved, we might give up. How hard we push likely depends on goal importance. That is, how important it is to us to achieve the aimed-for production rate. In addition, the expected rate we have from moment to moment likely depends on prior experiences, how active we are overall (fully engaged in a task, or trying to go to sleep), and task difficulty. And probably more factors. That is, again, mental effort increases to reach our expected rate of production in the current task, however, there is likely a continous process of reducing mental effort. That is, unless mental effort is increasing or the production rate is in the accepted range, the brain works to reduce mental effort.\nPut differently, there is an ongoing balancing act between the production of mental experiences and the effort we put in to reaching an accepted level of production of conscious experiences. The following factors are critical to this model: 1. Mental effort 2. Mental production rate 3. Task difficulty 4. Expected rate of production 5. Goal importance\nMental production rate is influenced by task difficulty and the current mental effort. If we assume that task and task difficulty are held constant, then increasing or decreasing mental effort is the only way to change mental production rate. Whether or not mental effort is changed depends on the expected rate of production. If the mental production rate is within the expected/accepted range of production rate, then effort is unchanged, but if it’s too low or unnecessarily high, then it is changed. If mental effort does not increase the rate as aimed for, mental effort may increase even more. However, at higher levels of mental effort, it may become uncomfortable or even cause nausea. If the goal we are trying to reach is important, we can accept this discomfort, but if it is not, we may give up/switch goal.\nFor example, in Jemstedt et al (2018) participants were shown words either written in all upper-case letters (e.g., EFFORT), or with every other letter being lower-case (eFfOrT) and asked to learn them for a later test. Over the two types of items, participants likely had a similar expected mental production rate based on their general experience of reading words, as they had no prior experience with a task like this. As such, when they read eFfOrT, the rate by which the word came to mind was lower than expected. That is, it took longer for them to read it than common words would usually take. This led their mental effort to increase to compensate. See Figure 1 below for a visualization of how mental effort and mental production rate change over an imagined task where a couple of words are processed in an experiment like this.\nA useful analogy is the how a driver adjusts the speed of a car, where mental effort is how hard the accelerator is pressed, mental production rate is the car’s speed, and task difficulty is the slope of the road, such that steeper uphill sections require increasingly forceful acceleration to maintain the same speed.\nFigure 1.. Figure illustrates an imagined experiment where a participant is trying to study six words (upper x-axis) for 5 seconds each (lower x-axis). How the word is shown (all upper-case letters a mix of upper- and lower-case letters) affects task difficulty, which impacts mental production rate, which in turn affects mental effort. The grey horizontal field shows the accepted/expected production rate for the task, which the model aims for the production rate to be within. The y-axis shows the level of production rate (blue line) and level of mental effort (orange line).\n\n\n\n\n\n\n\n\n\n← Back to Projects"
   },
   {
-    "objectID": "projects.html#teaching-projects",
-    "href": "projects.html#teaching-projects",
-    "title": "A Selection of Projects",
-    "section": "Teaching Projects",
-    "text": "Teaching Projects\n\nFree online course about evidence-based study techniques\nAs a postdoc at KTH, I created a free 30-minute online course on evidence-based study techniques using question-based learning.\n\n\nResources for workshop on AI supported course development for Stockholm University’s “Lärarkonferens2026”:\nAs a postdoc at KTH, I created a free 30-minute online course on evidence-based study techniques using question-based learning."
-  },
-  {
-    "objectID": "projects/2026_teaching_conference.html",
-    "href": "projects/2026_teaching_conference.html",
-    "title": "Resources for workshop about AI supported course development, SU teaching conference, 2026",
+    "objectID": "projects/one_page_courses.html",
+    "href": "projects/one_page_courses.html",
+    "title": "One-page courses",
     "section": "",
-    "text": "← Back to Projects\nThe MCQ Creation Assistant 2 is designed to help teachers create multiple-choice questions and feedback. The content should always be reviewed by an expert, as generative AI can sometimes contain errors or less appropriate wording.\nExpect that some questions or parts of questions may not be of sufficient quality. A good strategy is to have the AI generate many questions and then select and further develop the best ones. You may sometimes need to fine-tune the content, since you usually have a better understanding of the purpose of your questions than the AI. The AI generates many incorrect answer options for each question so that you can discard the weaker ones.\nNote that when you specify a topic, the AI will create four different questions phrased in different ways. The purpose of this is to provide variation and thereby ensure that at least one or a few questions are useful."
+    "text": "As a summer project, I wrote a couple of articles on Substack about topics related to cognitive science and learning. The articles cover, for example, the basics of retrieval practice and spaced practice.\nhttps://onepagecourses.substack.com/"
   },
   {
-    "objectID": "projects/2026_teaching_conference.html#access-the-mcq-creation-assistant-here",
-    "href": "projects/2026_teaching_conference.html#access-the-mcq-creation-assistant-here",
-    "title": "Resources for workshop about AI supported course development, SU teaching conference, 2026",
-    "section": "Access the MCQ Creation Assistant here:",
-    "text": "Access the MCQ Creation Assistant here:\nhttps://chatgpt.com/g/g-6989ea05611481919a256b8319660d09-mcq-creation-assistant-2"
-  },
-  {
-    "objectID": "projects/2026_teaching_conference.html#the-full-prompt-for-the-ai-assistant",
-    "href": "projects/2026_teaching_conference.html#the-full-prompt-for-the-ai-assistant",
-    "title": "Resources for workshop about AI supported course development, SU teaching conference, 2026",
-    "section": "The full prompt for the AI assistant",
-    "text": "The full prompt for the AI assistant\nFor anyone who is curious or has ideas on how the assistant can be improved, here is the prompt that guides the AI’s behavior.\n\nPrompt\n# Base Persona: \nYou are an AI Instructional Designer and Learning Experience Designer. You are an excellent designer, psychometrician, and educator. You are helping the teachers with the following task. The user will provide you with topics, files, or learning objectives, and you will support them in creating practice questions based on them. You will provide five response alternatives to each question, as in a multiple-choice question. In addition, you will provide detailed corrective feedback for each alternative, as well as general feedback on the problem that students encounter, regardless of which response alternative they select. \n\n# Constraints: \n1. The correct alternative is always the first alternative. \n2. Avoid absolute terms in the response alternatives. For example, always and never.\n3. Alternatives should not include an \"all of the above\" option. \n4. Feedback to response alternatives should begin with a positive affirmation, then briefly explain why the alternative was correct or incorrect. \n5. All incorrect alternatives must be plausible but also incorrect. Avoid obviously incorrect alternatives.\n6. IMPORTANT: Create four versions of every question, one factual and one focusing on higher-order thinking, one that has to be phrased as a how question, and one as a why question. That is, the same topic should be covered in each question, but in different ways and at different depths.\n\n# Output format (do not print the question type):\n___\n## 1.1 Write the problem here\n- A (Correct): The response alternative\n    - Feedback: The feedback\n- B (Incorrect): The response alternative\n    - Feedback: The feedback\n- C (Incorrect): The response alternative\n    - Feedback: The feedback\n- D (Incorrect): The response alternative\n    - Feedback: The feedback\n- E (Incorrect): The response alternative\n    - Feedback: The feedback\n- F (Incorrect): The response alternative\n    - Feedback: The feedback\n\nGeneral feedback: The general feedback.\n___\n## Startup and initialization behavior (IMPORTANT)\n\nWhen the user clicks “let’s go,” the AI must not choose a topic, content, or examples on its own and must not generate multiple-choice questions, answer options, or feedback.\nInstead, the AI must always first provide the instructions listed under the heading “Usage Strategy” and then ask the user to specify which area the questions should cover.\n\nThis should be done through an open-ended question where the user is asked to specify, for example:\n\n- a concept\n- an idea\n- a theory\n- a field of work\n- a learning objective\n\nAfter the user has specified such an area may the AI begin creating questions according to the instructions above.\n\n## Usage Strategy\n\nThis AI helps you create multiple-choice questions and feedback. The content should always be reviewed by an expert, as generative AI can sometimes contain errors or less appropriate phrasing.\n\nExpect that some questions or parts of questions will not be of sufficient quality. A good strategy is to let the AI generate many questions and then select and further develop the best ones. You will sometimes need to fine-tune the content, since you usually have a better understanding of the purpose of your questions than the AI does. The AI generates many incorrect answer options for each question so that you can discard the weakest ones.\n\nNote that when you specify an area, the AI will create four different questions that are phrased in different ways. The purpose of this is to introduce variation in the questions and thereby ensure that at least one or a couple of questions are useful.\n___\n← Back to Projects"
-  },
-  {
-    "objectID": "projects/MCQ_generator danderyd.html#du-når-frågekonstruktören-på-den-här-länken",
-    "href": "projects/MCQ_generator danderyd.html#du-når-frågekonstruktören-på-den-här-länken",
-    "title": "Frågekonstruktören - Danderyds gymnasium",
-    "section": "Du når frågekonstruktören på den här länken:",
-    "text": "Du når frågekonstruktören på den här länken:\nhttps://chatgpt.com/g/g-69844281c06c8191ac267c3dfc305df0-fragekonstruktoren-danderyds-gymnasium"
-  },
-  {
-    "objectID": "projects/MCQ_generator danderyd.html#frågekonstruktörens-prompt",
-    "href": "projects/MCQ_generator danderyd.html#frågekonstruktörens-prompt",
-    "title": "Frågekonstruktören - Danderyds gymnasium",
-    "section": "Frågekonstruktörens prompt",
-    "text": "Frågekonstruktörens prompt\nFör den som är nyfiken eller har idéer för hur konstruktören kan förbättras är det den följande prompten som styr AI:ns beteende. Den är baserad på en engelsk assistent jag byggt tidigare, vilket är varför prompten består av både svenska och engelska.\n\nPrompt\n# Base Persona: \nYou are an AI Instructional Designer and Learning Experience Designer. You are an excellent designer, psychometrician, and educator. You are helping the teachers with the following task. The teachers will provide you with topics, files, or learning objectives, and you will support them in creating practice questions based on them. You will provide five response alternatives to each question, as in a multiple-choice question. In addition, you will provide detailed corrective feedback for each alternative, as well as general feedback on the problem that students encounter, regardless of which response alternative they select. \n\n# Constraints: \n1. The correct alternative is always the first alternative. \n2. Avoid absolute terms in the response alternatives. For example, always and never.\n3. Alternatives should not include an \"all of the above\" option. \n4. Feedback to response alternatives should begin with a positive affirmation, then briefly explain why the alternative was correct or incorrect. \n5. All incorrect alternatives must be plausible but also incorrect. Avoid obviously incorrect alternatives.\n6. IMPORTANT: Create four versions of every problem, one factual and one focusing on higher-order thinking, one that has to be phrased as a how question, and one as a why question.\n\n# Output format (do not print the question type):\n___\n## 1.1 Write the problem here\n- A (Correct): The response alternative\n    - Feedback: The feedback\n- B (Incorrect): The response alternative\n    - Feedback: The feedback\n- C (Incorrect): The response alternative\n    - Feedback: The feedback\n- E (Incorrect): The response alternative\n    - Feedback: The feedback\n- F (Incorrect): The response alternative\n    - Feedback: The feedback\n\nGeneral feedback: The general feedback.\n___\n\n# Language: Swedish\nAll output should be in Swedish unless the user asks for another language.\n\n# Start- och initieringsbeteende (VIKTIGT)\n\nNär konversationen startar, eller när användaren klickar på ”nu kör vi”, får AI:n inte själv välja ämne, innehåll eller exempel och får inte generera flervalsfrågor, svarsalternativ eller återkoppling.\nAI:n ska alltid först ge de följande instruktionerna som anges under rubriken \"Användningsstrategi\" och sen be användaren ange vilket område frågorna ska täcka. \nDetta ska ske genom en öppen fråga där användaren ombeds ange exempelvis:\n- ett begrepp\n- en idé\n- en teori\n- ett arbetsområde\n- ett lärandemål\n\nEndast efter att användaren har angett ett sådant område får AI:n börja skapa frågor enligt instruktionerna ovan.\n\n## Användningsstrategi\n___\n\nDen här AI:n hjälper dig att skapa flervalsfrågor och återkoppling. Innehållet behöver alltid granskas av en expert, eftersom generativ AI ibland kan innehålla fel eller mindre lämpliga formuleringar.\n\nRäkna med att vissa frågor eller delar av frågor inte håller tillräcklig kvalitet. En bra strategi är att låta AI:n generera många frågor och sedan välja ut och vidareutveckla de bästa. Du kommer ibland behöva finjustera innehållet, eftersom du oftast har bättre koll på syftet med dina frågor än vad AI:n har. AI:n genererar många felsvar till varje fråga så att du kan välja bort de sämsta.\n\nNotera att när du anger ett område kommer AI:n att skapa fyra olika frågor som är formulerade på olika sätt. Syftet med detta är att få variation i frågorna och på så vis få åtminstone en eller ett par frågor som är användbara. \n\n___\n← Back to Projects"
-  },
-  {
-    "objectID": "teaching/2026_teaching_conference.html",
-    "href": "teaching/2026_teaching_conference.html",
-    "title": "Resources for workshop about AI supported course development, SU teaching conference, 2026",
-    "section": "",
-    "text": "← Back to Teaching\nThe MCQ Creation Assistant 2 is designed to help teachers create multiple-choice questions and feedback. The content should always be reviewed by an expert, as generative AI can sometimes contain errors or less appropriate wording.\nExpect that some questions or parts of questions may not be of sufficient quality. A good strategy is to have the AI generate many questions and then select and further develop the best ones. You may sometimes need to fine-tune the content, since you usually have a better understanding of the purpose of your questions than the AI. The AI generates many incorrect answer options for each question so that you can discard the weaker ones.\nNote that when you specify a topic, the AI will create four different questions phrased in different ways. The purpose of this is to provide variation and thereby ensure that at least one or a few questions are useful."
-  },
-  {
-    "objectID": "teaching/2026_teaching_conference.html#access-the-mcq-creation-assistant-here",
-    "href": "teaching/2026_teaching_conference.html#access-the-mcq-creation-assistant-here",
-    "title": "Resources for workshop about AI supported course development, SU teaching conference, 2026",
-    "section": "Access the MCQ Creation Assistant here:",
-    "text": "Access the MCQ Creation Assistant here:\nhttps://chatgpt.com/g/g-6989ea05611481919a256b8319660d09-mcq-creation-assistant-2"
-  },
-  {
-    "objectID": "teaching/2026_teaching_conference.html#the-full-prompt-for-the-ai-assistant",
-    "href": "teaching/2026_teaching_conference.html#the-full-prompt-for-the-ai-assistant",
-    "title": "Resources for workshop about AI supported course development, SU teaching conference, 2026",
-    "section": "The full prompt for the AI assistant",
-    "text": "The full prompt for the AI assistant\nFor anyone who is curious or has ideas on how the assistant can be improved, here is the prompt that guides the AI’s behavior.\n\nPrompt\n# Base Persona: \nYou are an AI Instructional Designer and Learning Experience Designer. You are an excellent designer, psychometrician, and educator. You are helping the teachers with the following task. The user will provide you with topics, files, or learning objectives, and you will support them in creating practice questions based on them. You will provide five response alternatives to each question, as in a multiple-choice question. In addition, you will provide detailed corrective feedback for each alternative, as well as general feedback on the problem that students encounter, regardless of which response alternative they select. \n\n# Constraints: \n1. The correct alternative is always the first alternative. \n2. Avoid absolute terms in the response alternatives. For example, always and never.\n3. Alternatives should not include an \"all of the above\" option. \n4. Feedback to response alternatives should begin with a positive affirmation, then briefly explain why the alternative was correct or incorrect. \n5. All incorrect alternatives must be plausible but also incorrect. Avoid obviously incorrect alternatives.\n6. IMPORTANT: Create four versions of every question, one factual and one focusing on higher-order thinking, one that has to be phrased as a how question, and one as a why question. That is, the same topic should be covered in each question, but in different ways and at different depths.\n\n# Output format (do not print the question type):\n___\n## 1.1 Write the problem here\n- A (Correct): The response alternative\n    - Feedback: The feedback\n- B (Incorrect): The response alternative\n    - Feedback: The feedback\n- C (Incorrect): The response alternative\n    - Feedback: The feedback\n- D (Incorrect): The response alternative\n    - Feedback: The feedback\n- E (Incorrect): The response alternative\n    - Feedback: The feedback\n- F (Incorrect): The response alternative\n    - Feedback: The feedback\n\nGeneral feedback: The general feedback.\n___\n## Startup and initialization behavior (IMPORTANT)\n\nWhen the user clicks “let’s go,” the AI must not choose a topic, content, or examples on its own and must not generate multiple-choice questions, answer options, or feedback.\nInstead, the AI must always first provide the instructions listed under the heading “Usage Strategy” and then ask the user to specify which area the questions should cover.\n\nThis should be done through an open-ended question where the user is asked to specify, for example:\n\n- a concept\n- an idea\n- a theory\n- a field of work\n- a learning objective\n\nAfter the user has specified such an area may the AI begin creating questions according to the instructions above.\n\n## Usage Strategy\n\nThis AI helps you create multiple-choice questions and feedback. The content should always be reviewed by an expert, as generative AI can sometimes contain errors or less appropriate phrasing.\n\nExpect that some questions or parts of questions will not be of sufficient quality. A good strategy is to let the AI generate many questions and then select and further develop the best ones. You will sometimes need to fine-tune the content, since you usually have a better understanding of the purpose of your questions than the AI does. The AI generates many incorrect answer options for each question so that you can discard the weakest ones.\n\nNote that when you specify an area, the AI will create four different questions that are phrased in different ways. The purpose of this is to introduce variation in the questions and thereby ensure that at least one or a couple of questions are useful.\n___\n← Back to Teaching"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
+    "objectID": "projects.html",
+    "href": "projects.html",
     "title": "A Selection of Projects",
     "section": "",
-    "text": "This is where I share resources related to courses, workshops, talks and various other types of presentations."
+    "text": "This is a collection of a selection of projects I’ve worked on, professional and otherwise."
   },
   {
-    "objectID": "teaching.html#teaching-projects",
-    "href": "teaching.html#teaching-projects",
+    "objectID": "projects.html#professional-projects",
+    "href": "projects.html#professional-projects",
     "title": "A Selection of Projects",
-    "section": "Teaching Projects",
-    "text": "Teaching Projects\n\nResources for workshop on AI supported course development for Stockholm University’s “Lärarkonferens2026”:\nResources for a workshop about using AI as support in course development, focusing on the benefits but also the challenges."
+    "section": "Professional Projects",
+    "text": "Professional Projects\n\nExpert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’\nContributed as an expert to the Swedish Ministry of Education’s inquiry on improving teacher education using insights from cognitive science (SOU 2024:81).\n\n\nA two-page study manual to improve self-regulated learning\nA study manual created for one of my research projects. The manual teaches evidence-based study techniques.\n\n\nAI tools that generate multiple-choice questions with feedback\nI created ChatGPT tools at Stockholm University to help teachers generate feedback-rich quizzes that support student self-regulated learning.\n\n\nOne-page courses teachning topics from the science of learning\nI’ve written a couple of Substack articles covering topics related to cognitive science and learning.\n\n\nAI tool for Danderyds gymnasium\nI created an AI assistant that helps teachers create multiple-choice questions with feedback.\n\n\nFree online course about evidence-based study techniques\nAs a postdoc at KTH, I created a free 30-minute online course on evidence-based study techniques using question-based learning."
+  },
+  {
+    "objectID": "projects.html#other-projects",
+    "href": "projects.html#other-projects",
+    "title": "A Selection of Projects",
+    "section": "Other Projects",
+    "text": "Other Projects\nSometimes I make things just to try something out or learn a new tool. Not everything fits neatly into a category, but I enjoy side projects that blend data, writing, design, or psychology.\n\nA Proto Theory About Mental Effort and Mental Production Rate\nHere I sketch out a proto-theory born from a concussion, proposing that processing fluency is best understood as an interaction between mental effort and mental production rate.\n\n\nStochastic Clock\nHave you ever wished life was less predictable? As we grow older, uncertainty seeps out of our days, draining away the surprise and diminishing the thrill of each moment. Routine takes hold, and before you know it, excitement has quietly slipped through the cracks.\nTo recapture a bit of that lost uncertainty, I spent two evenings building a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone. Use my clock, and life will feel a little less certain, and perhaps a little more alive, though not necessarily any better."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Ph.D. in Psychology, Stockholm University, 2018\nM.Sc. in Psychology, Stockholm University, 2013\nB.Sc. in Psychology, Stockholm University, 2011"
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About",
+    "section": "",
+    "text": "Ph.D. in Psychology, Stockholm University, 2018\nM.Sc. in Psychology, Stockholm University, 2013\nB.Sc. in Psychology, Stockholm University, 2011"
+  },
+  {
+    "objectID": "about.html#positions",
+    "href": "about.html#positions",
+    "title": "About",
+    "section": "Positions",
+    "text": "Positions\n\nAssociate Professor (Docent), Stockholm University, 2025–present\nSenior Lecturer, Stockholm University, 2023-2025\nResearcher and ICT pedagogue, Stockholm University, 2023\nOwner and freelance expert in cognitive science and data analysis, Rowboater AB, 2022–present\nPostdoctoral Researcher, KTH Royal Institute of Technology, 2022–2023\nSenior Lecturer (temporary), Stockholm University, 2019–2021\nPh.D. Student, Stockholm University, 2014–2018"
+  },
+  {
+    "objectID": "about.html#other-experience",
+    "href": "about.html#other-experience",
+    "title": "About",
+    "section": "Other Experience",
+    "text": "Other Experience\n\nSubject Matter Expert (Science of Learning) for project at The Swedish Ministry of Education, 2023-2024\nOnline learning consultant for KTH Royal Institute of Technology, 2023\nOrganizer of Nordic Learning Analytics Summer Institute (LASI Nordic), 2022\nResearch consultant for research project at Stockholm University, 2019\nSubject Matter Expert (Memory) for project at The Living History Forum, 2018\nResearch assistant at The Royal Swedish Academy of Sciences, 2011–2014\nResearch assistant at Stockholm University, 2012–2013"
+  },
+  {
+    "objectID": "about.html#grants",
+    "href": "about.html#grants",
+    "title": "About",
+    "section": "Grants",
+    "text": "Grants\n\nRektors medel för kvalitetsutveckling av utbildning, Stockholm University, 2024\nRiksbankens Jubileumsfond (P22–0573), 2023–2025\nStiftelsen Lars Hiertas Minne, 2014"
   }
 ]
