@@ -1,0 +1,17 @@
+---
+title: "A Selection of Projects"
+format: html
+page-layout: full
+---
+
+This is where I share resources related to courses, workshops, talks and various other types of presentations. 
+
+------------------------------------------------------------------------
+
+## Teaching Projects
+
+### [Resources for workshop on AI supported course development for Stockholm University's "Lärarkonferens2026":](teaching/2026_teaching_conference.qmd)
+
+Resources for a workshop about using AI as support in course development, focusing on the benefits but also the challenges. 
+
+------------------------------------------------------------------------

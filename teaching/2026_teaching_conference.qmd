@@ -5,7 +5,7 @@ format:
     css: ../styles.css
 ---
 
-[← Back to Projects](../projects.qmd){.button}
+[← Back to Teaching](../teaching.qmd){.button}
 
 **The MCQ Creation Assistant 2** is designed to help teachers create multiple-choice questions and feedback. The content should always be reviewed by an expert, as generative AI can sometimes contain errors or less appropriate wording.
 
@@ -78,4 +78,4 @@ Note that when you specify an area, the AI will create four different questions 
 ___
 ```
 
-[← Back to Projects](../projects.qmd){.button}
+[← Back to Teaching](../teaching.qmd){.button}
