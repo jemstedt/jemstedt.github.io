@@ -6,7 +6,14 @@ page-layout: full
 
 If you'd like to get in touch, feel free to reach out by email or on LinkedIn.
 
--   **Email**: [jemstedt\@su.se](mailto:jemstedt@su.se)
+## Email
+
+Contact me at [jemstedt\@su.se](mailto:jemstedt@su.se), if you want to discuss topics related to my work at Stockholm University.
+
+Contact me at my company adress [andreas\@rowboater.com](mailto:andreas@rowboater.com), if you want to, for example, hire me for a project.
+
+## More information about me
+
 -   **LinkedIn**: [linkedin.com/in/andreas-jemstedt](https://www.linkedin.com/in/andreas-jemstedt)
 -   **ORCID**: <https://orcid.org/0000-0003-3845-5468>
 -   **Stockholm University Webpage**: <https://www.su.se/english/profiles/anje6261-1.191060>
