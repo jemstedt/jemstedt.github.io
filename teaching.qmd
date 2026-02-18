@@ -14,4 +14,8 @@ This is where I share resources related to courses, workshops, talks and various
 
 Resources for a workshop about using AI as support in course development, focusing on the benefits but also the challenges. 
 
+### [Resources for workshop about Test-enhanced learning and using AI to support the development of questions:](teaching/retrieval_practice_and_ai_workshop.qmd)
+
+Resources for a test-enhanced learning (retrieval practice), and how AI might support development of questions and feedback. 
+
 ------------------------------------------------------------------------
