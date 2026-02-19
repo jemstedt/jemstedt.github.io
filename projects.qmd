@@ -38,6 +38,9 @@ As a postdoc at KTH, I created a free 30-minute online course on evidence-based 
 
 Sometimes I make things just to try something out or learn a new tool. Not everything fits neatly into a category, but I enjoy side projects that blend data, writing, design, or psychology.
 
+### [Checklist for accepting non-mandatory work](projects/accepting_work_checklist.qmd)
+Sometimes in life, you have the luxury of having more opportunities than time. Lately, I've been lucky enough to be in this position. To help me select which projects to work on, I developed this decision support tool. It's helped me, so maybe it can help someone else, too. The tool emerged as a thought cocktail after reading the excellent books The Checklist Manifesto, Deep Work, The Anatomy of a Breakthrough, and Thinking, Fast and Slow, all of which I highly recommend. 
+
 ### [A Proto Theory About Mental Effort and Mental Production Rate](projects/mental_effort.qmd)
 Here I sketch out a proto-theory born from a concussion, proposing that processing fluency is best understood as an interaction between mental effort and mental production rate.
 

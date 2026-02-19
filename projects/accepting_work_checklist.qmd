@@ -1,0 +1,51 @@
+---
+title: "Checklist for accepting non-mandatory work"
+---
+
+[← Back to Projects](../projects.qmd){.button}
+
+## Note about mandatory work
+
+If I have to do it, see if there is a way to make it fun.
+
+## How to deal with situations where offers happen face-to-face or over phone
+
+1. Say: **“Can I think about it and get back to you?”**
+
+2. Consult this checklist.
+
+3. If I answer on the spot, that answer is **provisional** — I’m allowed to change my mind after reviewing this. Think it through, its better to be a bit annoying and retract a yes than to end up regretting accepting a project.
+
+***
+### Pre-Mortem check (30 seconds) Imagine you've started working on the project and it went badly.
+
+1. What went wrong?
+
+2. Why did I end up regretting this?
+
+3. Which part annoyed, stressed, or drained me more than expected?
+
+4. Can I avoid or limit the bad parts?
+
+If the likely failure feels obvious or familiar, treat that as real data, not pessimism.
+
+***
+### Acceptance Checklist
+Only say yes if **all** of the following are true:
+
+- [ ] **Meaningful progress**  
+  There’s a substantial chance (≈50% or higher) that this will move me in a concrete way toward one of my [[Personal goals]]
+- [ ] **Worth the cost**  
+  The value clearly outweighs the pain, effort, or annoyance.
+- [ ] **Capacity**  
+  I genuinely have time for this without adding too much stress.
+- [ ] **Opportunity cost**  
+  This won’t crowd out something important that I already know I want to do.
+- [ ] **Clean yes**  
+  I’m saying yes because I want to, not out of guilt, fear, obligation, or people-pleasing.
+
+If any item is a **no** or a **maybe**, the default answer is **no** (or **“not right now”**).
+
+***
+
+[← Back to Projects](../projects.qmd){.button}
