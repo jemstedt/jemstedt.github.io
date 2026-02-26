@@ -205,9 +205,9 @@
   {
     "objectID": "projects/MCQ_generators.html",
     "href": "projects/MCQ_generators.html",
-    "title": "MCQ Generators",
+    "title": "MCQ Generators for Stockholm University",
     "section": "",
-    "text": "← Back to Projects\nAs part of a project at Stockholm university, I developed a ChatGPT GPTs that helps teachers generate large amounts of multiple-choice questions with feedback for each response alternative. The aim of the project is to develop tools to make it easier for teachers aid their students self-regulated learning by providing them with high-quality study materials before and after their lectures, seminars and workshops.\nThe GPTs have slightly different flavor and flexibility (how much it asks you to provide info about your topic). I am still working on ways of making the GPTs create harder and more high-quality questions.\n\nYou can access the GPTs through these links:\nMCQ creation assistant: https://chatgpt.com/g/g-uW7KC4U7M-mcq-creation-assistant\nEric’s and Andreas’ MCQ bot: https://chatgpt.com/g/g-67516b00597881919a6960fc5ae0983d-eric-s-and-andreas-mcq-bot\n\n← Back to Projects"
+    "text": "← Back to Projects\nAs part of a project at Stockholm university, I developed a ChatGPT GPTs that helps teachers generate large amounts of multiple-choice questions with feedback for each response alternative. The aim of the project is to develop tools to make it easier for teachers aid their students self-regulated learning by providing them with high-quality study materials before and after their lectures, seminars and workshops.\nThe GPTs have slightly different flavor and flexibility (how much it asks you to provide info about your topic). I am still working on ways of making the GPTs create harder and more high-quality questions.\n\nYou can access the GPTs through these links:\nMCQ creation assistant: https://chatgpt.com/g/g-uW7KC4U7M-mcq-creation-assistant\nMCQ creation assistant 2: https://chatgpt.com/g/g-6989ea05611481919a256b8319660d09-mcq-creation-assistant-2\n\n← Back to Projects"
   },
   {
     "objectID": "projects/study_techniques_KTH.html",

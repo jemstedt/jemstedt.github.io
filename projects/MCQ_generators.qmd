@@ -1,5 +1,5 @@
 ---
-title: "MCQ Generators"
+title: "MCQ Generators for Stockholm University"
 ---
 
 [← Back to Projects](../projects.qmd){.button}
@@ -12,6 +12,6 @@ The GPTs have slightly different flavor and flexibility (how much it asks you to
 
 **MCQ creation assistant**: <https://chatgpt.com/g/g-uW7KC4U7M-mcq-creation-assistant>
 
-**Eric's and Andreas' MCQ bot**: <https://chatgpt.com/g/g-67516b00597881919a6960fc5ae0983d-eric-s-and-andreas-mcq-bot>\
+**MCQ creation assistant 2**: <https://chatgpt.com/g/g-6989ea05611481919a256b8319660d09-mcq-creation-assistant-2>\
 \
 [← Back to Projects](../projects.qmd){.button}
