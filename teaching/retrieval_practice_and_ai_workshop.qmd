@@ -15,7 +15,7 @@ Here you will find links and prompts to two question assistants (Q assistans). O
 
 <https://chatgpt.com/g/g-6989ea05611481919a256b8319660d09-q-aide-multiple-choice-questions-and-feedback>
 
-**Q aide: Question and example responses**
+**Q aide: Questions and example responses**
 
 <https://chatgpt.com/g/g-69a02fdc08888191b38e419b45d1e646-q-aide-question-and-example-responses>
 
