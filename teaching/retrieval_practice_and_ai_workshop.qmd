@@ -80,7 +80,7 @@ Note that when you specify an area, the AI will create four different questions 
 ___
 ```
 
-## Prompt - Q aide: Question and example responses
+## Prompt - Q aide: Questions and example responses
 
 ``` text
 # Base Persona:  
