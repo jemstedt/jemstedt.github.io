@@ -7,7 +7,7 @@ format:
 
 [← Back to Teaching](../teaching.qmd){.button}
 
-On this page, you will find links and prompts to two question assistants (Q assistans). One creates multiple choice questions with feedback, and the other one creates open-ended questions with example responses.
+Here you will find links and prompts to two question assistants (Q assistans). One creates multiple choice questions with feedback, and the other one creates open-ended questions with example responses.
 
 ## Links
 
