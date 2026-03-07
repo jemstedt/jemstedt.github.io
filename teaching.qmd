@@ -8,6 +8,10 @@ page-layout: full
 
 This is where I share resources related to courses, workshops, talks and various other types of presentations. 
 
+### [Apple Game Simulation for Stockholm Bayes Club](teaching/apple_game_simulation.qmd)
+
+Simulates the outcome of a game found in a Basme comic book for Stockholm Bayes Club
+
 ### [Resources for workshop on AI supported course development for Stockholm University's "Lärarkonferens2026":](teaching/2026_teaching_conference.qmd)
 
 Resources for a workshop about using AI as support in course development, focusing on the benefits but also the challenges. 
