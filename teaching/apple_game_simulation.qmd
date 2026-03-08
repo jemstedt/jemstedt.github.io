@@ -9,6 +9,22 @@ format:
 
 [← Back to Teaching](../teaching.qmd){.button}
 
+## Game rules
+
+In this game you compete against grandma. Grandma moves along a path from start to finish, while you try to collect as many apples as possible before she reaches the end.
+
+Each round a six-sided die is rolled:
+
+- If the result is 1, 2, or 6, grandma moves forward that many spaces.
+- If the result is 3, 4, or 5, you collect that many apples instead.
+
+There are two special squares on the path:
+
+- If grandma lands on 9, she takes a shortcut and moves directly to 14.
+- If grandma lands on 18, she must skip her next turn.
+
+The game ends as soon as grandma reaches or passes square 21. At that moment the round stops immediately, and the number of apples you have collected is your final score.
+
 ## Try one game
 
 <button id="run-game">Play one game</button>

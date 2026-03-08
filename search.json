@@ -334,5 +334,12 @@
     "title": "Apple Game Simulation for Stockholm Bayes Club",
     "section": "Estimated probability of winning the game for 10, 20, 30 apples.",
     "text": "Estimated probability of winning the game for 10, 20, 30 apples.\n\n\nShow code\nlibrary(scales)\n\np10 &lt;- percent(mean(results &gt;= 10))\np20 &lt;- percent(mean(results &gt;= 20))\np30 &lt;- percent(mean(results &gt;= 30))\n\ncat(\n  \" ≥10 apples:\", p10,\"\\n\",\n  \"≥20 apples:\", p20,\"\\n\",\n  \"≥30 apples:\", p30\n)\n\n\n ≥10 apples: 88% \n ≥20 apples: 65% \n ≥30 apples: 41%\n\n\n← Back to Teaching"
+  },
+  {
+    "objectID": "teaching/apple_game_simulation.html#game-rules",
+    "href": "teaching/apple_game_simulation.html#game-rules",
+    "title": "Apple Game Simulation for Stockholm Bayes Club",
+    "section": "Game rules",
+    "text": "Game rules\nIn this game you compete against grandma. Grandma moves along a path from start to finish, while you try to collect as many apples as possible before she reaches the end.\nEach round a six-sided die is rolled:\n\nIf the result is 1, 2, or 6, grandma moves forward that many spaces.\nIf the result is 3, 4, or 5, you collect that many apples instead.\n\nThere are two special squares on the path:\n\nIf grandma lands on 9, she takes a shortcut and moves directly to 14.\nIf grandma lands on 18, she must skip her next turn.\n\nThe game ends as soon as grandma reaches or passes square 21. At that moment the round stops immediately, and the number of apples you have collected is your final score."
   }
 ]

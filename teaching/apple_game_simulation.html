@@ -162,7 +162,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#try-one-game" id="toc-try-one-game" class="nav-link active" data-scroll-target="#try-one-game">Try one game</a></li>
+  <li><a href="#game-rules" id="toc-game-rules" class="nav-link active" data-scroll-target="#game-rules">Game rules</a></li>
+  <li><a href="#try-one-game" id="toc-try-one-game" class="nav-link" data-scroll-target="#try-one-game">Try one game</a></li>
   <li><a href="#distribution-from-10000-simulated-games" id="toc-distribution-from-10000-simulated-games" class="nav-link" data-scroll-target="#distribution-from-10000-simulated-games">Distribution from 10,000 simulated games</a></li>
   <li><a href="#estimated-probability-of-winning-the-game-for-10-20-30-apples." id="toc-estimated-probability-of-winning-the-game-for-10-20-30-apples." class="nav-link" data-scroll-target="#estimated-probability-of-winning-the-game-for-10-20-30-apples.">Estimated probability of winning the game for 10, 20, 30 apples.</a></li>
   </ul>
@@ -191,6 +192,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><a href="../teaching.html" class="button">← Back to Teaching</a></p>
+<section id="game-rules" class="level2">
+<h2 class="anchored" data-anchor-id="game-rules">Game rules</h2>
+<p>In this game you compete against grandma. Grandma moves along a path from start to finish, while you try to collect as many apples as possible before she reaches the end.</p>
+<p>Each round a six-sided die is rolled:</p>
+<ul>
+<li>If the result is 1, 2, or 6, grandma moves forward that many spaces.</li>
+<li>If the result is 3, 4, or 5, you collect that many apples instead.</li>
+</ul>
+<p>There are two special squares on the path:</p>
+<ul>
+<li>If grandma lands on 9, she takes a shortcut and moves directly to 14.</li>
+<li>If grandma lands on 18, she must skip her next turn.</li>
+</ul>
+<p>The game ends as soon as grandma reaches or passes square 21. At that moment the round stops immediately, and the number of apples you have collected is your final score.</p>
+</section>
 <section id="try-one-game" class="level2">
 <h2 class="anchored" data-anchor-id="try-one-game">Try one game</h2>
 <button id="run-game">
