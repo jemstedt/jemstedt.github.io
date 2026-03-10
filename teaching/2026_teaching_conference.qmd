@@ -15,7 +15,11 @@ Note that when you specify a topic, the AI will create four different questions 
 
 ## Access the MCQ Creation Assistant here:
 
+### ChatGPT version
 <https://chatgpt.com/g/g-6989ea05611481919a256b8319660d09-mcq-creation-assistant-2>
+
+### Copilot version
+<https://m365.cloud.microsoft/chat/?titleId=T_5ea1c94d-ec97-ca0e-0f74-d605437d104a&source=embedded-builder>
 
 ## The full prompt for the AI assistant
 
