@@ -8,6 +8,10 @@ page-layout: full
 
 This is where I share resources related to courses, workshops, talks and various other types of presentations. 
 
+### [ResearchED 2026](teaching/2026_researchED.qmd)
+
+Handouts for two prestentations at researchED Scandinavia 2026
+
 ### [Apple Game Simulation for Stockholm Bayes Club](teaching/apple_game_simulation.qmd)
 
 Simulates the outcome of a game found in a Basme comic book for Stockholm Bayes Club

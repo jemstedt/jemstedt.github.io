@@ -1,0 +1,28 @@
+---
+title: "Resources for researchED, 2026"
+format:
+  html:
+    css: ../styles.css
+---
+
+[← Back to Teaching](../teaching.qmd){.button}
+
+[Nedladdningslänk till det här innehållet som en PDF](2026_researchED_files/2026_Handout_reserachED.pdf){target="_blank"}
+
+## **Begrepp från förmiddagen**
+
+**Redundanseffekten (redundancy effect):** Onödig kognitiv belastning som uppstår när flera informationskällor upprepar samma budskap eller tillför sådant som inte behövs, till exempel när en lärare säger exakt det som redan står på en slide. Belastningen minskar när överflödig information tas bort.
+
+**Effekten av delad uppmärksamhet (split attention effect):** Onödig kognitiv belastning som uppstår när eleven måste skifta fokus mellan separata informationsdelar som behöver integreras. Integrerad presentation minskar belastningen.
+
+**Effekten av övergående information (transient information effect):** Onödig kognitiv belastning som uppstår när viktig information försvinner snabbt och inte går att återvända till. Lärandet förbättras när informationen görs stabil och tillgänglig över tid.
+
+**Genomarbetade exempel (worked examples):** Fullständigt lösta exempel som visar hur en uppgift genomförs. De avlastar arbetsminnet och hjälper den lärande att förstå strukturen innan eget arbete påbörjas.
+
+## **Begrepp från förmiddagen**
+
+**Minnesåterkallning (retrieval practice):** En strategi där man aktivt plockar fram kunskap ur minnet i stället för att bara exponeras för informationen igen. Detta stärker minnesspåren och ger mer varaktigt lärande.
+
+**Fördelad inlärning (distributed practice / spaced learning):** Inlärning som sprids ut över tid i stället för att koncentreras vid ett tillfälle. Genom upprepade tillfällen får förankring ske mellan passen vilket leder till bättre långtidslärande.
+
+[← Back to Teaching](../teaching.qmd){.button}
