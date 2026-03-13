@@ -7,7 +7,7 @@ format:
 
 [← Back to Teaching](../teaching.qmd){.button}
 
-[Nedladdningslänk till det här innehållet som en PDF](2026_researchED_files/2026_Handout_reserachED.pdf){target="_blank"}
+[Nedladdningslänk till PDF-version](2026_researchED_files/2026_Handout_reserachED.pdf){target="_blank"}
 
 ## **Begrepp från förmiddagen**
 
@@ -19,7 +19,7 @@ format:
 
 **Genomarbetade exempel (worked examples):** Fullständigt lösta exempel som visar hur en uppgift genomförs. De avlastar arbetsminnet och hjälper den lärande att förstå strukturen innan eget arbete påbörjas.
 
-## **Begrepp från förmiddagen**
+## **Begrepp från eftermiddagen**
 
 **Minnesåterkallning (retrieval practice):** En strategi där man aktivt plockar fram kunskap ur minnet i stället för att bara exponeras för informationen igen. Detta stärker minnesspåren och ger mer varaktigt lärande.
 
