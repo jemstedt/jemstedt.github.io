@@ -36,7 +36,7 @@ As a postdoc at KTH Royal Institute of Technology, I created a free 30-minute on
 
 ## Other Projects
 
-Sometimes I make things just to try something out or learn a new tool. Not everything fits neatly into a category, but I enjoy side projects that blend data, writing, design, or psychology.
+Not everything fits neatly into a category, sometimes I make things just because I enjoy side projects that blend data, writing, design, and psychology.
 
 ### [Checklist for accepting non-mandatory work](projects/accepting_work_checklist.qmd)
 Sometimes in life, you have the luxury of having more opportunities than time. Lately, I've been lucky enough to be in this position. To help me select which projects to work on, I developed this decision support tool. It's helped me, so maybe it can help someone else. The tool emerged as a thought cocktail after reading the excellent books The Checklist Manifesto, Deep Work, The Anatomy of a Breakthrough, and Thinking, Fast and Slow, all of which I highly recommend. 
@@ -48,6 +48,6 @@ Here I sketch out a proto-theory born from a concussion, proposing that processi
 
 Have you ever wished life was less predictable? As we grow older, uncertainty seeps out of our days, draining away the surprise and diminishing the thrill of each moment. Routine takes hold, and before you know it, excitement has quietly slipped through the cracks.
 
-To recapture a bit of that lost uncertainty, I spent two evenings building a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone. Use my clock, and life will feel a little less certain, and perhaps a little more alive, though not necessarily any better.
+To recapture a bit of that lost uncertainty, I spent two evenings building a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone. Use my clock, and life will feel a little less certain, and perhaps a little more alive, though probably not better.
 
 ------------------------------------------------------------------------
