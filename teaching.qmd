@@ -6,21 +6,21 @@ page-layout: full
 
 ------------------------------------------------------------------------
 
-This is where I share resources related to courses, workshops, talks and various other types of presentations. 
+This is where I share resources related to courses, workshops, talks and other types of presentations. 
 
-### [ResearchED 2026](teaching/2026_researchED.qmd)
-
-Handouts for two prestentations at researchED Scandinavia 2026
-
-### [Apple Game Simulation for Stockholm Bayes Club](teaching/apple_game_simulation.qmd)
-
-Simulates the outcome of a game found in a Basme comic book for Stockholm Bayes Club
-
-### [Resources for workshop on AI supported course development for Stockholm University's "Lärarkonferens2026":](teaching/2026_teaching_conference.qmd)
+### [2026 Resources for workshop on AI supported course development for Stockholm University's "Lärarkonferens 2026":](teaching/2026_teaching_conference.qmd)
 
 Resources for a workshop about using AI as support in course development, focusing on the benefits but also the challenges. 
 
-### [Resources for workshop about Test-enhanced learning and using AI to support the development of questions:](teaching/retrieval_practice_and_ai_workshop.qmd)
+### [2026 ResearchED](teaching/2026_researchED.qmd)
+
+Handouts for two prestentations at researchED Scandinavia 2026
+
+### [2026 Apple Game Simulation for Stockholm Bayes Club](teaching/apple_game_simulation.qmd)
+
+Simulates the outcome of a game found in a Basme comic book for Stockholm Bayes Club
+
+### [2026 Resources for workshop about Test-enhanced learning and using AI to support the development of questions:](teaching/retrieval_practice_and_ai_workshop.qmd)
 
 Resources for a test-enhanced learning (retrieval practice), and how AI might support development of questions and feedback. 
 
