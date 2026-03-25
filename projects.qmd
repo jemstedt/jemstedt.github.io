@@ -4,7 +4,7 @@ format: html
 page-layout: full
 ---
 
-This is a collection of a selection of projects I’ve worked on, professional and otherwise.
+This is a selection of projects I’ve worked on, professional and otherwise.
 
 ------------------------------------------------------------------------
 
@@ -26,7 +26,7 @@ I created ChatGPT tools at Stockholm University to help teachers generate feedba
 
 I've written a couple of Substack articles covering topics related to cognitive science and learning.
 
-### [AI tool for Danderyds gymnasium](projects/MCQ_generator danderyd.qmd)
+### [AI tool for Danderyds gymnasium](projects/MCQ_generator%20danderyd.qmd)
 
 I created an AI assistant that helps teachers create multiple-choice questions with feedback.
 
@@ -39,9 +39,11 @@ As a postdoc at KTH Royal Institute of Technology, I created a free 30-minute on
 Not everything fits neatly into a category, sometimes I make things just because I enjoy side projects that blend data, writing, design, and psychology.
 
 ### [Checklist for accepting non-mandatory work](projects/accepting_work_checklist.qmd)
-Sometimes in life, you have the luxury of having more opportunities than time. Lately, I've been lucky enough to be in this position. To help me select which projects to work on, I developed this decision support tool. It's helped me, so maybe it can help someone else. The tool emerged as a thought cocktail after reading the excellent books The Checklist Manifesto, Deep Work, The Anatomy of a Breakthrough, and Thinking, Fast and Slow, all of which I highly recommend. 
+
+Sometimes in life, you have the luxury of having more opportunities than time. Lately, I've been lucky enough to be in this position. To help me select which projects to work on, I developed this decision support tool. It's helped me, so maybe it can help someone else. The tool emerged as a thought cocktail after reading the excellent books The Checklist Manifesto, Deep Work, The Anatomy of a Breakthrough, and Thinking, Fast and Slow, all of which I highly recommend.
 
 ### [A Proto Theory About Mental Effort and Mental Production Rate](projects/mental_effort.qmd)
+
 Here I sketch out a proto-theory born from a concussion, proposing that processing fluency is best understood as an interaction between mental effort and mental production rate.
 
 ### [Stochastic Clock](projects/stochastic_clock.qmd)
