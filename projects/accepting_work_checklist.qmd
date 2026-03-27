@@ -4,7 +4,7 @@ title: "Checklist for accepting non-mandatory work"
 
 [← Back to Projects](../projects.qmd){.button}
 
-## First, do a Pre-Mortem check (30 seconds)
+## First, do a premortem check (30 seconds)
 Imagine accepted the project and it went bad.
 
 1.  What went wrong?
