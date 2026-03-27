@@ -9,7 +9,7 @@ Imagine accepted the project and it went bad.
 
 1.  What went wrong?
 
-2.  Why did I end up regretting this?
+2.  Why did I end up regretting the project?
 
 3.  Which part annoyed, stressed, or drained me more than expected?
 
@@ -24,7 +24,7 @@ If the likely failure feels obvious or familiar, treat that as real data, not pe
 Only say yes if **all** of the following are true:
 
 -   [ ] **Meaningful progress**\
-    There’s a substantial chance (≈50% or higher) that this will move me in a concrete way toward one of my \[\[Personal goals\]\]
+    There’s a substantial chance (≈50% or higher) that this will move me in a concrete way toward one of my personal goals
 -   [ ] **Worth the cost**\
     The value clearly outweighs the pain, effort, or annoyance.
 -   [ ] **Capacity**\
