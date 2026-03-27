@@ -44,6 +44,6 @@ If any item is a **no** or a **maybe**, the default answer is **no** (or **“no
 
 2.  Consult this checklist.
 
-3.  If I answer on the spot, that answer is **provisional** — I’m allowed to change my mind after reviewing this. Think it through, its better to be a bit annoying and retract a yes than to end up regretting accepting a project.
+3.  If I answer on the spot, that answer is **provisional**. I’m allowed to change my mind after reviewing this. Think it through, its better to be a bit annoying and retract a yes than to end up regretting accepting a project.
 
 [← Back to Projects](../projects.qmd){.button}
