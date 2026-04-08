@@ -12,7 +12,7 @@ format:
     - Only answer once
     - No feedback
 
-- **30 minutes: Team responses to the same questions**
+- **20 minutes: Team responses to the same questions**
     - Only one person in each team opens the Canvas quiz
     - You get immediate feedback (correct / incorrect)
     - Retry the test until you get everything correct
@@ -20,9 +20,7 @@ format:
 
 - **Discussion of hard or unclear questions**
 
-- **BREAK**
-
-- **20 minutes: Team responses to 2 application questions**
+- **15 minutes: Team responses to 2 application questions**
     - Only one person in each team opens the Canvas quiz
     - No feedback
     - Be really sure about your answers
