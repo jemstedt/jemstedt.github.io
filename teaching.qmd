@@ -8,6 +8,10 @@ page-layout: full
 
 This is where I share resources related to courses, workshops, talks and other types of presentations.
 
+### [2026 UL1 - Students' learning and the teacher role:](teaching/2026_UL1_students_learning.qmd)
+
+Outline and details about the individual and team practice during the session about Students' learning and the teacher role
+
 ### [2026 Resources for workshop on AI supported course development for Stockholm University's "Lärarkonferens 2026":](teaching/2026_teaching_conference.qmd)
 
 Resources for a workshop about using AI as support in course development, focusing on the benefits but also the challenges.

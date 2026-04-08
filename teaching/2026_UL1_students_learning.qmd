@@ -1,0 +1,33 @@
+---
+title: "UL1: Students' learning and the teacher role, 2026"
+format:
+  html:
+    css: ../styles.css
+---
+
+[← Back to Teaching](../teaching.qmd){.button}
+
+- **20 minutes: Individual responses to 18 multiple-choice questions**
+    - One answer is *more correct* than the others
+    - Only answer once
+    - No feedback
+
+- **30 minutes: Team responses to the same questions**
+    - Only one person in each team opens the Canvas quiz
+    - You get immediate feedback (correct / incorrect)
+    - Retry the test until you get everything correct
+    - If you think the “correct” responses are incorrect, let’s discuss it
+
+- **Discussion of hard or unclear questions**
+
+- **BREAK**
+
+- **20 minutes: Team responses to 2 application questions**
+    - Only one person in each team opens the Canvas quiz
+    - No feedback
+    - Be really sure about your answers
+
+- **Defend your answers after the application exercise**
+
+
+[← Back to Teaching](../teaching.qmd){.button}
