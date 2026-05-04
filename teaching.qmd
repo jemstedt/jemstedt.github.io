@@ -8,7 +8,12 @@ page-layout: full
 
 This is where I share resources related to courses, workshops, talks and other types of presentations.
 
-### [2026 UL1 - Students' learning and the teacher role:](teaching/2026_UL1_students_learning.qmd)
+
+### [2026 CeUL - Teaching with desirable difficulties](teaching/2026_Teaching_with_desirable_difficulties.qmd)
+
+Resources for a CeUl workshop about applying teaching strategies informed by the desirable difficulties framework.
+
+### [2026 UL1 - Students' learning and the teacher role](teaching/2026_UL1_students_learning.qmd)
 
 Outline and details about the individual and team practice during the session about Students' learning and the teacher role
 

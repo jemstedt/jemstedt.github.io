@@ -1,0 +1,22 @@
+---
+title: "Resources for workshop about Test-enhanced learning and using AI to support the development of questions"
+format:
+  html:
+    css: ../styles.css
+---
+
+[← Back to Teaching](../teaching.qmd){.button}
+
++------------------+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| Storage Strength | Retrieval Strength | Example                                                                                                                                         |
++:================:+:==================:+:================================================================================================================================================+
+| High             | High               | A doctor stands in front of a patient with a set of symptoms and immediately knows which problem it is.                                         |
++------------------+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| High             | Low                | When you try to remember the capital of Australia, which you previously remembered many times, but right now cannot recall.                     |
++------------------+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| Low              | High               | The meaning of a concept that you have just learned and are now using in a discussion, but which you will have difficulty remembering tomorrow. |
++------------------+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| Low              | Low                | The name of a new colleague that you heard five minutes ago but now cannot remember.                                                            |
++------------------+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[← Back to Teaching](../teaching.qmd){.button}

@@ -207,7 +207,7 @@
     "href": "teaching.html",
     "title": "Teaching",
     "section": "",
-    "text": "This is where I share resources related to courses, workshops, talks and other types of presentations.\n\n2026 UL1 - Students’ learning and the teacher role:\nOutline and details about the individual and team practice during the session about Students’ learning and the teacher role\n\n\n2026 Resources for workshop on AI supported course development for Stockholm University’s “Lärarkonferens 2026”:\nResources for a workshop about using AI as support in course development, focusing on the benefits but also the challenges.\n\n\n2026 ResearchED\nHandouts for two prestentations at researchED Scandinavia 2026\n\n\n2026 Apple Game Simulation for Stockholm Bayes Club\nSimulates the outcome of a game found in a Basme comic book for Stockholm Bayes Club\n\n\n2026 Resources for workshop about Test-enhanced learning and using AI to support the development of questions:\nResources for a test-enhanced learning (retrieval practice), and how AI might support development of questions and feedback."
+    "text": "This is where I share resources related to courses, workshops, talks and other types of presentations.\n\n2026 CeUL - Teaching with desirable difficulties\nResources for a CeUl workshop about applying teaching strategies informed by the desirable difficulties framework.\n\n\n2026 UL1 - Students’ learning and the teacher role\nOutline and details about the individual and team practice during the session about Students’ learning and the teacher role\n\n\n2026 Resources for workshop on AI supported course development for Stockholm University’s “Lärarkonferens 2026”:\nResources for a workshop about using AI as support in course development, focusing on the benefits but also the challenges.\n\n\n2026 ResearchED\nHandouts for two prestentations at researchED Scandinavia 2026\n\n\n2026 Apple Game Simulation for Stockholm Bayes Club\nSimulates the outcome of a game found in a Basme comic book for Stockholm Bayes Club\n\n\n2026 Resources for workshop about Test-enhanced learning and using AI to support the development of questions:\nResources for a test-enhanced learning (retrieval practice), and how AI might support development of questions and feedback."
   },
   {
     "objectID": "contact.html",
@@ -376,5 +376,12 @@
     "title": "Resources for researchED, 2026",
     "section": "Begrepp från eftermiddagen",
     "text": "Begrepp från eftermiddagen\nMinnesåterkallning (retrieval practice): En strategi där man aktivt plockar fram kunskap ur minnet i stället för att bara exponeras för informationen igen. Detta stärker minnesspåren och ger mer varaktigt lärande.\nFördelad inlärning (distributed practice / spaced learning): Inlärning som sprids ut över tid i stället för att koncentreras vid ett tillfälle. Genom upprepade tillfällen får förankring ske mellan passen vilket leder till bättre långtidslärande.\n← Back to Teaching"
+  },
+  {
+    "objectID": "teaching/2026_Teaching_with_desirable_difficulties.html",
+    "href": "teaching/2026_Teaching_with_desirable_difficulties.html",
+    "title": "Resources for workshop about Test-enhanced learning and using AI to support the development of questions",
+    "section": "",
+    "text": "← Back to Teaching\n\n\n\n\n\n\n\n\nStorage Strength\nRetrieval Strength\nExample\n\n\n\n\nHigh\nHigh\nA doctor stands in front of a patient with a set of symptoms and immediately knows which problem it is.\n\n\nHigh\nLow\nWhen you try to remember the capital of Australia, which you previously remembered many times, but right now cannot recall.\n\n\nLow\nHigh\nThe meaning of a concept that you have just learned and are now using in a discussion, but which you will have difficulty remembering tomorrow.\n\n\nLow\nLow\nThe name of a new colleague that you heard five minutes ago but now cannot remember.\n\n\n\n← Back to Teaching"
   }
 ]
