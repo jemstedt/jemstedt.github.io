@@ -1,5 +1,5 @@
 ---
-title: "Resources for workshop about Test-enhanced learning and using AI to support the development of questions"
+title: "Resources for workshop about teaching with desirable difficulties"
 format:
   html:
     css: ../styles.css
