@@ -3,28 +3,38 @@ title: "Andreas Jemstedt"
 format: html
 page-layout: full
 ---
-::: {.container style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-bottom: 2em; text-align: left;"}
 
-<img src="images/profil.jpg" alt="Photo of Andreas Jemstedt"
-     style="flex-shrink: 0; width: 300px; height: auto; border-radius: 50%; border: 1px solid #ccc;" />
+:::: {.container style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-bottom: 2em; text-align: left;"}
+```{=html}
 
-<div style="flex: 1; min-width: 400px;">
+<img src="images/profil.jpeg" alt="Andreas Jemstedt"
+     style="
+       flex-shrink: 0;
+       width: 300px;
+       height: 300px;
+       object-fit: cover;
+       object-position: 50% 30%;
+       border-radius: 50%;
+       border: 1px solid #ccc;
+     " />
 
+```
+
+::: {style="flex: 1; min-width: 400px;"}
 ## Research and Teaching
+
 I’m a cognitive psychologist and work as an Associate Professor (Docent) in the Department of Education at Stockholm University. My research focuses on how people learn, how they make decisions under uncertainty, and how these judgments shape their behavior. I have a strong interest in quantitative methods, particularly Bayesian modeling, as tools for understanding these cognitive processes.
 
-Alongside research, I teach courses on how insights from cognitive science and the science of learning can be applied in educational settings. For example, how findings from research can be used to improve classroom practice, curriculum development, and the design of digital learning aids.
+Alongside research, I teach courses on how insights from cognitive science and the science of learning can be applied in educational settings. For example, how findings from research can be used to improve classroom practice, students self-regulated learning, and the design of digital learning aids.
 
 I also work with data, both from my own research and in collaboration with others. I have occasionally worked with teams outside my main area on experimental design, statistical analysis, or modeling, particularly in projects involving behavioral or cognitive data.
 
 ## Other Work
+
 Most of my work is academic, but I also contribute to projects beyond my own research and teaching. This usually include presentations and workshops, course design, report writing, and data analysis. I'm open to projects of various kinds, both within and outside the academic setting.
 
 If you're working on something related, or have data you'd like to explore, feel free to get in touch.
 
 📩 jemstedt\@su.se
-</div>
-
 :::
-
-
+::::
