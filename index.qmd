@@ -35,6 +35,6 @@ Most of my work is academic, but I also contribute to projects beyond my own res
 
 If you're working on something related, or have data you'd like to explore, feel free to get in touch.
 
-📩 jemstedt\@su.se
+📩 [Contact me](contact.qmd){.button}
 :::
 ::::
