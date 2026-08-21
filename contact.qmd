@@ -14,7 +14,7 @@ at **[jemstedt@su.se](mailto:jemstedt@su.se)**.
 - Profile at Stockholm University: <https://www.su.se/english/profiles/anje6261-1.191060>
 
 
-## Consultancy through Rowboater AB
+## Expert Services through Rowboater AB
 ```{=html}
 <img src="images/Rowboater_logo.png"
      alt="Rowboater AB"
@@ -25,17 +25,16 @@ at **[jemstedt@su.se](mailto:jemstedt@su.se)**.
       margin-left: 30px;
     " />
 ```
-I provide consultancy services through **Rowboater AB**.
+I provide expert services through **Rowboater AB**.
 
-For consultancy inquiries, please contact me at **[andreas@rowboater.com](mailto:andreas@rowboater.com)**.
+For inquiries, please contact me at **[andreas@rowboater.com](mailto:andreas@rowboater.com)** or connect with me on [LinkedIn](https://www.linkedin.com/in/andreas-jemstedt).
 
-You can also reach me at LinkedIn: [linkedin.com/in/andreas-jemstedt](https://www.linkedin.com/in/andreas-jemstedt)
+#### Selected areas of previous work
 
-#### Previous work has included:
-- Providing subject matter expertise
-- Delivering workshops and presentations
-- Developing online courses and educational materials
-- Writing reports and other written materials
-- Advising on research methods and study design
-- Conducting quantitative and statistical analyses
+- Subject-matter expertise and specialist advisory
+- Workshops, seminars, and presentations
+- Development of online courses and educational materials
+- Reports, analyses, and other written materials
+- Research methodology and study design
+- Quantitative data analysis
 
