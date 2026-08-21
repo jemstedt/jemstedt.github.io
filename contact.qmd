@@ -4,16 +4,38 @@ format: html
 page-layout: full
 ---
 
-If you'd like to get in touch, feel free to reach out by email or on LinkedIn.
+## Stockholm University
 
-## Email
+For questions related to my work at Stockholm University, please contact me 
+at **[jemstedt@su.se](mailto:jemstedt@su.se)**.
 
-Contact me at [jemstedt\@su.se](mailto:jemstedt@su.se), if you want to discuss topics related to my work at Stockholm University.
+#### Related links:
+- ORCID: <https://orcid.org/0000-0003-3845-5468>
+- Profile at Stockholm University: <https://www.su.se/english/profiles/anje6261-1.191060>
 
-Contact me at my company adress [andreas\@rowboater.com](mailto:andreas@rowboater.com), if you want to, for example, hire me for a project.
 
-## More information about me
+## Consultancy through Rowboater AB
+```{=html}
+<img src="images/Rowboater_logo.png"
+     alt="Rowboater AB"
+     style="
+      width: 300px;
+      height: 300px;
+      float: right;
+      margin-left: 30px;
+    " />
+```
+I provide consultancy services through **Rowboater AB**.
 
--   **LinkedIn**: [linkedin.com/in/andreas-jemstedt](https://www.linkedin.com/in/andreas-jemstedt)
--   **ORCID**: <https://orcid.org/0000-0003-3845-5468>
--   **Stockholm University Webpage**: <https://www.su.se/english/profiles/anje6261-1.191060>
+For consultancy inquiries, please contact me at **[andreas@rowboater.com](mailto:andreas@rowboater.com)**.
+
+You can also reach me at LinkedIn: [linkedin.com/in/andreas-jemstedt](https://www.linkedin.com/in/andreas-jemstedt)
+
+#### Previous work has included:
+- Providing subject matter expertise
+- Delivering workshops and presentations
+- Developing online courses and educational materials
+- Writing reports and other written materials
+- Advising on research methods and study design
+- Conducting quantitative and statistical analyses
+
