@@ -5,7 +5,7 @@ format:
     css: ../styles.css
 ---
 
-[← Back to Teaching](../teaching.qmd){.button}
+[← Back to Resources](../resources.qmd){.button}
 
 - **20 minutes: Individual responses to 18 multiple-choice questions**
     - One answer is *more correct* than the others
@@ -28,4 +28,4 @@ format:
 - **Defend your answers after the application exercise**
 
 
-[← Back to Teaching](../teaching.qmd){.button}
+[← Back to Resources](../resources.qmd){.button}

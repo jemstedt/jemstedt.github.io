@@ -12,10 +12,8 @@ website:
         text: About        
       - href: research.qmd
         text: Research
-      - href: teaching.qmd
-        text: Teaching
-      - href: projects.qmd
-        text: Projects        
+      - href: resources.qmd
+        text: Resources
       - href: contact.qmd
         text: Contact
 

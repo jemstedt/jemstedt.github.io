@@ -7,7 +7,7 @@ format:
     code-overflow: wrap
 ---
 
-[← Back to Teaching](../teaching.qmd){.button}
+[← Back to Resources](../resources.qmd){.button}
 
 ### Prompt - Generate multiple choice questions
 
@@ -43,4 +43,4 @@ General feedback: The general feedback.
 ___
 ````
 
-[← Back to Teaching](../teaching.qmd){.button}
+[← Back to Resources](../resources.qmd){.button}
