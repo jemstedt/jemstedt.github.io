@@ -3,7 +3,7 @@ title: "Study Manual"
 format: html
 ---
 
-[← Back to Projects](../projects.qmd){.button}
+[← Back to Resources](../resources.qmd){.button}
 
 I create a two-page study manual for one of my research projects. The manual teaches students to use evidence-based study techniques in two pages with bullet points. The purpose of the study was to test a cost-effective method of improving students self-regulated learning.
 
@@ -94,4 +94,4 @@ Also consider the following tips:
 
 ------------------------------------------------------------------------
 
-## [← Back to Projects](../projects.qmd){.button}
+## [← Back to Resources](../resources.qmd){.button}

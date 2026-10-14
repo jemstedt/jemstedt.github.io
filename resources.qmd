@@ -1,0 +1,87 @@
+---
+title: "Resources"
+format: html
+page-layout: full
+---
+
+Here you will find resources from my teaching, workshops and talks, as well as a selection of projects I've worked on, professional and otherwise.
+
+------------------------------------------------------------------------
+
+## Teaching and workshops
+
+This is where I share resources related to courses, workshops, talks and other types of presentations.
+
+### [2026 CeUL - Auto scored questions workshop](resources/2026_auto_scored_questions_workshop.qmd)
+
+Outline and details about the individual and team practice during the session about Students' learning and the teacher role
+
+### [2026 CeUL - Teaching with desirable difficulties workshop](resources/2026_Teaching_with_desirable_difficulties.qmd)
+
+Resources for a CeUl workshop about applying teaching strategies informed by the desirable difficulties framework.
+
+### [2026 Resources for workshop on AI supported course development for Stockholm University's "Lärarkonferens 2026":](resources/2026_teaching_conference.qmd)
+
+Resources for a workshop about using AI as support in course development, focusing on the benefits but also the challenges.
+
+### [2026 ResearchED](resources/2026_researchED.qmd)
+
+Handouts for two presentations at researchED Scandinavia 2026
+
+### [2026 Apple Game Simulation for Stockholm Bayes Club](resources/apple_game_simulation.qmd)
+
+Simulates the outcome of a game found in a Bamse comic book for Stockholm Bayes Club
+
+### [2026 Resources for workshop about Test-enhanced learning and using AI to support the development of questions:](resources/retrieval_practice_and_ai_workshop.qmd)
+
+Resources for a test-enhanced learning (retrieval practice), and how AI might support development of questions and feedback.
+
+------------------------------------------------------------------------
+
+## Professional projects
+
+### [Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’](resources/expert_to_inquiry.qmd)
+
+Contributed as an expert to the Swedish Ministry of Education's inquiry on improving teacher education using insights from cognitive science (SOU 2024:81).
+
+### [A two-page study manual to improve self-regulated learning](resources/study_manual.qmd)
+
+A study manual created for one of my research projects. The manual teaches evidence-based study techniques.
+
+### [AI tools that generate multiple-choice questions with feedback](resources/MCQ_generators.qmd)
+
+I created ChatGPT tools at Stockholm University to help teachers generate feedback-rich quizzes that support student self-regulated learning.
+
+### [One-page courses teaching topics from the science of learning](resources/one_page_courses.qmd)
+
+I've written a couple of Substack articles covering topics related to cognitive science and learning.
+
+### [AI tool for Danderyds gymnasium](resources/MCQ_generator%20danderyd.qmd)
+
+I created an AI assistant that helps teachers create multiple-choice questions with feedback.
+
+### [Free online course about evidence-based study techniques](resources/study_techniques_KTH.qmd)
+
+As a postdoc at KTH Royal Institute of Technology, I created a free 30-minute online course on evidence-based study techniques using question-based learning.
+
+------------------------------------------------------------------------
+
+## Other projects
+
+Not everything fits neatly into a category, sometimes I make things just because I enjoy side projects that blend data, writing, design, and psychology.
+
+### [Checklist for accepting non-mandatory work](resources/accepting_work_checklist.qmd)
+
+Sometimes in life, you have the luxury of having more opportunities than time. Lately, I've been lucky enough to be in this position. To help me select which projects to work on, I developed this decision support tool. It's helped me, so maybe it can help someone else. The tool emerged as a thought cocktail after reading the excellent books The Checklist Manifesto, Deep Work, The Anatomy of a Breakthrough, and Thinking, Fast and Slow, all of which I highly recommend.
+
+### [A Proto Theory About Mental Effort and Mental Production Rate](resources/mental_effort.qmd)
+
+Here I sketch out a proto-theory born from a concussion, proposing that processing fluency is best understood as an interaction between mental effort and mental production rate.
+
+### [Stochastic Clock](resources/stochastic_clock.qmd)
+
+Have you ever wished life was less predictable? As we grow older, uncertainty seeps out of our days, draining away the surprise and diminishing the thrill of each moment. Routine takes hold, and before you know it, excitement has quietly slipped through the cracks.
+
+To recapture a bit of that lost uncertainty, I spent two evenings building a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone. Use my clock, and life will feel a little less certain, and perhaps a little more alive, though probably not better.
+
+------------------------------------------------------------------------
