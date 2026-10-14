@@ -38,7 +38,7 @@ Resources for a test-enhanced learning (retrieval practice), and how AI might su
 
 ------------------------------------------------------------------------
 
-## Professional projects
+## Other professional projects
 
 ### [Expert Contribution – SOU 2024:81 ‘Ämneskunskaper och lärarskicklighet’](resources/expert_to_inquiry.qmd)
 
