@@ -103,6 +103,58 @@ Response text
 ___
 ```
 
+## Prompt - Put MCQs and short-answer questions into an interactive self-standing HTML document
+``` default
+Create a single, self-contained HTML file (inline CSS and JavaScript, no external libraries, fonts or images) that works as an interactive practice test. I will paste questions below. Use the content exactly as I wrote it. Do not rewrite, shorten, translate, correct or add to my questions, alternatives, feedback or example responses. Write all interface text (buttons, labels, instructions) in the same language as my questions. If my questions are in more than one language, ask me which language to use for the interface before building.
+
+INPUT
+I will paste a mix of two question types:
+1. Multiple choice questions, with feedback written for each response alternative. I will mark which alternative is correct (for example with "(Correct)" and "(Incorrect)" after the letter, or the feedback will make it clear). If it is unclear which is correct, or if more than one alternative seems to be correct, ask me before building.
+2. Short answer questions, each with a correct example response.
+Show the questions in the order I paste them, unless I say otherwise below.
+
+CLEANING OF THE INPUT
+- My pasted text may contain labels that belong to the input format, not to the content. Do not display them: question numbers from my input (such as "1.1"), alternative letters (A, B, C and so on), the markers "(Correct)" and "(Incorrect)", and the word "Feedback:" before each feedback text. Display only the actual question text, alternative text, feedback text and example response text, exactly as I wrote them.
+- Treat everything I paste as plain text. Keep quotation marks, apostrophes, parentheses, accented and special characters intact, and make sure they cannot break the JavaScript or the HTML.
+- Do not show which alternative is correct before the learner has clicked it. The page must not pre-highlight or otherwise hint at the correct alternative.
+
+RANDOM ORDER OF ALTERNATIVES
+- Randomize the order of the response alternatives in every multiple choice question each time the page loads. Do not show letter labels next to the alternatives, since they would no longer match the order.
+- Keep each alternative connected to its own feedback and its own correct or incorrect status when shuffling.
+
+HOW MULTIPLE CHOICE QUESTIONS SHOULD WORK
+- The learner can click any alternative, as many times as they like, until they pick the correct one. There is no limit on attempts and no penalty.
+- When an alternative is clicked, show the feedback for that alternative immediately, directly underneath that specific alternative (not in a separate area below the whole question).
+- Only one feedback message is visible per question at a time. When the learner clicks another alternative, the previous feedback disappears and the new feedback appears underneath the newly clicked alternative.
+- Mark the clicked alternative as correct or incorrect with a clear visual cue. A correct alternative is shown in green and an incorrect alternative in red (background and border), and each also gets an icon and a text label (for example "✓ Correct" and "✗ Incorrect", written in the language of the questions), so the cue does not rely on color alone. The feedback box underneath uses the same green or red styling.
+- Only the most recently clicked alternative in a question is marked at any time. When another alternative is clicked, the marking (color, icon and label) on the previously clicked alternative is removed, even if that alternative was the correct one.
+- Once the correct alternative has been chosen, the question stays in a "completed" state, with a small visible completed indicator. The learner may still click the other alternatives to read their feedback, and the question remains completed.
+- Each question works independently of the others.
+
+HOW SHORT ANSWER QUESTIONS SHOULD WORK
+- Show a text box (with a visible label) and a "Submit" button. Do not accept an empty or whitespace-only answer: put the focus back in the text box instead.
+- After submitting, keep the learner's answer visible (read-only) and reveal my correct example response below it, with a short prompt such as "Compare your response to the example response." Label my example response clearly (for example "Example response", in the language of the questions). Do not show the example response before the learner has submitted.
+- Add a button for the learner to mark that they have compared the two (optional) and a button to edit and resubmit their answer. Keep this simple. When the learner chooses to edit, the example response is hidden again and the question stops showing as completed until the answer is submitted again.
+- A short answer question counts as completed when an answer has been submitted.
+- Do not try to grade short answers automatically.
+
+LAYOUT AND DESIGN
+- Clean, simple and readable. Works well on both desktop and mobile, with no horizontal scrolling.
+- Number the questions in the order they are shown (1, 2, 3 and so on), regardless of the numbers in my input.
+- Do not add a title or heading for the practice test, and do not add a progress indicator or question counter at the top. Start directly with the first question. Give the HTML page a short neutral document title for the browser tab.
+- Accessible: keyboard navigable (alternatives and buttons are real buttons that work with Enter and Space), visible focus states, sufficient contrast, and use aria-live for feedback so screen readers announce it. Set the html lang attribute to the language of the questions.
+- No data is sent anywhere and nothing is stored (no localStorage, cookies or network requests). Everything runs locally in the browser. Reloading the page starts over with a new random order.
+
+OUTPUT
+Return the complete HTML file as one file I can open directly in a browser. Do not give only partial code. If anything in my input is ambiguous (for example, which alternative is correct, or where one question ends and the next begins), ask me before building.
+
+ANY SPECIAL INSTRUCTIONS (for example a different order, or grouping into sections): [write here or delete]
+
+MY QUESTIONS:
+[paste questions here]
+```
+
+
 ## Prompt - Get MCQs into importable file
 
 ``` default

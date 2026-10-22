@@ -12,7 +12,7 @@ Here you will find resources from my teaching, workshops and talks, as well as s
 
 This is where I share resources related to courses, workshops, talks and other types of presentations.
 
-### [2026 Prompts to help with creating practice questions and feedback:](resources/question_and_feedback_prompts.qmd)
+### [Prompts to help with creating practice questions and feedback:](resources/question_and_feedback_prompts.qmd)
 
 Resources for a test-enhanced learning (retrieval practice), and how AI might support development of questions and feedback.
 
