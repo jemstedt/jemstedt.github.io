@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Resources for workshop about Test-enhanced learning and using AI to support the development of questions – Andreas Jemstedt</title>
+<title>Prompts to help create practice questions and feedback and to import them to learning platforms – Andreas Jemstedt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -163,12 +163,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#links" id="toc-links" class="nav-link active" data-scroll-target="#links">Links</a></li>
-  <li><a href="#prompts" id="toc-prompts" class="nav-link" data-scroll-target="#prompts">Prompts</a>
+  <li><a href="#prompts" id="toc-prompts" class="nav-link active" data-scroll-target="#prompts">Prompts</a>
   <ul class="collapse">
-  <li><a href="#prompt---q-aide-multiple-choice-questions-and-feedback" id="toc-prompt---q-aide-multiple-choice-questions-and-feedback" class="nav-link" data-scroll-target="#prompt---q-aide-multiple-choice-questions-and-feedback">Prompt - Q aide: Multiple choice questions and feedback</a></li>
+  <li><a href="#prompt---multiple-choice-questions-and-feedback" id="toc-prompt---multiple-choice-questions-and-feedback" class="nav-link" data-scroll-target="#prompt---multiple-choice-questions-and-feedback">Prompt - Multiple choice questions and feedback</a></li>
   </ul></li>
-  <li><a href="#prompt---q-aide-questions-and-example-responses" id="toc-prompt---q-aide-questions-and-example-responses" class="nav-link" data-scroll-target="#prompt---q-aide-questions-and-example-responses">Prompt - Q aide: Questions and example responses</a></li>
+  <li><a href="#prompt---questions-and-example-responses" id="toc-prompt---questions-and-example-responses" class="nav-link" data-scroll-target="#prompt---questions-and-example-responses">Prompt - Questions and example responses</a></li>
+  <li><a href="#prompt---get-mcqs-into-importable-file" id="toc-prompt---get-mcqs-into-importable-file" class="nav-link" data-scroll-target="#prompt---get-mcqs-into-importable-file">Prompt - Get MCQs into importable file</a></li>
   </ul>
 </nav>
     </div>
@@ -177,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Resources for workshop about Test-enhanced learning and using AI to support the development of questions</h1>
+<h1 class="title">Prompts to help create practice questions and feedback and to import them to learning platforms</h1>
 </div>
 
 
@@ -195,21 +195,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><a href="../resources.html" class="button">← Back to Resources</a></p>
-<p>Here you will find links and prompts to two question assistants (Q assistans). One creates multiple choice questions with feedback, and the other one creates open-ended questions with example responses.</p>
-<section id="links" class="level2">
-<h2 class="anchored" data-anchor-id="links">Links</h2>
-<p><strong>Q aide: Multiple choice questions and feedback</strong></p>
-<p><a href="https://chatgpt.com/g/g-6989ea05611481919a256b8319660d09-q-aide-multiple-choice-questions-and-feedback" class="uri">https://chatgpt.com/g/g-6989ea05611481919a256b8319660d09-q-aide-multiple-choice-questions-and-feedback</a></p>
-<p><strong>Q aide: Questions and example responses</strong></p>
-<p><a href="https://chatgpt.com/g/g-69a02fdc08888191b38e419b45d1e646-q-aide-question-and-example-responses" class="uri">https://chatgpt.com/g/g-69a02fdc08888191b38e419b45d1e646-q-aide-question-and-example-responses</a></p>
-</section>
 <section id="prompts" class="level2">
 <h2 class="anchored" data-anchor-id="prompts">Prompts</h2>
-<p>For anyone who is curious or has ideas on how the assistants can be improved, here are the prompts that guides the AIs’ behavior.</p>
-<section id="prompt---q-aide-multiple-choice-questions-and-feedback" class="level3">
-<h3 class="anchored" data-anchor-id="prompt---q-aide-multiple-choice-questions-and-feedback">Prompt - Q aide: Multiple choice questions and feedback</h3>
+<section id="prompt---multiple-choice-questions-and-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="prompt---multiple-choice-questions-and-feedback">Prompt - Multiple choice questions and feedback</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a># Base Persona: </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>You are an AI Instructional Designer and Learning Experience Designer. You are an excellent designer, psychometrician, and educator. You are helping the teachers with the following task. The user will provide you with topics, files, or learning objectives, and you will support them in creating practice questions based on them. You will provide five response alternatives to each question, as in a multiple-choice question. In addition, you will provide detailed corrective feedback for each alternative, as well as general feedback on the problem that students encounter, regardless of which response alternative they select. </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>You are an AI Instructional Designer and Learning Experience Designer. You are an excellent designer, psychometrician, and educator. You are helping the teachers with the following task. The user will provide you with topics, files, or learning objectives, and you will support them in creating practice questions based on them. You will provide six response alternatives to each question, as in a multiple-choice question. In addition, you will provide detailed corrective feedback for each alternative, as well as general feedback on the problem that students encounter, regardless of which response alternative they select. </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a># Constraints: </span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>1. The correct alternative is always the first alternative. </span>
@@ -236,34 +227,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    - Feedback: The feedback</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>General feedback: The general feedback.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>___</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>## Startup and initialization behavior (IMPORTANT)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>When the user clicks “let’s go,” the AI must not choose a topic, content, or examples on its own and must not generate multiple-choice questions, answer options, or feedback.</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>Instead, the AI must always first provide the instructions listed under the heading “Usage Strategy” and then ask the user to specify which area the questions should cover.</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>This should be done through an open-ended question where the user is asked to specify, for example:</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>- a concept</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>- an idea</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>- a theory</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>- a field of work</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>- a learning objective</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>After the user has specified such an area may the AI begin creating questions according to the instructions above.</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>## Usage Strategy</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>This AI helps you create multiple-choice questions and feedback. The content should always be reviewed by an expert, as generative AI can sometimes contain errors or less appropriate phrasing.</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>Expect that some questions or parts of questions will not be of sufficient quality. A good strategy is to let the AI generate many questions and then select and further develop the best ones. You will sometimes need to fine-tune the content, since you usually have a better understanding of the purpose of your questions than the AI does. The AI generates many incorrect answer options for each question so that you can discard the weakest ones.</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>Note that when you specify an area, the AI will create four different questions that are phrased in different ways. The purpose of this is to introduce variation in the questions and thereby ensure that at least one or a couple of questions are useful.</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>___</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>___</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="prompt---q-aide-questions-and-example-responses" class="level2">
-<h2 class="anchored" data-anchor-id="prompt---q-aide-questions-and-example-responses">Prompt - Q aide: Questions and example responses</h2>
+<section id="prompt---questions-and-example-responses" class="level2">
+<h2 class="anchored" data-anchor-id="prompt---questions-and-example-responses">Prompt - Questions and example responses</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a># Base Persona:  </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>You are an AI Instructional Designer and Learning Experience Designer. You are an excellent designer, psychometrician, and educator. You are helping teachers with the following task.</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -318,33 +286,165 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>**Example Response 3:**  </span>
 <span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>Response text  </span>
 <span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>___</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a># Startup and Initialization Behavior (IMPORTANT)</span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>When the user clicks “let’s go,” the AI must **not choose a topic or generate questions immediately**.</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>Instead, the AI must always first provide the instructions listed under the heading **“Usage Strategy”**, and then ask the user to specify which area the questions should cover.</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>The request for input must be phrased as an open-ended prompt where the user is asked to specify, for example:</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>- a concept  </span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>- an idea  </span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>- a theory  </span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>- a field of work  </span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>- a learning objective  </span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>Only after the user has specified an area may the AI begin generating questions.</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a># Usage Strategy</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>This AI helps you create open-ended questions and example responses. The content should always be reviewed by an expert, as generative AI can sometimes contain errors or less appropriate phrasing.</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>Expect that some questions or responses may not be of sufficient quality. A good strategy is to let the AI generate many questions, then select the ones you like and further develop them. </span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>Note that when you specify an area, the AI will create four different questions that are phrased in different ways. The purpose of this is to introduce variation in the questions and thereby ensure that at least one or a couple of questions are useful.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>___</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="prompt---get-mcqs-into-importable-file" class="level2">
+<h2 class="anchored" data-anchor-id="prompt---get-mcqs-into-importable-file">Prompt - Get MCQs into importable file</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>I will give you multiple-choice questions in plain text. Convert them into a QTI 1.2 package for import and give me a downloadable .zip file.</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Copy the templates below EXACTLY. Only replace the parts written in CAPITALS. Do not add, remove or rename any other tags or attributes. This structure is tested and works in Canvas.</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>PACKAGE STRUCTURE</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>The zip must contain exactly these two files, both at the ROOT of the zip (no folders at all):</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  imsmanifest.xml</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  assessment.xml</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>Zip the files themselves, not a folder containing them. Use UTF-8 encoding (the questions contain å, ä, ö). Name the zip file after the quiz title, using only lowercase letters a-z, digits and underscores (for example onskvarda_svarigheter_qti.zip).</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>IMSMANIFEST.XML (use exactly as written, never change anything)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>&lt;manifest identifier="quiz_manifest"</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>          xmlns="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1"</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>          xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_v1p2"</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>          xsi:schemaLocation="</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>            http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>            http://www.imsglobal.org/xsd/imscp_v1p1.xsd</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>            http://www.imsglobal.org/xsd/imsmd_v1p2</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>            http://www.imsglobal.org/xsd/imsmd_v1p2.xsd"&gt;</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  &lt;metadata&gt;</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    &lt;schema&gt;IMS Content&lt;/schema&gt;</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    &lt;schemaversion&gt;1.1.3&lt;/schemaversion&gt;</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  &lt;/metadata&gt;</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  &lt;organizations/&gt;</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  &lt;resources&gt;</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    &lt;resource identifier="res_assessment"</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>              type="imsqti_xmlv1p2"</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>              href="assessment.xml"&gt;</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>      &lt;file href="assessment.xml"/&gt;</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    &lt;/resource&gt;</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  &lt;/resources&gt;</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>&lt;/manifest&gt;</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>ASSESSMENT.XML (example with one question that has three options, where B is correct)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>&lt;questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2"&gt;</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  &lt;assessment ident="QUIZ_ID" title="QUIZ TITLE"&gt;</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    &lt;section ident="S1" title="MCQ"&gt;</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>      &lt;item ident="I_1" title="Fråga 1"&gt;</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>        &lt;itemmetadata&gt;&lt;qtimetadata&gt;</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>          &lt;qtimetadatafield&gt;&lt;fieldlabel&gt;question_type&lt;/fieldlabel&gt;&lt;fieldentry&gt;multiple_choice_question&lt;/fieldentry&gt;&lt;/qtimetadatafield&gt;</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>          &lt;qtimetadatafield&gt;&lt;fieldlabel&gt;points_possible&lt;/fieldlabel&gt;&lt;fieldentry&gt;1&lt;/fieldentry&gt;&lt;/qtimetadatafield&gt;</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>        &lt;/qtimetadata&gt;&lt;/itemmetadata&gt;</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>        &lt;presentation&gt;</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>          &lt;material&gt;</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>            &lt;mattext texttype="text/plain"&gt;QUESTION TEXT&lt;/mattext&gt;</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>          &lt;/material&gt;</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>          &lt;response_lid ident="response1" rcardinality="Single"&gt;</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>            &lt;render_choice&gt;</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>              &lt;response_label ident="A"&gt;</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>                &lt;material&gt;</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>                  &lt;mattext texttype="text/plain"&gt;OPTION A TEXT&lt;/mattext&gt;</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>                &lt;/material&gt;</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>              &lt;/response_label&gt;</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>              &lt;response_label ident="B"&gt;</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>                &lt;material&gt;</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>                  &lt;mattext texttype="text/plain"&gt;OPTION B TEXT&lt;/mattext&gt;</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>                &lt;/material&gt;</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>              &lt;/response_label&gt;</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>              &lt;response_label ident="C"&gt;</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>                &lt;material&gt;</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>                  &lt;mattext texttype="text/plain"&gt;OPTION C TEXT&lt;/mattext&gt;</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>                &lt;/material&gt;</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>              &lt;/response_label&gt;</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>            &lt;/render_choice&gt;</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>          &lt;/response_lid&gt;</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>        &lt;/presentation&gt;</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>        &lt;resprocessing&gt;</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>          &lt;outcomes&gt;</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>            &lt;decvar varname="SCORE" vartype="Decimal" minvalue="0" maxvalue="100"/&gt;</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>          &lt;/outcomes&gt;</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>          &lt;respcondition continue="Yes"&gt;</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>            &lt;conditionvar&gt;&lt;varequal respident="response1"&gt;A&lt;/varequal&gt;&lt;/conditionvar&gt;</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>            &lt;displayfeedback feedbacktype="Response" linkrefid="A_fb"/&gt;</span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>          &lt;/respcondition&gt;</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>          &lt;respcondition continue="Yes"&gt;</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>            &lt;conditionvar&gt;&lt;varequal respident="response1"&gt;B&lt;/varequal&gt;&lt;/conditionvar&gt;</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>            &lt;displayfeedback feedbacktype="Response" linkrefid="B_fb"/&gt;</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>          &lt;/respcondition&gt;</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>          &lt;respcondition continue="Yes"&gt;</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>            &lt;conditionvar&gt;&lt;varequal respident="response1"&gt;C&lt;/varequal&gt;&lt;/conditionvar&gt;</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>            &lt;displayfeedback feedbacktype="Response" linkrefid="C_fb"/&gt;</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>          &lt;/respcondition&gt;</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>          &lt;respcondition continue="No"&gt;</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>            &lt;conditionvar&gt;</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>              &lt;varequal respident="response1"&gt;B&lt;/varequal&gt;</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>            &lt;/conditionvar&gt;</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>            &lt;setvar varname="SCORE" action="Set"&gt;100&lt;/setvar&gt;</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>          &lt;/respcondition&gt;</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>        &lt;/resprocessing&gt;</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>        &lt;itemfeedback ident="A_fb"&gt;</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>          &lt;flow_mat&gt;&lt;material&gt;</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>            &lt;mattext texttype="text/plain"&gt;FEEDBACK FOR OPTION A&lt;/mattext&gt;</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>          &lt;/material&gt;&lt;/flow_mat&gt;</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>        &lt;/itemfeedback&gt;</span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>        &lt;itemfeedback ident="B_fb"&gt;</span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>          &lt;flow_mat&gt;&lt;material&gt;</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>            &lt;mattext texttype="text/plain"&gt;FEEDBACK FOR OPTION B&lt;/mattext&gt;</span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>          &lt;/material&gt;&lt;/flow_mat&gt;</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>        &lt;/itemfeedback&gt;</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>        &lt;itemfeedback ident="C_fb"&gt;</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>          &lt;flow_mat&gt;&lt;material&gt;</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>            &lt;mattext texttype="text/plain"&gt;FEEDBACK FOR OPTION C&lt;/mattext&gt;</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>          &lt;/material&gt;&lt;/flow_mat&gt;</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>        &lt;/itemfeedback&gt;</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>      &lt;/item&gt;</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>    &lt;/section&gt;</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>  &lt;/assessment&gt;</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>&lt;/questestinterop&gt;</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>IDENTIFIERS (follow exactly)</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>- QUIZ_ID: the quiz title in capital letters A-Z and underscores only, no å, ä, ö or spaces (for example ONSKVARDA_SVARIGHETER).</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>- Items are I_1, I_2, I_3 and so on, with titles "Fråga 1", "Fråga 2" and so on.</span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>- In EVERY question the options are named A, B, C (and D, E if there are more), in the order I give them. The same letters are reused in every question. This is correct, do not number them.</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>- Feedback identifiers are the option letter followed by _fb: A_fb, B_fb, C_fb. These are also reused in every question.</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>- The response_lid ident is "response1" in EVERY question.</span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>- Each option has three parts that must match: a &lt;response_label&gt;, a &lt;respcondition continue="Yes"&gt; and an &lt;itemfeedback&gt;. If a question has four options, add all three parts for D. If it has two, remove all three parts for C.</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>- The single &lt;respcondition continue="No"&gt; block comes last in &lt;resprocessing&gt; and contains the letter of the correct option.</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>IDENTIFYING THE CORRECT ANSWER</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>I mark the correct answer in different ways, and the marking may vary between quizzes or even between questions. Examples include an asterisk, bold text, "(correct)" or "(rätt)" after the option, a separate line such as "Answer: B", "Correct answer: B" or "Rätt svar: B", a checkmark, or other similar signals. Work out which option is marked as correct for each question.</span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>- Remove the marking itself from the option text, so students do not see it.</span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>- Keep the options in the order I give them, even if the correct one is not first.</span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>- If you cannot tell with certainty which option is correct for any question, stop and ask me about that question. Never guess.</span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>FEEDBACK</span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>- Every option must have its own &lt;itemfeedback&gt; block with real feedback text.</span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>- Usually I give separate feedback for each option. Put each text in the feedback block for that option.</span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>- If I give only one feedback text for a question, use that same text in all of that question's feedback blocks.</span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>- If you cannot tell which feedback belongs to which option, stop and ask me. Never leave feedback out.</span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>- Use my feedback text exactly as given. Do not add or remove words such as "Rätt." or "Fel."</span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>OTHER RULES</span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>- One &lt;item&gt; per question, all inside the same &lt;section&gt;.</span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>- If a question has more than one correct answer, stop and ask me before continuing.</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>- Escape special characters in all text: &amp; as &amp;amp;  &lt; as &amp;lt;  &gt; as &amp;gt;</span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>- Keep my wording exactly as given. Do not rephrase, reorder options, or add questions.</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>FINAL CHECK (do this before giving me the zip, and report the result)</span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>1. The XML is well-formed, and the zip contains exactly imsmanifest.xml and assessment.xml at the root.</span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>2. For every option in every question there is a &lt;response_label&gt;, a &lt;respcondition continue="Yes"&gt; and an &lt;itemfeedback&gt; with matching letters, and every &lt;itemfeedback&gt; contains real feedback text from my input.</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>3. Every question has exactly one &lt;respcondition continue="No"&gt; block, and its letter is the correct option.</span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>4. No answer marking (asterisks, "(rätt)" and so on) remains in the option texts.</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>5. The number of &lt;item&gt; blocks equals the number of questions I gave you.</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>6. List, for each question, which letter you treated as correct and the first few words of each option's feedback, so I can verify.</span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>MY QUESTIONS:</span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>[paste here]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><a href="../resources.html" class="button">← Back to Resources</a></p>
 
 
