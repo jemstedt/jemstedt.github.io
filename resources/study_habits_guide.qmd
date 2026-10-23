@@ -1,0 +1,98 @@
+---
+title: "Guide about improving students study habits"
+format:
+  html:
+    css: ../styles.css
+---
+
+[← Back to Resources](../resources.qmd){.button}
+
+[Ladda ner följande guide som en PDF](study_habits_guide_SWE.pdf){.btn .btn-primary download="study_habits_guide_SWE.pdf"}
+
+# Studiestrategier och studievanor
+
+Detta material är ett stöd för lärare som vill hjälpa elever att studera på ett sätt som fungerar. Materialet sammanfattar vad forskningen säger om strategier som ger kunskap som består och går att använda flexibelt, och hur du som lärare kan hjälpa eleverna att faktiskt använda dem.
+
+Den bästa studiestrategin hjälper inte om den aldrig används. Materialet handlar därför om både vilka strategier som stödjer lärande och hur eleverna kan lära sig att använda dem.
+
+Nedan beskrivs några strategier och vad du som lärare kan göra.
+
+## Från kunskap till handling
+
+För att en elev ska börja använda en strategi behöver hen känna till den, tro att den fungerar, bestämma sig för att använda den och planera när och hur. Sista steget är att göra den till en vana, så att eleven slipper bestämma sig varje gång.
+
+**Vad du kan göra**
+
+- Förklara och modellera strategin.
+- Öva med stöd och ta sedan gradvis bort stödet.
+- Om möjligt, använd samma ord och rutiner i alla ämnen.
+
+## Önskvärda svårigheter
+
+Strategier som känns lite ansträngande ger mer varaktig kunskap. De passar när eleverna redan har en grund.
+
+**Så kan du tänka**
+
+- Vid nyinlärning fungerar dina genomgångar bra.
+- Därefter kan du öka svårigheten.
+- En svårighet är bara önskvärd om eleven kan klara den.
+
+## Minnesåterkallning
+
+Eleven försöker hämta fram kunskapen ur minnet i stället för att läsa om den. Strategin ger också mer flexibel kunskap och visar eleven vad hen kan.
+
+**Vad du kan göra**
+
+- Låt eleverna svara på övningsfrågor, skriva ned allt de minns från lektionen eller förhöra varandra.
+- Ge feedback, men inte rätt svar innan eleven har försökt själv.
+- Se till att frågorna ligger på en nivå som eleverna klarar.
+
+## Fördelad övning
+
+Om övningen sprids ut över tid blir resultatet bättre än om den görs vid ett tillfälle. Samlad övning känns ofta effektiv eftersom uppgifterna går allt lättare, men eleven glömmer mer. Vid fördelad övning hinner man glömma lite och lär sig då mer av efterföljande övning.
+
+**Vad du kan göra**
+
+- Återkom till tidigare innehåll, till exempel med quiz och frågekort.
+
+## Elaborering
+
+Eleven kopplar ny information till det hen redan kan, och kan göra det medan hen lär sig. Elaborering ska bygga på innehåll som eleverna redan har fått, annars blir det för svårt.
+
+**Vad du kan göra**
+
+- Få eleverna att besvara ”varför?” och ”hur?” medan de lär sig.
+- Låt eleverna förklara med egna ord, rita begreppskartor och hitta på egna exempel.
+- Se till att övningarna ligger på en nivå som eleverna klarar.
+
+## Planering och mål
+
+En plan gäller vad, när, var och hur eleven ska studera. Att skjuta upp studierna (prokrastinering) är vanligt. Specifika mål och delmål kan hjälpa eleverna att motverka det.
+
+**Vad du kan göra**
+
+- Hjälp eleverna att sätta specifika delmål.
+- Planera baklänges från slutmålet.
+- Hjälp eleverna att välja en studiemiljö där det är enkelt att göra rätt och svårt att göra fel.
+
+## Vanor och friktion
+
+Viljestyrka räcker för en kväll men inte för många. En vana är ett beteende kopplat till en viss situation och bildas genom upprepning. Små hinder (friktion) styr beteendet. Minska hindren för det du vill att eleverna ska göra mer av och öka dem för det de ska göra mindre av.
+
+**Vad du kan göra**
+
+- Hjälp eleverna att välja något litet och koppla det till något de redan gör, till exempel ”Efter middagen övar jag 15 minuter”.
+- Gör strategin lätt att börja, till exempel med färdiga frågor och facit.
+- Höj ambitionen först när det känns enkelt.
+
+## Så kan du börja
+
+- [ ] Förklara och modellera en strategi för eleverna, och säg när och varför den fungerar.
+- [ ] Bygg in minnesåterkallning i undervisningen, gärna med möjlighet att kolla sitt svar.
+- [ ] Planera in återkomst till tidigare innehåll, så att övningen sprids ut över tid.
+- [ ] Låt eleverna förklara med egna ord och fråga sig ”varför?”.
+- [ ] Hjälp eleverna att sätta specifika delmål och planera baklänges.
+- [ ] Hjälp dem att koppla studiestrategin till en fast situation, till exempel ”när jag läst klart försöker jag minnas innehållet”.
+- [ ] Minska friktionen för det eleverna ska göra och öka den för det de ska göra mindre av.
+
+[← Back to Resources](../resources.qmd){.button}
