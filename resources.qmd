@@ -15,6 +15,7 @@ This is where I share resources related to courses, workshops, talks and other t
 Resources for a test-enhanced learning (retrieval practice), and how AI might support development of questions and feedback.
 
 ### [Short guide about improving students study habits:](resources/study_habits_guide.qmd)
+
 A short guide in Swedish about helping students develop good study habits
 
 ### [A two-page study manual to improve self-regulated learning](resources/study_manual.qmd)
