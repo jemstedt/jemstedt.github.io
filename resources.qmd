@@ -4,11 +4,9 @@ format: html
 page-layout: full
 ---
 
-Here you will find resources from my teaching, workshops and talks, as well as some other resource.
-
 ------------------------------------------------------------------------
 
-## Resources for professional projects
+## For professional projects
 
 This is where I share resources related to courses, workshops, talks and other types of presentations.
 
@@ -28,13 +26,13 @@ I've written a couple of Substack articles covering topics related to cognitive 
 
 As a postdoc at KTH Royal Institute of Technology, I created a free 30-minute online course on evidence-based study techniques using question-based learning.
 
-### [2026 Apple Game Simulation for Stockholm Bayes Club](resources/apple_game_simulation.qmd)
+### [Apple Game Simulation for Stockholm Bayes Club](resources/apple_game_simulation.qmd)
 
 Simulates the outcome of a game found in a Bamse comic book for Stockholm Bayes Club
 
 ------------------------------------------------------------------------
 
-## Other Resources
+## For other purposes
 
 Not everything fits neatly into a category, sometimes I make things just because I enjoy side projects that blend data, writing, design, and psychology.
 
