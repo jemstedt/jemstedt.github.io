@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv" xml:lang="sv"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contact &amp; Links – Andreas Jemstedt</title>
+<title>Kontakt och länkar – Andreas Jemstedt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,7 +37,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -57,19 +56,219 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Inget resultat",
+    "search-matching-documents-text": "matchande dokument",
+    "search-copy-link-title": "Kopiera länk för att söka",
+    "search-hide-matches-text": "Göm ytterligare resultat",
+    "search-more-match-text": "annat resultat i detta dokument",
+    "search-more-matches-text": "fler resultat i detta dokument",
+    "search-clear-button-title": "Rensa",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Avbryt",
+    "search-submit-button-title": "Verkställ",
+    "search-label": "Sök"
   }
 }</script>
+<!--
+  Language switch for the website.
+
+  Swedish is the default. English is shown when <html> has the class "lang-en".
+  In the .qmd files:
+    - Swedish text goes in  ::: sv  ...  :::   or  [text]{.sv}
+    - English text goes in  ::: en  ...  :::   or  [text]{.en}
+    - Anything outside these blocks (code, prompts, reference lists, images)
+      is shown in both languages and is never translated.
+
+  The visitor's choice is remembered between pages. A link ending in
+  ?lang=en (for example jemstedt.se/research.html?lang=en) opens the
+  English version directly.
+-->
+<style>
+  html:not(.lang-en) .en,
+  html.lang-en .sv {
+    display: none !important;
+  }
+
+  .lang-switch {
+    background: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  /* Quarto orders the navbar with flexbox: this puts the button at the far right */
+  .lang-switch-item {
+    display: flex;
+    align-items: center;
+    order: 1000;
+    margin-left: 0.5rem;
+  }
+
+  /* On phones the button shows EN / SV so it fits on the same line as the name */
+  .lang-switch-short {
+    display: none;
+  }
+
+  @media (max-width: 991.98px) {
+    .lang-switch-item {
+      margin-left: 0.25rem;
+    }
+
+    .lang-switch.nav-link {
+      padding: 0.1rem 0.45rem;
+      border: 1px solid currentColor;
+      border-radius: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch .bi,
+    .lang-switch-label {
+      display: none;
+    }
+
+    .lang-switch-short {
+      display: inline;
+    }
+  }
+
+  /* Small phones: make room for the button next to the site name */
+  @media (max-width: 385px) {
+    .navbar-brand-container {
+      max-width: calc(100% - 135px) !important;
+    }
+
+    .navbar-brand .navbar-title {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var KEY = "site-lang";
+    var lang = "sv";
+
+    try {
+      var fromUrl = new URLSearchParams(window.location.search).get("lang");
+      if (fromUrl === "en" || fromUrl === "sv") {
+        lang = fromUrl;
+        localStorage.setItem(KEY, lang);
+      } else if (localStorage.getItem(KEY) === "en") {
+        lang = "en";
+      }
+    } catch (e) {}
+
+    // Set before the page is drawn, so the wrong language never flashes.
+    document.documentElement.classList.toggle("lang-en", lang === "en");
+    document.documentElement.lang = lang;
+
+    // Interface texts that Quarto writes in Swedish (lang: sv in _quarto.yml).
+    var UI_EN = {
+      "På denna sida": "On this page",
+      "Visa kod": "Show code",
+      "Dölj kod": "Hide code",
+      "Kod": "Code",
+      "Kopiera till urklipp": "Copy to Clipboard"
+    };
+
+    function swapText(el, attr) {
+      var key = attr ? "svAttr" : "svText";
+      if (!(key in el.dataset)) {
+        el.dataset[key] = attr ? el.getAttribute(attr) : el.textContent.trim();
+      }
+      var sv = el.dataset[key];
+      var value = lang === "en" && UI_EN[sv] ? UI_EN[sv] : sv;
+      if (attr) {
+        el.setAttribute(attr, value);
+      } else {
+        el.textContent = value;
+      }
+    }
+
+    var originalTitle = document.title;
+
+    function apply() {
+      var html = document.documentElement;
+      html.classList.toggle("lang-en", lang === "en");
+      html.lang = lang;
+
+      document.querySelectorAll("#toc-title, details.code-fold > summary").forEach(function (el) {
+        swapText(el);
+      });
+      document.querySelectorAll(".code-copy-button[title]").forEach(function (el) {
+        swapText(el, "title");
+      });
+
+      // Browser tab title
+      var sv = document.querySelector("h1.title .sv");
+      var en = document.querySelector("h1.title .en");
+      document.title = lang === "en" && sv && en
+        ? originalTitle.replace(sv.textContent.trim(), en.textContent.trim())
+        : originalTitle;
+
+      // Button label shows the language you can switch to
+      var btn = document.querySelector(".lang-switch");
+      if (btn) {
+        var label = btn.querySelector(".lang-switch-label");
+        var short = btn.querySelector(".lang-switch-short");
+        label.textContent = lang === "en" ? "Svenska" : "English";
+        short.textContent = lang === "en" ? "SV" : "EN";
+        btn.lang = lang === "en" ? "sv" : "en";
+        btn.setAttribute("aria-label", lang === "en" ? "Byt till svenska" : "Switch to English");
+      }
+    }
+
+    function addButton() {
+      var item = document.createElement("div");
+      item.className = "lang-switch-item";
+      item.innerHTML =
+        '<button type="button" class="nav-link lang-switch">' +
+        '<i class="bi bi-translate" aria-hidden="true"></i>' +
+        '<span class="lang-switch-label"></span>' +
+        '<span class="lang-switch-short"></span></button>';
+
+      // Next to the search icon, so it is visible on phones without opening the menu
+      var search = document.getElementById("quarto-search");
+      var toggler = document.querySelector(".navbar .navbar-toggler");
+      var anchor = search || toggler;
+      if (anchor) {
+        anchor.parentNode.insertBefore(item, anchor);
+      } else {
+        var nav = document.querySelector(".navbar .navbar-container") || document.body;
+        nav.appendChild(item);
+      }
+
+      item.querySelector("button").addEventListener("click", function () {
+        lang = lang === "en" ? "sv" : "en";
+        try {
+          localStorage.setItem(KEY, lang);
+          var url = new URL(window.location.href);
+          if (lang === "en") {
+            url.searchParams.set("lang", "en");
+          } else {
+            url.searchParams.delete("lang");
+          }
+          history.replaceState(null, "", url);
+        } catch (e) {}
+        apply();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mark each language block so screen readers pronounce it correctly
+      document.querySelectorAll(".sv").forEach(function (el) { el.lang = "sv"; });
+      document.querySelectorAll(".en").forEach(function (el) { el.lang = "en"; });
+      addButton();
+      apply();
+    });
+
+    // Quarto adds copy buttons after page load
+    window.addEventListener("load", apply);
+  })();
+</script>
 
 
 </head>
@@ -85,31 +284,31 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Andreas Jemstedt</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Sök"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skifta navigering" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text"><span class="sv">Hem</span><span class="en">Home</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text"><span class="sv">Om mig</span><span class="en">About</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./research.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text"><span class="sv">Forskning</span><span class="en">Research</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./resources.html"> 
-<span class="menu-text">Resources</span></a>
+<span class="menu-text"><span class="sv">Resurser</span><span class="en">Resources</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./contact.html" aria-current="page"> 
-<span class="menu-text">Contact</span></a>
+<span class="menu-text"><span class="sv">Kontakt</span><span class="en">Contact</span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -122,27 +321,18 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#stockholm-university" id="toc-stockholm-university" class="nav-link active" data-scroll-target="#stockholm-university">Stockholm University</a></li>
-  <li><a href="#expert-services-through-rowboater-ab" id="toc-expert-services-through-rowboater-ab" class="nav-link" data-scroll-target="#expert-services-through-rowboater-ab">Expert Services through Rowboater AB</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contact &amp; Links</h1>
+<h1 class="title"><span class="sv">Kontakt och länkar</span><span class="en">Contact &amp; Links</span></h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -154,29 +344,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="stockholm-university" class="level2">
-<h2 class="anchored" data-anchor-id="stockholm-university">Stockholm University</h2>
-<p>For questions related to my work at Stockholm University, please contact me at <strong><a href="mailto:jemstedt@su.se">jemstedt@su.se</a></strong>.</p>
-<section id="related-links" class="level4">
-<h4 class="anchored" data-anchor-id="related-links">Related links:</h4>
+<div class="contact-grid">
+<section id="stockholms-universitet-stockholm-university" class="level2 contact-card">
+<h2 data-anchor-id="stockholms-universitet-stockholm-university"><span class="sv">Stockholms universitet</span> <span class="en">Stockholm University</span></h2>
+<div class="sv">
+<p>För frågor som rör mitt arbete vid Stockholms universitet, kontakta mig via mejl.</p>
+</div>
+<div class="en">
+<p>For questions related to my work at Stockholm University, please contact me by email.</p>
+</div>
+<div class="contact-list">
 <ul>
-<li>ORCID: <a href="https://orcid.org/0000-0003-3845-5468" class="uri">https://orcid.org/0000-0003-3845-5468</a></li>
-<li>Profile at Stockholm University: <a href="https://www.su.se/english/profiles/anje6261-1.191060" class="uri">https://www.su.se/english/profiles/anje6261-1.191060</a></li>
+<li><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:jemstedt@su.se">jemstedt@su.se</a></li>
+<li><i class="bi bi-person-vcard" aria-hidden="true"></i> <a href="https://orcid.org/0000-0003-3845-5468">ORCID 0000-0003-3845-5468</a></li>
+<li><i class="bi bi-building" aria-hidden="true"></i> <a href="https://www.su.se/profiles/a/anje6261" class="sv">Profil vid Stockholms universitet</a><a href="https://www.su.se/english/profiles/a/anje6261" class="en">Profile at Stockholm University</a></li>
 </ul>
+</div>
 </section>
-</section>
-<section id="expert-services-through-rowboater-ab" class="level2">
-<h2 class="anchored" data-anchor-id="expert-services-through-rowboater-ab">Expert Services through Rowboater AB</h2>
-<img src="images/Rowboater_logo.png" alt="Rowboater AB" style="
-      width: 300px;
-      height: 300px;
-      float: right;
-      margin-left: 30px;
-    ">
-<p>I provide expert services through <strong>Rowboater AB</strong>.</p>
-<p>For inquiries, please contact me at <strong><a href="mailto:andreas@rowboater.com">andreas@rowboater.com</a></strong> or connect with me on <a href="https://www.linkedin.com/in/andreas-jemstedt">LinkedIn</a>.</p>
-<section id="selected-areas-of-previous-work" class="level4">
-<h4 class="anchored" data-anchor-id="selected-areas-of-previous-work">Selected areas of previous work</h4>
+<div class="contact-card">
+<img src="images/Rowboater_logo.png" alt="Rowboater AB" class="contact-logo">
+<section id="tjänster-via-rowboater-ab-services-through-rowboater-ab" class="level2">
+<h2 data-anchor-id="tjänster-via-rowboater-ab-services-through-rowboater-ab"><span class="sv">Tjänster via Rowboater AB</span> <span class="en">Services through Rowboater AB</span></h2>
+<div class="sv">
+<p>Jag erbjuder tjänster via mitt företag <strong>Rowboater AB</strong>. Kontakta mig via mejl eller LinkedIn.</p>
+</div>
+<div class="en">
+<p>I provide services through my company <strong>Rowboater AB</strong>. Contact me by email or on LinkedIn.</p>
+</div>
+<div class="contact-list">
+<ul>
+<li><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:andreas@rowboater.com">andreas@rowboater.com</a></li>
+<li><i class="bi bi-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/andreas-jemstedt">LinkedIn</a></li>
+</ul>
+</div>
+<section id="exempel-på-tidigare-uppdrag-selected-areas-of-previous-work" class="level4">
+<h4 data-anchor-id="exempel-på-tidigare-uppdrag-selected-areas-of-previous-work"><span class="sv">Exempel på tidigare uppdrag</span> <span class="en">Selected areas of previous work</span></h4>
+<div class="sv">
+<ul>
+<li>Ämnesexpertis och rådgivning</li>
+<li>Workshoppar, seminarier och föreläsningar</li>
+<li>Utveckling av onlinekurser och utbildningsmaterial</li>
+<li>Rapporter, analyser och annat skriftligt material</li>
+<li>Forskningsmetodik och studiedesign</li>
+<li>Kvantitativ dataanalys</li>
+</ul>
+</div>
+<div class="en">
 <ul>
 <li>Subject-matter expertise and advisory work</li>
 <li>Workshops, seminars, and presentations</li>
@@ -185,21 +398,77 @@ ul.task-list li input[type="checkbox"] {
 <li>Research methodology and study design</li>
 <li>Quantitative data analysis</li>
 </ul>
-
-
+</div>
 </section>
 </section>
+</div>
+</div>
+<style>
+  /* Two cards side by side on wide screens, stacked on phones */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 2rem;
+    margin: 1.5rem 0 3rem;
+  }
+
+  .contact-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.75rem 2rem;
+  }
+
+  .contact-card h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .contact-card h4 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    clear: both;
+  }
+
+  .contact-logo {
+    float: right;
+    width: 110px;
+    height: auto;
+    margin: 0 0 1rem 1.25rem;
+  }
+
+  .contact-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0 0;
+  }
+
+  .contact-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-list .bi {
+    color: #6c1827;
+    margin-right: 0.5rem;
+  }
+
+  @media (max-width: 400px) {
+    .contact-card {
+      padding: 1.25rem;
+    }
+
+    .contact-logo {
+      width: 80px;
+    }
+  }
+</style>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -216,12 +485,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopierat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopierat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

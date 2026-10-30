@@ -2,25 +2,35 @@ project:
   type: website
   output-dir: .
 
+# The site is in Swedish with an English version on the same pages.
+# Swedish text: ::: sv ... :::  or  [text]{.sv}
+# English text: ::: en ... :::  or  [text]{.en}
+# Everything else (code, prompts, references) is shown in both languages.
+# The switch itself is in language.html and language.lua.
+lang: sv
+filters:
+  - language.lua
+
 website:
   title: "Andreas Jemstedt"
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: "[Hem]{.sv}[Home]{.en}"
       - href: about.qmd
-        text: About        
+        text: "[Om mig]{.sv}[About]{.en}"
       - href: research.qmd
-        text: Research
+        text: "[Forskning]{.sv}[Research]{.en}"
       - href: resources.qmd
-        text: Resources
+        text: "[Resurser]{.sv}[Resources]{.en}"
       - href: contact.qmd
-        text: Contact
+        text: "[Kontakt]{.sv}[Contact]{.en}"
 
 format:
   html:
     theme: Journal
     toc: true
+    include-in-header: language.html
 
 editor: visual
 execute:

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv" xml:lang="sv"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Resources – Andreas Jemstedt</title>
+<title>Resurser – Andreas Jemstedt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -57,19 +57,219 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Inget resultat",
+    "search-matching-documents-text": "matchande dokument",
+    "search-copy-link-title": "Kopiera länk för att söka",
+    "search-hide-matches-text": "Göm ytterligare resultat",
+    "search-more-match-text": "annat resultat i detta dokument",
+    "search-more-matches-text": "fler resultat i detta dokument",
+    "search-clear-button-title": "Rensa",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Avbryt",
+    "search-submit-button-title": "Verkställ",
+    "search-label": "Sök"
   }
 }</script>
+<!--
+  Language switch for the website.
+
+  Swedish is the default. English is shown when <html> has the class "lang-en".
+  In the .qmd files:
+    - Swedish text goes in  ::: sv  ...  :::   or  [text]{.sv}
+    - English text goes in  ::: en  ...  :::   or  [text]{.en}
+    - Anything outside these blocks (code, prompts, reference lists, images)
+      is shown in both languages and is never translated.
+
+  The visitor's choice is remembered between pages. A link ending in
+  ?lang=en (for example jemstedt.se/research.html?lang=en) opens the
+  English version directly.
+-->
+<style>
+  html:not(.lang-en) .en,
+  html.lang-en .sv {
+    display: none !important;
+  }
+
+  .lang-switch {
+    background: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  /* Quarto orders the navbar with flexbox: this puts the button at the far right */
+  .lang-switch-item {
+    display: flex;
+    align-items: center;
+    order: 1000;
+    margin-left: 0.5rem;
+  }
+
+  /* On phones the button shows EN / SV so it fits on the same line as the name */
+  .lang-switch-short {
+    display: none;
+  }
+
+  @media (max-width: 991.98px) {
+    .lang-switch-item {
+      margin-left: 0.25rem;
+    }
+
+    .lang-switch.nav-link {
+      padding: 0.1rem 0.45rem;
+      border: 1px solid currentColor;
+      border-radius: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch .bi,
+    .lang-switch-label {
+      display: none;
+    }
+
+    .lang-switch-short {
+      display: inline;
+    }
+  }
+
+  /* Small phones: make room for the button next to the site name */
+  @media (max-width: 385px) {
+    .navbar-brand-container {
+      max-width: calc(100% - 135px) !important;
+    }
+
+    .navbar-brand .navbar-title {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var KEY = "site-lang";
+    var lang = "sv";
+
+    try {
+      var fromUrl = new URLSearchParams(window.location.search).get("lang");
+      if (fromUrl === "en" || fromUrl === "sv") {
+        lang = fromUrl;
+        localStorage.setItem(KEY, lang);
+      } else if (localStorage.getItem(KEY) === "en") {
+        lang = "en";
+      }
+    } catch (e) {}
+
+    // Set before the page is drawn, so the wrong language never flashes.
+    document.documentElement.classList.toggle("lang-en", lang === "en");
+    document.documentElement.lang = lang;
+
+    // Interface texts that Quarto writes in Swedish (lang: sv in _quarto.yml).
+    var UI_EN = {
+      "På denna sida": "On this page",
+      "Visa kod": "Show code",
+      "Dölj kod": "Hide code",
+      "Kod": "Code",
+      "Kopiera till urklipp": "Copy to Clipboard"
+    };
+
+    function swapText(el, attr) {
+      var key = attr ? "svAttr" : "svText";
+      if (!(key in el.dataset)) {
+        el.dataset[key] = attr ? el.getAttribute(attr) : el.textContent.trim();
+      }
+      var sv = el.dataset[key];
+      var value = lang === "en" && UI_EN[sv] ? UI_EN[sv] : sv;
+      if (attr) {
+        el.setAttribute(attr, value);
+      } else {
+        el.textContent = value;
+      }
+    }
+
+    var originalTitle = document.title;
+
+    function apply() {
+      var html = document.documentElement;
+      html.classList.toggle("lang-en", lang === "en");
+      html.lang = lang;
+
+      document.querySelectorAll("#toc-title, details.code-fold > summary").forEach(function (el) {
+        swapText(el);
+      });
+      document.querySelectorAll(".code-copy-button[title]").forEach(function (el) {
+        swapText(el, "title");
+      });
+
+      // Browser tab title
+      var sv = document.querySelector("h1.title .sv");
+      var en = document.querySelector("h1.title .en");
+      document.title = lang === "en" && sv && en
+        ? originalTitle.replace(sv.textContent.trim(), en.textContent.trim())
+        : originalTitle;
+
+      // Button label shows the language you can switch to
+      var btn = document.querySelector(".lang-switch");
+      if (btn) {
+        var label = btn.querySelector(".lang-switch-label");
+        var short = btn.querySelector(".lang-switch-short");
+        label.textContent = lang === "en" ? "Svenska" : "English";
+        short.textContent = lang === "en" ? "SV" : "EN";
+        btn.lang = lang === "en" ? "sv" : "en";
+        btn.setAttribute("aria-label", lang === "en" ? "Byt till svenska" : "Switch to English");
+      }
+    }
+
+    function addButton() {
+      var item = document.createElement("div");
+      item.className = "lang-switch-item";
+      item.innerHTML =
+        '<button type="button" class="nav-link lang-switch">' +
+        '<i class="bi bi-translate" aria-hidden="true"></i>' +
+        '<span class="lang-switch-label"></span>' +
+        '<span class="lang-switch-short"></span></button>';
+
+      // Next to the search icon, so it is visible on phones without opening the menu
+      var search = document.getElementById("quarto-search");
+      var toggler = document.querySelector(".navbar .navbar-toggler");
+      var anchor = search || toggler;
+      if (anchor) {
+        anchor.parentNode.insertBefore(item, anchor);
+      } else {
+        var nav = document.querySelector(".navbar .navbar-container") || document.body;
+        nav.appendChild(item);
+      }
+
+      item.querySelector("button").addEventListener("click", function () {
+        lang = lang === "en" ? "sv" : "en";
+        try {
+          localStorage.setItem(KEY, lang);
+          var url = new URL(window.location.href);
+          if (lang === "en") {
+            url.searchParams.set("lang", "en");
+          } else {
+            url.searchParams.delete("lang");
+          }
+          history.replaceState(null, "", url);
+        } catch (e) {}
+        apply();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mark each language block so screen readers pronounce it correctly
+      document.querySelectorAll(".sv").forEach(function (el) { el.lang = "sv"; });
+      document.querySelectorAll(".en").forEach(function (el) { el.lang = "en"; });
+      addButton();
+      apply();
+    });
+
+    // Quarto adds copy buttons after page load
+    window.addEventListener("load", apply);
+  })();
+</script>
 
 
 </head>
@@ -85,31 +285,31 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Andreas Jemstedt</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Sök"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skifta navigering" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text"><span class="sv">Hem</span><span class="en">Home</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text"><span class="sv">Om mig</span><span class="en">About</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./research.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text"><span class="sv">Forskning</span><span class="en">Research</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./resources.html" aria-current="page"> 
-<span class="menu-text">Resources</span></a>
+<span class="menu-text"><span class="sv">Resurser</span><span class="en">Resources</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./contact.html"> 
-<span class="menu-text">Contact</span></a>
+<span class="menu-text"><span class="sv">Kontakt</span><span class="en">Contact</span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -124,23 +324,23 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">På denna sida</h2>
    
   <ul>
-  <li><a href="#for-professional-projects" id="toc-for-professional-projects" class="nav-link active" data-scroll-target="#for-professional-projects">For professional projects</a>
+  <li><a href="#arbetsrelaterade-for-professional-projects" id="toc-arbetsrelaterade-for-professional-projects" class="nav-link active" data-scroll-target="#arbetsrelaterade-for-professional-projects"><span class="sv">Arbetsrelaterade</span> <span class="en">For professional projects</span></a>
   <ul class="collapse">
-  <li><a href="#prompts-to-help-with-creating-practice-questions-and-feedback" id="toc-prompts-to-help-with-creating-practice-questions-and-feedback" class="nav-link" data-scroll-target="#prompts-to-help-with-creating-practice-questions-and-feedback">Prompts to help with creating practice questions and feedback:</a></li>
-  <li><a href="#short-guide-about-improving-students-study-habits" id="toc-short-guide-about-improving-students-study-habits" class="nav-link" data-scroll-target="#short-guide-about-improving-students-study-habits">Short guide about improving students study habits:</a></li>
-  <li><a href="#a-two-page-study-manual-to-improve-self-regulated-learning" id="toc-a-two-page-study-manual-to-improve-self-regulated-learning" class="nav-link" data-scroll-target="#a-two-page-study-manual-to-improve-self-regulated-learning">A two-page study manual to improve self-regulated learning</a></li>
-  <li><a href="#one-page-courses-teaching-topics-from-the-science-of-learning" id="toc-one-page-courses-teaching-topics-from-the-science-of-learning" class="nav-link" data-scroll-target="#one-page-courses-teaching-topics-from-the-science-of-learning">One-page courses teaching topics from the science of learning</a></li>
-  <li><a href="#free-online-course-about-evidence-based-study-techniques" id="toc-free-online-course-about-evidence-based-study-techniques" class="nav-link" data-scroll-target="#free-online-course-about-evidence-based-study-techniques">Free online course about evidence-based study techniques</a></li>
-  <li><a href="#apple-game-simulation-for-stockholm-bayes-club" id="toc-apple-game-simulation-for-stockholm-bayes-club" class="nav-link" data-scroll-target="#apple-game-simulation-for-stockholm-bayes-club">Apple Game Simulation for Stockholm Bayes Club</a></li>
+  <li><a href="#promptar-för-att-skapa-övningsfrågor-och-feedbackprompts-to-help-with-creating-practice-questions-and-feedback" id="toc-promptar-för-att-skapa-övningsfrågor-och-feedbackprompts-to-help-with-creating-practice-questions-and-feedback" class="nav-link" data-scroll-target="#promptar-för-att-skapa-övningsfrågor-och-feedbackprompts-to-help-with-creating-practice-questions-and-feedback"><span class="sv">Promptar för att skapa övningsfrågor och feedback</span><span class="en">Prompts to help with creating practice questions and feedback:</span></a></li>
+  <li><a href="#kort-guide-om-att-förbättra-elevers-studievanorshort-guide-about-improving-students-study-habits" id="toc-kort-guide-om-att-förbättra-elevers-studievanorshort-guide-about-improving-students-study-habits" class="nav-link" data-scroll-target="#kort-guide-om-att-förbättra-elevers-studievanorshort-guide-about-improving-students-study-habits"><span class="sv">Kort guide om att förbättra elevers studievanor</span><span class="en">Short guide about improving students’ study habits:</span></a></li>
+  <li><a href="#en-studiemanual-på-två-sidor-för-att-förbättra-självreglerat-lärandea-two-page-study-manual-to-improve-self-regulated-learning" id="toc-en-studiemanual-på-två-sidor-för-att-förbättra-självreglerat-lärandea-two-page-study-manual-to-improve-self-regulated-learning" class="nav-link" data-scroll-target="#en-studiemanual-på-två-sidor-för-att-förbättra-självreglerat-lärandea-two-page-study-manual-to-improve-self-regulated-learning"><span class="sv">En studiemanual på två sidor för att förbättra självreglerat lärande</span><span class="en">A two-page study manual to improve self-regulated learning</span></a></li>
+  <li><a href="#one-page-courses-om-ämnen-relaterade-till-science-of-learningone-page-courses-teaching-topics-from-the-science-of-learning" id="toc-one-page-courses-om-ämnen-relaterade-till-science-of-learningone-page-courses-teaching-topics-from-the-science-of-learning" class="nav-link" data-scroll-target="#one-page-courses-om-ämnen-relaterade-till-science-of-learningone-page-courses-teaching-topics-from-the-science-of-learning"><span class="sv">“One-page courses” om ämnen relaterade till Science of Learning</span><span class="en">One-page courses teaching topics from the science of learning</span></a></li>
+  <li><a href="#gratis-onlinekurs-om-evidensinformerade-studieteknikerfree-online-course-about-evidence-based-study-techniques" id="toc-gratis-onlinekurs-om-evidensinformerade-studieteknikerfree-online-course-about-evidence-based-study-techniques" class="nav-link" data-scroll-target="#gratis-onlinekurs-om-evidensinformerade-studieteknikerfree-online-course-about-evidence-based-study-techniques"><span class="sv">Gratis onlinekurs om evidensinformerade studietekniker</span><span class="en">Free online course about evidence-based study techniques</span></a></li>
+  <li><a href="#simulering-av-ett-äppelspel-för-stockholm-bayes-clubapple-game-simulation-for-stockholm-bayes-club" id="toc-simulering-av-ett-äppelspel-för-stockholm-bayes-clubapple-game-simulation-for-stockholm-bayes-club" class="nav-link" data-scroll-target="#simulering-av-ett-äppelspel-för-stockholm-bayes-clubapple-game-simulation-for-stockholm-bayes-club"><span class="sv">Simulering av ett äppelspel för Stockholm Bayes Club</span><span class="en">Apple Game Simulation for Stockholm Bayes Club</span></a></li>
   </ul></li>
-  <li><a href="#for-other-purposes" id="toc-for-other-purposes" class="nav-link" data-scroll-target="#for-other-purposes">For other purposes</a>
+  <li><a href="#för-andra-ändamål-for-other-purposes" id="toc-för-andra-ändamål-for-other-purposes" class="nav-link" data-scroll-target="#för-andra-ändamål-for-other-purposes"><span class="sv">För andra ändamål</span> <span class="en">For other purposes</span></a>
   <ul class="collapse">
-  <li><a href="#checklist-for-accepting-non-mandatory-work" id="toc-checklist-for-accepting-non-mandatory-work" class="nav-link" data-scroll-target="#checklist-for-accepting-non-mandatory-work">Checklist for accepting non-mandatory work</a></li>
-  <li><a href="#a-proto-theory-about-mental-effort-and-mental-production-rate" id="toc-a-proto-theory-about-mental-effort-and-mental-production-rate" class="nav-link" data-scroll-target="#a-proto-theory-about-mental-effort-and-mental-production-rate">A Proto Theory About Mental Effort and Mental Production Rate</a></li>
-  <li><a href="#stochastic-clock" id="toc-stochastic-clock" class="nav-link" data-scroll-target="#stochastic-clock">Stochastic Clock</a></li>
+  <li><a href="#checklista-för-att-tacka-ja-till-frivilliga-uppdragchecklist-for-accepting-non-mandatory-work" id="toc-checklista-för-att-tacka-ja-till-frivilliga-uppdragchecklist-for-accepting-non-mandatory-work" class="nav-link" data-scroll-target="#checklista-för-att-tacka-ja-till-frivilliga-uppdragchecklist-for-accepting-non-mandatory-work"><span class="sv">Checklista för att tacka ja till frivilliga uppdrag</span><span class="en">Checklist for accepting non-mandatory work</span></a></li>
+  <li><a href="#en-prototeori-om-mental-ansträngning-och-mental-produktionstakta-proto-theory-about-mental-effort-and-mental-production-rate" id="toc-en-prototeori-om-mental-ansträngning-och-mental-produktionstakta-proto-theory-about-mental-effort-and-mental-production-rate" class="nav-link" data-scroll-target="#en-prototeori-om-mental-ansträngning-och-mental-produktionstakta-proto-theory-about-mental-effort-and-mental-production-rate"><span class="sv">En prototeori om mental ansträngning och mental produktionstakt</span><span class="en">A Proto Theory About Mental Effort and Mental Production Rate</span></a></li>
+  <li><a href="#stokastisk-klockastochastic-clock" id="toc-stokastisk-klockastochastic-clock" class="nav-link" data-scroll-target="#stokastisk-klockastochastic-clock"><span class="sv">Stokastisk klocka</span><span class="en">Stochastic Clock</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -150,7 +350,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Resources</h1>
+<h1 class="title"><span class="sv">Resurser</span><span class="en">Resources</span></h1>
 </div>
 
 
@@ -168,50 +368,106 @@ ul.task-list li input[type="checkbox"] {
 
 
 <hr>
-<section id="for-professional-projects" class="level2">
-<h2 class="anchored" data-anchor-id="for-professional-projects">For professional projects</h2>
+<section id="arbetsrelaterade-for-professional-projects" class="level2">
+<h2 class="anchored" data-anchor-id="arbetsrelaterade-for-professional-projects"><span class="sv">Arbetsrelaterade</span> <span class="en">For professional projects</span></h2>
+<div class="sv">
+<p>Här delar jag material till kurser, workshoppar, föreläsningar och andra typer av presentationer.</p>
+</div>
+<div class="en">
 <p>This is where I share resources related to courses, workshops, talks and other types of presentations.</p>
-<section id="prompts-to-help-with-creating-practice-questions-and-feedback" class="level3">
-<h3 class="anchored" data-anchor-id="prompts-to-help-with-creating-practice-questions-and-feedback"><a href="./resources/question_and_feedback_prompts.html">Prompts to help with creating practice questions and feedback:</a></h3>
-<p>Resources for a test-enhanced learning (retrieval practice), and how AI might support development of questions and feedback.</p>
+</div>
+<section id="promptar-för-att-skapa-övningsfrågor-och-feedbackprompts-to-help-with-creating-practice-questions-and-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="promptar-för-att-skapa-övningsfrågor-och-feedbackprompts-to-help-with-creating-practice-questions-and-feedback"><span class="sv"><a href="./resources/question_and_feedback_prompts.html">Promptar för att skapa övningsfrågor och feedback</a></span><span class="en"><a href="./resources/question_and_feedback_prompts.html">Prompts to help with creating practice questions and feedback:</a></span></h3>
+<div class="sv">
+<p>Resurser för minnesåterkallning (retrieval practice) och för hur AI kan stödja arbetet med att ta fram frågor och feedback.</p>
+</div>
+<div class="en">
+<p>Resources for test-enhanced learning (retrieval practice), and how AI might support development of questions and feedback.</p>
+</div>
 </section>
-<section id="short-guide-about-improving-students-study-habits" class="level3">
-<h3 class="anchored" data-anchor-id="short-guide-about-improving-students-study-habits"><a href="./resources/study_habits_guide.html">Short guide about improving students study habits:</a></h3>
-<p>A short guide in Swedish about helping students develop good study habits</p>
+<section id="kort-guide-om-att-förbättra-elevers-studievanorshort-guide-about-improving-students-study-habits" class="level3">
+<h3 class="anchored" data-anchor-id="kort-guide-om-att-förbättra-elevers-studievanorshort-guide-about-improving-students-study-habits"><span class="sv"><a href="./resources/study_habits_guide.html">Kort guide om att förbättra elevers studievanor</a></span><span class="en"><a href="./resources/study_habits_guide.html">Short guide about improving students’ study habits:</a></span></h3>
+<div class="sv">
+<p>En kort guide om hur du kan hjälpa elever att utveckla goda studievanor.</p>
+</div>
+<div class="en">
+<p>A short guide about helping students develop good study habits. The downloadable PDF is in Swedish.</p>
+</div>
 </section>
-<section id="a-two-page-study-manual-to-improve-self-regulated-learning" class="level3">
-<h3 class="anchored" data-anchor-id="a-two-page-study-manual-to-improve-self-regulated-learning"><a href="./resources/study_manual.html">A two-page study manual to improve self-regulated learning</a></h3>
+<section id="en-studiemanual-på-två-sidor-för-att-förbättra-självreglerat-lärandea-two-page-study-manual-to-improve-self-regulated-learning" class="level3">
+<h3 class="anchored" data-anchor-id="en-studiemanual-på-två-sidor-för-att-förbättra-självreglerat-lärandea-two-page-study-manual-to-improve-self-regulated-learning"><span class="sv"><a href="./resources/study_manual.html">En studiemanual på två sidor för att förbättra självreglerat lärande</a></span><span class="en"><a href="./resources/study_manual.html">A two-page study manual to improve self-regulated learning</a></span></h3>
+<div class="sv">
+<p>En studiemanual som jag tog fram för ett av mina forskningsprojekt. Manualen lär ut evidensbaserade studietekniker.</p>
+</div>
+<div class="en">
 <p>A study manual created for one of my research projects. The manual teaches evidence-based study techniques.</p>
+</div>
 </section>
-<section id="one-page-courses-teaching-topics-from-the-science-of-learning" class="level3">
-<h3 class="anchored" data-anchor-id="one-page-courses-teaching-topics-from-the-science-of-learning"><a href="./resources/one_page_courses.html">One-page courses teaching topics from the science of learning</a></h3>
+<section id="one-page-courses-om-ämnen-relaterade-till-science-of-learningone-page-courses-teaching-topics-from-the-science-of-learning" class="level3">
+<h3 class="anchored" data-anchor-id="one-page-courses-om-ämnen-relaterade-till-science-of-learningone-page-courses-teaching-topics-from-the-science-of-learning"><span class="sv"><a href="./resources/one_page_courses.html">“One-page courses” om ämnen relaterade till Science of Learning</a></span><span class="en"><a href="./resources/one_page_courses.html">One-page courses teaching topics from the science of learning</a></span></h3>
+<div class="sv">
+<p>Jag har skrivit några artiklar på Substack om ämnen som rör kognitionsvetenskap och lärande.</p>
+</div>
+<div class="en">
 <p>I’ve written a couple of Substack articles covering topics related to cognitive science and learning.</p>
+</div>
 </section>
-<section id="free-online-course-about-evidence-based-study-techniques" class="level3">
-<h3 class="anchored" data-anchor-id="free-online-course-about-evidence-based-study-techniques"><a href="./resources/study_techniques_KTH.html">Free online course about evidence-based study techniques</a></h3>
+<section id="gratis-onlinekurs-om-evidensinformerade-studieteknikerfree-online-course-about-evidence-based-study-techniques" class="level3">
+<h3 class="anchored" data-anchor-id="gratis-onlinekurs-om-evidensinformerade-studieteknikerfree-online-course-about-evidence-based-study-techniques"><span class="sv"><a href="./resources/study_techniques_KTH.html">Gratis onlinekurs om evidensinformerade studietekniker</a></span><span class="en"><a href="./resources/study_techniques_KTH.html">Free online course about evidence-based study techniques</a></span></h3>
+<div class="sv">
+<p>Som postdoktor vid KTH skapade jag en kostnadsfri onlinekurs på 30 minuter om evidensinformerade studietekniker, kursen är uppbyggd enligt principer från frågebaserat lärande.</p>
+</div>
+<div class="en">
 <p>As a postdoc at KTH Royal Institute of Technology, I created a free 30-minute online course on evidence-based study techniques using question-based learning.</p>
+</div>
 </section>
-<section id="apple-game-simulation-for-stockholm-bayes-club" class="level3">
-<h3 class="anchored" data-anchor-id="apple-game-simulation-for-stockholm-bayes-club"><a href="./resources/apple_game_simulation.html">Apple Game Simulation for Stockholm Bayes Club</a></h3>
-<p>Simulates the outcome of a game found in a Bamse comic book for Stockholm Bayes Club</p>
+<section id="simulering-av-ett-äppelspel-för-stockholm-bayes-clubapple-game-simulation-for-stockholm-bayes-club" class="level3">
+<h3 class="anchored" data-anchor-id="simulering-av-ett-äppelspel-för-stockholm-bayes-clubapple-game-simulation-for-stockholm-bayes-club"><span class="sv"><a href="./resources/apple_game_simulation.html">Simulering av ett äppelspel för Stockholm Bayes Club</a></span><span class="en"><a href="./resources/apple_game_simulation.html">Apple Game Simulation for Stockholm Bayes Club</a></span></h3>
+<div class="sv">
+<p>Simulerar utfallet av ett spel från en Bamsetidning. Gjord för Stockholm Bayes Club.</p>
+</div>
+<div class="en">
+<p>Simulates the outcome of a game found in a Bamse comic book for Stockholm Bayes Club.</p>
+</div>
 <hr>
 </section>
 </section>
-<section id="for-other-purposes" class="level2">
-<h2 class="anchored" data-anchor-id="for-other-purposes">For other purposes</h2>
-<p>Not everything fits neatly into a category, sometimes I make things just because I enjoy side projects that blend data, writing, design, and psychology.</p>
-<section id="checklist-for-accepting-non-mandatory-work" class="level3">
-<h3 class="anchored" data-anchor-id="checklist-for-accepting-non-mandatory-work"><a href="./resources/accepting_work_checklist.html">Checklist for accepting non-mandatory work</a></h3>
+<section id="för-andra-ändamål-for-other-purposes" class="level2">
+<h2 class="anchored" data-anchor-id="för-andra-ändamål-for-other-purposes"><span class="sv">För andra ändamål</span> <span class="en">For other purposes</span></h2>
+<div class="sv">
+<p>Ibland gör jag saker bara för att jag tycker om sidoprojekt som blandar data, skrivande, design och psykologi.</p>
+</div>
+<div class="en">
+<p>Sometimes I make things just because I enjoy side projects that blend data, writing, design, and psychology.</p>
+</div>
+<section id="checklista-för-att-tacka-ja-till-frivilliga-uppdragchecklist-for-accepting-non-mandatory-work" class="level3">
+<h3 class="anchored" data-anchor-id="checklista-för-att-tacka-ja-till-frivilliga-uppdragchecklist-for-accepting-non-mandatory-work"><span class="sv"><a href="./resources/accepting_work_checklist.html">Checklista för att tacka ja till frivilliga uppdrag</a></span><span class="en"><a href="./resources/accepting_work_checklist.html">Checklist for accepting non-mandatory work</a></span></h3>
+<div class="sv">
+<p>Ibland har man lyxen att ha fler möjligheter än tid. På sistone har jag haft turen att vara i den situationen. För att lättare välja vilka projekt tog jag fram det här beslutsstödet. Det har hjälpt mig, så det kanske kan hjälpa någon annan också. Verktyget växte fram som en mental cocktail efter att jag läst de utmärkta böckerna The Checklist Manifesto, Deep Work, The Anatomy of a Breakthrough och Thinking, Fast and Slow, som jag alla varmt rekommenderar.</p>
+</div>
+<div class="en">
 <p>Sometimes in life, you have the luxury of having more opportunities than time. Lately, I’ve been lucky enough to be in this position. To help me select which projects to work on, I developed this decision support tool. It’s helped me, so maybe it can help someone else. The tool emerged as a thought cocktail after reading the excellent books The Checklist Manifesto, Deep Work, The Anatomy of a Breakthrough, and Thinking, Fast and Slow, all of which I highly recommend.</p>
+</div>
 </section>
-<section id="a-proto-theory-about-mental-effort-and-mental-production-rate" class="level3">
-<h3 class="anchored" data-anchor-id="a-proto-theory-about-mental-effort-and-mental-production-rate"><a href="./resources/mental_effort.html">A Proto Theory About Mental Effort and Mental Production Rate</a></h3>
+<section id="en-prototeori-om-mental-ansträngning-och-mental-produktionstakta-proto-theory-about-mental-effort-and-mental-production-rate" class="level3">
+<h3 class="anchored" data-anchor-id="en-prototeori-om-mental-ansträngning-och-mental-produktionstakta-proto-theory-about-mental-effort-and-mental-production-rate"><span class="sv"><a href="./resources/mental_effort.html">En prototeori om mental ansträngning och mental produktionstakt</a></span><span class="en"><a href="./resources/mental_effort.html">A Proto Theory About Mental Effort and Mental Production Rate</a></span></h3>
+<div class="sv">
+<p>Här skissar jag på en prototeori som föddes ur en hjärnskakning. Den föreslår att bearbetningsflyt (processing fluency) bäst förstås som ett samspel mellan mental ansträngning och mental produktionstakt.</p>
+</div>
+<div class="en">
 <p>Here I sketch out a proto-theory born from a concussion, proposing that processing fluency is best understood as an interaction between mental effort and mental production rate.</p>
+</div>
 </section>
-<section id="stochastic-clock" class="level3">
-<h3 class="anchored" data-anchor-id="stochastic-clock"><a href="./resources/stochastic_clock.html">Stochastic Clock</a></h3>
+<section id="stokastisk-klockastochastic-clock" class="level3">
+<h3 class="anchored" data-anchor-id="stokastisk-klockastochastic-clock"><span class="sv"><a href="./resources/stochastic_clock.html">Stokastisk klocka</a></span><span class="en"><a href="./resources/stochastic_clock.html">Stochastic Clock</a></span></h3>
+<div class="sv">
+<p>Har du någonsin önskat att livet vore mindre förutsägbart? När vi blir äldre sipprar osäkerheten ut ur våra dagar. Överraskningarna försvinner och varje ögonblick blir lite mindre spännande. Rutinerna tar över, och innan du vet ordet av har spänningen tyst smygit iväg från dig.</p>
+<p>För att få tillbaka lite av den förlorade osäkerheten ägnade har jag byggt en ”stokastisk” klocka. I det långa loppet visar den rätt tid i genomsnitt, men för det mesta gör den inte det. Och ju längre du låter den gå, desto troligare är det att du glider in i din egen privata tidszon. Om du använder min klocka kommer livet att kännas lite mindre säkert och kanske lite mer levande, även om det förmodligen inte blir bättre.</p>
+</div>
+<div class="en">
 <p>Have you ever wished life was less predictable? As we grow older, uncertainty seeps out of our days, draining away the surprise and diminishing the thrill of each moment. Routine takes hold, and before you know it, excitement has quietly slipped through the cracks.</p>
-<p>To recapture a bit of that lost uncertainty, I spent two evenings building a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone. Use my clock, and life will feel a little less certain, and perhaps a little more alive, though probably not better.</p>
+<p>To recapture a bit of that lost uncertainty, I built a “stochastic” clock. Over the long run it will tell the right time on average, but most of the time it won’t. And the longer you let it run, the more likely you are to drift into your own private time zone. Use my clock, and life will feel a little less certain, and perhaps a little more alive, though probably not better.</p>
+</div>
 <hr>
 
 
@@ -244,12 +500,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopierat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopierat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

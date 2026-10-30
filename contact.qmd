@@ -1,40 +1,133 @@
 ---
-title: "Contact & Links"
+title: "[Kontakt och länkar]{.sv}[Contact & Links]{.en}"
 format: html
 page-layout: full
+toc: false
+anchor-sections: false
 ---
 
-## Stockholm University
+:::::: contact-grid
 
-For questions related to my work at Stockholm University, please contact me 
-at **[jemstedt@su.se](mailto:jemstedt@su.se)**.
+::::: contact-card
+## [Stockholms universitet]{.sv} [Stockholm University]{.en}
 
-#### Related links:
-- ORCID: <https://orcid.org/0000-0003-3845-5468>
-- Profile at Stockholm University: <https://www.su.se/english/profiles/anje6261-1.191060>
+::: sv
+För frågor som rör mitt arbete vid Stockholms universitet, kontakta mig via mejl.
+:::
 
+::: en
+For questions related to my work at Stockholm University, please contact me by email.
+:::
 
-## Expert Services through Rowboater AB
+::: contact-list
+- <i class="bi bi-envelope" aria-hidden="true"></i> [jemstedt\@su.se](mailto:jemstedt@su.se)
+- <i class="bi bi-person-vcard" aria-hidden="true"></i> [ORCID 0000-0003-3845-5468](https://orcid.org/0000-0003-3845-5468)
+- <i class="bi bi-building" aria-hidden="true"></i> [Profil vid Stockholms universitet](https://www.su.se/profiles/a/anje6261){.sv}[Profile at Stockholm University](https://www.su.se/english/profiles/a/anje6261){.en}
+:::
+:::::
+
+::::: contact-card
 ```{=html}
-<img src="images/Rowboater_logo.png"
-     alt="Rowboater AB"
-     style="
-      width: 300px;
-      height: 300px;
-      float: right;
-      margin-left: 30px;
-    " />
+<img src="images/Rowboater_logo.png" alt="Rowboater AB" class="contact-logo" />
 ```
-I provide expert services through **Rowboater AB**.
 
-For inquiries, please contact me at **[andreas@rowboater.com](mailto:andreas@rowboater.com)** or connect with me on [LinkedIn](https://www.linkedin.com/in/andreas-jemstedt).
+## [Tjänster via Rowboater AB]{.sv} [Services through Rowboater AB]{.en}
 
-#### Selected areas of previous work
+::: sv
+Jag erbjuder tjänster via mitt företag **Rowboater AB**. Kontakta mig via mejl eller LinkedIn.
+:::
 
+::: en
+I provide services through my company **Rowboater AB**. Contact me by email or on LinkedIn.
+:::
+
+::: contact-list
+- <i class="bi bi-envelope" aria-hidden="true"></i> [andreas\@rowboater.com](mailto:andreas@rowboater.com)
+- <i class="bi bi-linkedin" aria-hidden="true"></i> [LinkedIn](https://www.linkedin.com/in/andreas-jemstedt)
+:::
+
+#### [Exempel på tidigare uppdrag]{.sv} [Selected areas of previous work]{.en}
+
+::: sv
+- Ämnesexpertis och rådgivning
+- Workshoppar, seminarier och föreläsningar
+- Utveckling av onlinekurser och utbildningsmaterial
+- Rapporter, analyser och annat skriftligt material
+- Forskningsmetodik och studiedesign
+- Kvantitativ dataanalys
+:::
+
+::: en
 - Subject-matter expertise and advisory work
 - Workshops, seminars, and presentations
 - Development of online courses and educational materials
 - Reports, analyses, and other written materials
 - Research methodology and study design
 - Quantitative data analysis
+:::
+:::::
 
+::::::
+
+```{=html}
+<style>
+  /* Two cards side by side on wide screens, stacked on phones */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 2rem;
+    margin: 1.5rem 0 3rem;
+  }
+
+  .contact-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.75rem 2rem;
+  }
+
+  .contact-card h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .contact-card h4 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    clear: both;
+  }
+
+  .contact-logo {
+    float: right;
+    width: 110px;
+    height: auto;
+    margin: 0 0 1rem 1.25rem;
+  }
+
+  .contact-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0 0;
+  }
+
+  .contact-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-list .bi {
+    color: #6c1827;
+    margin-right: 0.5rem;
+  }
+
+  @media (max-width: 400px) {
+    .contact-card {
+      padding: 1.25rem;
+    }
+
+    .contact-logo {
+      width: 80px;
+    }
+  }
+</style>
+```

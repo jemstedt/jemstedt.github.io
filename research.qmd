@@ -1,20 +1,28 @@
 ---
-title: "Research"
+title: "[Forskning]{.sv}[Research]{.en}"
 format: html
 csl: apa.csl
 execute:
   echo: false
 ---
 
-My work spans topics in cognitive psychology, memory, learning, metacognition, and decisions under uncertainty. I am especially interested in how people monitor their own understanding, how they regulate their learning over time, and how we can model these processes.
+::: sv
+Min forskning rör lärande, minne, och metakognition. Jag är särskilt intresserad av hur människor övervakar sin egen förståelse, hur de reglerar sitt lärande över tid och hur vi kan modellera de här processerna.
+
+Listan nedan omfattar böcker, tidskriftsartiklar, bokkapitel och ett urval av konferensbidrag.
+:::
+
+::: en
+My work spans topics in cognitive psychology, such as, memory, learning, and metacognition. I am especially interested in how people monitor their own understanding, how they regulate their learning over time, and how we can model these processes.
 
 The list below includes books, journal articles, book chapters, and selected conference presentations.
+:::
 
-## Books
+## [Böcker]{.sv} [Books]{.en}
 
-1. Linderoth, J., & **Jemstedt, A**. (2026). *Undervisning på kognitionsvetenskaplig grund*. Natur & Kultur. <https://www.nok.se/titlar/laromedel-b2/undervisning-pa-kognitionsvetenskaplig-grund/>
+1.  Linderoth, J., & **Jemstedt, A**. (2026). *Undervisning på kognitionsvetenskaplig grund*. Natur & Kultur. <https://www.nok.se/titlar/laromedel-b2/undervisning-pa-kognitionsvetenskaplig-grund/>
 
-## Journal Articles
+## [Tidskriftsartiklar]{.sv} [Journal Articles]{.en}
 
 1.  Schwartz, B. L., Sundelin, T., & **Jemstedt, A**. (2026). Meta-metacognition: Processes underlying judgments about metacognition. *New Ideas in Psychology, 82*, 101254. <https://doi.org/10.1016/j.newideapsych.2026.101254>
 2.  Sundelin, T., **Jemstedt, A**., Gavel, A., Schwartz, B. L., & Axelsson, J. (2025). The Effect of Sleep Loss on Retrospective Metacognitive Judgements Across Five Cognitive Tests. *Journal of Sleep Research*, e70141. <https://doi.org/10.1111/jsr.70141>
@@ -28,13 +36,13 @@ The list below includes books, journal articles, book chapters, and selected con
 10. Arvidsson, K., & **Jemstedt, A.** (2022). The Perceived Importance of Language Skills in Europe—The Case of Swedish Migrants in France. *Languages, 7*(4), Article 4. <https://doi.org/10.3390/languages7040290>
 11. Kubik, V., **Jemstedt, A.**, Eshratabadi, H. M., Schwartz, B. L., & Jönsson, F. U. (2022). The underconfidence-with-practice effect in action memory: The contribution of retrieval practice to metacognitive monitoring. *Metacognition and Learning, 17*(2), 375–398. <https://doi.org/10.1007/s11409-021-09288-2>
 12. **Jemstedt, A.**, Schwartz, B. L., & Jönsson, F. U. (2018). Ease-of-learning judgments are based on both processing fluency and beliefs. *Memory, 26*(6), 807–815. <https://doi.org/10.1080/09658211.2017.1410849>
-13. **Jemstedt, A.**, Kubik, V., & Jönsson, F. U. (2017). What moderates the accuracy of ease of learning judgments? *Metacognition and Learning, 12*(3), 337–355. <https://doi-org.ezp.sub.su.se/10.1007/s11409-017-9172-3>
+13. **Jemstedt, A.**, Kubik, V., & Jönsson, F. U. (2017). What moderates the accuracy of ease of learning judgments? *Metacognition and Learning, 12*(3), 337–355. <https://doi.org/10.1007/s11409-017-9172-3>
 
-## Book Chapters
+## [Bokkapitel]{.sv} [Book Chapters]{.en}
 
 1.  Schwartz, B. L., & **Jemstedt, A.** (2021). The Role of Fluency and Dysfluency in Metacognitive Experiences. In D. Moraitou & P. Metallidou (Eds.), *Trends and Prospects in Metacognition Research across the Life Span: A Tribute to Anastasia Efklides* (pp. 25–40). Springer International Publishing. <https://doi.org/10.1007/978-3-030-51673-4_2>
 
-## Conference Contributions
+## [Konferensbidrag]{.sv} [Conference Contributions]{.en}
 
 1.  Sundelin, T., **Jemstedt, A.**, Gavel, A., Axelsson, J., & Schwartz, B. L. (2024b, November). Sleep deprivation and metacognitive accuracy. Proceedings of the *Psychonomic Society Annual Meeting*.
 2.  Sundelin, T., **Jemstedt, A.**, Gavel, A., Axelsson, J., & Schwartz, B. L. (2024a, October). Metacognition during sleep deprivation. *Proceedings of SweCog (Swedish Cognitive Science Society) Conference*.
