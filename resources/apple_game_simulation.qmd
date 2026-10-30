@@ -1,16 +1,33 @@
 ---
-title: "Apple Game Simulation for Stockholm Bayes Club"
+title: "[Simulering av äppelspelet för Stockholm Bayes Club]{.sv}[Apple Game Simulation for Stockholm Bayes Club]{.en}"
 format:
   html:
     css: ../styles.css
     code-fold: true
-    code-summary: "Show code"
+    code-summary: "Visa kod"
 ---
 
-[← Back to Resources](../resources.qmd){.button}
+[[← Tillbaka till resurser]{.sv}[← Back to Resources]{.en}](../resources.qmd){.button}
 
-## Game rules
+## [Spelregler]{.sv} [Game rules]{.en}
 
+::: sv
+I det här spelet tävlar du mot farmor. Farmor går längs en stig från start till mål, medan du försöker samla så många äpplen som möjligt innan hon kommer fram.
+
+I varje omgång kastar man en vanlig sexsidig tärning:
+
+- Om det blir 1, 2 eller 6 flyttar farmor fram lika många steg.
+- Om det blir 3, 4 eller 5 samlar du i stället lika många äpplen.
+
+Det finns två specialrutor på stigen:
+
+- Om farmor hamnar på 9 tar hon en genväg och flyttar direkt till 14.
+- Om farmor hamnar på 18 måste hon stå över nästa tur.
+
+Spelet slutar så fort farmor når eller passerar ruta 21. Då avbryts omgången direkt, och antalet äpplen du har samlat är ditt slutresultat.
+:::
+
+::: en
 In this game you compete against grandma. Grandma moves along a path from start to finish, while you try to collect as many apples as possible before she reaches the end.
 
 Each round a six-sided die is rolled:
@@ -24,10 +41,11 @@ There are two special squares on the path:
 - If grandma lands on 18, she must skip her next turn.
 
 The game ends as soon as grandma reaches or passes square 21. At that moment the round stops immediately, and the number of apples you have collected is your final score.
+:::
 
-## Try one game
+## [Testa en omgång]{.sv} [Try one game]{.en}
 
-<button id="run-game">Play one game</button>
+<button id="run-game"><span class="sv">Spela en omgång</span><span class="en">Play one game</span></button>
 
 <div id="result-box"></div>
 
@@ -110,7 +128,7 @@ document.getElementById("run-game").addEventListener("click", () => {
   const apples = simulateGame();
 
   document.getElementById("result-box").innerHTML =
-    `<strong>Apples collected:</strong> ${apples}<br><br>
+    `<strong><span class="sv">Insamlade äpplen:</span><span class="en">Apples collected:</span></strong> ${apples}<br><br>
      ${check(apples,10)}<br>
      ${check(apples,20)}<br>
      ${check(apples,30)}`;
@@ -119,7 +137,7 @@ document.getElementById("run-game").addEventListener("click", () => {
 
 ---
 
-## Distribution from 10,000 simulated games
+## [Fördelning från 10 000 simulerade spel]{.sv} [Distribution from 10,000 simulated games]{.en}
 
 ```{r}
 library(ggplot2)
@@ -181,7 +199,7 @@ ggplot(df, aes(x = apples)) +
   theme_bw() +
   theme(panel.grid.minor = element_blank())
 ```
-## Estimated probability of winning the game for 10, 20, 30 apples.
+## [Uppskattad sannolikhet att vinna spelet med 10, 20 och 30 äpplen]{.sv} [Estimated probability of winning the game for 10, 20, 30 apples]{.en}
 
 ```{r}
 library(scales)
@@ -197,4 +215,4 @@ cat(
 )
 ```
 
-[← Back to Resources](../resources.qmd){.button}
+[[← Tillbaka till resurser]{.sv}[← Back to Resources]{.en}](../resources.qmd){.button}

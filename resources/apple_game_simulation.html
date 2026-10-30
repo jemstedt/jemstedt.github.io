@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv" xml:lang="sv"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Apple Game Simulation for Stockholm Bayes Club – Andreas Jemstedt</title>
+<title>Simulering av äppelspelet för Stockholm Bayes Club – Andreas Jemstedt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -92,19 +92,219 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Inget resultat",
+    "search-matching-documents-text": "matchande dokument",
+    "search-copy-link-title": "Kopiera länk för att söka",
+    "search-hide-matches-text": "Göm ytterligare resultat",
+    "search-more-match-text": "annat resultat i detta dokument",
+    "search-more-matches-text": "fler resultat i detta dokument",
+    "search-clear-button-title": "Rensa",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Avbryt",
+    "search-submit-button-title": "Verkställ",
+    "search-label": "Sök"
   }
 }</script>
+<!--
+  Language switch for the website.
+
+  Swedish is the default. English is shown when <html> has the class "lang-en".
+  In the .qmd files:
+    - Swedish text goes in  ::: sv  ...  :::   or  [text]{.sv}
+    - English text goes in  ::: en  ...  :::   or  [text]{.en}
+    - Anything outside these blocks (code, prompts, reference lists, images)
+      is shown in both languages and is never translated.
+
+  The visitor's choice is remembered between pages. A link ending in
+  ?lang=en (for example jemstedt.se/research.html?lang=en) opens the
+  English version directly.
+-->
+<style>
+  html:not(.lang-en) .en,
+  html.lang-en .sv {
+    display: none !important;
+  }
+
+  .lang-switch {
+    background: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  /* Quarto orders the navbar with flexbox: this puts the button at the far right */
+  .lang-switch-item {
+    display: flex;
+    align-items: center;
+    order: 1000;
+    margin-left: 0.5rem;
+  }
+
+  /* On phones the button shows EN / SV so it fits on the same line as the name */
+  .lang-switch-short {
+    display: none;
+  }
+
+  @media (max-width: 991.98px) {
+    .lang-switch-item {
+      margin-left: 0.25rem;
+    }
+
+    .lang-switch.nav-link {
+      padding: 0.1rem 0.45rem;
+      border: 1px solid currentColor;
+      border-radius: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch .bi,
+    .lang-switch-label {
+      display: none;
+    }
+
+    .lang-switch-short {
+      display: inline;
+    }
+  }
+
+  /* Small phones: make room for the button next to the site name */
+  @media (max-width: 385px) {
+    .navbar-brand-container {
+      max-width: calc(100% - 135px) !important;
+    }
+
+    .navbar-brand .navbar-title {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var KEY = "site-lang";
+    var lang = "sv";
+
+    try {
+      var fromUrl = new URLSearchParams(window.location.search).get("lang");
+      if (fromUrl === "en" || fromUrl === "sv") {
+        lang = fromUrl;
+        localStorage.setItem(KEY, lang);
+      } else if (localStorage.getItem(KEY) === "en") {
+        lang = "en";
+      }
+    } catch (e) {}
+
+    // Set before the page is drawn, so the wrong language never flashes.
+    document.documentElement.classList.toggle("lang-en", lang === "en");
+    document.documentElement.lang = lang;
+
+    // Interface texts that Quarto writes in Swedish (lang: sv in _quarto.yml).
+    var UI_EN = {
+      "På denna sida": "On this page",
+      "Visa kod": "Show code",
+      "Dölj kod": "Hide code",
+      "Kod": "Code",
+      "Kopiera till urklipp": "Copy to Clipboard"
+    };
+
+    function swapText(el, attr) {
+      var key = attr ? "svAttr" : "svText";
+      if (!(key in el.dataset)) {
+        el.dataset[key] = attr ? el.getAttribute(attr) : el.textContent.trim();
+      }
+      var sv = el.dataset[key];
+      var value = lang === "en" && UI_EN[sv] ? UI_EN[sv] : sv;
+      if (attr) {
+        el.setAttribute(attr, value);
+      } else {
+        el.textContent = value;
+      }
+    }
+
+    var originalTitle = document.title;
+
+    function apply() {
+      var html = document.documentElement;
+      html.classList.toggle("lang-en", lang === "en");
+      html.lang = lang;
+
+      document.querySelectorAll("#toc-title, details.code-fold > summary").forEach(function (el) {
+        swapText(el);
+      });
+      document.querySelectorAll(".code-copy-button[title]").forEach(function (el) {
+        swapText(el, "title");
+      });
+
+      // Browser tab title
+      var sv = document.querySelector("h1.title .sv");
+      var en = document.querySelector("h1.title .en");
+      document.title = lang === "en" && sv && en
+        ? originalTitle.replace(sv.textContent.trim(), en.textContent.trim())
+        : originalTitle;
+
+      // Button label shows the language you can switch to
+      var btn = document.querySelector(".lang-switch");
+      if (btn) {
+        var label = btn.querySelector(".lang-switch-label");
+        var short = btn.querySelector(".lang-switch-short");
+        label.textContent = lang === "en" ? "Svenska" : "English";
+        short.textContent = lang === "en" ? "SV" : "EN";
+        btn.lang = lang === "en" ? "sv" : "en";
+        btn.setAttribute("aria-label", lang === "en" ? "Byt till svenska" : "Switch to English");
+      }
+    }
+
+    function addButton() {
+      var item = document.createElement("div");
+      item.className = "lang-switch-item";
+      item.innerHTML =
+        '<button type="button" class="nav-link lang-switch">' +
+        '<i class="bi bi-translate" aria-hidden="true"></i>' +
+        '<span class="lang-switch-label"></span>' +
+        '<span class="lang-switch-short"></span></button>';
+
+      // Next to the search icon, so it is visible on phones without opening the menu
+      var search = document.getElementById("quarto-search");
+      var toggler = document.querySelector(".navbar .navbar-toggler");
+      var anchor = search || toggler;
+      if (anchor) {
+        anchor.parentNode.insertBefore(item, anchor);
+      } else {
+        var nav = document.querySelector(".navbar .navbar-container") || document.body;
+        nav.appendChild(item);
+      }
+
+      item.querySelector("button").addEventListener("click", function () {
+        lang = lang === "en" ? "sv" : "en";
+        try {
+          localStorage.setItem(KEY, lang);
+          var url = new URL(window.location.href);
+          if (lang === "en") {
+            url.searchParams.set("lang", "en");
+          } else {
+            url.searchParams.delete("lang");
+          }
+          history.replaceState(null, "", url);
+        } catch (e) {}
+        apply();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mark each language block so screen readers pronounce it correctly
+      document.querySelectorAll(".sv").forEach(function (el) { el.lang = "sv"; });
+      document.querySelectorAll(".en").forEach(function (el) { el.lang = "en"; });
+      addButton();
+      apply();
+    });
+
+    // Quarto adds copy buttons after page load
+    window.addEventListener("load", apply);
+  })();
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -121,31 +321,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Andreas Jemstedt</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Sök"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skifta navigering" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text"><span class="sv">Hem</span><span class="en">Home</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text"><span class="sv">Om mig</span><span class="en">About</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../research.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text"><span class="sv">Forskning</span><span class="en">Research</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
-<span class="menu-text">Resources</span></a>
+<span class="menu-text"><span class="sv">Resurser</span><span class="en">Resources</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../contact.html"> 
-<span class="menu-text">Contact</span></a>
+<span class="menu-text"><span class="sv">Kontakt</span><span class="en">Contact</span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -160,13 +360,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">På denna sida</h2>
    
   <ul>
-  <li><a href="#game-rules" id="toc-game-rules" class="nav-link active" data-scroll-target="#game-rules">Game rules</a></li>
-  <li><a href="#try-one-game" id="toc-try-one-game" class="nav-link" data-scroll-target="#try-one-game">Try one game</a></li>
-  <li><a href="#distribution-from-10000-simulated-games" id="toc-distribution-from-10000-simulated-games" class="nav-link" data-scroll-target="#distribution-from-10000-simulated-games">Distribution from 10,000 simulated games</a></li>
-  <li><a href="#estimated-probability-of-winning-the-game-for-10-20-30-apples." id="toc-estimated-probability-of-winning-the-game-for-10-20-30-apples." class="nav-link" data-scroll-target="#estimated-probability-of-winning-the-game-for-10-20-30-apples.">Estimated probability of winning the game for 10, 20, 30 apples.</a></li>
+  <li><a href="#spelregler-game-rules" id="toc-spelregler-game-rules" class="nav-link active" data-scroll-target="#spelregler-game-rules"><span class="sv">Spelregler</span> <span class="en">Game rules</span></a></li>
+  <li><a href="#testa-en-omgång-try-one-game" id="toc-testa-en-omgång-try-one-game" class="nav-link" data-scroll-target="#testa-en-omgång-try-one-game"><span class="sv">Testa en omgång</span> <span class="en">Try one game</span></a></li>
+  <li><a href="#fördelning-från-10-000-simulerade-spel-distribution-from-10000-simulated-games" id="toc-fördelning-från-10-000-simulerade-spel-distribution-from-10000-simulated-games" class="nav-link" data-scroll-target="#fördelning-från-10-000-simulerade-spel-distribution-from-10000-simulated-games"><span class="sv">Fördelning från 10 000 simulerade spel</span> <span class="en">Distribution from 10,000 simulated games</span></a></li>
+  <li><a href="#uppskattad-sannolikhet-att-vinna-spelet-med-10-20-och-30-äpplen-estimated-probability-of-winning-the-game-for-10-20-30-apples" id="toc-uppskattad-sannolikhet-att-vinna-spelet-med-10-20-och-30-äpplen-estimated-probability-of-winning-the-game-for-10-20-30-apples" class="nav-link" data-scroll-target="#uppskattad-sannolikhet-att-vinna-spelet-med-10-20-och-30-äpplen-estimated-probability-of-winning-the-game-for-10-20-30-apples"><span class="sv">Uppskattad sannolikhet att vinna spelet med 10, 20 och 30 äpplen</span> <span class="en">Estimated probability of winning the game for 10, 20, 30 apples</span></a></li>
   </ul>
 </nav>
     </div>
@@ -175,7 +375,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Apple Game Simulation for Stockholm Bayes Club</h1>
+<h1 class="title"><span class="sv">Simulering av äppelspelet för Stockholm Bayes Club</span><span class="en">Apple Game Simulation for Stockholm Bayes Club</span></h1>
 </div>
 
 
@@ -192,9 +392,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
-<section id="game-rules" class="level2">
-<h2 class="anchored" data-anchor-id="game-rules">Game rules</h2>
+<p><a href="../resources.html" class="button"><span class="sv">← Tillbaka till resurser</span><span class="en">← Back to Resources</span></a></p>
+<section id="spelregler-game-rules" class="level2">
+<h2 class="anchored" data-anchor-id="spelregler-game-rules"><span class="sv">Spelregler</span> <span class="en">Game rules</span></h2>
+<div class="sv">
+<p>I det här spelet tävlar du mot farmor. Farmor går längs en stig från start till mål, medan du försöker samla så många äpplen som möjligt innan hon kommer fram.</p>
+<p>I varje omgång kastar man en vanlig sexsidig tärning:</p>
+<ul>
+<li>Om det blir 1, 2 eller 6 flyttar farmor fram lika många steg.</li>
+<li>Om det blir 3, 4 eller 5 samlar du i stället lika många äpplen.</li>
+</ul>
+<p>Det finns två specialrutor på stigen:</p>
+<ul>
+<li>Om farmor hamnar på 9 tar hon en genväg och flyttar direkt till 14.</li>
+<li>Om farmor hamnar på 18 måste hon stå över nästa tur.</li>
+</ul>
+<p>Spelet slutar så fort farmor når eller passerar ruta 21. Då avbryts omgången direkt, och antalet äpplen du har samlat är ditt slutresultat.</p>
+</div>
+<div class="en">
 <p>In this game you compete against grandma. Grandma moves along a path from start to finish, while you try to collect as many apples as possible before she reaches the end.</p>
 <p>Each round a six-sided die is rolled:</p>
 <ul>
@@ -207,11 +422,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>If grandma lands on 18, she must skip her next turn.</li>
 </ul>
 <p>The game ends as soon as grandma reaches or passes square 21. At that moment the round stops immediately, and the number of apples you have collected is your final score.</p>
+</div>
 </section>
-<section id="try-one-game" class="level2">
-<h2 class="anchored" data-anchor-id="try-one-game">Try one game</h2>
+<section id="testa-en-omgång-try-one-game" class="level2">
+<h2 class="anchored" data-anchor-id="testa-en-omgång-try-one-game"><span class="sv">Testa en omgång</span> <span class="en">Try one game</span></h2>
 <button id="run-game">
-Play one game
+<span class="sv">Spela en omgång</span><span class="en">Play one game</span>
 </button>
 <div id="result-box">
 
@@ -294,7 +510,7 @@ document.getElementById("run-game").addEventListener("click", () => {
   const apples = simulateGame();
 
   document.getElementById("result-box").innerHTML =
-    `<strong>Apples collected:</strong> ${apples}<br><br>
+    `<strong><span class="sv">Insamlade äpplen:</span><span class="en">Apples collected:</span></strong> ${apples}<br><br>
      ${check(apples,10)}<br>
      ${check(apples,20)}<br>
      ${check(apples,30)}`;
@@ -302,11 +518,11 @@ document.getElementById("run-game").addEventListener("click", () => {
 </script>
 <hr>
 </section>
-<section id="distribution-from-10000-simulated-games" class="level2">
-<h2 class="anchored" data-anchor-id="distribution-from-10000-simulated-games">Distribution from 10,000 simulated games</h2>
+<section id="fördelning-från-10-000-simulerade-spel-distribution-from-10000-simulated-games" class="level2">
+<h2 class="anchored" data-anchor-id="fördelning-från-10-000-simulerade-spel-distribution-from-10000-simulated-games"><span class="sv">Fördelning från 10 000 simulerade spel</span> <span class="en">Distribution from 10,000 simulated games</span></h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Show code</summary>
+<summary>Visa kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>simulate_game <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
@@ -364,7 +580,7 @@ document.getElementById("run-game").addEventListener("click", () => {
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Number of games"</span></span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Kopiera till urklipp" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -375,11 +591,11 @@ document.getElementById("run-game").addEventListener("click", () => {
 </div>
 </div>
 </section>
-<section id="estimated-probability-of-winning-the-game-for-10-20-30-apples." class="level2">
-<h2 class="anchored" data-anchor-id="estimated-probability-of-winning-the-game-for-10-20-30-apples.">Estimated probability of winning the game for 10, 20, 30 apples.</h2>
+<section id="uppskattad-sannolikhet-att-vinna-spelet-med-10-20-och-30-äpplen-estimated-probability-of-winning-the-game-for-10-20-30-apples" class="level2">
+<h2 class="anchored" data-anchor-id="uppskattad-sannolikhet-att-vinna-spelet-med-10-20-och-30-äpplen-estimated-probability-of-winning-the-game-for-10-20-30-apples"><span class="sv">Uppskattad sannolikhet att vinna spelet med 10, 20 och 30 äpplen</span> <span class="en">Estimated probability of winning the game for 10, 20, 30 apples</span></h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Show code</summary>
+<summary>Visa kod</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>p10 <span class="ot">&lt;-</span> <span class="fu">percent</span>(<span class="fu">mean</span>(results <span class="sc">&gt;=</span> <span class="dv">10</span>))</span>
@@ -390,7 +606,7 @@ document.getElementById("run-game").addEventListener("click", () => {
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">" ≥10 apples:"</span>, p10,<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>,</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"≥20 apples:"</span>, p20,<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>,</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"≥30 apples:"</span>, p30</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Kopiera till urklipp" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> ≥10 apples: 88% 
@@ -398,7 +614,7 @@ document.getElementById("run-game").addEventListener("click", () => {
  ≥30 apples: 41%</code></pre>
 </div>
 </div>
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
+<p><a href="../resources.html" class="button"><span class="sv">← Tillbaka till resurser</span><span class="en">← Back to Resources</span></a></p>
 
 
 </section>
@@ -429,12 +645,12 @@ document.getElementById("run-game").addEventListener("click", () => {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopierat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopierat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv" xml:lang="sv"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stochastic Clock – Andreas Jemstedt</title>
+<title>Stokastisk klocka – Andreas Jemstedt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -57,19 +57,219 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Inget resultat",
+    "search-matching-documents-text": "matchande dokument",
+    "search-copy-link-title": "Kopiera länk för att söka",
+    "search-hide-matches-text": "Göm ytterligare resultat",
+    "search-more-match-text": "annat resultat i detta dokument",
+    "search-more-matches-text": "fler resultat i detta dokument",
+    "search-clear-button-title": "Rensa",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Avbryt",
+    "search-submit-button-title": "Verkställ",
+    "search-label": "Sök"
   }
 }</script>
+<!--
+  Language switch for the website.
+
+  Swedish is the default. English is shown when <html> has the class "lang-en".
+  In the .qmd files:
+    - Swedish text goes in  ::: sv  ...  :::   or  [text]{.sv}
+    - English text goes in  ::: en  ...  :::   or  [text]{.en}
+    - Anything outside these blocks (code, prompts, reference lists, images)
+      is shown in both languages and is never translated.
+
+  The visitor's choice is remembered between pages. A link ending in
+  ?lang=en (for example jemstedt.se/research.html?lang=en) opens the
+  English version directly.
+-->
+<style>
+  html:not(.lang-en) .en,
+  html.lang-en .sv {
+    display: none !important;
+  }
+
+  .lang-switch {
+    background: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  /* Quarto orders the navbar with flexbox: this puts the button at the far right */
+  .lang-switch-item {
+    display: flex;
+    align-items: center;
+    order: 1000;
+    margin-left: 0.5rem;
+  }
+
+  /* On phones the button shows EN / SV so it fits on the same line as the name */
+  .lang-switch-short {
+    display: none;
+  }
+
+  @media (max-width: 991.98px) {
+    .lang-switch-item {
+      margin-left: 0.25rem;
+    }
+
+    .lang-switch.nav-link {
+      padding: 0.1rem 0.45rem;
+      border: 1px solid currentColor;
+      border-radius: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch .bi,
+    .lang-switch-label {
+      display: none;
+    }
+
+    .lang-switch-short {
+      display: inline;
+    }
+  }
+
+  /* Small phones: make room for the button next to the site name */
+  @media (max-width: 385px) {
+    .navbar-brand-container {
+      max-width: calc(100% - 135px) !important;
+    }
+
+    .navbar-brand .navbar-title {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var KEY = "site-lang";
+    var lang = "sv";
+
+    try {
+      var fromUrl = new URLSearchParams(window.location.search).get("lang");
+      if (fromUrl === "en" || fromUrl === "sv") {
+        lang = fromUrl;
+        localStorage.setItem(KEY, lang);
+      } else if (localStorage.getItem(KEY) === "en") {
+        lang = "en";
+      }
+    } catch (e) {}
+
+    // Set before the page is drawn, so the wrong language never flashes.
+    document.documentElement.classList.toggle("lang-en", lang === "en");
+    document.documentElement.lang = lang;
+
+    // Interface texts that Quarto writes in Swedish (lang: sv in _quarto.yml).
+    var UI_EN = {
+      "På denna sida": "On this page",
+      "Visa kod": "Show code",
+      "Dölj kod": "Hide code",
+      "Kod": "Code",
+      "Kopiera till urklipp": "Copy to Clipboard"
+    };
+
+    function swapText(el, attr) {
+      var key = attr ? "svAttr" : "svText";
+      if (!(key in el.dataset)) {
+        el.dataset[key] = attr ? el.getAttribute(attr) : el.textContent.trim();
+      }
+      var sv = el.dataset[key];
+      var value = lang === "en" && UI_EN[sv] ? UI_EN[sv] : sv;
+      if (attr) {
+        el.setAttribute(attr, value);
+      } else {
+        el.textContent = value;
+      }
+    }
+
+    var originalTitle = document.title;
+
+    function apply() {
+      var html = document.documentElement;
+      html.classList.toggle("lang-en", lang === "en");
+      html.lang = lang;
+
+      document.querySelectorAll("#toc-title, details.code-fold > summary").forEach(function (el) {
+        swapText(el);
+      });
+      document.querySelectorAll(".code-copy-button[title]").forEach(function (el) {
+        swapText(el, "title");
+      });
+
+      // Browser tab title
+      var sv = document.querySelector("h1.title .sv");
+      var en = document.querySelector("h1.title .en");
+      document.title = lang === "en" && sv && en
+        ? originalTitle.replace(sv.textContent.trim(), en.textContent.trim())
+        : originalTitle;
+
+      // Button label shows the language you can switch to
+      var btn = document.querySelector(".lang-switch");
+      if (btn) {
+        var label = btn.querySelector(".lang-switch-label");
+        var short = btn.querySelector(".lang-switch-short");
+        label.textContent = lang === "en" ? "Svenska" : "English";
+        short.textContent = lang === "en" ? "SV" : "EN";
+        btn.lang = lang === "en" ? "sv" : "en";
+        btn.setAttribute("aria-label", lang === "en" ? "Byt till svenska" : "Switch to English");
+      }
+    }
+
+    function addButton() {
+      var item = document.createElement("div");
+      item.className = "lang-switch-item";
+      item.innerHTML =
+        '<button type="button" class="nav-link lang-switch">' +
+        '<i class="bi bi-translate" aria-hidden="true"></i>' +
+        '<span class="lang-switch-label"></span>' +
+        '<span class="lang-switch-short"></span></button>';
+
+      // Next to the search icon, so it is visible on phones without opening the menu
+      var search = document.getElementById("quarto-search");
+      var toggler = document.querySelector(".navbar .navbar-toggler");
+      var anchor = search || toggler;
+      if (anchor) {
+        anchor.parentNode.insertBefore(item, anchor);
+      } else {
+        var nav = document.querySelector(".navbar .navbar-container") || document.body;
+        nav.appendChild(item);
+      }
+
+      item.querySelector("button").addEventListener("click", function () {
+        lang = lang === "en" ? "sv" : "en";
+        try {
+          localStorage.setItem(KEY, lang);
+          var url = new URL(window.location.href);
+          if (lang === "en") {
+            url.searchParams.set("lang", "en");
+          } else {
+            url.searchParams.delete("lang");
+          }
+          history.replaceState(null, "", url);
+        } catch (e) {}
+        apply();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mark each language block so screen readers pronounce it correctly
+      document.querySelectorAll(".sv").forEach(function (el) { el.lang = "sv"; });
+      document.querySelectorAll(".en").forEach(function (el) { el.lang = "en"; });
+      addButton();
+      apply();
+    });
+
+    // Quarto adds copy buttons after page load
+    window.addEventListener("load", apply);
+  })();
+</script>
 
 
 </head>
@@ -85,31 +285,31 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Andreas Jemstedt</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Sök"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skifta navigering" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text"><span class="sv">Hem</span><span class="en">Home</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text"><span class="sv">Om mig</span><span class="en">About</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../research.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text"><span class="sv">Forskning</span><span class="en">Research</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
-<span class="menu-text">Resources</span></a>
+<span class="menu-text"><span class="sv">Resurser</span><span class="en">Resources</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../contact.html"> 
-<span class="menu-text">Contact</span></a>
+<span class="menu-text"><span class="sv">Kontakt</span><span class="en">Contact</span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -130,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Stochastic Clock</h1>
+<h1 class="title"><span class="sv">Stokastisk klocka</span><span class="en">Stochastic Clock</span></h1>
 </div>
 
 
@@ -147,10 +347,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
+<p><a href="../resources.html" class="button"><span class="sv">← Tillbaka till resurser</span><span class="en">← Back to Resources</span></a></p>
+<div class="sv">
+<p>Har du någonsin önskat att livet vore mindre förutsägbart? Den här experimentella klockan byter precision mot överraskning och tickar framåt med slumpmässiga intervall i stället för jämna sekunder. Den visar rätt tid i genomsnitt, men sällan just nu. Låt den gå, så kanske du glider in i din egen privata tidszon, ett fenomen som kallas stokastisk drift.</p>
+</div>
+<div class="en">
 <p>Have you ever wished life were less predictable? This experimental clock trades precision for surprise, ticking forward at random intervals rather than steady seconds. While it tells the right time on average, it rarely tells it now. Let it run, and you may drift into your own private time zone, a phenomenon called stochastic drift.</p>
+</div>
 <iframe src="stochastic_clock_original.html" width="100%" height="1200" frameborder="0" style="border:1px solid #ddd; border-radius:4px;" loading="lazy"></iframe>
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
+<p><a href="../resources.html" class="button"><span class="sv">← Tillbaka till resurser</span><span class="en">← Back to Resources</span></a></p>
 
 
 
@@ -180,12 +385,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopierat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopierat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

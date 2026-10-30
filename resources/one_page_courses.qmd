@@ -1,9 +1,19 @@
 ---
-title: "One-page courses"
+title: "[Ensideskurser]{.sv}[One-page courses]{.en}"
 ---
 
+[[← Tillbaka till resurser](../resources.qmd){.button}]{.sv}[[← Back to Resources](../resources.qmd){.button}]{.en}
+
+::: sv
+Som sommarprojekt skrev jag några artiklar på Substack om ämnen som rör kognitionsvetenskap och lärande. Artiklarna handlar till exempel om grunderna i minnesåterkallning och fördelad övning.
+:::
+
+::: en
 As a summer project, I wrote a couple of articles on Substack about topics related to cognitive science and learning. The articles cover, for example, the basics of retrieval practice and spaced practice.
+:::
 
 <https://onepagecourses.substack.com/>
 
-![](images/one-page courses.png)
+![](images/one-page%20courses.png)
+
+[[← Tillbaka till resurser](../resources.qmd){.button}]{.sv}[[← Back to Resources](../resources.qmd){.button}]{.en}

@@ -1,5 +1,5 @@
 ---
-title: "Stochastic Clock"
+title: "[Stokastisk klocka]{.sv}[Stochastic Clock]{.en}"
 format:
   html:
     sanitize: false
@@ -7,9 +7,15 @@ resources:
   - "*.html"
 ---
 
-[← Back to Resources](../resources.qmd){.button}
+[[← Tillbaka till resurser]{.sv}[← Back to Resources]{.en}](../resources.qmd){.button}
 
+::: sv
+Har du någonsin önskat att livet vore mindre förutsägbart? Den här experimentella klockan byter precision mot överraskning och tickar framåt med slumpmässiga intervall i stället för jämna sekunder. Den visar rätt tid i genomsnitt, men sällan just nu. Låt den gå, så kanske du glider in i din egen privata tidszon, ett fenomen som kallas stokastisk drift.
+:::
+
+::: en
 Have you ever wished life were less predictable? This experimental clock trades precision for surprise, ticking forward at random intervals rather than steady seconds. While it tells the right time on average, it rarely tells it now. Let it run, and you may drift into your own private time zone, a phenomenon called stochastic drift.
+:::
 
 ```{=html}
 <iframe
@@ -22,4 +28,4 @@ Have you ever wished life were less predictable? This experimental clock trades 
 ></iframe>
 ```
 
-[← Back to Resources](../resources.qmd){.button}
+[[← Tillbaka till resurser]{.sv}[← Back to Resources]{.en}](../resources.qmd){.button}

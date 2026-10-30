@@ -1,15 +1,17 @@
 ---
-title: "Prompts to help create practice questions and feedback and to import them to learning platforms"
+title: "[Promptar för att skapa övningsfrågor och feedback och för att importera dem till lärplattformar]{.sv}[Prompts to help create practice questions and feedback and to import them to learning platforms]{.en}"
 format:
   html:
     css: ../styles.css
 ---
 
-[← Back to Resources](../resources.qmd){.button}
+[[← Tillbaka till resurser](../resources.qmd){.button}]{.sv}[[← Back to Resources](../resources.qmd){.button}]{.en}
 
-## Prompts
+### [Prompt - Flervalsfrågor och feedback]{.sv} [Prompt - Multiple choice questions and feedback]{.en}
 
-### Prompt - Multiple choice questions and feedback
+::: sv
+Om du vill ha frågor på svenska får du be om det i prompten.
+:::
 
 ``` default
 # Base Persona: 
@@ -43,7 +45,7 @@ General feedback: The general feedback.
 ___
 ```
 
-## Prompt - Questions and example responses
+## [Prompt - Frågor och exempelsvar]{.sv} [Prompt - Questions and example responses]{.en}
 
 ``` default
 # Base Persona:  
@@ -103,7 +105,8 @@ Response text
 ___
 ```
 
-## Prompt - Put MCQs and short-answer questions into an interactive self-standing HTML document
+## [Prompt - Lägg flervalsfrågor och kortsvarsfrågor i ett interaktivt, fristående HTML-dokument]{.sv} [Prompt - Put MCQs and short-answer questions into an interactive self-standing HTML document]{.en}
+
 ``` default
 Create a single, self-contained HTML file (inline CSS and JavaScript, no external libraries, fonts or images) that works as an interactive practice test. I will paste questions below. Use the content exactly as I wrote it. Do not rewrite, shorten, translate, correct or add to my questions, alternatives, feedback or example responses. Write all interface text (buttons, labels, instructions) in the same language as my questions. If my questions are in more than one language, ask me which language to use for the interface before building.
 
@@ -154,8 +157,7 @@ MY QUESTIONS:
 [paste questions here]
 ```
 
-
-## Prompt - Get MCQs into importable file
+## [Prompt - Gör om flervalsfrågor till en fil som kan importeras]{.sv} [Prompt - Get MCQs into importable file]{.en}
 
 ``` default
 I will give you multiple-choice questions in plain text. Convert them into a QTI 1.2 package for import and give me a downloadable .zip file.
@@ -315,4 +317,4 @@ MY QUESTIONS:
 [paste here]
 ```
 
-[← Back to Resources](../resources.qmd){.button}
+[[← Tillbaka till resurser](../resources.qmd){.button}]{.sv}[[← Back to Resources](../resources.qmd){.button}]{.en}

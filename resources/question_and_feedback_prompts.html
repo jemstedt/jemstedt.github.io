@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv" xml:lang="sv"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Prompts to help create practice questions and feedback and to import them to learning platforms – Andreas Jemstedt</title>
+<title>Promptar för att skapa övningsfrågor och feedback och för att importera dem till lärplattformar – Andreas Jemstedt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -92,19 +92,219 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Inget resultat",
+    "search-matching-documents-text": "matchande dokument",
+    "search-copy-link-title": "Kopiera länk för att söka",
+    "search-hide-matches-text": "Göm ytterligare resultat",
+    "search-more-match-text": "annat resultat i detta dokument",
+    "search-more-matches-text": "fler resultat i detta dokument",
+    "search-clear-button-title": "Rensa",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Avbryt",
+    "search-submit-button-title": "Verkställ",
+    "search-label": "Sök"
   }
 }</script>
+<!--
+  Language switch for the website.
+
+  Swedish is the default. English is shown when <html> has the class "lang-en".
+  In the .qmd files:
+    - Swedish text goes in  ::: sv  ...  :::   or  [text]{.sv}
+    - English text goes in  ::: en  ...  :::   or  [text]{.en}
+    - Anything outside these blocks (code, prompts, reference lists, images)
+      is shown in both languages and is never translated.
+
+  The visitor's choice is remembered between pages. A link ending in
+  ?lang=en (for example jemstedt.se/research.html?lang=en) opens the
+  English version directly.
+-->
+<style>
+  html:not(.lang-en) .en,
+  html.lang-en .sv {
+    display: none !important;
+  }
+
+  .lang-switch {
+    background: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  /* Quarto orders the navbar with flexbox: this puts the button at the far right */
+  .lang-switch-item {
+    display: flex;
+    align-items: center;
+    order: 1000;
+    margin-left: 0.5rem;
+  }
+
+  /* On phones the button shows EN / SV so it fits on the same line as the name */
+  .lang-switch-short {
+    display: none;
+  }
+
+  @media (max-width: 991.98px) {
+    .lang-switch-item {
+      margin-left: 0.25rem;
+    }
+
+    .lang-switch.nav-link {
+      padding: 0.1rem 0.45rem;
+      border: 1px solid currentColor;
+      border-radius: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch .bi,
+    .lang-switch-label {
+      display: none;
+    }
+
+    .lang-switch-short {
+      display: inline;
+    }
+  }
+
+  /* Small phones: make room for the button next to the site name */
+  @media (max-width: 385px) {
+    .navbar-brand-container {
+      max-width: calc(100% - 135px) !important;
+    }
+
+    .navbar-brand .navbar-title {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var KEY = "site-lang";
+    var lang = "sv";
+
+    try {
+      var fromUrl = new URLSearchParams(window.location.search).get("lang");
+      if (fromUrl === "en" || fromUrl === "sv") {
+        lang = fromUrl;
+        localStorage.setItem(KEY, lang);
+      } else if (localStorage.getItem(KEY) === "en") {
+        lang = "en";
+      }
+    } catch (e) {}
+
+    // Set before the page is drawn, so the wrong language never flashes.
+    document.documentElement.classList.toggle("lang-en", lang === "en");
+    document.documentElement.lang = lang;
+
+    // Interface texts that Quarto writes in Swedish (lang: sv in _quarto.yml).
+    var UI_EN = {
+      "På denna sida": "On this page",
+      "Visa kod": "Show code",
+      "Dölj kod": "Hide code",
+      "Kod": "Code",
+      "Kopiera till urklipp": "Copy to Clipboard"
+    };
+
+    function swapText(el, attr) {
+      var key = attr ? "svAttr" : "svText";
+      if (!(key in el.dataset)) {
+        el.dataset[key] = attr ? el.getAttribute(attr) : el.textContent.trim();
+      }
+      var sv = el.dataset[key];
+      var value = lang === "en" && UI_EN[sv] ? UI_EN[sv] : sv;
+      if (attr) {
+        el.setAttribute(attr, value);
+      } else {
+        el.textContent = value;
+      }
+    }
+
+    var originalTitle = document.title;
+
+    function apply() {
+      var html = document.documentElement;
+      html.classList.toggle("lang-en", lang === "en");
+      html.lang = lang;
+
+      document.querySelectorAll("#toc-title, details.code-fold > summary").forEach(function (el) {
+        swapText(el);
+      });
+      document.querySelectorAll(".code-copy-button[title]").forEach(function (el) {
+        swapText(el, "title");
+      });
+
+      // Browser tab title
+      var sv = document.querySelector("h1.title .sv");
+      var en = document.querySelector("h1.title .en");
+      document.title = lang === "en" && sv && en
+        ? originalTitle.replace(sv.textContent.trim(), en.textContent.trim())
+        : originalTitle;
+
+      // Button label shows the language you can switch to
+      var btn = document.querySelector(".lang-switch");
+      if (btn) {
+        var label = btn.querySelector(".lang-switch-label");
+        var short = btn.querySelector(".lang-switch-short");
+        label.textContent = lang === "en" ? "Svenska" : "English";
+        short.textContent = lang === "en" ? "SV" : "EN";
+        btn.lang = lang === "en" ? "sv" : "en";
+        btn.setAttribute("aria-label", lang === "en" ? "Byt till svenska" : "Switch to English");
+      }
+    }
+
+    function addButton() {
+      var item = document.createElement("div");
+      item.className = "lang-switch-item";
+      item.innerHTML =
+        '<button type="button" class="nav-link lang-switch">' +
+        '<i class="bi bi-translate" aria-hidden="true"></i>' +
+        '<span class="lang-switch-label"></span>' +
+        '<span class="lang-switch-short"></span></button>';
+
+      // Next to the search icon, so it is visible on phones without opening the menu
+      var search = document.getElementById("quarto-search");
+      var toggler = document.querySelector(".navbar .navbar-toggler");
+      var anchor = search || toggler;
+      if (anchor) {
+        anchor.parentNode.insertBefore(item, anchor);
+      } else {
+        var nav = document.querySelector(".navbar .navbar-container") || document.body;
+        nav.appendChild(item);
+      }
+
+      item.querySelector("button").addEventListener("click", function () {
+        lang = lang === "en" ? "sv" : "en";
+        try {
+          localStorage.setItem(KEY, lang);
+          var url = new URL(window.location.href);
+          if (lang === "en") {
+            url.searchParams.set("lang", "en");
+          } else {
+            url.searchParams.delete("lang");
+          }
+          history.replaceState(null, "", url);
+        } catch (e) {}
+        apply();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mark each language block so screen readers pronounce it correctly
+      document.querySelectorAll(".sv").forEach(function (el) { el.lang = "sv"; });
+      document.querySelectorAll(".en").forEach(function (el) { el.lang = "en"; });
+      addButton();
+      apply();
+    });
+
+    // Quarto adds copy buttons after page load
+    window.addEventListener("load", apply);
+  })();
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -121,31 +321,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <span class="navbar-title">Andreas Jemstedt</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Sök"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skifta navigering" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text"><span class="sv">Hem</span><span class="en">Home</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text"><span class="sv">Om mig</span><span class="en">About</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../research.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text"><span class="sv">Forskning</span><span class="en">Research</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
-<span class="menu-text">Resources</span></a>
+<span class="menu-text"><span class="sv">Resurser</span><span class="en">Resources</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../contact.html"> 
-<span class="menu-text">Contact</span></a>
+<span class="menu-text"><span class="sv">Kontakt</span><span class="en">Contact</span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -160,16 +360,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">På denna sida</h2>
    
   <ul>
-  <li><a href="#prompts" id="toc-prompts" class="nav-link active" data-scroll-target="#prompts">Prompts</a>
-  <ul class="collapse">
-  <li><a href="#prompt---multiple-choice-questions-and-feedback" id="toc-prompt---multiple-choice-questions-and-feedback" class="nav-link" data-scroll-target="#prompt---multiple-choice-questions-and-feedback">Prompt - Multiple choice questions and feedback</a></li>
-  </ul></li>
-  <li><a href="#prompt---questions-and-example-responses" id="toc-prompt---questions-and-example-responses" class="nav-link" data-scroll-target="#prompt---questions-and-example-responses">Prompt - Questions and example responses</a></li>
-  <li><a href="#prompt---put-mcqs-and-short-answer-questions-into-an-interactive-self-standing-html-document" id="toc-prompt---put-mcqs-and-short-answer-questions-into-an-interactive-self-standing-html-document" class="nav-link" data-scroll-target="#prompt---put-mcqs-and-short-answer-questions-into-an-interactive-self-standing-html-document">Prompt - Put MCQs and short-answer questions into an interactive self-standing HTML document</a></li>
-  <li><a href="#prompt---get-mcqs-into-importable-file" id="toc-prompt---get-mcqs-into-importable-file" class="nav-link" data-scroll-target="#prompt---get-mcqs-into-importable-file">Prompt - Get MCQs into importable file</a></li>
+  <li><a href="#prompt---flervalsfrågor-och-feedback-prompt---multiple-choice-questions-and-feedback" id="toc-prompt---flervalsfrågor-och-feedback-prompt---multiple-choice-questions-and-feedback" class="nav-link active" data-scroll-target="#prompt---flervalsfrågor-och-feedback-prompt---multiple-choice-questions-and-feedback"><span class="sv">Prompt - Flervalsfrågor och feedback</span> <span class="en">Prompt - Multiple choice questions and feedback</span></a></li>
+  <li><a href="#prompt---frågor-och-exempelsvar-prompt---questions-and-example-responses" id="toc-prompt---frågor-och-exempelsvar-prompt---questions-and-example-responses" class="nav-link" data-scroll-target="#prompt---frågor-och-exempelsvar-prompt---questions-and-example-responses"><span class="sv">Prompt - Frågor och exempelsvar</span> <span class="en">Prompt - Questions and example responses</span></a></li>
+  <li><a href="#prompt---lägg-flervalsfrågor-och-kortsvarsfrågor-i-ett-interaktivt-fristående-html-dokument-prompt---put-mcqs-and-short-answer-questions-into-an-interactive-self-standing-html-document" id="toc-prompt---lägg-flervalsfrågor-och-kortsvarsfrågor-i-ett-interaktivt-fristående-html-dokument-prompt---put-mcqs-and-short-answer-questions-into-an-interactive-self-standing-html-document" class="nav-link" data-scroll-target="#prompt---lägg-flervalsfrågor-och-kortsvarsfrågor-i-ett-interaktivt-fristående-html-dokument-prompt---put-mcqs-and-short-answer-questions-into-an-interactive-self-standing-html-document"><span class="sv">Prompt - Lägg flervalsfrågor och kortsvarsfrågor i ett interaktivt, fristående HTML-dokument</span> <span class="en">Prompt - Put MCQs and short-answer questions into an interactive self-standing HTML document</span></a></li>
+  <li><a href="#prompt---gör-om-flervalsfrågor-till-en-fil-som-kan-importeras-prompt---get-mcqs-into-importable-file" id="toc-prompt---gör-om-flervalsfrågor-till-en-fil-som-kan-importeras-prompt---get-mcqs-into-importable-file" class="nav-link" data-scroll-target="#prompt---gör-om-flervalsfrågor-till-en-fil-som-kan-importeras-prompt---get-mcqs-into-importable-file"><span class="sv">Prompt - Gör om flervalsfrågor till en fil som kan importeras</span> <span class="en">Prompt - Get MCQs into importable file</span></a></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +375,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prompts to help create practice questions and feedback and to import them to learning platforms</h1>
+<h1 class="title"><span class="sv">Promptar för att skapa övningsfrågor och feedback och för att importera dem till lärplattformar</span><span class="en">Prompts to help create practice questions and feedback and to import them to learning platforms</span></h1>
 </div>
 
 
@@ -195,11 +392,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
-<section id="prompts" class="level2">
-<h2 class="anchored" data-anchor-id="prompts">Prompts</h2>
-<section id="prompt---multiple-choice-questions-and-feedback" class="level3">
-<h3 class="anchored" data-anchor-id="prompt---multiple-choice-questions-and-feedback">Prompt - Multiple choice questions and feedback</h3>
+<p><span class="sv"><a href="../resources.html" class="button">← Tillbaka till resurser</a></span><span class="en"><a href="../resources.html" class="button">← Back to Resources</a></span></p>
+<section id="prompt---flervalsfrågor-och-feedback-prompt---multiple-choice-questions-and-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="prompt---flervalsfrågor-och-feedback-prompt---multiple-choice-questions-and-feedback"><span class="sv">Prompt - Flervalsfrågor och feedback</span> <span class="en">Prompt - Multiple choice questions and feedback</span></h3>
+<div class="sv">
+<p>Om du vill ha frågor på svenska får du be om det i prompten.</p>
+</div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a># Base Persona: </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>You are an AI Instructional Designer and Learning Experience Designer. You are an excellent designer, psychometrician, and educator. You are helping the teachers with the following task. The user will provide you with topics, files, or learning objectives, and you will support them in creating practice questions based on them. You will provide six response alternatives to each question, as in a multiple-choice question. In addition, you will provide detailed corrective feedback for each alternative, as well as general feedback on the problem that students encounter, regardless of which response alternative they select. </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -228,11 +426,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    - Feedback: The feedback</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>General feedback: The general feedback.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>___</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>___</span></code></pre></div><button title="Kopiera till urklipp" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-</section>
-<section id="prompt---questions-and-example-responses" class="level2">
-<h2 class="anchored" data-anchor-id="prompt---questions-and-example-responses">Prompt - Questions and example responses</h2>
+<section id="prompt---frågor-och-exempelsvar-prompt---questions-and-example-responses" class="level2">
+<h2 class="anchored" data-anchor-id="prompt---frågor-och-exempelsvar-prompt---questions-and-example-responses"><span class="sv">Prompt - Frågor och exempelsvar</span> <span class="en">Prompt - Questions and example responses</span></h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a># Base Persona:  </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>You are an AI Instructional Designer and Learning Experience Designer. You are an excellent designer, psychometrician, and educator. You are helping teachers with the following task.</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -287,10 +484,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>**Example Response 3:**  </span>
 <span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>Response text  </span>
 <span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>___</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>___</span></code></pre></div><button title="Kopiera till urklipp" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="prompt---put-mcqs-and-short-answer-questions-into-an-interactive-self-standing-html-document" class="level2">
-<h2 class="anchored" data-anchor-id="prompt---put-mcqs-and-short-answer-questions-into-an-interactive-self-standing-html-document">Prompt - Put MCQs and short-answer questions into an interactive self-standing HTML document</h2>
+<section id="prompt---lägg-flervalsfrågor-och-kortsvarsfrågor-i-ett-interaktivt-fristående-html-dokument-prompt---put-mcqs-and-short-answer-questions-into-an-interactive-self-standing-html-document" class="level2">
+<h2 class="anchored" data-anchor-id="prompt---lägg-flervalsfrågor-och-kortsvarsfrågor-i-ett-interaktivt-fristående-html-dokument-prompt---put-mcqs-and-short-answer-questions-into-an-interactive-self-standing-html-document"><span class="sv">Prompt - Lägg flervalsfrågor och kortsvarsfrågor i ett interaktivt, fristående HTML-dokument</span> <span class="en">Prompt - Put MCQs and short-answer questions into an interactive self-standing HTML document</span></h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Create a single, self-contained HTML file (inline CSS and JavaScript, no external libraries, fonts or images) that works as an interactive practice test. I will paste questions below. Use the content exactly as I wrote it. Do not rewrite, shorten, translate, correct or add to my questions, alternatives, feedback or example responses. Write all interface text (buttons, labels, instructions) in the same language as my questions. If my questions are in more than one language, ask me which language to use for the interface before building.</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>INPUT</span>
@@ -337,10 +534,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>ANY SPECIAL INSTRUCTIONS (for example a different order, or grouping into sections): [write here or delete]</span>
 <span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>MY QUESTIONS:</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>[paste questions here]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>[paste questions here]</span></code></pre></div><button title="Kopiera till urklipp" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="prompt---get-mcqs-into-importable-file" class="level2">
-<h2 class="anchored" data-anchor-id="prompt---get-mcqs-into-importable-file">Prompt - Get MCQs into importable file</h2>
+<section id="prompt---gör-om-flervalsfrågor-till-en-fil-som-kan-importeras-prompt---get-mcqs-into-importable-file" class="level2">
+<h2 class="anchored" data-anchor-id="prompt---gör-om-flervalsfrågor-till-en-fil-som-kan-importeras-prompt---get-mcqs-into-importable-file"><span class="sv">Prompt - Gör om flervalsfrågor till en fil som kan importeras</span> <span class="en">Prompt - Get MCQs into importable file</span></h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>I will give you multiple-choice questions in plain text. Convert them into a QTI 1.2 package for import and give me a downloadable .zip file.</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Copy the templates below EXACTLY. Only replace the parts written in CAPITALS. Do not add, remove or rename any other tags or attributes. This structure is tested and works in Canvas.</span>
@@ -495,8 +692,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a>6. List, for each question, which letter you treated as correct and the first few words of each option's feedback, so I can verify.</span>
 <span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a>MY QUESTIONS:</span>
-<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>[paste here]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
+<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>[paste here]</span></code></pre></div><button title="Kopiera till urklipp" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="sv"><a href="../resources.html" class="button">← Tillbaka till resurser</a></span><span class="en"><a href="../resources.html" class="button">← Back to Resources</a></span></p>
 
 
 </section>
@@ -527,12 +724,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopierat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopierat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

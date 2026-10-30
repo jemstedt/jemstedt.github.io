@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv" xml:lang="sv"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Guide about improving students study habits – Andreas Jemstedt</title>
+<title>Guide om att förbättra elevers studievanor – Andreas Jemstedt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -57,19 +57,219 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Inget resultat",
+    "search-matching-documents-text": "matchande dokument",
+    "search-copy-link-title": "Kopiera länk för att söka",
+    "search-hide-matches-text": "Göm ytterligare resultat",
+    "search-more-match-text": "annat resultat i detta dokument",
+    "search-more-matches-text": "fler resultat i detta dokument",
+    "search-clear-button-title": "Rensa",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Avbryt",
+    "search-submit-button-title": "Verkställ",
+    "search-label": "Sök"
   }
 }</script>
+<!--
+  Language switch for the website.
+
+  Swedish is the default. English is shown when <html> has the class "lang-en".
+  In the .qmd files:
+    - Swedish text goes in  ::: sv  ...  :::   or  [text]{.sv}
+    - English text goes in  ::: en  ...  :::   or  [text]{.en}
+    - Anything outside these blocks (code, prompts, reference lists, images)
+      is shown in both languages and is never translated.
+
+  The visitor's choice is remembered between pages. A link ending in
+  ?lang=en (for example jemstedt.se/research.html?lang=en) opens the
+  English version directly.
+-->
+<style>
+  html:not(.lang-en) .en,
+  html.lang-en .sv {
+    display: none !important;
+  }
+
+  .lang-switch {
+    background: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  /* Quarto orders the navbar with flexbox: this puts the button at the far right */
+  .lang-switch-item {
+    display: flex;
+    align-items: center;
+    order: 1000;
+    margin-left: 0.5rem;
+  }
+
+  /* On phones the button shows EN / SV so it fits on the same line as the name */
+  .lang-switch-short {
+    display: none;
+  }
+
+  @media (max-width: 991.98px) {
+    .lang-switch-item {
+      margin-left: 0.25rem;
+    }
+
+    .lang-switch.nav-link {
+      padding: 0.1rem 0.45rem;
+      border: 1px solid currentColor;
+      border-radius: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch .bi,
+    .lang-switch-label {
+      display: none;
+    }
+
+    .lang-switch-short {
+      display: inline;
+    }
+  }
+
+  /* Small phones: make room for the button next to the site name */
+  @media (max-width: 385px) {
+    .navbar-brand-container {
+      max-width: calc(100% - 135px) !important;
+    }
+
+    .navbar-brand .navbar-title {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var KEY = "site-lang";
+    var lang = "sv";
+
+    try {
+      var fromUrl = new URLSearchParams(window.location.search).get("lang");
+      if (fromUrl === "en" || fromUrl === "sv") {
+        lang = fromUrl;
+        localStorage.setItem(KEY, lang);
+      } else if (localStorage.getItem(KEY) === "en") {
+        lang = "en";
+      }
+    } catch (e) {}
+
+    // Set before the page is drawn, so the wrong language never flashes.
+    document.documentElement.classList.toggle("lang-en", lang === "en");
+    document.documentElement.lang = lang;
+
+    // Interface texts that Quarto writes in Swedish (lang: sv in _quarto.yml).
+    var UI_EN = {
+      "På denna sida": "On this page",
+      "Visa kod": "Show code",
+      "Dölj kod": "Hide code",
+      "Kod": "Code",
+      "Kopiera till urklipp": "Copy to Clipboard"
+    };
+
+    function swapText(el, attr) {
+      var key = attr ? "svAttr" : "svText";
+      if (!(key in el.dataset)) {
+        el.dataset[key] = attr ? el.getAttribute(attr) : el.textContent.trim();
+      }
+      var sv = el.dataset[key];
+      var value = lang === "en" && UI_EN[sv] ? UI_EN[sv] : sv;
+      if (attr) {
+        el.setAttribute(attr, value);
+      } else {
+        el.textContent = value;
+      }
+    }
+
+    var originalTitle = document.title;
+
+    function apply() {
+      var html = document.documentElement;
+      html.classList.toggle("lang-en", lang === "en");
+      html.lang = lang;
+
+      document.querySelectorAll("#toc-title, details.code-fold > summary").forEach(function (el) {
+        swapText(el);
+      });
+      document.querySelectorAll(".code-copy-button[title]").forEach(function (el) {
+        swapText(el, "title");
+      });
+
+      // Browser tab title
+      var sv = document.querySelector("h1.title .sv");
+      var en = document.querySelector("h1.title .en");
+      document.title = lang === "en" && sv && en
+        ? originalTitle.replace(sv.textContent.trim(), en.textContent.trim())
+        : originalTitle;
+
+      // Button label shows the language you can switch to
+      var btn = document.querySelector(".lang-switch");
+      if (btn) {
+        var label = btn.querySelector(".lang-switch-label");
+        var short = btn.querySelector(".lang-switch-short");
+        label.textContent = lang === "en" ? "Svenska" : "English";
+        short.textContent = lang === "en" ? "SV" : "EN";
+        btn.lang = lang === "en" ? "sv" : "en";
+        btn.setAttribute("aria-label", lang === "en" ? "Byt till svenska" : "Switch to English");
+      }
+    }
+
+    function addButton() {
+      var item = document.createElement("div");
+      item.className = "lang-switch-item";
+      item.innerHTML =
+        '<button type="button" class="nav-link lang-switch">' +
+        '<i class="bi bi-translate" aria-hidden="true"></i>' +
+        '<span class="lang-switch-label"></span>' +
+        '<span class="lang-switch-short"></span></button>';
+
+      // Next to the search icon, so it is visible on phones without opening the menu
+      var search = document.getElementById("quarto-search");
+      var toggler = document.querySelector(".navbar .navbar-toggler");
+      var anchor = search || toggler;
+      if (anchor) {
+        anchor.parentNode.insertBefore(item, anchor);
+      } else {
+        var nav = document.querySelector(".navbar .navbar-container") || document.body;
+        nav.appendChild(item);
+      }
+
+      item.querySelector("button").addEventListener("click", function () {
+        lang = lang === "en" ? "sv" : "en";
+        try {
+          localStorage.setItem(KEY, lang);
+          var url = new URL(window.location.href);
+          if (lang === "en") {
+            url.searchParams.set("lang", "en");
+          } else {
+            url.searchParams.delete("lang");
+          }
+          history.replaceState(null, "", url);
+        } catch (e) {}
+        apply();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mark each language block so screen readers pronounce it correctly
+      document.querySelectorAll(".sv").forEach(function (el) { el.lang = "sv"; });
+      document.querySelectorAll(".en").forEach(function (el) { el.lang = "en"; });
+      addButton();
+      apply();
+    });
+
+    // Quarto adds copy buttons after page load
+    window.addEventListener("load", apply);
+  })();
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -86,31 +286,31 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Andreas Jemstedt</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Sök"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skifta navigering" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text"><span class="sv">Hem</span><span class="en">Home</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text"><span class="sv">Om mig</span><span class="en">About</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../research.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text"><span class="sv">Forskning</span><span class="en">Research</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
-<span class="menu-text">Resources</span></a>
+<span class="menu-text"><span class="sv">Resurser</span><span class="en">Resources</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../contact.html"> 
-<span class="menu-text">Contact</span></a>
+<span class="menu-text"><span class="sv">Kontakt</span><span class="en">Contact</span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -125,19 +325,19 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">På denna sida</h2>
    
   <ul>
-  <li><a href="#studiestrategier-och-studievanor" id="toc-studiestrategier-och-studievanor" class="nav-link active" data-scroll-target="#studiestrategier-och-studievanor">Studiestrategier och studievanor</a>
+  <li><a href="#studiestrategier-och-studievanor-study-strategies-and-study-habits" id="toc-studiestrategier-och-studievanor-study-strategies-and-study-habits" class="nav-link active" data-scroll-target="#studiestrategier-och-studievanor-study-strategies-and-study-habits"><span class="sv">Studiestrategier och studievanor</span> <span class="en">Study strategies and study habits</span></a>
   <ul class="collapse">
-  <li><a href="#från-kunskap-till-handling" id="toc-från-kunskap-till-handling" class="nav-link" data-scroll-target="#från-kunskap-till-handling">Från kunskap till handling</a></li>
-  <li><a href="#önskvärda-svårigheter" id="toc-önskvärda-svårigheter" class="nav-link" data-scroll-target="#önskvärda-svårigheter">Önskvärda svårigheter</a></li>
-  <li><a href="#minnesåterkallning" id="toc-minnesåterkallning" class="nav-link" data-scroll-target="#minnesåterkallning">Minnesåterkallning</a></li>
-  <li><a href="#fördelad-övning" id="toc-fördelad-övning" class="nav-link" data-scroll-target="#fördelad-övning">Fördelad övning</a></li>
-  <li><a href="#elaborering" id="toc-elaborering" class="nav-link" data-scroll-target="#elaborering">Elaborering</a></li>
-  <li><a href="#planering-och-mål" id="toc-planering-och-mål" class="nav-link" data-scroll-target="#planering-och-mål">Planering och mål</a></li>
-  <li><a href="#vanor-och-friktion" id="toc-vanor-och-friktion" class="nav-link" data-scroll-target="#vanor-och-friktion">Vanor och friktion</a></li>
-  <li><a href="#så-kan-du-börja" id="toc-så-kan-du-börja" class="nav-link" data-scroll-target="#så-kan-du-börja">Så kan du börja</a></li>
+  <li><a href="#från-kunskap-till-handling-from-knowledge-to-action" id="toc-från-kunskap-till-handling-from-knowledge-to-action" class="nav-link" data-scroll-target="#från-kunskap-till-handling-from-knowledge-to-action"><span class="sv">Från kunskap till handling</span> <span class="en">From knowledge to action</span></a></li>
+  <li><a href="#önskvärda-svårigheter-desirable-difficulties" id="toc-önskvärda-svårigheter-desirable-difficulties" class="nav-link" data-scroll-target="#önskvärda-svårigheter-desirable-difficulties"><span class="sv">Önskvärda svårigheter</span> <span class="en">Desirable difficulties</span></a></li>
+  <li><a href="#minnesåterkallning-retrieval-practice" id="toc-minnesåterkallning-retrieval-practice" class="nav-link" data-scroll-target="#minnesåterkallning-retrieval-practice"><span class="sv">Minnesåterkallning</span> <span class="en">Retrieval practice</span></a></li>
+  <li><a href="#fördelad-övning-spaced-practice" id="toc-fördelad-övning-spaced-practice" class="nav-link" data-scroll-target="#fördelad-övning-spaced-practice"><span class="sv">Fördelad övning</span> <span class="en">Spaced practice</span></a></li>
+  <li><a href="#elaborering-elaboration" id="toc-elaborering-elaboration" class="nav-link" data-scroll-target="#elaborering-elaboration"><span class="sv">Elaborering</span> <span class="en">Elaboration</span></a></li>
+  <li><a href="#planering-och-mål-planning-and-goals" id="toc-planering-och-mål-planning-and-goals" class="nav-link" data-scroll-target="#planering-och-mål-planning-and-goals"><span class="sv">Planering och mål</span> <span class="en">Planning and goals</span></a></li>
+  <li><a href="#vanor-och-friktion-habits-and-friction" id="toc-vanor-och-friktion-habits-and-friction" class="nav-link" data-scroll-target="#vanor-och-friktion-habits-and-friction"><span class="sv">Vanor och friktion</span> <span class="en">Habits and friction</span></a></li>
+  <li><a href="#så-kan-du-börja-how-to-get-started" id="toc-så-kan-du-börja-how-to-get-started" class="nav-link" data-scroll-target="#så-kan-du-börja-how-to-get-started"><span class="sv">Så kan du börja</span> <span class="en">How to get started</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -147,7 +347,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Guide about improving students study habits</h1>
+<h1 class="title"><span class="sv">Guide om att förbättra elevers studievanor</span><span class="en">Guide about improving students’ study habits</span></h1>
 </div>
 
 
@@ -164,48 +364,96 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
-<p><a href="study_habits_guide_SWE.pdf" class="btn btn-primary" download="study_habits_guide_SWE.pdf">Ladda ner följande guide som en PDF</a></p>
-<section id="studiestrategier-och-studievanor" class="level1">
-<h1>Studiestrategier och studievanor</h1>
+<p><a href="../resources.html" class="button"><span class="sv">← Tillbaka till resurser</span><span class="en">← Back to Resources</span></a></p>
+<p><a href="files/study_habits_guide_SWE.pdf" class="btn btn-primary" download="study_habits_guide_SWE.pdf"><span class="sv">Ladda ner följande guide som en PDF</span><span class="en">Download the guide as a PDF (in Swedish)</span></a></p>
+<section id="studiestrategier-och-studievanor-study-strategies-and-study-habits" class="level1">
+<h1><span class="sv">Studiestrategier och studievanor</span> <span class="en">Study strategies and study habits</span></h1>
+<div class="sv">
 <p>Detta material är ett stöd för lärare som vill hjälpa elever att studera på ett sätt som stödjer långsiktigt lärande. Materialet sammanfattar vad forskningen säger om strategier som ger kunskap som består och går att använda flexibelt, och hur du som lärare kan hjälpa eleverna att faktiskt använda dem.</p>
 <p>Den bästa studiestrategin hjälper inte om den aldrig används. Materialet handlar därför om både vilka strategier som stödjer lärande och hur eleverna kan lära sig att använda dem.</p>
-<section id="från-kunskap-till-handling" class="level2">
-<h2 class="anchored" data-anchor-id="från-kunskap-till-handling">Från kunskap till handling</h2>
+</div>
+<div class="en">
+<p>This material supports teachers who want to help students study in ways that support long-term learning. It summarizes what research says about strategies that produce knowledge that lasts and can be used flexibly, and how you as a teacher can help students actually use them.</p>
+<p>The best study strategy does not help if it is never used. The material is therefore about both which strategies support learning and how students can learn to use them.</p>
+</div>
+<section id="från-kunskap-till-handling-from-knowledge-to-action" class="level2">
+<h2 class="anchored" data-anchor-id="från-kunskap-till-handling-from-knowledge-to-action"><span class="sv">Från kunskap till handling</span> <span class="en">From knowledge to action</span></h2>
+<div class="sv">
 <p>För att en elev ska börja använda en strategi behöver hen känna till den, tro att den fungerar, bestämma sig för att använda den och planera när och hur. Sista steget är att göra den till en vana, så att eleven slipper bestämma sig varje gång.</p>
 <p><strong>Vad du kan göra:</strong> förklara och modellera strategin, öva med stöd och ta sedan gradvis bort stödet. Om möjligt, använd samma ord och rutiner i alla ämnen.</p>
+</div>
+<div class="en">
+<p>For a student to start using a strategy, they need to know about it, believe that it works, decide to use it, and plan when and how. The last step is to make it a habit, so that the student does not have to decide every time.</p>
+<p><strong>What you can do:</strong> explain and model the strategy, practice with support, and then gradually remove the support. If possible, use the same words and routines in all subjects.</p>
+</div>
 </section>
-<section id="önskvärda-svårigheter" class="level2">
-<h2 class="anchored" data-anchor-id="önskvärda-svårigheter">Önskvärda svårigheter</h2>
+<section id="önskvärda-svårigheter-desirable-difficulties" class="level2">
+<h2 class="anchored" data-anchor-id="önskvärda-svårigheter-desirable-difficulties"><span class="sv">Önskvärda svårigheter</span> <span class="en">Desirable difficulties</span></h2>
+<div class="sv">
 <p>Strategier som leder till mer kognitiv ansträngning ger mer varaktig kunskap. De passar när eleverna redan har en grundläggande förståelse/färdighet. Det som känns lätt är inte alltid det som ger bäst långsiktigt lärande. Vid nyinlärning fungerar dina genomgångar bra. Därefter kan du öka svårigheten. En svårighet är bara önskvärd om eleven kan klara den. Eleverna behöver lyckas.</p>
+</div>
+<div class="en">
+<p>Strategies that lead to more cognitive effort produce more durable knowledge. They are suitable when students already have a basic understanding or skill. What feels easy is not always what gives the best long-term learning. When students first learn something new, your teacher-led explanations work well. After that, you can increase the difficulty. A difficulty is only desirable if the student can manage it. Students need to succeed.</p>
+</div>
 </section>
-<section id="minnesåterkallning" class="level2">
-<h2 class="anchored" data-anchor-id="minnesåterkallning">Minnesåterkallning</h2>
+<section id="minnesåterkallning-retrieval-practice" class="level2">
+<h2 class="anchored" data-anchor-id="minnesåterkallning-retrieval-practice"><span class="sv">Minnesåterkallning</span> <span class="en">Retrieval practice</span></h2>
+<div class="sv">
 <p>Eleven försöker hämta fram kunskapen ur minnet i stället för att läsa om den. Strategin ger också mer flexibel kunskap och visar eleven vad hen kan.</p>
 <p><strong>Vad du kan göra:</strong> låt eleverna svara på övningsfrågor, skriva ned allt de minns från lektionen eller förhöra varandra. Ge feedback, men inte rätt svar innan eleven har försökt själv. Se till att frågorna ligger på en nivå som eleverna klarar.</p>
+</div>
+<div class="en">
+<p>The student tries to retrieve the knowledge from memory instead of rereading it. The strategy also produces more flexible knowledge and shows the student what they know.</p>
+<p><strong>What you can do:</strong> let students answer practice questions, write down everything they remember from the lesson, or quiz each other. Give feedback, but not the correct answer before the student has tried on their own. Make sure the questions are at a level the students can manage.</p>
+</div>
 </section>
-<section id="fördelad-övning" class="level2">
-<h2 class="anchored" data-anchor-id="fördelad-övning">Fördelad övning</h2>
+<section id="fördelad-övning-spaced-practice" class="level2">
+<h2 class="anchored" data-anchor-id="fördelad-övning-spaced-practice"><span class="sv">Fördelad övning</span> <span class="en">Spaced practice</span></h2>
+<div class="sv">
 <p>Om övningen sprids ut över tid blir resultatet bättre än om den görs vid ett tillfälle. Samlad övning känns ofta effektiv eftersom uppgifterna går lättare för varje repetition, men eleven glömmer mer. Vid fördelad övning hinner man glömma lite och behöver då anstränga sig mer vid nästa repetition, vilket leder till att de lär sig mer av övningen.</p>
 <p><strong>Vad du kan göra:</strong> återkom till tidigare innehåll, till exempel med quiz och frågekort.</p>
+</div>
+<div class="en">
+<p>If practice is spread out over time, the result is better than if it is done on a single occasion. Massed practice often feels effective because the tasks get easier with each repetition, but the student forgets more. With spaced practice, students have time to forget a little and then need to put in more effort at the next repetition, which means they learn more from the practice.</p>
+<p><strong>What you can do:</strong> return to earlier content, for example with quizzes and flashcards.</p>
+</div>
 </section>
-<section id="elaborering" class="level2">
-<h2 class="anchored" data-anchor-id="elaborering">Elaborering</h2>
+<section id="elaborering-elaboration" class="level2">
+<h2 class="anchored" data-anchor-id="elaborering-elaboration"><span class="sv">Elaborering</span> <span class="en">Elaboration</span></h2>
+<div class="sv">
 <p>Elaborering innebär att eleven kopplar ny information till det hen redan kan, till exempel genom att fråga sig varför något stämmer eller förklara med egna ord. Det kan ske redan medan eleven lär sig. Det är viktigt att eleven lyckas. Exempelvis, att förklaringarna de ger stämmer.</p>
 <p><strong>Vad du kan göra:</strong> få eleverna att besvara ”varför?” och ”hur?” medan de lär sig, och låt eleverna förklara med egna ord (självförklaringar), rita begreppskartor och hitta på egna exempel. Se till att övningarna ligger på en nivå som eleverna klarar.</p>
+</div>
+<div class="en">
+<p>Elaboration means that the student connects new information to what they already know, for example by asking themselves why something is true or by explaining it in their own words. This can happen while the student is learning. It is important that the student succeeds, for example that the explanations they give are correct.</p>
+<p><strong>What you can do:</strong> get students to answer “why?” and “how?” while they learn, and let them explain in their own words (self-explanations), draw concept maps, and come up with their own examples. Make sure the exercises are at a level the students can manage.</p>
+</div>
 </section>
-<section id="planering-och-mål" class="level2">
-<h2 class="anchored" data-anchor-id="planering-och-mål">Planering och mål</h2>
+<section id="planering-och-mål-planning-and-goals" class="level2">
+<h2 class="anchored" data-anchor-id="planering-och-mål-planning-and-goals"><span class="sv">Planering och mål</span> <span class="en">Planning and goals</span></h2>
+<div class="sv">
 <p>En plan gäller vad som ska göras, när, var och hur eleven ska studera. Att skjuta upp studierna (prokrastinering) är vanligt. Specifika mål och delmål kan hjälpa eleverna att motverka det. Forskningen om planering hos barn och ungdomar är begränsad, så se råden som tumregler och testa vad som fungerar bäst.</p>
 <p><strong>Vad du kan göra:</strong> hjälp eleverna att sätta specifika delmål och kombinera dem med slutmål, planera baklänges från slutmålet steg för steg över veckorna och välja en studiemiljö där det är enkelt att göra rätt och svårt att göra fel.</p>
+</div>
+<div class="en">
+<p>A plan covers what is to be done, and when, where, and how the student will study. Putting off studying (procrastination) is common. Specific goals and subgoals can help students counteract it. Research on planning in children and adolescents is limited, so treat the advice as rules of thumb and test what works best.</p>
+<p><strong>What you can do:</strong> help students set specific subgoals and combine them with end goals, plan backwards from the end goal step by step over the weeks, and choose a study environment where it is easy to do the right thing and hard to do the wrong thing.</p>
+</div>
 </section>
-<section id="vanor-och-friktion" class="level2">
-<h2 class="anchored" data-anchor-id="vanor-och-friktion">Vanor och friktion</h2>
+<section id="vanor-och-friktion-habits-and-friction" class="level2">
+<h2 class="anchored" data-anchor-id="vanor-och-friktion-habits-and-friction"><span class="sv">Vanor och friktion</span> <span class="en">Habits and friction</span></h2>
+<div class="sv">
 <p>Viljestyrka räcker för en kväll men inte för många. En vana är ett beteende kopplat till en viss situation och bildas genom upprepning. Små hinder (friktion) styr beteendet. Minska hindren för det du vill att eleverna ska göra mer av och öka dem för det de ska göra mindre av.</p>
 <p><strong>Vad du kan göra:</strong> hjälp eleverna att välja något litet och koppla det till något de redan gör, till exempel ”Efter middagen övar jag 15 minuter”. Gör strategin lätt att börja, till exempel med färdiga frågor och facit. Välj strategier som är lätta att använda (låg friktion). Hjälp eleverna att välja en fast tid och plats för studier och att minska frestelser, till exempel distraktioner på iPaden. Lär eleverna om lärande och vanor, till exempel önskvärda svårigheter, situation och upprepning. Visa, förklara och modellera strategierna. Höj ambitionen först när det känns enkelt.</p>
+</div>
+<div class="en">
+<p>Willpower is enough for one evening but not for many. A habit is a behavior linked to a particular situation, and it is formed through repetition. Small obstacles (friction) steer behavior. Reduce the obstacles for what you want students to do more of, and increase them for what they should do less of.</p>
+<p><strong>What you can do:</strong> help students choose something small and link it to something they already do, for example “After dinner, I practice for 15 minutes”. Make the strategy easy to start, for example with ready-made questions and answer keys. Choose strategies that are easy to use (low friction). Help students choose a fixed time and place for studying and reduce temptations, for example distractions on the iPad. Teach students about learning and habits, for example desirable difficulties, situation, and repetition. Show, explain, and model the strategies. Raise the ambition only when it feels easy.</p>
+</div>
 </section>
-<section id="så-kan-du-börja" class="level2">
-<h2 class="anchored" data-anchor-id="så-kan-du-börja">Så kan du börja</h2>
+<section id="så-kan-du-börja-how-to-get-started" class="level2">
+<h2 class="anchored" data-anchor-id="så-kan-du-börja-how-to-get-started"><span class="sv">Så kan du börja</span> <span class="en">How to get started</span></h2>
+<div class="sv">
 <ul class="task-list">
 <li><label><input type="checkbox">Förklara och modellera en strategi för eleverna, och säg när och varför den fungerar.</label></li>
 <li><label><input type="checkbox">Bygg in minnesåterkallning i undervisningen, gärna med möjlighet att kolla sitt svar.</label></li>
@@ -215,7 +463,19 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">Hjälp dem att koppla studiestrategin till en fast situation, till exempel ”när jag läst klart försöker jag minnas innehållet”.</label></li>
 <li><label><input type="checkbox">Minska friktionen för det eleverna ska göra och öka den för det de ska göra mindre av.</label></li>
 </ul>
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
+</div>
+<div class="en">
+<ul class="task-list">
+<li><label><input type="checkbox">Explain and model a strategy for the students, and say when and why it works.</label></li>
+<li><label><input type="checkbox">Build retrieval practice into your teaching, preferably with a chance for students to check their answers.</label></li>
+<li><label><input type="checkbox">Plan to return to earlier content, so that practice is spread out over time.</label></li>
+<li><label><input type="checkbox">Let students explain in their own words and ask themselves “why?”.</label></li>
+<li><label><input type="checkbox">Help students set specific subgoals and plan backwards.</label></li>
+<li><label><input type="checkbox">Help them link the study strategy to a fixed situation, for example “when I have finished reading, I try to recall the content”.</label></li>
+<li><label><input type="checkbox">Reduce friction for what students should do and increase it for what they should do less of.</label></li>
+</ul>
+</div>
+<p><a href="../resources.html" class="button"><span class="sv">← Tillbaka till resurser</span><span class="en">← Back to Resources</span></a></p>
 
 
 </section>
@@ -247,12 +507,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopierat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopierat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

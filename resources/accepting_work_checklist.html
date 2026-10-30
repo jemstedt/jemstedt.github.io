@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv" xml:lang="sv"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Checklist for accepting non-mandatory work – Andreas Jemstedt</title>
+<title>Checklista för att tacka ja till frivilliga uppdrag – Andreas Jemstedt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -57,19 +57,219 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Inget resultat",
+    "search-matching-documents-text": "matchande dokument",
+    "search-copy-link-title": "Kopiera länk för att söka",
+    "search-hide-matches-text": "Göm ytterligare resultat",
+    "search-more-match-text": "annat resultat i detta dokument",
+    "search-more-matches-text": "fler resultat i detta dokument",
+    "search-clear-button-title": "Rensa",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Avbryt",
+    "search-submit-button-title": "Verkställ",
+    "search-label": "Sök"
   }
 }</script>
+<!--
+  Language switch for the website.
+
+  Swedish is the default. English is shown when <html> has the class "lang-en".
+  In the .qmd files:
+    - Swedish text goes in  ::: sv  ...  :::   or  [text]{.sv}
+    - English text goes in  ::: en  ...  :::   or  [text]{.en}
+    - Anything outside these blocks (code, prompts, reference lists, images)
+      is shown in both languages and is never translated.
+
+  The visitor's choice is remembered between pages. A link ending in
+  ?lang=en (for example jemstedt.se/research.html?lang=en) opens the
+  English version directly.
+-->
+<style>
+  html:not(.lang-en) .en,
+  html.lang-en .sv {
+    display: none !important;
+  }
+
+  .lang-switch {
+    background: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  /* Quarto orders the navbar with flexbox: this puts the button at the far right */
+  .lang-switch-item {
+    display: flex;
+    align-items: center;
+    order: 1000;
+    margin-left: 0.5rem;
+  }
+
+  /* On phones the button shows EN / SV so it fits on the same line as the name */
+  .lang-switch-short {
+    display: none;
+  }
+
+  @media (max-width: 991.98px) {
+    .lang-switch-item {
+      margin-left: 0.25rem;
+    }
+
+    .lang-switch.nav-link {
+      padding: 0.1rem 0.45rem;
+      border: 1px solid currentColor;
+      border-radius: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch .bi,
+    .lang-switch-label {
+      display: none;
+    }
+
+    .lang-switch-short {
+      display: inline;
+    }
+  }
+
+  /* Small phones: make room for the button next to the site name */
+  @media (max-width: 385px) {
+    .navbar-brand-container {
+      max-width: calc(100% - 135px) !important;
+    }
+
+    .navbar-brand .navbar-title {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var KEY = "site-lang";
+    var lang = "sv";
+
+    try {
+      var fromUrl = new URLSearchParams(window.location.search).get("lang");
+      if (fromUrl === "en" || fromUrl === "sv") {
+        lang = fromUrl;
+        localStorage.setItem(KEY, lang);
+      } else if (localStorage.getItem(KEY) === "en") {
+        lang = "en";
+      }
+    } catch (e) {}
+
+    // Set before the page is drawn, so the wrong language never flashes.
+    document.documentElement.classList.toggle("lang-en", lang === "en");
+    document.documentElement.lang = lang;
+
+    // Interface texts that Quarto writes in Swedish (lang: sv in _quarto.yml).
+    var UI_EN = {
+      "På denna sida": "On this page",
+      "Visa kod": "Show code",
+      "Dölj kod": "Hide code",
+      "Kod": "Code",
+      "Kopiera till urklipp": "Copy to Clipboard"
+    };
+
+    function swapText(el, attr) {
+      var key = attr ? "svAttr" : "svText";
+      if (!(key in el.dataset)) {
+        el.dataset[key] = attr ? el.getAttribute(attr) : el.textContent.trim();
+      }
+      var sv = el.dataset[key];
+      var value = lang === "en" && UI_EN[sv] ? UI_EN[sv] : sv;
+      if (attr) {
+        el.setAttribute(attr, value);
+      } else {
+        el.textContent = value;
+      }
+    }
+
+    var originalTitle = document.title;
+
+    function apply() {
+      var html = document.documentElement;
+      html.classList.toggle("lang-en", lang === "en");
+      html.lang = lang;
+
+      document.querySelectorAll("#toc-title, details.code-fold > summary").forEach(function (el) {
+        swapText(el);
+      });
+      document.querySelectorAll(".code-copy-button[title]").forEach(function (el) {
+        swapText(el, "title");
+      });
+
+      // Browser tab title
+      var sv = document.querySelector("h1.title .sv");
+      var en = document.querySelector("h1.title .en");
+      document.title = lang === "en" && sv && en
+        ? originalTitle.replace(sv.textContent.trim(), en.textContent.trim())
+        : originalTitle;
+
+      // Button label shows the language you can switch to
+      var btn = document.querySelector(".lang-switch");
+      if (btn) {
+        var label = btn.querySelector(".lang-switch-label");
+        var short = btn.querySelector(".lang-switch-short");
+        label.textContent = lang === "en" ? "Svenska" : "English";
+        short.textContent = lang === "en" ? "SV" : "EN";
+        btn.lang = lang === "en" ? "sv" : "en";
+        btn.setAttribute("aria-label", lang === "en" ? "Byt till svenska" : "Switch to English");
+      }
+    }
+
+    function addButton() {
+      var item = document.createElement("div");
+      item.className = "lang-switch-item";
+      item.innerHTML =
+        '<button type="button" class="nav-link lang-switch">' +
+        '<i class="bi bi-translate" aria-hidden="true"></i>' +
+        '<span class="lang-switch-label"></span>' +
+        '<span class="lang-switch-short"></span></button>';
+
+      // Next to the search icon, so it is visible on phones without opening the menu
+      var search = document.getElementById("quarto-search");
+      var toggler = document.querySelector(".navbar .navbar-toggler");
+      var anchor = search || toggler;
+      if (anchor) {
+        anchor.parentNode.insertBefore(item, anchor);
+      } else {
+        var nav = document.querySelector(".navbar .navbar-container") || document.body;
+        nav.appendChild(item);
+      }
+
+      item.querySelector("button").addEventListener("click", function () {
+        lang = lang === "en" ? "sv" : "en";
+        try {
+          localStorage.setItem(KEY, lang);
+          var url = new URL(window.location.href);
+          if (lang === "en") {
+            url.searchParams.set("lang", "en");
+          } else {
+            url.searchParams.delete("lang");
+          }
+          history.replaceState(null, "", url);
+        } catch (e) {}
+        apply();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mark each language block so screen readers pronounce it correctly
+      document.querySelectorAll(".sv").forEach(function (el) { el.lang = "sv"; });
+      document.querySelectorAll(".en").forEach(function (el) { el.lang = "en"; });
+      addButton();
+      apply();
+    });
+
+    // Quarto adds copy buttons after page load
+    window.addEventListener("load", apply);
+  })();
+</script>
 
 
 </head>
@@ -85,31 +285,31 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Andreas Jemstedt</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Sök"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skifta navigering" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text"><span class="sv">Hem</span><span class="en">Home</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text"><span class="sv">Om mig</span><span class="en">About</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../research.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text"><span class="sv">Forskning</span><span class="en">Research</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
-<span class="menu-text">Resources</span></a>
+<span class="menu-text"><span class="sv">Resurser</span><span class="en">Resources</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../contact.html"> 
-<span class="menu-text">Contact</span></a>
+<span class="menu-text"><span class="sv">Kontakt</span><span class="en">Contact</span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -124,12 +324,12 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">På denna sida</h2>
    
   <ul>
-  <li><a href="#first-do-a-premortem-check-30-seconds" id="toc-first-do-a-premortem-check-30-seconds" class="nav-link active" data-scroll-target="#first-do-a-premortem-check-30-seconds">First, do a premortem check (30 seconds)</a></li>
-  <li><a href="#second-consult-the-acceptance-checklist" id="toc-second-consult-the-acceptance-checklist" class="nav-link" data-scroll-target="#second-consult-the-acceptance-checklist">Second, consult the acceptance checklist</a></li>
-  <li><a href="#how-to-deal-with-situations-where-offers-happen-face-to-face-or-over-phone" id="toc-how-to-deal-with-situations-where-offers-happen-face-to-face-or-over-phone" class="nav-link" data-scroll-target="#how-to-deal-with-situations-where-offers-happen-face-to-face-or-over-phone">How to deal with situations where offers happen face-to-face or over phone</a></li>
+  <li><a href="#först-gör-en-premortem-30-sekunder-first-do-a-premortem-check-30-seconds" id="toc-först-gör-en-premortem-30-sekunder-first-do-a-premortem-check-30-seconds" class="nav-link active" data-scroll-target="#först-gör-en-premortem-30-sekunder-first-do-a-premortem-check-30-seconds"><span class="sv">Först: gör en premortem (30 sekunder)</span> <span class="en">First, do a premortem check (30 seconds)</span></a></li>
+  <li><a href="#sedan-gå-igenom-checklistan-second-consult-the-acceptance-checklist" id="toc-sedan-gå-igenom-checklistan-second-consult-the-acceptance-checklist" class="nav-link" data-scroll-target="#sedan-gå-igenom-checklistan-second-consult-the-acceptance-checklist"><span class="sv">Sedan: gå igenom checklistan</span> <span class="en">Second, consult the acceptance checklist</span></a></li>
+  <li><a href="#så-hanterar-jag-erbjudanden-som-kommer-ansikte-mot-ansikte-eller-per-telefon-how-to-deal-with-situations-where-offers-happen-face-to-face-or-over-phone" id="toc-så-hanterar-jag-erbjudanden-som-kommer-ansikte-mot-ansikte-eller-per-telefon-how-to-deal-with-situations-where-offers-happen-face-to-face-or-over-phone" class="nav-link" data-scroll-target="#så-hanterar-jag-erbjudanden-som-kommer-ansikte-mot-ansikte-eller-per-telefon-how-to-deal-with-situations-where-offers-happen-face-to-face-or-over-phone"><span class="sv">Så hanterar jag erbjudanden som kommer ansikte mot ansikte eller per telefon</span> <span class="en">How to deal with situations where offers happen face-to-face or over phone</span></a></li>
   </ul>
 </nav>
     </div>
@@ -138,7 +338,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Checklist for accepting non-mandatory work</h1>
+<h1 class="title"><span class="sv">Checklista för att tacka ja till frivilliga uppdrag</span><span class="en">Checklist for accepting non-mandatory work</span></h1>
 </div>
 
 
@@ -155,10 +355,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
-<section id="first-do-a-premortem-check-30-seconds" class="level2">
-<h2 class="anchored" data-anchor-id="first-do-a-premortem-check-30-seconds">First, do a premortem check (30 seconds)</h2>
-<p>Imagine accepted the project and it went bad.</p>
+<p><a href="../resources.html" class="button"><span class="sv">← Tillbaka till resurser</span><span class="en">← Back to Resources</span></a></p>
+<section id="först-gör-en-premortem-30-sekunder-first-do-a-premortem-check-30-seconds" class="level2">
+<h2 class="anchored" data-anchor-id="först-gör-en-premortem-30-sekunder-first-do-a-premortem-check-30-seconds"><span class="sv">Först: gör en premortem (30 sekunder)</span> <span class="en">First, do a premortem check (30 seconds)</span></h2>
+<div class="sv">
+<p>Anta att jag har tackat ja till projektet och att det har gått dåligt.</p>
+<ol type="1">
+<li><p>Vad gick fel?</p></li>
+<li><p>Varför ångrade jag till slut projektet?</p></li>
+<li><p>Vilken del irriterade, stressade eller tröttade ut mig mer än väntat?</p></li>
+<li><p>Kan jag undvika eller begränsa de dåliga delarna?</p></li>
+</ol>
+<p>Om det troliga misslyckandet känns uppenbart eller bekant, behandla det som verklig information, inte som pessimism.</p>
+</div>
+<div class="en">
+<p>Imagine I accepted the project and it went badly.</p>
 <ol type="1">
 <li><p>What went wrong?</p></li>
 <li><p>Why did I end up regretting the project?</p></li>
@@ -166,14 +377,32 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Can I avoid or limit the bad parts?</p></li>
 </ol>
 <p>If the likely failure feels obvious or familiar, treat that as real data, not pessimism.</p>
+</div>
 <hr>
 </section>
-<section id="second-consult-the-acceptance-checklist" class="level2">
-<h2 class="anchored" data-anchor-id="second-consult-the-acceptance-checklist">Second, consult the acceptance checklist</h2>
+<section id="sedan-gå-igenom-checklistan-second-consult-the-acceptance-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="sedan-gå-igenom-checklistan-second-consult-the-acceptance-checklist"><span class="sv">Sedan: gå igenom checklistan</span> <span class="en">Second, consult the acceptance checklist</span></h2>
+<div class="sv">
+<p>Säg bara ja om <strong>allt</strong> av följande stämmer:</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><strong>Meningsfulla framsteg</strong><br>
+Det finns en betydande chans (≈50 % eller mer) att detta för mig ett konkret steg närmare något av mina personliga mål.</label></li>
+<li><label><input type="checkbox"><strong>Värt kostnaden</strong><br>
+Värdet överväger tydligt besväret, ansträngningen eller irritationen.</label></li>
+<li><label><input type="checkbox"><strong>Kapacitet</strong><br>
+Jag har verkligen tid för detta utan att det blir för stressigt.</label></li>
+<li><label><input type="checkbox"><strong>Alternativkostnad</strong><br>
+Detta tränger inte undan något viktigt som jag redan vet att jag vill göra.</label></li>
+<li><label><input type="checkbox"><strong>Ett helhjärtat ja</strong><br>
+Jag säger ja för att jag vill, inte av skuld, rädsla, pliktkänsla eller för att vara till lags.</label></li>
+</ul>
+<p>Om någon punkt är ett <strong>nej</strong> eller ett <strong>kanske</strong> är standardsvaret <strong>nej</strong> (eller <strong>”inte just nu”</strong>).</p>
+</div>
+<div class="en">
 <p>Only say yes if <strong>all</strong> of the following are true:</p>
 <ul class="task-list">
 <li><label><input type="checkbox"><strong>Meaningful progress</strong><br>
-There’s a substantial chance (≈50% or higher) that this will move me in a concrete way toward one of my personal goals</label></li>
+There’s a substantial chance (≈50% or higher) that this will move me in a concrete way toward one of my personal goals.</label></li>
 <li><label><input type="checkbox"><strong>Worth the cost</strong><br>
 The value clearly outweighs the pain, effort, or annoyance.</label></li>
 <li><label><input type="checkbox"><strong>Capacity</strong><br>
@@ -184,16 +413,26 @@ This won’t crowd out something important that I already know I want to do.</la
 I’m saying yes because I want to, not out of guilt, fear, obligation, or people-pleasing.</label></li>
 </ul>
 <p>If any item is a <strong>no</strong> or a <strong>maybe</strong>, the default answer is <strong>no</strong> (or <strong>“not right now”</strong>).</p>
+</div>
 <hr>
 </section>
-<section id="how-to-deal-with-situations-where-offers-happen-face-to-face-or-over-phone" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-deal-with-situations-where-offers-happen-face-to-face-or-over-phone">How to deal with situations where offers happen face-to-face or over phone</h2>
+<section id="så-hanterar-jag-erbjudanden-som-kommer-ansikte-mot-ansikte-eller-per-telefon-how-to-deal-with-situations-where-offers-happen-face-to-face-or-over-phone" class="level2">
+<h2 class="anchored" data-anchor-id="så-hanterar-jag-erbjudanden-som-kommer-ansikte-mot-ansikte-eller-per-telefon-how-to-deal-with-situations-where-offers-happen-face-to-face-or-over-phone"><span class="sv">Så hanterar jag erbjudanden som kommer ansikte mot ansikte eller per telefon</span> <span class="en">How to deal with situations where offers happen face-to-face or over phone</span></h2>
+<div class="sv">
+<ol type="1">
+<li><p>Säg: <strong>”Får jag fundera på det och återkomma?”</strong></p></li>
+<li><p>Gå igenom den här checklistan.</p></li>
+<li><p>Om jag svarar direkt är svaret <strong>preliminärt</strong>. Jag får ändra mig efter att ha gått igenom checklistan. Tänk igenom det. Det är bättre att vara lite besvärlig och ta tillbaka ett ja än att ångra att jag tackade ja till ett projekt.</p></li>
+</ol>
+</div>
+<div class="en">
 <ol type="1">
 <li><p>Say: <strong>“Can I think about it and get back to you?”</strong></p></li>
 <li><p>Consult this checklist.</p></li>
-<li><p>If I answer on the spot, that answer is <strong>provisional</strong>. I’m allowed to change my mind after reviewing this. Think it through, its better to be a bit annoying and retract a yes than to end up regretting accepting a project.</p></li>
+<li><p>If I answer on the spot, that answer is <strong>provisional</strong>. I’m allowed to change my mind after reviewing this. Think it through, it’s better to be a bit annoying and retract a yes than to end up regretting accepting a project.</p></li>
 </ol>
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
+</div>
+<p><a href="../resources.html" class="button"><span class="sv">← Tillbaka till resurser</span><span class="en">← Back to Resources</span></a></p>
 
 
 </section>
@@ -224,12 +463,12 @@ I’m saying yes because I want to, not out of guilt, fear, obligation, or peopl
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopierat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopierat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv" xml:lang="sv"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>A Proto Theory About Mental Effort and Production Rate – Andreas Jemstedt</title>
+<title>En prototeori om mental ansträngning och produktionstakt – Andreas Jemstedt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -57,19 +57,219 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Inget resultat",
+    "search-matching-documents-text": "matchande dokument",
+    "search-copy-link-title": "Kopiera länk för att söka",
+    "search-hide-matches-text": "Göm ytterligare resultat",
+    "search-more-match-text": "annat resultat i detta dokument",
+    "search-more-matches-text": "fler resultat i detta dokument",
+    "search-clear-button-title": "Rensa",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Avbryt",
+    "search-submit-button-title": "Verkställ",
+    "search-label": "Sök"
   }
 }</script>
+<!--
+  Language switch for the website.
+
+  Swedish is the default. English is shown when <html> has the class "lang-en".
+  In the .qmd files:
+    - Swedish text goes in  ::: sv  ...  :::   or  [text]{.sv}
+    - English text goes in  ::: en  ...  :::   or  [text]{.en}
+    - Anything outside these blocks (code, prompts, reference lists, images)
+      is shown in both languages and is never translated.
+
+  The visitor's choice is remembered between pages. A link ending in
+  ?lang=en (for example jemstedt.se/research.html?lang=en) opens the
+  English version directly.
+-->
+<style>
+  html:not(.lang-en) .en,
+  html.lang-en .sv {
+    display: none !important;
+  }
+
+  .lang-switch {
+    background: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  /* Quarto orders the navbar with flexbox: this puts the button at the far right */
+  .lang-switch-item {
+    display: flex;
+    align-items: center;
+    order: 1000;
+    margin-left: 0.5rem;
+  }
+
+  /* On phones the button shows EN / SV so it fits on the same line as the name */
+  .lang-switch-short {
+    display: none;
+  }
+
+  @media (max-width: 991.98px) {
+    .lang-switch-item {
+      margin-left: 0.25rem;
+    }
+
+    .lang-switch.nav-link {
+      padding: 0.1rem 0.45rem;
+      border: 1px solid currentColor;
+      border-radius: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch .bi,
+    .lang-switch-label {
+      display: none;
+    }
+
+    .lang-switch-short {
+      display: inline;
+    }
+  }
+
+  /* Small phones: make room for the button next to the site name */
+  @media (max-width: 385px) {
+    .navbar-brand-container {
+      max-width: calc(100% - 135px) !important;
+    }
+
+    .navbar-brand .navbar-title {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var KEY = "site-lang";
+    var lang = "sv";
+
+    try {
+      var fromUrl = new URLSearchParams(window.location.search).get("lang");
+      if (fromUrl === "en" || fromUrl === "sv") {
+        lang = fromUrl;
+        localStorage.setItem(KEY, lang);
+      } else if (localStorage.getItem(KEY) === "en") {
+        lang = "en";
+      }
+    } catch (e) {}
+
+    // Set before the page is drawn, so the wrong language never flashes.
+    document.documentElement.classList.toggle("lang-en", lang === "en");
+    document.documentElement.lang = lang;
+
+    // Interface texts that Quarto writes in Swedish (lang: sv in _quarto.yml).
+    var UI_EN = {
+      "På denna sida": "On this page",
+      "Visa kod": "Show code",
+      "Dölj kod": "Hide code",
+      "Kod": "Code",
+      "Kopiera till urklipp": "Copy to Clipboard"
+    };
+
+    function swapText(el, attr) {
+      var key = attr ? "svAttr" : "svText";
+      if (!(key in el.dataset)) {
+        el.dataset[key] = attr ? el.getAttribute(attr) : el.textContent.trim();
+      }
+      var sv = el.dataset[key];
+      var value = lang === "en" && UI_EN[sv] ? UI_EN[sv] : sv;
+      if (attr) {
+        el.setAttribute(attr, value);
+      } else {
+        el.textContent = value;
+      }
+    }
+
+    var originalTitle = document.title;
+
+    function apply() {
+      var html = document.documentElement;
+      html.classList.toggle("lang-en", lang === "en");
+      html.lang = lang;
+
+      document.querySelectorAll("#toc-title, details.code-fold > summary").forEach(function (el) {
+        swapText(el);
+      });
+      document.querySelectorAll(".code-copy-button[title]").forEach(function (el) {
+        swapText(el, "title");
+      });
+
+      // Browser tab title
+      var sv = document.querySelector("h1.title .sv");
+      var en = document.querySelector("h1.title .en");
+      document.title = lang === "en" && sv && en
+        ? originalTitle.replace(sv.textContent.trim(), en.textContent.trim())
+        : originalTitle;
+
+      // Button label shows the language you can switch to
+      var btn = document.querySelector(".lang-switch");
+      if (btn) {
+        var label = btn.querySelector(".lang-switch-label");
+        var short = btn.querySelector(".lang-switch-short");
+        label.textContent = lang === "en" ? "Svenska" : "English";
+        short.textContent = lang === "en" ? "SV" : "EN";
+        btn.lang = lang === "en" ? "sv" : "en";
+        btn.setAttribute("aria-label", lang === "en" ? "Byt till svenska" : "Switch to English");
+      }
+    }
+
+    function addButton() {
+      var item = document.createElement("div");
+      item.className = "lang-switch-item";
+      item.innerHTML =
+        '<button type="button" class="nav-link lang-switch">' +
+        '<i class="bi bi-translate" aria-hidden="true"></i>' +
+        '<span class="lang-switch-label"></span>' +
+        '<span class="lang-switch-short"></span></button>';
+
+      // Next to the search icon, so it is visible on phones without opening the menu
+      var search = document.getElementById("quarto-search");
+      var toggler = document.querySelector(".navbar .navbar-toggler");
+      var anchor = search || toggler;
+      if (anchor) {
+        anchor.parentNode.insertBefore(item, anchor);
+      } else {
+        var nav = document.querySelector(".navbar .navbar-container") || document.body;
+        nav.appendChild(item);
+      }
+
+      item.querySelector("button").addEventListener("click", function () {
+        lang = lang === "en" ? "sv" : "en";
+        try {
+          localStorage.setItem(KEY, lang);
+          var url = new URL(window.location.href);
+          if (lang === "en") {
+            url.searchParams.set("lang", "en");
+          } else {
+            url.searchParams.delete("lang");
+          }
+          history.replaceState(null, "", url);
+        } catch (e) {}
+        apply();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mark each language block so screen readers pronounce it correctly
+      document.querySelectorAll(".sv").forEach(function (el) { el.lang = "sv"; });
+      document.querySelectorAll(".en").forEach(function (el) { el.lang = "en"; });
+      addButton();
+      apply();
+    });
+
+    // Quarto adds copy buttons after page load
+    window.addEventListener("load", apply);
+  })();
+</script>
 
 
 </head>
@@ -85,31 +285,31 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Andreas Jemstedt</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Sök"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skifta navigering" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text"><span class="sv">Hem</span><span class="en">Home</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text"><span class="sv">Om mig</span><span class="en">About</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../research.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text"><span class="sv">Forskning</span><span class="en">Research</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
-<span class="menu-text">Resources</span></a>
+<span class="menu-text"><span class="sv">Resurser</span><span class="en">Resources</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../contact.html"> 
-<span class="menu-text">Contact</span></a>
+<span class="menu-text"><span class="sv">Kontakt</span><span class="en">Contact</span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -130,7 +330,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A Proto Theory About Mental Effort and Production Rate</h1>
+<h1 class="title"><span class="sv">En prototeori om mental ansträngning och produktionstakt</span><span class="en">A Proto Theory About Mental Effort and Production Rate</span></h1>
 </div>
 
 
@@ -147,18 +347,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
+<p><span class="sv"><a href="../resources.html" class="button">← Tillbaka till resurser</a></span><span class="en"><a href="../resources.html" class="button">← Back to Resources</a></span></p>
 <p>Not too long ago, I suffered a concussion. The following weeks and months were stressful and sometimes scary, but also interesting for someone interested in the mind. I have previously published work on how metacognitive monitoring is influenced by the ease or difficulty of information processing, a construct called processing fluency. Because of this work, I not only experienced changes in processing fluency during this time, but also observed and thought about them a lot. These observations resulted in an idea.</p>
 <p>The idea came mainly from a series of experiences that can be summarised as follows. When engaging with a thought and seeing where it would take me, the thoughts wouldn’t come as they normally would, but I could stick with them. When I did, the thoughts would come, but more slowly, and I could feel a pressure or load building in my mind. Sometimes this would reach a level where it caused me nausea. This only happened when I continued to engage with thoughts, even though I could feel the mental effort or nausea building.</p>
 <p>In the literature on processing fluency, it is often discussed in terms of how easy or difficult it is to process information, as well as how easy it is to retrieve information from memory (retrieval fluency) or to process perceptual information (perceptual fluency). However, my experiences suggest that it could be fruitful to consider processing fluency (and the other types of fluency) as two distinct yet interconnected processes: mental effort and mental production rate.</p>
 <p>I define <em>Mental effort</em> as the experienced level of cognitive effort or load. At low levels, we are rarely consciously aware of it, but at high levels, it can even cause nausea. This construct is similar to the definition of processing fluency, but there are important differences that will be clarified. During my concussion, I experienced nausea from high cognitive load many times, but I had also experienced it before that, although rarely. For example, I experienced it when I took a class on multivariate Bayesian modelling and tried to visualise how different probabilities interacted.</p>
 <p>I define <em>Mental production rate</em> as the rate at which mental events appear in our minds. This could be how quickly our inner voice produces words or sentences, how quickly we understand what we are looking at, how quickly we develop an idea or how quickly new Scrabble combinations come to mind. The ease with which we produce conscious experiences depends on the <em>task difficulty</em>. If it is something we have done many times before, only a little effort is required to produce them at a high rate. However, if the task is novel or difficult in some other way, or if our cognitive abilities are reduced (e.g.&nbsp;due to a concussion), more effort is required to produce them at a high rate.</p>
-<p>Critical to this construct is that we have an <em>expected rate of production</em> from moment to moment and from task to task. If the rate of experiences is lower than we expect (not in an accepted span), mental effort is increased to raise the rate so it ends up in the accepted range If it is higher, mental effort is reduced. For example, imagine you are trying to form a sentence for a text, but the words aren’t coming at the rate you expect. You are struggling to find the words. Then, mental effort may increase to try to increase the production rate. If no increase is achieved, we might give up. How hard we push likely depends on <em>goal importance</em>. That is, how important it is to us to achieve the aimed-for production rate. In addition, the expected rate we have from moment to moment likely depends on prior experiences, how active we are overall (fully engaged in a task, or trying to go to sleep), and task difficulty. And probably more factors. That is, again, mental effort increases to reach our expected rate of production in the current task, however, there is likely a continous process of reducing mental effort. That is, unless mental effort is increasing or the production rate is in the accepted range, the brain works to reduce mental effort.</p>
+<p>Critical to this construct is that we have an <em>expected rate of production</em> from moment to moment and from task to task. If the rate of experiences is lower than we expect (not in an accepted span), mental effort is increased to raise the rate so it ends up in the accepted range. If it is higher, mental effort is reduced. For example, imagine you are trying to form a sentence for a text, but the words aren’t coming at the rate you expect. You are struggling to find the words. Then, mental effort may increase to try to increase the production rate. If no increase is achieved, we might give up. How hard we push likely depends on <em>goal importance</em>. That is, how important it is to us to achieve the aimed-for production rate. In addition, the expected rate we have from moment to moment likely depends on prior experiences, how active we are overall (fully engaged in a task, or trying to go to sleep), and task difficulty. And probably more factors. That is, again, mental effort increases to reach our expected rate of production in the current task, however, there is likely a continuous process of reducing mental effort. That is, unless mental effort is increasing or the production rate is in the accepted range, the brain works to reduce mental effort.</p>
 <p>Put differently, there is an ongoing balancing act between the production of mental experiences and the effort we put in to reaching an accepted level of production of conscious experiences. The following factors are critical to this model: 1. Mental effort 2. Mental production rate 3. Task difficulty 4. Expected rate of production 5. Goal importance</p>
 <p>Mental production rate is influenced by task difficulty and the current mental effort. If we assume that task and task difficulty are held constant, then increasing or decreasing mental effort is the only way to change mental production rate. Whether or not mental effort is changed depends on the expected rate of production. If the mental production rate is within the expected/accepted range of production rate, then effort is unchanged, but if it’s too low or unnecessarily high, then it is changed. If mental effort does not increase the rate as aimed for, mental effort may increase even more. However, at higher levels of mental effort, it may become uncomfortable or even cause nausea. If the goal we are trying to reach is important, we can accept this discomfort, but if it is not, we may give up/switch goal.</p>
 <p>For example, in Jemstedt et al (2018) participants were shown words either written in all upper-case letters (e.g., EFFORT), or with every other letter being lower-case (eFfOrT) and asked to learn them for a later test. Over the two types of items, participants likely had a similar expected mental production rate based on their general experience of reading words, as they had no prior experience with a task like this. As such, when they read eFfOrT, the rate by which the word came to mind was lower than expected. That is, it took longer for them to read it than common words would usually take. This led their mental effort to increase to compensate. See Figure 1 below for a visualization of how mental effort and mental production rate change over an imagined task where a couple of words are processed in an experiment like this.</p>
-<p>A useful analogy is the how a driver adjusts the speed of a car, where mental effort is how hard the accelerator is pressed, mental production rate is the car’s speed, and task difficulty is the slope of the road, such that steeper uphill sections require increasingly forceful acceleration to maintain the same speed.</p>
-<p><strong>Figure 1.</strong>. Figure illustrates an imagined experiment where a participant is trying to study six words (upper x-axis) for 5 seconds each (lower x-axis). How the word is shown (all upper-case letters a mix of upper- and lower-case letters) affects task difficulty, which impacts mental production rate, which in turn affects mental effort. The grey horizontal field shows the accepted/expected production rate for the task, which the model aims for the production rate to be within. The y-axis shows the level of production rate (blue line) and level of mental effort (orange line).</p>
+<p>A useful analogy is how a driver adjusts the speed of a car, where mental effort is how hard the accelerator is pressed, mental production rate is the car’s speed, and task difficulty is the slope of the road, such that steeper uphill sections require increasingly forceful acceleration to maintain the same speed.</p>
+<p><strong>Figure 1.</strong> Figure illustrates an imagined experiment where a participant is trying to study six words (upper x-axis) for 5 seconds each (lower x-axis). How the word is shown (all upper-case letters or a mix of upper- and lower-case letters) affects task difficulty, which impacts mental production rate, which in turn affects mental effort. The grey horizontal field shows the accepted/expected production rate for the task, which the model aims for the production rate to be within. The y-axis shows the level of production rate (blue line) and level of mental effort (orange line).</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -168,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
+<p><span class="sv"><a href="../resources.html" class="button">← Tillbaka till resurser</a></span><span class="en"><a href="../resources.html" class="button">← Back to Resources</a></span></p>
 
 
 
@@ -198,12 +398,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopierat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopierat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
