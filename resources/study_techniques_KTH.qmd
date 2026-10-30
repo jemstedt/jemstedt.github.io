@@ -1,10 +1,18 @@
 ---
-title: "Course about evidence-based study techniques"
+title: "[Kurs om evidensbaserade studietekniker]{.sv}[Course about evidence-based study techniques]{.en}"
 ---
 
-As a postdoc at KTH Royal Institute of Technology, I developed a free 30-minute online course that teaches evidence-based study techniques using question-based learning (learn by answer questions and receive feedback).
+::: sv
+Som postdoktor vid KTH utvecklade jag en kostnadsfri onlinekurs på 30 minuter som lär ut evidensbaserade studietekniker med hjälp av frågebaserat lärande (man lär sig genom att besvara frågor och få feedback).
+
+Du kommer åt kursen gratis här. Logga bara in som gäst.
+:::
+
+::: en
+As a postdoc at KTH Royal Institute of Technology, I developed a free 30-minute online course that teaches evidence-based study techniques using question-based learning (learn by answering questions and receiving feedback).
 
 You can access the course for free here. Just sign in as a guest.
+:::
 
 <https://qbl.sys.kth.se/sections/evidensbaserade_studietekniker_063l3>
 

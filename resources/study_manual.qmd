@@ -1,97 +1,188 @@
 ---
-title: "Study Manual"
+title: "[Studiemanual]{.sv}[Study Manual]{.en}"
 format: html
 ---
 
-[← Back to Resources](../resources.qmd){.button}
+[[← Tillbaka till resurser]{.sv}[← Back to Resources]{.en}](../resources.qmd){.button}
 
-I create a two-page study manual for one of my research projects. The manual teaches students to use evidence-based study techniques in two pages with bullet points. The purpose of the study was to test a cost-effective method of improving students self-regulated learning.
+::: sv
+Jag tog fram en studiemanual på två sidor för ett av mina forskningsprojekt. Manualen lär studenter att använda evidensbaserade studietekniker, på två sidor i punktform. Syftet med studien var att pröva en kostnadseffektiv metod för att förbättra studenters självreglerade lärande.
+
+Studien: Jemstedt, A. (2024). Enhancing learning with a two-page study manual. *Learning and Instruction, 90*, 101852. <https://doi.org/10.1016/j.learninstruc.2023.101852>
+:::
+
+::: en
+I created a two-page study manual for one of my research projects. The manual teaches students to use evidence-based study techniques in two pages with bullet points. The purpose of the study was to test a cost-effective method of improving students' self-regulated learning.
 
 The study: Jemstedt, A. (2024). Enhancing learning with a two-page study manual. *Learning and Instruction, 90*, 101852. <https://doi.org/10.1016/j.learninstruc.2023.101852>
+:::
 
-## 📄 Download the Manual as PDF
+## [📄 Ladda ner manualen som PDF]{.sv} [📄 Download the Manual as PDF]{.en}
 
--   [Download: English version](../pdfs/Study_manual_English.pdf)
--   [Download: Swedish version](../pdfs/Study_manual_Swedish.pdf)
+::: sv
+- [Ladda ner: svensk version](files/Study_manual_Swedish.pdf)
+- [Ladda ner: engelsk version](files/Study_manual_English.pdf)
+:::
+
+::: en
+- [Download: English version](files/Study_manual_English.pdf)
+- [Download: Swedish version](files/Study_manual_Swedish.pdf)
+:::
 
 ------------------------------------------------------------------------
 
-## 📘 Study Manual
+## [📘 Studiemanual]{.sv} [📘 Study Manual]{.en}
 
+::: sv
+Nedan följer en beskrivning av tre metoder som är gynnsamma för inlärning. Utöver detta innehåller manualen förslag på hur du kan planera din studietid på ett sätt som gör att du kan använda metoderna i dina studier.
+:::
+
+::: en
 Below you will find descriptions of three methods that can aid your learning. Besides this, the manual also makes suggestions on how you can plan your study time to use these methods in your studies.
+:::
 
-### Three methods that research has shown will aid your learning
+### [Tre metoder som enligt forskning är gynnsamma för inlärning]{.sv} [Three methods that research has shown will aid your learning]{.en}
 
 ------------------------------------------------------------------------
 
-### 1. Deep processing of what you learn
+### [1. Djup bearbetning av det du lär dig]{.sv} [1. Deep processing of what you learn]{.en}
 
+::: sv
+Du kommer minnas information bättre om du bearbetar den och gör den betydelsefull, istället för att bara läsa orden.
+
+- Skapa frågor åt dig själv medan du läser, som du sedan kan använda för att testa dig själv. Använd till exempel rubriker och begrepp i kurslitteraturen som grund för frågorna.
+
+  - När det är möjligt, skriv dina frågor som ”varför”-frågor. T. ex. *varför är isbjörnar vita?*
+
+- Skriv svar till dina frågor och använd dessa som facit. Om möjligt, gör följande i dina svar:
+
+  - Skriv som om du förklarade för en person som inte har lärt sig det du har lärt dig.
+  - Använd konkreta exempel för att förtydliga.
+  - Koppla det du skriver till dig själv eller händelser i ditt liv.
+  - Koppla samman informationen med saker du har lärt dig tidigare.
+
+- Skapa på samma sätt frågor och svar för ny information som ges vid lärarledd undervisning.
+
+- Uppdatera kontinuerligt dina frågor och svar allt eftersom du lär dig mer under kursens gång.
+:::
+
+::: en
 You will remember information better if you elaborate on it and make it meaningful, rather than simply reading the words.
 
--   Create questions for yourself while you read which you can use to test yourself later. Use, for example, headings and concepts as a basis for your questions.
+- Create questions for yourself while you read which you can use to test yourself later. Use, for example, headings and concepts as a basis for your questions.
 
-    -   When possible, write your questions in the form of “why” questions. For example: *Why are polar bears white?*
+  - When possible, write your questions in the form of “why” questions. For example: *Why are polar bears white?*
 
--   Write answers to your questions. If possible, do the following in your answers:
+- Write answers to your questions. If possible, do the following in your answers:
 
-    -   Write as if you were explaining to a person who has not learned what you have learned.\
-    -   Use concrete examples to clarify.\
-    -   Connect what you write to yourself or your personal experiences.\
-    -   Connect the information with things you have previously learned.
+  - Write as if you were explaining to a person who has not learned what you have learned.\
+  - Use concrete examples to clarify.\
+  - Connect what you write to yourself or your personal experiences.\
+  - Connect the information with things you have previously learned.
 
--   In the same way, create questions and answers for new information you learn during teacher-led learning.
+- In the same way, create questions and answers for new information you learn during teacher-led learning.
 
--   Continuously update your questions and answers as you learn more throughout the course.
+- Continuously update your questions and answers as you learn more throughout the course.
+:::
 
 ------------------------------------------------------------------------
 
-### 2. Retrieval practice
+### [2. Självtestning]{.sv} [2. Retrieval practice]{.en}
 
+::: sv
+Du kommer minnas ditt kursmaterial bättre om du testar dig på materialet, istället för att bara läsa det igen. Det är dock viktigt att kontrollera att det du minns är korrekt.
+
+- Testa dig på:
+
+  - Dina egna frågor som du skapar när du t. ex. läser kurslitteraturen.
+  - Kursbokens frågor.
+    - Se om din kursbok har frågor i slutet av varje kapitel.
+    - Se om din kursbok har en hemsida där det finns test för varje kapitel.
+  - Gamla tentafrågor eller övningstentor
+    - När du kan svaret på en fråga, skriv ner ditt svar och använd det sedan som facit när du testar dig själv.
+
+- När du testar dig, försök att först minnas svaren på frågorna innan du läser svaren på frågorna. Läs facit för att försäkra dig om att du minns rätt.
+
+- Testa dig på andra frågor innan du testar dig på samma fråga igen.
+:::
+
+::: en
 You will remember more of the course material if you test yourself on it instead of simply reading it again. However, it is important that you check that what you remember is correct.
 
--   Test yourself on:
+- Test yourself on:
 
-    -   The questions you create while reading the course literature.\
-    -   Questions in your course book:
-        -   Check if your course book has questions at the end of each chapter.\
-        -   Check if your course book has a homepage with practice tests.\
-    -   Old exams and practice tests:
-        -   When you know the answer to a question, write it down and use it when you test yourself later.
+  - The questions you create while reading the course literature.\
+  - Questions in your course book:
+    - Check if your course book has questions at the end of each chapter.\
+    - Check if your course book has a homepage with practice tests.\
+  - Old exams and practice tests:
+    - When you know the answer to a question, write it down and use it when you test yourself later.
 
--   When you test yourself, first try to remember the answer before you read the answer. Read the answer to check that what you remember is correct.
+- When you test yourself, first try to remember the answer before you read the answer. Read the answer to check that what you remember is correct.
 
--   Test yourself on other questions before you test yourself on the same question again.
+- Test yourself on other questions before you test yourself on the same question again.
+:::
 
 ------------------------------------------------------------------------
 
-### 3. Distributed practice
+### [3. Utspridning av studietid]{.sv} [3. Distributed practice]{.en}
 
+::: sv
+När du studerar har du begränsad tid att studera olika delar av kursens material. Du kommer att minnas varje del av materialet bättre om du sprider ut din studietid över kortare sessioner än om du lägger all tid vid ett studietillfälle. Undvik därför att studera samma sak om och om igen direkt efter varandra. Sprid istället ut tiden med mellanrum.
+
+- Mellanrummen kan vara timmar eller dagar. Huvudsaken är att du sprider ut tiden.
+
+- Detta gäller också självtestning. Läs eller testa dig på något annat innan du testar dig på samma fråga igen.
+:::
+
+::: en
 When you study, you have limited time to study different parts of the course material. You will remember each part better if you spread out your study time over shorter sessions instead of studying everything in one long session. Avoid studying the same information repeatedly in a single session. Instead, space it out.
 
--   The time between the sessions can be hours or days. The main thing is that you spread out your time.
+- The time between the sessions can be hours or days. The main thing is that you spread out your time.
 
--   This also applies to self-testing. Read or test yourself on other material before testing yourself on the same questions again.
+- This also applies to self-testing. Read or test yourself on other material before testing yourself on the same questions again.
+:::
 
 ------------------------------------------------------------------------
 
-## Plan your study time
+## [Planera din studietid]{.sv} [Plan your study time]{.en}
 
+::: sv
+Ingen av ovanstående metoder kommer att göra ditt lärande mer effektivt om du inte använder dig av dem. För att använda dig av metoderna, se till att planera så att du har tid att använda dem. För att du ska kunna använda metoderna behöver du dessutom planera för att kunna studera samma information flera gånger under kursen.
+
+Se till att du har tid för följande när du planerar din tid.
+
+- Tid att läsa kurslitteraturen som anges i kursanvisningarna inför varje kursmoment. När du läser kurslitteraturen, följ punkterna som beskrivs under *Djup bearbetning av det du lär dig*. Planera in ordentligt med tid så att du kan skapa bra frågor och bra svar.
+
+- Tid att testa dig på det du har lärt dig tidigare under kursen. När du planerar din tid kan du exempelvis planera in tid för att testa dig på kurslitteraturen till föreläsning 1 och 2 efter att du varit på föreläsning 3. När du testar dig, följ punkterna som beskrivs under *Självtestning*.
+
+- Testa dig på samma kunskap flera gånger under kursen, men med mellanrum. Följ det som är beskrivet under *Utspridning av studietid*.
+
+När du planerar din studietid kan du också tänka på följande.
+
+- Använd en kalender när du planerar in din studietid.
+- Planera tid för grupparbeten.
+- Vid heltidsstudier förväntas du studera 40 timmar per vecka, det vill säga 8 timmar om dagen om du bara studerar på vardagar. I detta är både dina egna studier inräknade och den lärarledda undervisningen.
+:::
+
+::: en
 None of the methods above will improve your learning if you do not use them. To make use of the methods, plan your time so that you have time to apply them — and to revisit the same material multiple times.
 
 When planning, make sure to allocate time for:
 
--   Reading the course literature according to your course’s schedule. While reading, follow the instructions under *Deep processing of what you learn*. Allow enough time to create good questions and answers.
+- Reading the course literature according to your course’s schedule. While reading, follow the instructions under *Deep processing of what you learn*. Allow enough time to create good questions and answers.
 
--   Testing yourself on material you learned earlier in the course. For example, test yourself on content from lectures 1 and 2 after attending lecture 3. Follow the instructions under *Retrieval practice*.
+- Testing yourself on material you learned earlier in the course. For example, test yourself on content from lectures 1 and 2 after attending lecture 3. Follow the instructions under *Retrieval practice*.
 
--   Testing yourself on the same material at different points during the course. Follow the *Distributed practice* advice.
+- Testing yourself on the same material at different points during the course. Follow the *Distributed practice* advice.
 
 Also consider the following tips:
 
--   Use a calendar to plan your study time.\
--   Include time for group assignments.\
--   Full-time study equals about 40 hours per week — approximately 8 hours per weekday. This includes both independent and teacher-led learning.
+- Use a calendar to plan your study time.\
+- Include time for group assignments.\
+- Full-time study equals about 40 hours per week — approximately 8 hours per weekday. This includes both independent and teacher-led learning.
+:::
 
 ------------------------------------------------------------------------
 
-## [← Back to Resources](../resources.qmd){.button}
+[[← Tillbaka till resurser]{.sv}[← Back to Resources]{.en}](../resources.qmd){.button}

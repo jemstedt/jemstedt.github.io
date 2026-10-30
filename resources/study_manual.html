@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv" xml:lang="sv"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.36">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Study Manual – Andreas Jemstedt</title>
+<title>Studiemanual – Andreas Jemstedt</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -57,19 +57,219 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Inget resultat",
+    "search-matching-documents-text": "matchande dokument",
+    "search-copy-link-title": "Kopiera länk för att söka",
+    "search-hide-matches-text": "Göm ytterligare resultat",
+    "search-more-match-text": "annat resultat i detta dokument",
+    "search-more-matches-text": "fler resultat i detta dokument",
+    "search-clear-button-title": "Rensa",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Avbryt",
+    "search-submit-button-title": "Verkställ",
+    "search-label": "Sök"
   }
 }</script>
+<!--
+  Language switch for the website.
+
+  Swedish is the default. English is shown when <html> has the class "lang-en".
+  In the .qmd files:
+    - Swedish text goes in  ::: sv  ...  :::   or  [text]{.sv}
+    - English text goes in  ::: en  ...  :::   or  [text]{.en}
+    - Anything outside these blocks (code, prompts, reference lists, images)
+      is shown in both languages and is never translated.
+
+  The visitor's choice is remembered between pages. A link ending in
+  ?lang=en (for example jemstedt.se/research.html?lang=en) opens the
+  English version directly.
+-->
+<style>
+  html:not(.lang-en) .en,
+  html.lang-en .sv {
+    display: none !important;
+  }
+
+  .lang-switch {
+    background: none;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  /* Quarto orders the navbar with flexbox: this puts the button at the far right */
+  .lang-switch-item {
+    display: flex;
+    align-items: center;
+    order: 1000;
+    margin-left: 0.5rem;
+  }
+
+  /* On phones the button shows EN / SV so it fits on the same line as the name */
+  .lang-switch-short {
+    display: none;
+  }
+
+  @media (max-width: 991.98px) {
+    .lang-switch-item {
+      margin-left: 0.25rem;
+    }
+
+    .lang-switch.nav-link {
+      padding: 0.1rem 0.45rem;
+      border: 1px solid currentColor;
+      border-radius: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch .bi,
+    .lang-switch-label {
+      display: none;
+    }
+
+    .lang-switch-short {
+      display: inline;
+    }
+  }
+
+  /* Small phones: make room for the button next to the site name */
+  @media (max-width: 385px) {
+    .navbar-brand-container {
+      max-width: calc(100% - 135px) !important;
+    }
+
+    .navbar-brand .navbar-title {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var KEY = "site-lang";
+    var lang = "sv";
+
+    try {
+      var fromUrl = new URLSearchParams(window.location.search).get("lang");
+      if (fromUrl === "en" || fromUrl === "sv") {
+        lang = fromUrl;
+        localStorage.setItem(KEY, lang);
+      } else if (localStorage.getItem(KEY) === "en") {
+        lang = "en";
+      }
+    } catch (e) {}
+
+    // Set before the page is drawn, so the wrong language never flashes.
+    document.documentElement.classList.toggle("lang-en", lang === "en");
+    document.documentElement.lang = lang;
+
+    // Interface texts that Quarto writes in Swedish (lang: sv in _quarto.yml).
+    var UI_EN = {
+      "På denna sida": "On this page",
+      "Visa kod": "Show code",
+      "Dölj kod": "Hide code",
+      "Kod": "Code",
+      "Kopiera till urklipp": "Copy to Clipboard"
+    };
+
+    function swapText(el, attr) {
+      var key = attr ? "svAttr" : "svText";
+      if (!(key in el.dataset)) {
+        el.dataset[key] = attr ? el.getAttribute(attr) : el.textContent.trim();
+      }
+      var sv = el.dataset[key];
+      var value = lang === "en" && UI_EN[sv] ? UI_EN[sv] : sv;
+      if (attr) {
+        el.setAttribute(attr, value);
+      } else {
+        el.textContent = value;
+      }
+    }
+
+    var originalTitle = document.title;
+
+    function apply() {
+      var html = document.documentElement;
+      html.classList.toggle("lang-en", lang === "en");
+      html.lang = lang;
+
+      document.querySelectorAll("#toc-title, details.code-fold > summary").forEach(function (el) {
+        swapText(el);
+      });
+      document.querySelectorAll(".code-copy-button[title]").forEach(function (el) {
+        swapText(el, "title");
+      });
+
+      // Browser tab title
+      var sv = document.querySelector("h1.title .sv");
+      var en = document.querySelector("h1.title .en");
+      document.title = lang === "en" && sv && en
+        ? originalTitle.replace(sv.textContent.trim(), en.textContent.trim())
+        : originalTitle;
+
+      // Button label shows the language you can switch to
+      var btn = document.querySelector(".lang-switch");
+      if (btn) {
+        var label = btn.querySelector(".lang-switch-label");
+        var short = btn.querySelector(".lang-switch-short");
+        label.textContent = lang === "en" ? "Svenska" : "English";
+        short.textContent = lang === "en" ? "SV" : "EN";
+        btn.lang = lang === "en" ? "sv" : "en";
+        btn.setAttribute("aria-label", lang === "en" ? "Byt till svenska" : "Switch to English");
+      }
+    }
+
+    function addButton() {
+      var item = document.createElement("div");
+      item.className = "lang-switch-item";
+      item.innerHTML =
+        '<button type="button" class="nav-link lang-switch">' +
+        '<i class="bi bi-translate" aria-hidden="true"></i>' +
+        '<span class="lang-switch-label"></span>' +
+        '<span class="lang-switch-short"></span></button>';
+
+      // Next to the search icon, so it is visible on phones without opening the menu
+      var search = document.getElementById("quarto-search");
+      var toggler = document.querySelector(".navbar .navbar-toggler");
+      var anchor = search || toggler;
+      if (anchor) {
+        anchor.parentNode.insertBefore(item, anchor);
+      } else {
+        var nav = document.querySelector(".navbar .navbar-container") || document.body;
+        nav.appendChild(item);
+      }
+
+      item.querySelector("button").addEventListener("click", function () {
+        lang = lang === "en" ? "sv" : "en";
+        try {
+          localStorage.setItem(KEY, lang);
+          var url = new URL(window.location.href);
+          if (lang === "en") {
+            url.searchParams.set("lang", "en");
+          } else {
+            url.searchParams.delete("lang");
+          }
+          history.replaceState(null, "", url);
+        } catch (e) {}
+        apply();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mark each language block so screen readers pronounce it correctly
+      document.querySelectorAll(".sv").forEach(function (el) { el.lang = "sv"; });
+      document.querySelectorAll(".en").forEach(function (el) { el.lang = "en"; });
+      addButton();
+      apply();
+    });
+
+    // Quarto adds copy buttons after page load
+    window.addEventListener("load", apply);
+  })();
+</script>
 
 
 </head>
@@ -85,31 +285,31 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Andreas Jemstedt</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Sök"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Skifta navigering" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text"><span class="sv">Hem</span><span class="en">Home</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text"><span class="sv">Om mig</span><span class="en">About</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../research.html"> 
-<span class="menu-text">Research</span></a>
+<span class="menu-text"><span class="sv">Forskning</span><span class="en">Research</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../resources.html"> 
-<span class="menu-text">Resources</span></a>
+<span class="menu-text"><span class="sv">Resurser</span><span class="en">Resources</span></span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../contact.html"> 
-<span class="menu-text">Contact</span></a>
+<span class="menu-text"><span class="sv">Kontakt</span><span class="en">Contact</span></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -124,19 +324,18 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">På denna sida</h2>
    
   <ul>
-  <li><a href="#download-the-manual-as-pdf" id="toc-download-the-manual-as-pdf" class="nav-link active" data-scroll-target="#download-the-manual-as-pdf">📄 Download the Manual as PDF</a></li>
-  <li><a href="#study-manual" id="toc-study-manual" class="nav-link" data-scroll-target="#study-manual">📘 Study Manual</a>
+  <li><a href="#ladda-ner-manualen-som-pdf-download-the-manual-as-pdf" id="toc-ladda-ner-manualen-som-pdf-download-the-manual-as-pdf" class="nav-link active" data-scroll-target="#ladda-ner-manualen-som-pdf-download-the-manual-as-pdf"><span class="sv">📄 Ladda ner manualen som PDF</span> <span class="en">📄 Download the Manual as PDF</span></a></li>
+  <li><a href="#studiemanual-study-manual" id="toc-studiemanual-study-manual" class="nav-link" data-scroll-target="#studiemanual-study-manual"><span class="sv">📘 Studiemanual</span> <span class="en">📘 Study Manual</span></a>
   <ul class="collapse">
-  <li><a href="#three-methods-that-research-has-shown-will-aid-your-learning" id="toc-three-methods-that-research-has-shown-will-aid-your-learning" class="nav-link" data-scroll-target="#three-methods-that-research-has-shown-will-aid-your-learning">Three methods that research has shown will aid your learning</a></li>
-  <li><a href="#deep-processing-of-what-you-learn" id="toc-deep-processing-of-what-you-learn" class="nav-link" data-scroll-target="#deep-processing-of-what-you-learn">1. Deep processing of what you learn</a></li>
-  <li><a href="#retrieval-practice" id="toc-retrieval-practice" class="nav-link" data-scroll-target="#retrieval-practice">2. Retrieval practice</a></li>
-  <li><a href="#distributed-practice" id="toc-distributed-practice" class="nav-link" data-scroll-target="#distributed-practice">3. Distributed practice</a></li>
+  <li><a href="#tre-metoder-som-enligt-forskning-är-gynnsamma-för-inlärning-three-methods-that-research-has-shown-will-aid-your-learning" id="toc-tre-metoder-som-enligt-forskning-är-gynnsamma-för-inlärning-three-methods-that-research-has-shown-will-aid-your-learning" class="nav-link" data-scroll-target="#tre-metoder-som-enligt-forskning-är-gynnsamma-för-inlärning-three-methods-that-research-has-shown-will-aid-your-learning"><span class="sv">Tre metoder som enligt forskning är gynnsamma för inlärning</span> <span class="en">Three methods that research has shown will aid your learning</span></a></li>
+  <li><a href="#djup-bearbetning-av-det-du-lär-dig-1.-deep-processing-of-what-you-learn" id="toc-djup-bearbetning-av-det-du-lär-dig-1.-deep-processing-of-what-you-learn" class="nav-link" data-scroll-target="#djup-bearbetning-av-det-du-lär-dig-1.-deep-processing-of-what-you-learn"><span class="sv">1. Djup bearbetning av det du lär dig</span> <span class="en">1. Deep processing of what you learn</span></a></li>
+  <li><a href="#självtestning-2.-retrieval-practice" id="toc-självtestning-2.-retrieval-practice" class="nav-link" data-scroll-target="#självtestning-2.-retrieval-practice"><span class="sv">2. Självtestning</span> <span class="en">2. Retrieval practice</span></a></li>
+  <li><a href="#utspridning-av-studietid-3.-distributed-practice" id="toc-utspridning-av-studietid-3.-distributed-practice" class="nav-link" data-scroll-target="#utspridning-av-studietid-3.-distributed-practice"><span class="sv">3. Utspridning av studietid</span> <span class="en">3. Distributed practice</span></a></li>
   </ul></li>
-  <li><a href="#plan-your-study-time" id="toc-plan-your-study-time" class="nav-link" data-scroll-target="#plan-your-study-time">Plan your study time</a></li>
-  <li><a href="#back-to-resources" id="toc-back-to-resources" class="nav-link" data-scroll-target="#back-to-resources">← Back to Resources</a></li>
+  <li><a href="#planera-din-studietid-plan-your-study-time" id="toc-planera-din-studietid-plan-your-study-time" class="nav-link" data-scroll-target="#planera-din-studietid-plan-your-study-time"><span class="sv">Planera din studietid</span> <span class="en">Plan your study time</span></a></li>
   </ul>
 </nav>
     </div>
@@ -145,7 +344,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Study Manual</h1>
+<h1 class="title"><span class="sv">Studiemanual</span><span class="en">Study Manual</span></h1>
 </div>
 
 
@@ -162,26 +361,64 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><a href="../resources.html" class="button">← Back to Resources</a></p>
-<p>I create a two-page study manual for one of my research projects. The manual teaches students to use evidence-based study techniques in two pages with bullet points. The purpose of the study was to test a cost-effective method of improving students self-regulated learning.</p>
+<p><a href="../resources.html" class="button"><span class="sv">← Tillbaka till resurser</span><span class="en">← Back to Resources</span></a></p>
+<div class="sv">
+<p>Jag tog fram en studiemanual på två sidor för ett av mina forskningsprojekt. Manualen lär studenter att använda evidensbaserade studietekniker, på två sidor i punktform. Syftet med studien var att pröva en kostnadseffektiv metod för att förbättra studenters självreglerade lärande.</p>
+<p>Studien: Jemstedt, A. (2024). Enhancing learning with a two-page study manual. <em>Learning and Instruction, 90</em>, 101852. <a href="https://doi.org/10.1016/j.learninstruc.2023.101852" class="uri">https://doi.org/10.1016/j.learninstruc.2023.101852</a></p>
+</div>
+<div class="en">
+<p>I created a two-page study manual for one of my research projects. The manual teaches students to use evidence-based study techniques in two pages with bullet points. The purpose of the study was to test a cost-effective method of improving students’ self-regulated learning.</p>
 <p>The study: Jemstedt, A. (2024). Enhancing learning with a two-page study manual. <em>Learning and Instruction, 90</em>, 101852. <a href="https://doi.org/10.1016/j.learninstruc.2023.101852" class="uri">https://doi.org/10.1016/j.learninstruc.2023.101852</a></p>
-<section id="download-the-manual-as-pdf" class="level2">
-<h2 class="anchored" data-anchor-id="download-the-manual-as-pdf">📄 Download the Manual as PDF</h2>
+</div>
+<section id="ladda-ner-manualen-som-pdf-download-the-manual-as-pdf" class="level2">
+<h2 class="anchored" data-anchor-id="ladda-ner-manualen-som-pdf-download-the-manual-as-pdf"><span class="sv">📄 Ladda ner manualen som PDF</span> <span class="en">📄 Download the Manual as PDF</span></h2>
+<div class="sv">
 <ul>
-<li><a href="../pdfs/Study_manual_English.pdf">Download: English version</a></li>
-<li><a href="../pdfs/Study_manual_Swedish.pdf">Download: Swedish version</a></li>
+<li><a href="files/Study_manual_Swedish.pdf">Ladda ner: svensk version</a></li>
+<li><a href="files/Study_manual_English.pdf">Ladda ner: engelsk version</a></li>
 </ul>
+</div>
+<div class="en">
+<ul>
+<li><a href="files/Study_manual_English.pdf">Download: English version</a></li>
+<li><a href="files/Study_manual_Swedish.pdf">Download: Swedish version</a></li>
+</ul>
+</div>
 <hr>
 </section>
-<section id="study-manual" class="level2">
-<h2 class="anchored" data-anchor-id="study-manual">📘 Study Manual</h2>
+<section id="studiemanual-study-manual" class="level2">
+<h2 class="anchored" data-anchor-id="studiemanual-study-manual"><span class="sv">📘 Studiemanual</span> <span class="en">📘 Study Manual</span></h2>
+<div class="sv">
+<p>Nedan följer en beskrivning av tre metoder som är gynnsamma för inlärning. Utöver detta innehåller manualen förslag på hur du kan planera din studietid på ett sätt som gör att du kan använda metoderna i dina studier.</p>
+</div>
+<div class="en">
 <p>Below you will find descriptions of three methods that can aid your learning. Besides this, the manual also makes suggestions on how you can plan your study time to use these methods in your studies.</p>
-<section id="three-methods-that-research-has-shown-will-aid-your-learning" class="level3">
-<h3 class="anchored" data-anchor-id="three-methods-that-research-has-shown-will-aid-your-learning">Three methods that research has shown will aid your learning</h3>
+</div>
+<section id="tre-metoder-som-enligt-forskning-är-gynnsamma-för-inlärning-three-methods-that-research-has-shown-will-aid-your-learning" class="level3">
+<h3 class="anchored" data-anchor-id="tre-metoder-som-enligt-forskning-är-gynnsamma-för-inlärning-three-methods-that-research-has-shown-will-aid-your-learning"><span class="sv">Tre metoder som enligt forskning är gynnsamma för inlärning</span> <span class="en">Three methods that research has shown will aid your learning</span></h3>
 <hr>
 </section>
-<section id="deep-processing-of-what-you-learn" class="level3">
-<h3 class="anchored" data-anchor-id="deep-processing-of-what-you-learn">1. Deep processing of what you learn</h3>
+<section id="djup-bearbetning-av-det-du-lär-dig-1.-deep-processing-of-what-you-learn" class="level3">
+<h3 class="anchored" data-anchor-id="djup-bearbetning-av-det-du-lär-dig-1.-deep-processing-of-what-you-learn"><span class="sv">1. Djup bearbetning av det du lär dig</span> <span class="en">1. Deep processing of what you learn</span></h3>
+<div class="sv">
+<p>Du kommer minnas information bättre om du bearbetar den och gör den betydelsefull, istället för att bara läsa orden.</p>
+<ul>
+<li><p>Skapa frågor åt dig själv medan du läser, som du sedan kan använda för att testa dig själv. Använd till exempel rubriker och begrepp i kurslitteraturen som grund för frågorna.</p>
+<ul>
+<li>När det är möjligt, skriv dina frågor som ”varför”-frågor. T. ex. <em>varför är isbjörnar vita?</em></li>
+</ul></li>
+<li><p>Skriv svar till dina frågor och använd dessa som facit. Om möjligt, gör följande i dina svar:</p>
+<ul>
+<li>Skriv som om du förklarade för en person som inte har lärt sig det du har lärt dig.</li>
+<li>Använd konkreta exempel för att förtydliga.</li>
+<li>Koppla det du skriver till dig själv eller händelser i ditt liv.</li>
+<li>Koppla samman informationen med saker du har lärt dig tidigare.</li>
+</ul></li>
+<li><p>Skapa på samma sätt frågor och svar för ny information som ges vid lärarledd undervisning.</p></li>
+<li><p>Uppdatera kontinuerligt dina frågor och svar allt eftersom du lär dig mer under kursens gång.</p></li>
+</ul>
+</div>
+<div class="en">
 <p>You will remember information better if you elaborate on it and make it meaningful, rather than simply reading the words.</p>
 <ul>
 <li><p>Create questions for yourself while you read which you can use to test yourself later. Use, for example, headings and concepts as a basis for your questions.</p>
@@ -201,10 +438,32 @@ ul.task-list li input[type="checkbox"] {
 <li><p>In the same way, create questions and answers for new information you learn during teacher-led learning.</p></li>
 <li><p>Continuously update your questions and answers as you learn more throughout the course.</p></li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="retrieval-practice" class="level3">
-<h3 class="anchored" data-anchor-id="retrieval-practice">2. Retrieval practice</h3>
+<section id="självtestning-2.-retrieval-practice" class="level3">
+<h3 class="anchored" data-anchor-id="självtestning-2.-retrieval-practice"><span class="sv">2. Självtestning</span> <span class="en">2. Retrieval practice</span></h3>
+<div class="sv">
+<p>Du kommer minnas ditt kursmaterial bättre om du testar dig på materialet, istället för att bara läsa det igen. Det är dock viktigt att kontrollera att det du minns är korrekt.</p>
+<ul>
+<li><p>Testa dig på:</p>
+<ul>
+<li>Dina egna frågor som du skapar när du t. ex. läser kurslitteraturen.</li>
+<li>Kursbokens frågor.
+<ul>
+<li>Se om din kursbok har frågor i slutet av varje kapitel.</li>
+<li>Se om din kursbok har en hemsida där det finns test för varje kapitel.</li>
+</ul></li>
+<li>Gamla tentafrågor eller övningstentor
+<ul>
+<li>När du kan svaret på en fråga, skriv ner ditt svar och använd det sedan som facit när du testar dig själv.</li>
+</ul></li>
+</ul></li>
+<li><p>När du testar dig, försök att först minnas svaren på frågorna innan du läser svaren på frågorna. Läs facit för att försäkra dig om att du minns rätt.</p></li>
+<li><p>Testa dig på andra frågor innan du testar dig på samma fråga igen.</p></li>
+</ul>
+</div>
+<div class="en">
 <p>You will remember more of the course material if you test yourself on it instead of simply reading it again. However, it is important that you check that what you remember is correct.</p>
 <ul>
 <li><p>Test yourself on:</p>
@@ -226,20 +485,46 @@ ul.task-list li input[type="checkbox"] {
 <li><p>When you test yourself, first try to remember the answer before you read the answer. Read the answer to check that what you remember is correct.</p></li>
 <li><p>Test yourself on other questions before you test yourself on the same question again.</p></li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="distributed-practice" class="level3">
-<h3 class="anchored" data-anchor-id="distributed-practice">3. Distributed practice</h3>
+<section id="utspridning-av-studietid-3.-distributed-practice" class="level3">
+<h3 class="anchored" data-anchor-id="utspridning-av-studietid-3.-distributed-practice"><span class="sv">3. Utspridning av studietid</span> <span class="en">3. Distributed practice</span></h3>
+<div class="sv">
+<p>När du studerar har du begränsad tid att studera olika delar av kursens material. Du kommer att minnas varje del av materialet bättre om du sprider ut din studietid över kortare sessioner än om du lägger all tid vid ett studietillfälle. Undvik därför att studera samma sak om och om igen direkt efter varandra. Sprid istället ut tiden med mellanrum.</p>
+<ul>
+<li><p>Mellanrummen kan vara timmar eller dagar. Huvudsaken är att du sprider ut tiden.</p></li>
+<li><p>Detta gäller också självtestning. Läs eller testa dig på något annat innan du testar dig på samma fråga igen.</p></li>
+</ul>
+</div>
+<div class="en">
 <p>When you study, you have limited time to study different parts of the course material. You will remember each part better if you spread out your study time over shorter sessions instead of studying everything in one long session. Avoid studying the same information repeatedly in a single session. Instead, space it out.</p>
 <ul>
 <li><p>The time between the sessions can be hours or days. The main thing is that you spread out your time.</p></li>
 <li><p>This also applies to self-testing. Read or test yourself on other material before testing yourself on the same questions again.</p></li>
 </ul>
+</div>
 <hr>
 </section>
 </section>
-<section id="plan-your-study-time" class="level2">
-<h2 class="anchored" data-anchor-id="plan-your-study-time">Plan your study time</h2>
+<section id="planera-din-studietid-plan-your-study-time" class="level2">
+<h2 class="anchored" data-anchor-id="planera-din-studietid-plan-your-study-time"><span class="sv">Planera din studietid</span> <span class="en">Plan your study time</span></h2>
+<div class="sv">
+<p>Ingen av ovanstående metoder kommer att göra ditt lärande mer effektivt om du inte använder dig av dem. För att använda dig av metoderna, se till att planera så att du har tid att använda dem. För att du ska kunna använda metoderna behöver du dessutom planera för att kunna studera samma information flera gånger under kursen.</p>
+<p>Se till att du har tid för följande när du planerar din tid.</p>
+<ul>
+<li><p>Tid att läsa kurslitteraturen som anges i kursanvisningarna inför varje kursmoment. När du läser kurslitteraturen, följ punkterna som beskrivs under <em>Djup bearbetning av det du lär dig</em>. Planera in ordentligt med tid så att du kan skapa bra frågor och bra svar.</p></li>
+<li><p>Tid att testa dig på det du har lärt dig tidigare under kursen. När du planerar din tid kan du exempelvis planera in tid för att testa dig på kurslitteraturen till föreläsning 1 och 2 efter att du varit på föreläsning 3. När du testar dig, följ punkterna som beskrivs under <em>Självtestning</em>.</p></li>
+<li><p>Testa dig på samma kunskap flera gånger under kursen, men med mellanrum. Följ det som är beskrivet under <em>Utspridning av studietid</em>.</p></li>
+</ul>
+<p>När du planerar din studietid kan du också tänka på följande.</p>
+<ul>
+<li>Använd en kalender när du planerar in din studietid.</li>
+<li>Planera tid för grupparbeten.</li>
+<li>Vid heltidsstudier förväntas du studera 40 timmar per vecka, det vill säga 8 timmar om dagen om du bara studerar på vardagar. I detta är både dina egna studier inräknade och den lärarledda undervisningen.</li>
+</ul>
+</div>
+<div class="en">
 <p>None of the methods above will improve your learning if you do not use them. To make use of the methods, plan your time so that you have time to apply them — and to revisit the same material multiple times.</p>
 <p>When planning, make sure to allocate time for:</p>
 <ul>
@@ -255,10 +540,9 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li>Full-time study equals about 40 hours per week — approximately 8 hours per weekday. This includes both independent and teacher-led learning.</li>
 </ul>
+</div>
 <hr>
-</section>
-<section id="back-to-resources" class="level2">
-<h2 class="anchored" data-anchor-id="back-to-resources"><a href="../resources.html" class="button">← Back to Resources</a></h2>
+<p><a href="../resources.html" class="button"><span class="sv">← Tillbaka till resurser</span><span class="en">← Back to Resources</span></a></p>
 
 
 </section>
@@ -289,12 +573,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopierat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopierat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
