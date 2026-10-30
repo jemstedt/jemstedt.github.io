@@ -44,7 +44,7 @@ page-layout: full
 
 ::: sv
 - Ämnesexpert (Science of Learning) i ett projekt vid Utbildningsdepartementet, 2023–2024
-- Konsult inom onlinelärande för KTH, 2023
+- Konsult inom onlinelärande för Kungliga tekniska högskolan, 2023
 - Arrangör av Nordic Learning Analytics Summer Institute (LASI Nordic), 2022
 - Forskningskonsult i ett forskningsprojekt vid Stockholms universitet, 2019
 - Ämnesexpert (minne) i ett projekt vid Forum för levande historia, 2018
