@@ -7,71 +7,81 @@ page-layout: full
 ## [Utbildning]{.sv} [Education]{.en}
 
 ::: sv
-- Doktorsexamen i psykologi, Stockholms universitet, 2018
-- Masterexamen i psykologi, Stockholms universitet, 2013
-- Kandidatexamen i psykologi, Stockholms universitet, 2011
+-   Doktorsexamen i psykologi, Stockholms universitet, 2018
+-   Masterexamen i psykologi, Stockholms universitet, 2013
+-   Kandidatexamen i psykologi, Stockholms universitet, 2011
 :::
 
 ::: en
-- Ph.D. in Psychology, Stockholm University, 2018
-- M.Sc. in Psychology, Stockholm University, 2013
-- B.Sc. in Psychology, Stockholm University, 2011
+-   Ph.D. in Psychology, Stockholm University, 2018
+-   M.Sc. in Psychology, Stockholm University, 2013
+-   B.Sc. in Psychology, Stockholm University, 2011
 :::
 
 ## [Anställningar]{.sv} [Positions]{.en}
 
+### [Nuvarande]{.sv} [Current]{.en} {.unlisted}
+
 ::: sv
-- Universitetslektor och Docent, Stockholms universitet, sedan 2025
-- Universitetslektor, Stockholms universitet, 2023–2025
-- Forskare och IKT-pedagog, Stockholms universitet, 2023
-- Ägare och frilansande expert inom kognitionsvetenskap och dataanalys, Rowboater AB, sedan 2022
-- Postdoktor, KTH, 2022–2023
-- Universitetslektor (visstid), Stockholms universitet, 2019–2021
-- Doktorand, Stockholms universitet, 2014–2018
+-   Universitetslektor och docent, Stockholms universitet, sedan 2025
+-   Ägare och frilansande expert inom kognitionsvetenskap och dataanalys, Rowboater AB, sedan 2022
 :::
 
 ::: en
-- Associate Professor (Docent), Stockholm University, 2025–present
-- Senior Lecturer, Stockholm University, 2023–2025
-- Researcher and ICT pedagogue, Stockholm University, 2023
-- Owner and freelance expert in cognitive science and data analysis, Rowboater AB, 2022–present
-- Postdoctoral Researcher, KTH Royal Institute of Technology, 2022–2023
-- Senior Lecturer (temporary), Stockholm University, 2019–2021
-- Ph.D. Student, Stockholm University, 2014–2018
+-   Associate Professor (Docent), Stockholm University, 2025–present
+-   Owner and freelance expert in cognitive science and data analysis, Rowboater AB, 2022–present
 :::
 
-## [Övrig erfarenhet]{.sv} [Other Experience]{.en}
+### [Tidigare]{.sv} [Previous]{.en} {.unlisted}
 
 ::: sv
-- Ämnesexpert (Science of Learning) i ett projekt vid Utbildningsdepartementet, 2023–2024
-- Konsult inom onlinelärande för Kungliga tekniska högskolan, 2023
-- Arrangör av Nordic Learning Analytics Summer Institute (LASI Nordic), 2022
-- Forskningskonsult i ett forskningsprojekt vid Stockholms universitet, 2019
-- Ämnesexpert (minne) i ett projekt vid Forum för levande historia, 2018
-- Forskningsassistent vid Kungliga vetenskapsakademien, 2011–2014
-- Forskningsassistent vid Stockholms universitet, 2012–2013
+-   Universitetslektor, Stockholms universitet, 2023–2025
+-   Forskare och IKT-pedagog, Stockholms universitet, 2023
+-   Postdoktor, KTH, 2022–2023
+-   Universitetslektor (visstid), Stockholms universitet, 2019–2021
+-   Doktorand, Stockholms universitet, 2014–2018
 :::
 
 ::: en
-- Subject Matter Expert (Science of Learning) for project at The Swedish Ministry of Education, 2023–2024
-- Online learning consultant for KTH Royal Institute of Technology, 2023
-- Organizer of Nordic Learning Analytics Summer Institute (LASI Nordic), 2022
-- Research consultant for research project at Stockholm University, 2019
-- Subject Matter Expert (Memory) for project at The Living History Forum, 2018
-- Research assistant at The Royal Swedish Academy of Sciences, 2011–2014
-- Research assistant at Stockholm University, 2012–2013
+-   Senior Lecturer, Stockholm University, 2023–2025
+-   Researcher and ICT pedagogue, Stockholm University, 2023
+-   Postdoctoral Researcher, KTH Royal Institute of Technology, 2022–2023
+-   Senior Lecturer (temporary), Stockholm University, 2019–2021
+-   Ph.D. Student, Stockholm University, 2014–2018
+:::
+
+## [Urval av övriga erfarenheter]{.sv} [Selected Other Experience]{.en}
+
+::: sv
+-   Ämnesexpert (Science of Learning) i ett projekt vid Utbildningsdepartementet, 2023–2024
+-   Konsult inom onlinelärande för Kungliga tekniska högskolan, 2023
+-   Arrangör av Nordic Learning Analytics Summer Institute (LASI Nordic), 2022
+-   Forskningskonsult i ett forskningsprojekt vid Stockholms universitet, 2019
+-   Ämnesexpert (minne) i ett projekt vid Forum för levande historia, 2018
+-   Forskningsassistent vid Kungliga vetenskapsakademien, 2011–2014
+-   Forskningsassistent vid Stockholms universitet, 2012–2013
+:::
+
+::: en
+-   Subject Matter Expert (Science of Learning) for project at The Swedish Ministry of Education, 2023–2024
+-   Online learning consultant for KTH Royal Institute of Technology, 2023
+-   Organizer of Nordic Learning Analytics Summer Institute (LASI Nordic), 2022
+-   Research consultant for research project at Stockholm University, 2019
+-   Subject Matter Expert (Memory) for project at The Living History Forum, 2018
+-   Research assistant at The Royal Swedish Academy of Sciences, 2011–2014
+-   Research assistant at Stockholm University, 2012–2013
 :::
 
 ## [Forskningsanslag]{.sv} [Grants]{.en}
 
 ::: sv
-- *Rektors medel för kvalitetsutveckling av utbildning*, Stockholms universitet, 2024
-- Riksbankens Jubileumsfond (P22–0573), 2023–2025
-- Stiftelsen Lars Hiertas Minne, 2014
+-   *Rektors medel för kvalitetsutveckling av utbildning*, Stockholms universitet, 2024
+-   Riksbankens Jubileumsfond (P22–0573), 2023–2025
+-   Stiftelsen Lars Hiertas Minne, 2014
 :::
 
 ::: en
-- *Rektors medel för kvalitetsutveckling av utbildning*, Stockholm University, 2024
-- Riksbankens Jubileumsfond (P22–0573), 2023–2025
-- Stiftelsen Lars Hiertas Minne, 2014
+-   *Rektors medel för kvalitetsutveckling av utbildning*, Stockholm University, 2024
+-   Riksbankens Jubileumsfond (P22–0573), 2023–2025
+-   Stiftelsen Lars Hiertas Minne, 2014
 :::
