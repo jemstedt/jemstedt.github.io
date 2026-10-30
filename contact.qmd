@@ -31,14 +31,14 @@ For questions related to my work at Stockholm University, please contact me by e
 <img src="images/Rowboater_logo.png" alt="Rowboater AB" class="contact-logo" />
 ```
 
-## [Tjänster via Rowboater AB]{.sv} [Services through Rowboater AB]{.en}
+## [Uppdrag via Rowboater AB]{.sv} [Freelance work through Rowboater AB]{.en}
 
 ::: sv
-Jag erbjuder tjänster via mitt företag **Rowboater AB**. Kontakta mig via mejl eller LinkedIn.
+Jag tar uppdrag genom mitt företag **Rowboater AB**. Kontakta mig via mejl eller LinkedIn.
 :::
 
 ::: en
-I provide services through my company **Rowboater AB**. Contact me by email or on LinkedIn.
+I take on projects through my company, **Rowboater AB**. Contact me by email or on LinkedIn.
 :::
 
 ::: contact-list
